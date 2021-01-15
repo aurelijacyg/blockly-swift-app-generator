@@ -3,11 +3,7 @@ import React, { useState, forwardRef, useImperativeHandle } from 'react';
 import BlocklyComponent, { Block, Category, Field } from '../Blockly';
 import BlocklyJS from 'blockly/javascript';
 
-import axios from 'axios'
 import fileDownload from 'js-file-download'
-
-import '../blocks/customblocks';
-import '../generator/generator';
 
 import '../blocks/appBlock';
 import '../blocks/galleryPhotoBlock';
@@ -34,24 +30,14 @@ const BlocklyBox = forwardRef((props, ref) => {
         var code = BlocklyJS.workspaceToCode(
           simpleWorkspace.current.workspace
         );
-        console.log(code, '\n]');
-        
-        //handleDownload('https://your-website.com/your-image.jpg', 'test-download.jpg')
 
-        //download("AppConfigData.swift", "This is the swift file content :)");
+        var swiftCode = '//APP CONFIG\n//\n//\n\n\n' + code + '\n]'
+        console.log(swiftCode);
+
+        download("AppConfigData.swift", swiftCode);
         alert("Code was sucessfully generated")
 
     };
-
-    const handleDownload = (url, filename) => {
-        var fileDownload = require('js-file-download');
-        axios.get(url, {
-            responseType: 'blob',
-        })
-            .then((res) => {
-                fileDownload(res.data, filename)
-            })
-    }
 
     const download = (filename, text) => {
         var element = document.createElement('a');

@@ -12,5 +12,5 @@ struct ContentPhotosData {
     var headingColor: Color
     var infoTextColor: Color
     var navigationBarTextTitle: String
-    var photosArray: [Photo]
+    var photosArray: [PhotoData]
 }

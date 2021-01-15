@@ -1,5 +1,5 @@
 //
-//  Image.swift
+//  ImageData.swift
 //  SimpleApp
 //
 //  Created by Aurelija Cygaite 

@@ -35,6 +35,6 @@ Blockly.JavaScript['photo'] = function(block) {
   var random_id = Math.floor(Math.random() * 1000);
 
   // Assemble JavaScript into code variable.
-  var code = 'Photo(\nid: ' + random_id + ',\nimageURL: ' + text_imageurl + ',\ncategory: ' + text_category + ',\nheading: ' + text_heading + ',\ninfoText: ' + text_label + '\n),\n';
+  var code = 'PhotoData(\nid: ' + random_id + ',\nimageURL: ' + text_imageurl + ',\ncategory: ' + text_category + ',\nheading: ' + text_heading + ',\ninfoText: ' + text_label + '\n),\n';
   return code;
 };

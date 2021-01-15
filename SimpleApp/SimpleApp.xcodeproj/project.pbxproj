@@ -8,8 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		98110BC325AB60AA001D1618 /* RemoteImageCircle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98110BC225AB60AA001D1618 /* RemoteImageCircle.swift */; };
-		98110BC825AB63CC001D1618 /* Photo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98110BC725AB63CC001D1618 /* Photo.swift */; };
-		98110BD025AB6975001D1618 /* Test.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98110BCF25AB6975001D1618 /* Test.swift */; };
+		98110BC825AB63CC001D1618 /* PhotoData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98110BC725AB63CC001D1618 /* PhotoData.swift */; };
 		98110BE625AB838B001D1618 /* ContentDetailData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98110BE525AB838B001D1618 /* ContentDetailData.swift */; };
 		98110BEB25AB83F5001D1618 /* ContentPhotosData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98110BEA25AB83F5001D1618 /* ContentPhotosData.swift */; };
 		98110BF025AB8471001D1618 /* HomePageData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98110BEF25AB8471001D1618 /* HomePageData.swift */; };
@@ -52,8 +51,7 @@
 
 /* Begin PBXFileReference section */
 		98110BC225AB60AA001D1618 /* RemoteImageCircle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteImageCircle.swift; sourceTree = "<group>"; };
-		98110BC725AB63CC001D1618 /* Photo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Photo.swift; sourceTree = "<group>"; };
-		98110BCF25AB6975001D1618 /* Test.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Test.swift; sourceTree = "<group>"; };
+		98110BC725AB63CC001D1618 /* PhotoData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoData.swift; sourceTree = "<group>"; };
 		98110BE525AB838B001D1618 /* ContentDetailData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentDetailData.swift; sourceTree = "<group>"; };
 		98110BEA25AB83F5001D1618 /* ContentPhotosData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentPhotosData.swift; sourceTree = "<group>"; };
 		98110BEF25AB8471001D1618 /* HomePageData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePageData.swift; sourceTree = "<group>"; };
@@ -131,7 +129,7 @@
 		988CB63325AA18FF00E87FEA /* SimpleApp */ = {
 			isa = PBXGroup;
 			children = (
-				98110BC725AB63CC001D1618 /* Photo.swift */,
+				98110BC725AB63CC001D1618 /* PhotoData.swift */,
 				988CB63425AA18FF00E87FEA /* AppDelegate.swift */,
 				988CB63625AA18FF00E87FEA /* SceneDelegate.swift */,
 				988CB63825AA18FF00E87FEA /* ContentView.swift */,
@@ -145,7 +143,6 @@
 				988CB64225AA190100E87FEA /* Info.plist */,
 				988CB68825AA612400E87FEA /* CardView.swift */,
 				98110BC225AB60AA001D1618 /* RemoteImageCircle.swift */,
-				98110BCF25AB6975001D1618 /* Test.swift */,
 				98110BE525AB838B001D1618 /* ContentDetailData.swift */,
 				98110BEA25AB83F5001D1618 /* ContentPhotosData.swift */,
 				98110BEF25AB8471001D1618 /* HomePageData.swift */,
@@ -321,9 +318,8 @@
 				98110C0925AB87F5001D1618 /* AppConfigData.swift in Sources */,
 				988CB67C25AA51FA00E87FEA /* UIScreen+size.swift in Sources */,
 				988CB67725AA29BA00E87FEA /* RemoteImage.swift in Sources */,
-				98110BD025AB6975001D1618 /* Test.swift in Sources */,
 				98110BC325AB60AA001D1618 /* RemoteImageCircle.swift in Sources */,
-				98110BC825AB63CC001D1618 /* Photo.swift in Sources */,
+				98110BC825AB63CC001D1618 /* PhotoData.swift in Sources */,
 				98110BEB25AB83F5001D1618 /* ContentPhotosData.swift in Sources */,
 				988CB63725AA18FF00E87FEA /* SceneDelegate.swift in Sources */,
 				98110BFD25AB8629001D1618 /* ListConfigData.swift in Sources */,

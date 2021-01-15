@@ -1,5 +1,5 @@
 //
-//  Photo.swift
+//  PhotoData.swift
 //  SimpleApp
 //
 //  Created by Aurelija Cygaite
@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct Photo : Identifiable {
+struct PhotoData : Identifiable {
     var id: Int
     var imageURL: String
     var category: String

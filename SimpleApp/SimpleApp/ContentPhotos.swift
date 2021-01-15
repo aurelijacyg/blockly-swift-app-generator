@@ -13,7 +13,7 @@ struct ContentPhotos: View {
     var headingColor: Color
     var infoTextColor: Color
     var navigationBarTextTitle: String
-    var photosArray: [Photo]
+    var photosArray: [PhotoData]
 
 
     var body: some View {
