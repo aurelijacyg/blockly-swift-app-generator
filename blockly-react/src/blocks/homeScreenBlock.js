@@ -48,7 +48,7 @@ Blockly.JavaScript['home_screen'] = function(block) {
   }
 
   // Assemble JavaScript into code variable.
-  var code = 'let homePage = HomePageData(\ncolumnsNumber: ' + number_columnsnumber + ',\nisLayoutList: ' + isLayoutList + ',\nlogoURL: ' + "'" + text_logourl + "'" +
-      ',\nheader: ' + "'" + text_header + "'" + ',\nheaderColor: Color.white,\nsubtitleText: ' + "'" + text_subtitletext + "'" + ',\nsubtitleTextColor: Color.' + dropdown_subtitletextcolordropdown + '\n)\n\n' + additionalCode;
+  var code = 'let homePage = HomePageData(\ncolumnsNumber: ' + number_columnsnumber + ',\nisLayoutList: ' + isLayoutList + ',\nlogoURL: "' + text_logourl +
+      '",\nheader: "' + text_header + '",\nheaderColor: Color.white,\nsubtitleText: "' + text_subtitletext + '",\nsubtitleTextColor: Color.' + dropdown_subtitletextcolordropdown + '\n)\n\n' + additionalCode;
   return code;
 };

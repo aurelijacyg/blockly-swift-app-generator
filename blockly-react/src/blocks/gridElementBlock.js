@@ -45,7 +45,7 @@ Blockly.JavaScript['grid_element'] = function(block) {
   }
 
   // Assemble JavaScript into code variable.
-  var code = 'GridConfigData(\nid: ' + random_id + ',\ntext: ' + "'" + text_text + "'" + ',\nbackgroundColor: Color.' + dropdown_backgrounddropdown 
+  var code = 'GridConfigData(\nid: ' + random_id + ',\ntext: "' + text_text + '",\nbackgroundColor: Color.' + dropdown_backgrounddropdown 
     + ',\ncornerRadius: ' + number_cornerradius + ',\ntextColor: Color.' + dropdown_textcolordropdown + ',\ndestination: ' + additionalCode + value_destination + '\n),\n\n';
   return code;
 };

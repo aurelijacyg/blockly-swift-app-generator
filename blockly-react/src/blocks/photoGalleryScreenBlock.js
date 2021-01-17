@@ -42,8 +42,7 @@ Blockly.JavaScript['destination_photos'] = function(block) {
 
   // Assemble JavaScript into code variable.
   var code = 'ContentPhotos(\ncategoryColor: Color.' + dropdown_categorycolor + ',\nheadingColor: Color.' + dropdown_headingcolor + 
-    ',\ninfoTextColor: Color.' + dropdown_labelcolor + ',\nnavigationBarTextTitle: ' + "'" + text_navigationbartexttitle + "'" + ',\nphotosArray: [\n' + statements_photogallery + ']\n\n)';
+    ',\ninfoTextColor: Color.' + dropdown_labelcolor + ',\nnavigationBarTextTitle: "' + text_navigationbartexttitle + '",\nphotosArray: [\n' + statements_photogallery + ']\n\n)';
 
-  // TODO: Change ORDER_NONE to the correct strength.
   return [code, Blockly.JavaScript.ORDER_NONE];
 };

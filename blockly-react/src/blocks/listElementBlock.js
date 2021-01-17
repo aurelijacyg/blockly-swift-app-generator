@@ -46,8 +46,8 @@ Blockly.JavaScript['list_element'] = function(block) {
   }
 
   // Assemble JavaScript into code variable.
-  var code = 'ListConfigData(\nid: ' + random_id + ',\ntext: ' + "'" + text_text + "'" + ',\nbackgroundColor: Color.' + dropdown_backgroundcolor 
-    + ',\ntextColor: Color.' + dropdown_textcolor + ',\nicon: ' + "'" + dropdown_icon + "'" + ',\ndestination: ' + additionalCode + value_destination + '\n),\n\n';
+  var code = 'ListConfigData(\nid: ' + random_id + ',\ntext: "' + text_text + '",\nbackgroundColor: Color.' + dropdown_backgroundcolor 
+    + ',\ntextColor: Color.' + dropdown_textcolor + ',\nicon: "' + dropdown_icon + '",\ndestination: ' + additionalCode + value_destination + '\n),\n\n';
 
   return code;
 };

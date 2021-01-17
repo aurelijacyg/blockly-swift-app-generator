@@ -37,10 +37,8 @@ Blockly.JavaScript['destination_content'] = function(block) {
 
 
   // Assemble JavaScript into code variable.
-  var code = 'ContentDetail(\ntitleText: ' + "'" + text_titletext + "'" + ',\nbodyText: ' + "'" + text_bodytext + "'" + ',\ntitleColor: Color.' + dropdown_titlecolordropdown +
+  var code = 'ContentDetail(\ntitleText: "' + text_titletext + '",\nbodyText: "' + text_bodytext + '",\ntitleColor: Color.' + dropdown_titlecolordropdown +
     ',\nbodyTextColor: Color.' + dropdown_bodycolordropdown + ',\nimage: ImageData' + value_contentimage + ')\n';
 
-
-  // Change ORDER_NONE to the correct strength.
   return [code, Blockly.JavaScript.ORDER_NONE];
 };

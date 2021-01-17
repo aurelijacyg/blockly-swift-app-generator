@@ -3,8 +3,6 @@ import React, { useState, forwardRef, useImperativeHandle } from 'react';
 import BlocklyComponent, { Block, Category, Field } from '../Blockly';
 import BlocklyJS from 'blockly/javascript';
 
-import fileDownload from 'js-file-download'
-
 import '../blocks/appBlock';
 import '../blocks/galleryPhotoBlock';
 import '../blocks/gridElementBlock';
@@ -31,7 +29,7 @@ const BlocklyBox = forwardRef((props, ref) => {
           simpleWorkspace.current.workspace
         );
 
-        var swiftCode = '//APP CONFIG\n//\n//\n\n\n' + code + '\n]'
+        var swiftCode = '//\n//--- APP CONFIG ---\n//\n\n\nimport SwiftUI\n\n' + code + '\n]'
         console.log(swiftCode);
 
         download("AppConfigData.swift", swiftCode);

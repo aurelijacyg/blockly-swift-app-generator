@@ -22,6 +22,6 @@ Blockly.JavaScript['app'] = function(block) {
   var statements_name = Blockly.JavaScript.statementToCode(block, 'NAME');
 
   // Assemble JavaScript into code variable.
-  var code = `let appName=${text_appname}\n${statements_name}`;
+  var code = `let appName="${text_appname}"\n${statements_name}`;
   return code;
 };

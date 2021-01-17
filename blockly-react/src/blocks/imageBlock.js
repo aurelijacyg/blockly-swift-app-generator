@@ -38,9 +38,7 @@ Blockly.JavaScript['image'] = function(block) {
   }
 
   // Assemble JavaScript into code variable.
-  var code = 'URL: ' + "'" + text_imageurl + "'" + ',\nwidth: ' + number_width + ',\nheight: ' + number_height + ',\nisImageRounded: ' + isImageRouded + '\n';
+  var code = 'URL: "' + text_imageurl + '",\nwidth: ' + number_width + ',\nheight: ' + number_height + ',\nisRounded: ' + isImageRouded + '\n';
 
-
-  // TODO: Change ORDER_NONE to the correct strength.
   return [code, Blockly.JavaScript.ORDER_NONE];
 };
