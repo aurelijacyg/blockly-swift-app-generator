@@ -62,8 +62,10 @@ const InfoModal = () => {
       </Typography>
 
       <Typography variant="body2" color="textSecondary" component="p">
-        With this tool you can create an app for display information. For example, it could be your trip blog, recipe book, app advisor and etc..
-        If you want to create an app, you need to...
+      The main purpose of your app is to attractively display information of your choosing. It could become the app of your Recipes’ book or an app designated to share your life hacks and advices with others. It might even become an app to introduce you interior design ideas by sharing the pictures of your best works. Sky is the limit – your app, your ideas!
+      </Typography>
+      <Typography variant="body2" color="textSecondary" component="p">
+      To begin creating your app, start with the main block named “App” and then insert the “Homepage”. There are two choices for the “Homepage”: list or grid to make your homepage fit for purpose. Choose the “onClick screen” for every element of list or grid. You also have two choices for “onClick screen”: photo gallery screen or information screen. Every element can be designed to reflect your idea. As soon as you are done, click the button “Generate Code” and insert the file to ../SimpleApp/SimpleApp. You can download a full code at https://github.com/aurelijacyg/blockly-swift-app-generator.
       </Typography>
 
       <Button

@@ -11,11 +11,11 @@ import SwiftUI
 let homePage = HomePageData(
     columnsNumber: 2,
     isLayoutList: false,
-    logoURL: "https://images.fineartamerica.com/images/artworkimages/mediumlarge/1/colorful-abstract-blocks-karolina-perlinska.jpg",
+    logoURL: "https://us.123rf.com/450wm/sergeiminsk/sergeiminsk1709/sergeiminsk170900006/86139704-abbellisca-con-le-siluette-blu-e-porpora-delle-montagne-e-colline-con-il-bello-cielo-sanguinante-di-.jpg?ver=6",
     header: "Tripify",
     headerColor: Color.white,
     subtitleText: "Find your vacation spot...",
-    subtitleTextColor: Color.secondary
+    subtitleTextColor: Color.pink
 )
 
 // Render LIST LAYOUT:
@@ -125,9 +125,9 @@ let gridElements =
         GridConfigData(
             id: 2,
             text: "Iceland",
-            backgroundColor: Color.purple,
+            backgroundColor: Color.white,
             cornerRadius: 10.0,
-            textColor: Color.white,
+            textColor: Color.pink,
             destination: Destination.content(
                 ContentDetail(
                     titleText: "Iceland",
@@ -147,7 +147,29 @@ let gridElements =
         GridConfigData(
             id: 3,
             text: "Norway",
-            backgroundColor: Color.purple,
+            backgroundColor: Color.white,
+            cornerRadius: 10.0,
+            textColor: Color.pink,
+            destination: Destination.content(
+                ContentDetail(
+                    titleText: "Iceland",
+                    bodyText: "Iceland is a Nordic island country in the North Atlantic Ocean, with a population of 356,991 and an area of 103,000 km2 (40,000 sq mi), making it the most sparsely populated country in Europe.[e][13] The capital and largest city is Reykjavík. Reykjavík and the surrounding areas in the southwest of the country are home to over two-thirds of the population. Iceland is volcanically and geologically active. The interior consists of a plateau characterised by sand and lava fields, mountains, and glaciers, and many glacial rivers flow to the sea through the lowlands. Iceland is warmed by the Gulf Stream and has a temperate climate, despite a high latitude just outside the Arctic Circle. Its high latitude and marine influence keep summers chilly, with most of the archipelago having a polar climate.",
+                    titleColor: Color.primary,
+                    bodyTextColor: Color.secondary,
+                    image: ImageData(
+                        URL: "https://www.telegraph.co.uk/content/dam/Travel/commerce-partners/scenic/RESTRICTED-SCENIC-icelanddiscovery-productcard-TRAVEL.jpg",
+                        width: 250,
+                        height: 250,
+                        isRounded: true
+                    )
+                )
+            )
+        ),
+
+        GridConfigData(
+            id: 4,
+            text: "Norway-gallery",
+            backgroundColor: Color.pink,
             cornerRadius: 10.0,
             textColor: Color.white,
             destination: Destination.content(
@@ -167,11 +189,33 @@ let gridElements =
         ),
 
         GridConfigData(
-            id: 4,
-            text: "Canada",
-            backgroundColor: Color.purple,
+            id: 5,
+            text: "Canada-gallery",
+            backgroundColor: Color.pink,
             cornerRadius: 10.0,
             textColor: Color.white,
+            destination: Destination.content(
+                ContentDetail(
+                    titleText: "Iceland",
+                    bodyText: "Iceland is a Nordic island country in the North Atlantic Ocean, with a population of 356,991 and an area of 103,000 km2 (40,000 sq mi), making it the most sparsely populated country in Europe.[e][13] The capital and largest city is Reykjavík. Reykjavík and the surrounding areas in the southwest of the country are home to over two-thirds of the population. Iceland is volcanically and geologically active. The interior consists of a plateau characterised by sand and lava fields, mountains, and glaciers, and many glacial rivers flow to the sea through the lowlands. Iceland is warmed by the Gulf Stream and has a temperate climate, despite a high latitude just outside the Arctic Circle. Its high latitude and marine influence keep summers chilly, with most of the archipelago having a polar climate.",
+                    titleColor: Color.primary,
+                    bodyTextColor: Color.secondary,
+                    image: ImageData(
+                        URL: "https://www.telegraph.co.uk/content/dam/Travel/commerce-partners/scenic/RESTRICTED-SCENIC-icelanddiscovery-productcard-TRAVEL.jpg",
+                        width: 250,
+                        height: 250,
+                        isRounded: true
+                    )
+                )
+            )
+        ),
+
+        GridConfigData(
+            id: 6,
+            text: "Canada",
+            backgroundColor: Color.white,
+            cornerRadius: 10.0,
+            textColor: Color.pink,
             destination: Destination.content(
                 ContentDetail(
                     titleText: "Iceland",
