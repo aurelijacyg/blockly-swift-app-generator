@@ -11,3 +11,5 @@ First of all, you must have Xcode installed on your computer.
 #### Model-View
 <img width="600" alt="MV" src="https://user-images.githubusercontent.com/43350371/115863057-98e46f80-a43d-11eb-8daa-ff2197053dba.png">
 
+### UI
+Swift UI
