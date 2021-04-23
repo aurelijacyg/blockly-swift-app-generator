@@ -138,7 +138,7 @@
 			path = Models;
 			sourceTree = "<group>";
 		};
-		9835BBF92632BB03004D23E1 /* View */ = {
+		9835BBF92632BB03004D23E1 /* Views */ = {
 			isa = PBXGroup;
 			children = (
 				9835BBFA2632BB7B004D23E1 /* UI */,
@@ -146,7 +146,7 @@
 				988CB67125AA1C4800E87FEA /* PaperView.swift */,
 				988CB68325AA5DCC00E87FEA /* CardGalleryView.swift */,
 			);
-			path = View;
+			path = Views;
 			sourceTree = "<group>";
 		};
 		9835BBFA2632BB7B004D23E1 /* UI */ = {
@@ -166,6 +166,16 @@
 				9835BC502632C95E004D23E1 /* Layout.swift */,
 			);
 			path = Helpers;
+			sourceTree = "<group>";
+		};
+		9835BC612632DB97004D23E1 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				98110C0825AB87F5001D1618 /* AppConfiguration.swift */,
+				988CB63425AA18FF00E87FEA /* AppDelegate.swift */,
+				988CB63625AA18FF00E87FEA /* SceneDelegate.swift */,
+			);
+			path = App;
 			sourceTree = "<group>";
 		};
 		988CB62825AA18FF00E87FEA = {
@@ -191,14 +201,12 @@
 		988CB63325AA18FF00E87FEA /* MyApp */ = {
 			isa = PBXGroup;
 			children = (
+				9835BC612632DB97004D23E1 /* App */,
 				9835BBEB2632B911004D23E1 /* Resources */,
 				9835BBEC2632B946004D23E1 /* Extensions */,
 				9835BC4F2632C92F004D23E1 /* Helpers */,
 				9835BBF12632BA1E004D23E1 /* Models */,
-				9835BBF92632BB03004D23E1 /* View */,
-				988CB63425AA18FF00E87FEA /* AppDelegate.swift */,
-				988CB63625AA18FF00E87FEA /* SceneDelegate.swift */,
-				98110C0825AB87F5001D1618 /* AppConfiguration.swift */,
+				9835BBF92632BB03004D23E1 /* Views */,
 				988CB63F25AA190100E87FEA /* LaunchScreen.storyboard */,
 				988CB64225AA190100E87FEA /* Info.plist */,
 				988CB63C25AA190100E87FEA /* Preview Content */,
