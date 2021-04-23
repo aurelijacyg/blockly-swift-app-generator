@@ -6,15 +6,20 @@ import CardActionArea from '@material-ui/core/CardActionArea';
 import CardContent from '@material-ui/core/CardContent';
 import CardMedia from '@material-ui/core/CardMedia';
 import Typography from '@material-ui/core/Typography';
+import CyanColor from '@material-ui/core/colors/cyan';
 
-import logo from '../images/abstract.jpg'
+import logo from '../../images/abstract.jpg'
 
 const useStyles = makeStyles({
   root: {
-    maxWidth: 1800,
+    flexGrow: 1,
+    maxWidth: 1200
   },
   media: {
-    height: 160,
+    height: 250,
+  },
+  typoHeader: {
+    color: CyanColor[800],
   },
 });
 
@@ -22,7 +27,7 @@ const InfoCard = () => {
   const classes = useStyles();
 
   return (
-    <Card className={classes.root}>
+    <Card className={classes.root} justify="center" alignItems="center">
       <CardActionArea>
         <CardMedia
           className={classes.media}
@@ -30,11 +35,11 @@ const InfoCard = () => {
           title="Blocks logo"
         />
         <CardContent>
-          <Typography gutterBottom variant="h5" color="textPrimary" component="h2">
+          <Typography gutterBottom variant="h5" component="h2" className={classes.typoHeader}>
             Build your own app
           </Typography>
           <Typography variant="body2" color="textSecondary" component="p">
-            This is an efiicient method for creating small iOS apps. 
+            This is a fun method for creating small iOS apps. 
             This tool allows you to place blocks like a puzzle and create your custom iOS app design and program buttons for a simple actions.
           </Typography>
         </CardContent>

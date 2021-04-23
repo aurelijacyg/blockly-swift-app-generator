@@ -1,6 +1,6 @@
 import React, { useState, forwardRef, useImperativeHandle } from 'react';
 
-import BlocklyComponent, { Block, Category, Field } from '../Blockly';
+import BlocklyComponent, { Block, Category, Field } from '../blockly';
 import BlocklyJS from 'blockly/javascript';
 
 import '../blocks/appBlock';
