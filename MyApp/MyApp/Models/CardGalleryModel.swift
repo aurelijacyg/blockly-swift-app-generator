@@ -1,5 +1,5 @@
 //
-//  ContentPhotosData.swift
+//  CardGalleryModel.swift
 //  MyApp
 //
 //  Created by Aurelija Cygaite
@@ -7,10 +7,10 @@
 
 import SwiftUI
 
-struct ContentPhotosData {
+struct CardGalleryModel {
     var categoryColor: Color
     var headingColor: Color
     var infoTextColor: Color
     var navigationBarTextTitle: String
-    var photosArray: [PhotoData]
+    var cards: [CardModel]
 }

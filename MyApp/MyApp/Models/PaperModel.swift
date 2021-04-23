@@ -1,5 +1,5 @@
 //
-//  ContentDetailData.swift
+//  PaperModel.swift
 //  MyApp
 //
 //  Created by Aurelija Cygaite
@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct ContentDetailData {
+struct PaperModel {
     var titleText: String
     var bodyText: String
     var titleColor: Color

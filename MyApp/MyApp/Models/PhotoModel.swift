@@ -1,5 +1,5 @@
 //
-//  ImageData.swift
+//  PhotoModel.swift
 //  MyApp
 //
 //  Created by Aurelija Cygaite 
@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct ImageData {
+struct PhotoModel {
     var URL: String
     var width: CGFloat
     var height: CGFloat

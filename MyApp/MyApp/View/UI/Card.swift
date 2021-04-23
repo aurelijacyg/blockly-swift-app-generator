@@ -1,5 +1,5 @@
 //
-//  CardView.swift
+//  Card.swift
 //  MyApp
 //
 //  Created by Aurelija Cygaite 
@@ -7,8 +7,8 @@
 
 import SwiftUI
 
-struct CardView: View {
-    var imageURL: String
+struct Card: View {
+    var photoURL: String
     var category: String
     var heading: String
     var infoText: String
@@ -18,7 +18,7 @@ struct CardView: View {
 
     var body: some View {
         VStack {
-            RemoteImage(url: imageURL)
+            RemoteImage(url: photoURL)
                 .aspectRatio(contentMode: .fit)
 
             HStack {
@@ -50,10 +50,10 @@ struct CardView: View {
     }
 }
 
-struct CardView_Previews: PreviewProvider {
+struct Card_Previews: PreviewProvider {
     static var previews: some View {
-        CardView(
-            imageURL: "https://img.traveltriangle.com/blog/wp-content/uploads/2018/11/Canada-Mountains.jpg",
+        Card(
+            photoURL: "https://img.traveltriangle.com/blog/wp-content/uploads/2018/11/Canada-Mountains.jpg",
             category: "SwiftUI",
             heading: "Drawing a Border with Rounded Corners",
             infoText: "AC",

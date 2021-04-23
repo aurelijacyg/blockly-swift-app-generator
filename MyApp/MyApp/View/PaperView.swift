@@ -1,5 +1,5 @@
 //
-//  ContentDetail.swift
+//  PaperView.swift
 //  MyApp
 //
 //  Created by Aurelija Cygaite
@@ -7,26 +7,26 @@
 
 import SwiftUI
 
-struct ContentDetail: View {
+struct PaperView: View {
 
     var titleText: String
     var bodyText: String
     var titleColor: Color
     var bodyTextColor: Color
-    var image: ImageData
+    var photo: PhotoModel
 
     var body: some View {
 
         ScrollView(.vertical) {
             VStack(spacing:25) {
-                if image.isRounded {
-                    RemoteImageCircle(url: image.URL)
+                if photo.isRounded {
+                    RemoteImageCircle(url: photo.URL)
                         .aspectRatio(contentMode: .fit)
-                        .frame(width: image.width, height: image.height)
+                        .frame(width: photo.width, height: photo.height)
                 } else {
-                    RemoteImage(url: image.URL)
+                    RemoteImage(url: photo.URL)
                         .aspectRatio(contentMode: .fit)
-                        .frame(width: image.width, height: image.height)
+                        .frame(width: photo.width, height: photo.height)
                 }
 
                 Text(titleText)
@@ -56,14 +56,14 @@ struct ContentDetail: View {
     }
 }
 
-struct ContentDetail_Previews: PreviewProvider {
+struct PaperView_Previews: PreviewProvider {
     static var previews: some View {
-        ContentDetail(
+        PaperView(
             titleText: "Title",
             bodyText: "text",
             titleColor:  Color.primary,
             bodyTextColor: Color.secondary,
-            image: ImageData.init(
+            photo: PhotoModel.init(
                 URL: "www.image",
                 width: 250,
                 height: 250,

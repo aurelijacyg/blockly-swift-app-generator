@@ -1,5 +1,5 @@
 //
-//  ListConfigData.swift
+//  GridItemModel.swift
 //  MyApp
 //
 //  Created by Aurelija Cygaite
@@ -7,12 +7,11 @@
 
 import SwiftUI
 
-struct ListConfigData : Identifiable {
+struct GridItemModel : Identifiable {
     var id: Int
     var text: String
     var backgroundColor: Color
+    var cornerRadius: CGFloat
     var textColor: Color
-    var icon: String? = ""
-    var destination: Destination
+    var routeTo: Routing
 }
-

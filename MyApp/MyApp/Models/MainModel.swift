@@ -1,5 +1,5 @@
 //
-//  HomePageData.swift
+//  MainModel.swift
 //  MyApp
 //
 //  Created by Aurelija Cygaite
@@ -7,10 +7,10 @@
 
 import SwiftUI
 
-struct HomePageData {
+struct MainModel {
     var columnsNumber: Int
-    var isLayoutList: Bool
-    var logoURL: String
+    var layout: Layout
+    var photoURL: String
     var header: String
     var headerColor: Color
     var subtitleText: String

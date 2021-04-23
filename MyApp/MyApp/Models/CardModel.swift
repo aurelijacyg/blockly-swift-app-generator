@@ -1,5 +1,5 @@
 //
-//  PhotoData.swift
+//  CardModel.swift
 //  MyApp
 //
 //  Created by Aurelija Cygaite
@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct PhotoData : Identifiable {
+struct CardModel : Identifiable {
     var id: Int
     var imageURL: String
     var category: String
