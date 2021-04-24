@@ -14,22 +14,29 @@ const useStyles = makeStyles((theme) => ({
   },
   title: {
     flexGrow: 1,
+    color: "#FFFFFF"
   },
+  secondaryLight: {
+    color: theme.palette.secondary.light
+  },
+  primaryButton: {
+    color: "#FFFFFF"
+  }
 }));
 
-export default function ButtonAppBar() {
+const ButtonAppBar = () => {
   const classes = useStyles();
 
   return (
     <div className={classes.root}>
-      <AppBar position="static" color="default">
+      <AppBar position="static" color="primary">
         <Toolbar>
           <Typography variant="h5" className={classes.title}>
             Blocks Pie
           </Typography>
 
-          <Button 
-            color="primary"
+          <Button
+            className={classes.secondaryLight}
             onClick={() => { }}
             startIcon={<AppsIcon />}
           >
@@ -37,7 +44,7 @@ export default function ButtonAppBar() {
           </Button>
         
           <Button 
-            color="default"
+            className={classes.primaryButton}
             onClick={() => { }}
             startIcon={<ArrowUpwardIcon />}
           >
@@ -48,4 +55,5 @@ export default function ButtonAppBar() {
     </div>
   );
 }
-//Swift App builder
+
+export default ButtonAppBar;
