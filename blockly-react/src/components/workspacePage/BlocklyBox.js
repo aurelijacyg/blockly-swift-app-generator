@@ -1,16 +1,16 @@
 import React, { useState, forwardRef, useImperativeHandle } from 'react';
 
-import BlocklyComponent, { Block, Category, Field } from '../blockly';
+import BlocklyComponent, { Block, Category, Field } from '../../blockly';
 import BlocklyJS from 'blockly/javascript';
 
-import '../blocks/appBlock';
-import '../blocks/galleryPhotoBlock';
-import '../blocks/gridElementBlock';
-import '../blocks/homeScreenBlock';
-import '../blocks/imageBlock';
-import '../blocks/infoScreenBlock';
-import '../blocks/listElementBlock';
-import '../blocks/photoGalleryScreenBlock';
+import '../../blocks/appBlock';
+import '../../blocks/galleryPhotoBlock';
+import '../../blocks/gridElementBlock';
+import '../../blocks/homeScreenBlock';
+import '../../blocks/imageBlock';
+import '../../blocks/infoScreenBlock';
+import '../../blocks/listElementBlock';
+import '../../blocks/photoGalleryScreenBlock';
 
 
 const BlocklyBox = forwardRef((props, ref) => {

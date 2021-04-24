@@ -1,11 +1,8 @@
 import React from 'react';
 
-import HomePage from './pages/HomePage';
-import AppBar from './components/AppBar';
-import BottomBar from './components/BottomBar';
-import Grid from '@material-ui/core/Grid';
 import { makeStyles } from '@material-ui/core/styles';
 import { MuiThemeProvider, createMuiTheme } from '@material-ui/core/styles';
+import Routing from './router/Routing';
 
 const useStyles = makeStyles(() => ({
   root: {
@@ -31,29 +28,11 @@ const theme = createMuiTheme({
 
 const App = () => {
   const classes = useStyles();
+  
   return (
     <MuiThemeProvider theme={theme}>
       <div className={classes.root}>
-        <Grid
-          container
-          spacing={0}
-          direction="column"
-          justify="center"
-          alignItems="center"
-          style={{ maxHeight: '100%', overflow: 'auto' }}
-        >
-          <Grid item xs={12}>
-            <AppBar />
-            &#160; &#160; &#160;
-          </Grid>
-          <Grid item xs={12}>
-            <HomePage />
-          </Grid>
-          <Grid item xs={12}>
-            &#160; &#160; &#160; &#160;
-            <BottomBar />
-          </Grid>
-        </Grid>
+        <Routing />
       </div>
     </MuiThemeProvider>
   );

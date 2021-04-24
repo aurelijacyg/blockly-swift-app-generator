@@ -6,7 +6,7 @@ import Grid from '@material-ui/core/Grid';
 import Fab from '@material-ui/core/Fab';
 import AppsIcon from '@material-ui/icons/Apps';
 
-import headerImg from '../../images/header.jpg'
+import headerImg from '../../images/logo.png'
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -24,8 +24,12 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-const Header = () => {
+const Header = ({ onCreateApp }) => {
   const classes = useStyles();
+
+  const handleCreateAppBtn = () => { 
+    onCreateApp();
+  }
 
   return (
     <div className={classes.root}>
@@ -46,6 +50,7 @@ const Header = () => {
           <Fab
             variant="extended"
             color="secondary"
+            onClick={() => handleCreateAppBtn()}
           > 
             <AppsIcon className={classes.extendedIcon} />
             Create App

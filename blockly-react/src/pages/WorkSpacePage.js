@@ -4,8 +4,7 @@ import { makeStyles } from '@material-ui/core/styles';
 import Grid from '@material-ui/core/Grid';
 import Fab from '@material-ui/core/Fab';
 import CodeIcon from '@material-ui/icons/Code';
-import BlocklyBox from '../components/BlocklyBox';
-
+import BlocklyBox from '../components/workspacePage/BlocklyBox';
 
 const useStyles = makeStyles((theme) => ({
     root: {

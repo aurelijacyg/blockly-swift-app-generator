@@ -27,7 +27,7 @@ const BottomAppBar = () => {
       <AppBar position="fixed" color="inherit" className={classes.bottomBar}>
         <Toolbar>
           <Typography variant="body2" color="textSecondary" component="p">
-              Blokcs Pie @2021 AC
+            Doably @2021 AC
           </Typography>
           <div className={classes.grow} />
           <Typography variant="body2" color="textSecondary" component="p">
