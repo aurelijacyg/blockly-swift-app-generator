@@ -31,7 +31,7 @@ const TopBar = () => {
   const history = useHistory();
 
   const handleHomeBtnClick = () => history.push('/');
-  const handleGetStartedBtnClick = () => history.push('/');
+  const handleGetStartedBtnClick = () => history.push('/getstarted');
 
   return (
     <div className={classes.root}>

@@ -7,10 +7,12 @@ import {
 import { makeStyles } from '@material-ui/core/styles';
 import Grid from '@material-ui/core/Grid';
 
-import HomePage from '../pages/HomePage';
-import Workspace from '../pages/WorkSpacePage';
 import TopBar from '../components/TopBar';
 import BottomBar from '../components/BottomBar';
+
+import HomePage from '../pages/HomePage';
+import WorkspacePage from '../pages/WorkSpacePage';
+import GetStartedPage from '../pages/GetStartedPage';
 
 
 const useStyles = makeStyles(() => ({
@@ -40,7 +42,10 @@ const Routing = () => {
                     <Grid item xs={12}>
                         <Switch>
                             <Route path="/workspace">
-                                <Workspace />
+                                <WorkspacePage />
+                            </Route>
+                            <Route path="/getstarted">
+                                <GetStartedPage />
                             </Route>
                             <Route path="/">
                                 <HomePage />
