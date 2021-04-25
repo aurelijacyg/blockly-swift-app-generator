@@ -3,6 +3,7 @@ import Grid from '@material-ui/core/Grid';
 import Header from '../components/getStartedPage/Header';
 import StepsList from '../components/getStartedPage/StepsList';
 import Network from '../components/getStartedPage/Network';
+import Divider from '@material-ui/core/Divider';
 
 const GetStartedPage = () => {
   return (
@@ -15,6 +16,7 @@ const GetStartedPage = () => {
           <StepsList />
         </Grid>
         <Grid item xs={12} justify="center" alignItems="center">
+          <Divider />
           <Network />
         </Grid>
       </Grid>

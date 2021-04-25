@@ -23,15 +23,9 @@ const WorkspacePage = () => {
   const childRef = useRef();
 
   return (
-    <div className={classes.root}>
+    <main>
       <Grid container spacing={3} justify="center" alignItems="center">
-        <Grid 
-          item xs={12}
-          container
-          direction="row"
-          justify="flex-end"
-          alignItems="flex-end"
-        >
+        <Grid item xs={12} justify="center" alignItems="center">
           <Fab
             variant="extended"
             color="secondary"
@@ -43,14 +37,13 @@ const WorkspacePage = () => {
           </Fab>
         </Grid>
         <Grid item xs={12} justify="center" alignItems="center">
-          <BlocklyBox ref={childRef} />
+          <BlocklyBox 
+            ref={childRef} 
+          />
         </Grid>
       </Grid>
-    </div>
-
+    </main>
   );
 }
 
 export default WorkspacePage;
-
-// YRA ICON GetApp

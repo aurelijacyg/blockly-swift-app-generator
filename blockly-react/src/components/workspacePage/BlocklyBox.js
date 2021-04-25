@@ -3,6 +3,11 @@ import React, { useState, forwardRef, useImperativeHandle } from 'react';
 import BlocklyComponent, { Block, Category, Field } from '../../blockly';
 import BlocklyJS from 'blockly/javascript';
 
+import Typography from '@material-ui/core/Typography';
+import Link from '@material-ui/core/Link';
+
+import Alert from '../Alert';
+
 import '../../blocks/appBlock';
 import '../../blocks/galleryPhotoBlock';
 import '../../blocks/gridElementBlock';
@@ -13,8 +18,22 @@ import '../../blocks/listElementBlock';
 import '../../blocks/photoGalleryScreenBlock';
 
 
-const BlocklyBox = forwardRef((props, ref) => {
+const BlocklyBox = forwardRef((props, ref ) => {
     const [simpleWorkspace, setSimpleWorkSpace] = useState(React.createRef());
+    const [isModalOpen, setModalOpen] = useState(false);
+
+    const modalInformation = 
+        {
+          title: "Code was sucessfully generated!",
+          text:
+          <Typography>
+          {'Insert the configurated file to the main app code. You can download a full code '}
+          <Link color="primary" href="https://github.com/aurelijacyg/blockly-swift-app-generator">
+            here.
+          </Link>{' '}
+        </Typography>,
+        };
+      
 
     useImperativeHandle(
         ref,
@@ -30,11 +49,9 @@ const BlocklyBox = forwardRef((props, ref) => {
         );
 
         var swiftCode = '//\n//--- APP CONFIG ---\n//\n\n\nimport SwiftUI\n\n' + code + '\n]'
-        console.log(swiftCode);
 
+        setModalOpen(true);
         download("AppConfigData.swift", swiftCode);
-        alert("Code was sucessfully generated") //TODO: DIALOG UI COMPONENT 
-
     };
 
     const download = (filename, text) => {
@@ -48,11 +65,16 @@ const BlocklyBox = forwardRef((props, ref) => {
         element.click();
 
         document.body.removeChild(element);
-    }
+    };
 
     return (
         <div className="BlocklyBox">
-
+            <Alert 
+                isOpen={isModalOpen}
+                onClose={() => setModalOpen(false)}
+                title={modalInformation.title}
+                text={modalInformation.text}
+            />
             <BlocklyComponent ref={simpleWorkspace}
                 readOnly={false} trashcan={true} media={'media/'}
                 move={{
