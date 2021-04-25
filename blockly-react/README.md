@@ -1,6 +1,7 @@
-# One page website to create an app using Blockly blocks
+# Doably 
+## A website to create an app using Blockly blocks
 
-## How to run the project
+### How to run the project
  - clone repository
  - in console cd to `blockly-swift-ui-generator/blockly-react`
  - run `npm install --save react-router-dom`
