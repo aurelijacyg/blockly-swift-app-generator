@@ -32,7 +32,7 @@ const AccordionItem = ( props ) => {
 }
 
 AccordionItem.propTypes = {
-    card: PropTypes.object,
-  };
+    item: PropTypes.object,
+};
 
 export default AccordionItem;
