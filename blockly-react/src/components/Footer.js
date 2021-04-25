@@ -1,8 +1,7 @@
-import React from 'react';
-import { makeStyles } from '@material-ui/core/styles';
-import Typography from '@material-ui/core/Typography';
-import Link from '@material-ui/core/Link';
-import { grey200 } from 'material-ui/styles/colors';
+import React from "react";
+import { makeStyles } from "@material-ui/core/styles";
+import { Typography, Link } from "@material-ui/core";
+import { grey200 } from "material-ui/styles/colors";
 
 const useStyles = makeStyles((theme) => ({
   footer: {
@@ -14,10 +13,10 @@ const useStyles = makeStyles((theme) => ({
 const Copyright = () => {
   return (
     <Typography variant="body2" color="textSecondary" align="center">
-      {'Copyright © '}
+      {"Copyright © "}
       <Link color="inherit" href="https://doably.com/">
         Doably
-      </Link>{' '}
+      </Link>{" "}
       {new Date().getFullYear()}
     </Typography>
   );
@@ -28,13 +27,13 @@ const Footer = () => {
 
   return (
     <footer className={classes.footer}>
-        <Typography variant="h5" align="center" color="textSecondary" gutterBottom>
-          • Doably •
+      <Typography variant="h5" align="center" color="textSecondary" gutterBottom>
+        • Doably •
         </Typography>
-        <Typography variant="subtitle1" align="center" color="textSecondary" component="p">
-          Do Magic
+      <Typography variant="subtitle1" align="center" color="textSecondary" component="p">
+        Do Magic
         </Typography>
-        <Copyright />
+      <Copyright />
     </footer>
   );
 }

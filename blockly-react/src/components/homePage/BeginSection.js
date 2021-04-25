@@ -1,9 +1,6 @@
-import React from 'react';
-import { makeStyles } from '@material-ui/core/styles';
-import Typography from '@material-ui/core/Typography';
-import Grid from '@material-ui/core/Grid';
-import Button from '@material-ui/core/Button';
-import Container from '@material-ui/core/Container';
+import React from "react";
+import { makeStyles } from "@material-ui/core/styles";
+import { Typography, Grid, Button, Container } from "@material-ui/core";
 
 const useStyles = makeStyles((theme) => ({
     content: {
@@ -31,9 +28,9 @@ const BeginSection = ({ onCreateApp }) => {
                 &#160; &#160; &#160;
                 <div>
                     <Grid container justify="center">
-                        <Button 
-                            variant="contained" 
-                            color="primary" 
+                        <Button
+                            variant="contained"
+                            color="primary"
                             size="large"
                             onClick={() => handleCreateAppBtn()}
                         >

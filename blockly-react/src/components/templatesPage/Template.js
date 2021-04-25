@@ -1,7 +1,6 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-import { makeStyles } from '@material-ui/core/styles';
-import Typography from '@material-ui/core/Typography';
+import React from "react";
+import { makeStyles } from "@material-ui/core/styles";
+import { Typography } from "@material-ui/core";
 
 const useStyles = makeStyles((theme) => ({
     content: {
@@ -11,9 +10,8 @@ const useStyles = makeStyles((theme) => ({
     },
 }));
 
-const Template = (props) => {
+const Template = ({ template }) => {
     const classes = useStyles();
-    const { template } = props;
 
     return (
         <div className={classes.content}>
@@ -23,9 +21,5 @@ const Template = (props) => {
         </div>
     );
 }
-
-Template.propTypes = {
-    template: PropTypes.object,
-};
 
 export default Template;

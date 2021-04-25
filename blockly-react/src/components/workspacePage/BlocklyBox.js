@@ -1,39 +1,38 @@
-import React, { useState, forwardRef, useImperativeHandle } from 'react';
+import React, { useState, forwardRef, useImperativeHandle } from "react";
 
-import BlocklyComponent, { Block, Category, Field } from '../../blockly';
-import BlocklyJS from 'blockly/javascript';
+import BlocklyComponent, { Block, Category, Field } from "../../blockly";
+import BlocklyJS from "blockly/javascript";
 
-import Typography from '@material-ui/core/Typography';
-import Link from '@material-ui/core/Link';
+import { Typography, Link } from "@material-ui/core";
 
-import Alert from '../Alert';
+import Alert from "../Alert";
 
-import '../../blocks/appBlock';
-import '../../blocks/galleryPhotoBlock';
-import '../../blocks/gridElementBlock';
-import '../../blocks/homeScreenBlock';
-import '../../blocks/imageBlock';
-import '../../blocks/infoScreenBlock';
-import '../../blocks/listElementBlock';
-import '../../blocks/photoGalleryScreenBlock';
+import "../../blocks/appBlock";
+import "../../blocks/galleryPhotoBlock";
+import "../../blocks/gridElementBlock";
+import "../../blocks/homeScreenBlock";
+import "../../blocks/imageBlock";
+import "../../blocks/infoScreenBlock";
+import "../../blocks/listElementBlock";
+import "../../blocks/photoGalleryScreenBlock";
 
 
-const BlocklyBox = forwardRef((props, ref ) => {
+const BlocklyBox = forwardRef((props, ref) => {
     const [simpleWorkspace, setSimpleWorkSpace] = useState(React.createRef());
     const [isModalOpen, setModalOpen] = useState(false);
 
-    const modalInformation = 
-        {
-          title: "Code was sucessfully generated!",
-          text:
-          <Typography>
-          {'Insert the configurated file to the main app code. You can download a full code '}
-          <Link color="primary" href="https://github.com/aurelijacyg/blockly-swift-app-generator">
-            here.
-          </Link>{' '}
-        </Typography>,
-        };
-      
+    const modalInformation =
+    {
+        title: "Code was sucessfully generated!",
+        text:
+            <Typography>
+                {"Insert the configurated file to the main app code. You can download a full code "}
+                <Link color="primary" href="https://github.com/aurelijacyg/blockly-swift-app-generator">
+                    here.
+          </Link>{" "}
+            </Typography>,
+    };
+
 
     useImperativeHandle(
         ref,
@@ -43,23 +42,22 @@ const BlocklyBox = forwardRef((props, ref ) => {
     )
 
     const generateCode = () => {
-        
         var code = BlocklyJS.workspaceToCode(
-          simpleWorkspace.current.workspace
+            simpleWorkspace.current.workspace
         );
 
-        var swiftCode = '//\n//--- APP CONFIG ---\n//\n\n\nimport SwiftUI\n\n' + code + '\n]'
+        var swiftCode = "//\n//--- APP CONFIG ---\n//\n\n\nimport SwiftUI\n\n" + code + "\n]"
 
         setModalOpen(true);
         download("AppConfigData.swift", swiftCode);
     };
 
     const download = (filename, text) => {
-        var element = document.createElement('a');
-        element.setAttribute('href', 'data:text/plain;charset=utf-8,' + encodeURIComponent(text));
-        element.setAttribute('download', filename);
+        var element = document.createElement("a");
+        element.setAttribute("href", "data:text/plain;charset=utf-8," + encodeURIComponent(text));
+        element.setAttribute("download", filename);
 
-        element.style.display = 'none';
+        element.style.display = "none";
         document.body.appendChild(element);
 
         element.click();
@@ -69,14 +67,14 @@ const BlocklyBox = forwardRef((props, ref ) => {
 
     return (
         <div className="BlocklyBox">
-            <Alert 
+            <Alert
                 isOpen={isModalOpen}
                 onClose={() => setModalOpen(false)}
                 title={modalInformation.title}
                 text={modalInformation.text}
             />
             <BlocklyComponent ref={simpleWorkspace}
-                readOnly={false} trashcan={true} media={'media/'}
+                readOnly={false} trashcan={true} media={"media/"}
                 move={{
                     scrollbars: true,
                     drag: true,

@@ -1,13 +1,6 @@
-import React from 'react';
-import Grid from '@material-ui/core/Grid';
-import Typography from '@material-ui/core/Typography';
-import { makeStyles } from '@material-ui/core/styles';
-import Container from '@material-ui/core/Container';
-import Link from '@material-ui/core/Link';
-
-import GitHubIcon from '@material-ui/icons/GitHub';
-import MailOutlineIcon from '@material-ui/icons/MailOutline';
-import LinkedInIcon from '@material-ui/icons/LinkedIn';
+import React from "react";
+import { makeStyles } from "@material-ui/core/styles";
+import { Container, Link, Grid, Typography } from "@material-ui/core";
 
 const useStyles = makeStyles((theme) => ({
     networkGrid: {
@@ -16,25 +9,7 @@ const useStyles = makeStyles((theme) => ({
     },
 }));
 
-const networks = [
-    {
-        title: "Github",
-        icon: <GitHubIcon fontSize="large" color="disabled"/>,
-        web: "https://github.com/aurelijacyg/blockly-swift-app-generator"
-    },
-    {
-        title: "Email",
-        icon: <MailOutlineIcon fontSize="large" color="disabled"/>,
-        web: "https://mail.google.com/mail/?view=cm&fs=1&to=cygaurelija@gmail.com&su=Support.Doably"
-    },
-    {
-        title: "LinkedIn",
-        icon: <LinkedInIcon fontSize="large" color="disabled"/>,
-        web: "https://www.linkedin.com/in/aurelija-čygaitė-2aa74a160/"
-    },
-];
-
-const Network = () => {
+const Network = ({ networks }) => {
     const classes = useStyles();
 
     return (

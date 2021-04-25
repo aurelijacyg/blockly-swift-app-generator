@@ -1,9 +1,8 @@
-import React, { useRef } from 'react';
-import { makeStyles } from '@material-ui/core/styles';
-import BlocklyBox from '../components/workspacePage/BlocklyBox';
-import Grid from '@material-ui/core/Grid';
-import Fab from '@material-ui/core/Fab';
-import CodeIcon from '@material-ui/icons/Code';
+import React, { useRef } from "react";
+import { makeStyles } from "@material-ui/core/styles";
+import BlocklyBox from "../components/workspacePage/BlocklyBox";
+import { Grid, Fab } from "@material-ui/core";
+import CodeIcon from "@material-ui/icons/Code";
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -37,8 +36,8 @@ const WorkspacePage = () => {
           </Fab>
         </Grid>
         <Grid item xs={12} justify="center" alignItems="center">
-          <BlocklyBox 
-            ref={childRef} 
+          <BlocklyBox
+            ref={childRef}
           />
         </Grid>
       </Grid>

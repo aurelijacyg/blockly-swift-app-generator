@@ -4,22 +4,21 @@ import {
     Switch,
     Route,
 } from "react-router-dom";
-import CssBaseline from '@material-ui/core/CssBaseline';
-import Container from '@material-ui/core/Container';
+import { CssBaseline, Container } from "@material-ui/core";
 
-import AppTopBar from '../components/AppTopBar';
-import Footer from '../components/Footer';
+import AppTopBar from "../components/AppTopBar";
+import Footer from "../components/Footer";
 
-import HomePage from '../pages/HomePage';
-import WorkspacePage from '../pages/WorkSpacePage';
-import GetStartedPage from '../pages/GetStartedPage';
-import TemplatesPage from '../pages/TemplatesPage';
+import HomePage from "../pages/HomePage";
+import WorkspacePage from "../pages/WorkSpacePage";
+import GetStartedPage from "../pages/GetStartedPage";
+import TemplatesPage from "../pages/TemplatesPage";
 
 const Routing = () => {
     return (
         <Router>
             <React.Fragment>
-                <CssBaseline/>
+                <CssBaseline />
                 <Container maxWidth="lg">
                     <AppTopBar />
                     &#160; &#160; &#160;
@@ -36,7 +35,7 @@ const Routing = () => {
                         <Route path="/">
                             <HomePage />
                         </Route>
-                        <Route path="*" component={() => '404 NOT FOUND'} />
+                        <Route path="*" component={() => "404 NOT FOUND"} />
                     </Switch>
                 </Container>
                 &#160; &#160; &#160;

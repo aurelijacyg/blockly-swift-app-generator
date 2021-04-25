@@ -1,13 +1,11 @@
-import React from 'react';
-import { useHistory } from 'react-router-dom';
-import { makeStyles } from '@material-ui/core/styles';
-import Toolbar from '@material-ui/core/Toolbar';
-import Typography from '@material-ui/core/Typography';
-import Button from '@material-ui/core/Button';
+import React from "react";
+import { useHistory } from "react-router-dom";
+import { makeStyles } from "@material-ui/core/styles";
+import { Toolbar, Typography, Button } from "@material-ui/core";
 
-import HomeIcon from '@material-ui/icons/Home';
-import ArrowUpwardIcon from '@material-ui/icons/ArrowUpward';
-import BorderAllIcon from '@material-ui/icons/BorderAll';
+import HomeIcon from "@material-ui/icons/Home";
+import ArrowUpwardIcon from "@material-ui/icons/ArrowUpward";
+import BorderAllIcon from "@material-ui/icons/BorderAll";
 
 
 const useStyles = makeStyles((theme) => ({
@@ -27,14 +25,14 @@ const AppTopBar = () => {
   const classes = useStyles();
   const history = useHistory();
 
-  const handleHomeBtnClick = () => history.push('/');
-  const handleGetStartedBtnClick = () => history.push('/getstarted');
-  const handleTemplatesBtnClick = () => history.push('/templates');
+  const handleHomeBtnClick = () => history.push("/");
+  const handleGetStartedBtnClick = () => history.push("/getstarted");
+  const handleTemplatesBtnClick = () => history.push("/templates");
 
   return (
     <React.Fragment>
       <Toolbar className={classes.toolbar}>
-        <Typography variant="h5" className={classes.title} noWrap> 
+        <Typography variant="h5" className={classes.title} noWrap>
           Doably
         </Typography>
         <Button

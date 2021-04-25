@@ -1,24 +1,22 @@
-import React from 'react';
-import Grid from '@material-ui/core/Grid';
-import Typography from '@material-ui/core/Typography';
-import Template from '../components/templatesPage/Template';
-
+import React from "react";
+import { Typography, Grid } from "@material-ui/core";
+import Template from "../components/templatesPage/Template";
 
 const templates = [
   {
-    title: 'Grid',
+    title: "Grid",
     image: "",
   },
   {
-    title: 'Photo gallery',
+    title: "Photo gallery",
     image: "",
   },
   {
-    title: 'Photo gallery',
+    title: "Photo gallery",
     image: "",
   },
   {
-    title: 'Photo gallery',
+    title: "Photo gallery",
     image: "",
   },
 ];
@@ -34,7 +32,7 @@ const TemplatesPage = () => {
         </Grid>
         <Grid item xs={12} justify="center" alignItems="center">
           {templates.map((template) => (
-            <Template key={template.title} template={template}/>
+            <Template key={template.title} template={template} />
           ))}
         </Grid>
       </Grid>
