@@ -1,65 +1,60 @@
-import React, { useRef} from 'react';
+import React from "react";
+import { useHistory } from "react-router-dom";
+import { Grid } from "@material-ui/core";
 
-import { makeStyles } from '@material-ui/core/styles';
-import Grid from '@material-ui/core/Grid';
-import Fab from '@material-ui/core/Fab';
-import CodeIcon from '@material-ui/icons/Code';
+import HeaderImage from "../images/cubes.jpg";
+import ExampleAppHomeGridImage from "../images/appExamples/App_example_home_grid.png";
+import ExampleAppPhotoGalleryImage from "../images/appExamples/App_example_photo_gallery.png";
 
-import InfoCard from '../components/InfoCard';
-import InfoModal from '../components/InfoModal';
-import BlocklyBox from '../components/BlocklyBox';
-
-
-const useStyles = makeStyles((theme) => ({
-    root: {
-      flexGrow: 1,
-    },
-    extendedIcon: {
-      marginRight: theme.spacing(1),
-    },
-    fab: {
-      marginRight: theme.spacing(1),
-    },
-}));
+import Header from "../components/homePage/Header";
+import ExampleCard from "../components/homePage/ExampleCard";
+import BeginSection from "../components/homePage/BeginSection";
+import Post from "../components/homePage/Post";
 
 const HomePage = () => {
-    const classes = useStyles();
-    const childRef = useRef();
+  const history = useHistory();
+  const handleCreateAppBtn = () => history.push("/workspace");
 
-    return (
-    <div className={classes.root}>
-      <Grid container spacing={3}>
-        <Grid item xs={12}>
-          <InfoCard />
-        </Grid>
-        <Grid item xs={6}>
-          <InfoModal />
-        </Grid>
-        <Grid 
-          item xs={6}
-          container
-          direction="row"
-          justify="flex-end"
-          alignItems="flex-end"
+  const headerPost = {
+    title: "Doably",
+    description:
+      "This is a fun method for creating iOS apps. This tool allows you to place blocks like a puzzle and create your custom iOS app design and program buttons for actions.",
+    image: HeaderImage
+  };
 
-        >
-          <Fab 
-            variant="extended"
-            color="secondary"
-            className={classes.fab}
-            onClick={() => { childRef.current.generateCode() }}
-          >
-            <CodeIcon className={classes.extendedIcon} />
-            Generate code
-          </Fab>
-        </Grid>
-        <Grid item xs={12}>
-          <BlocklyBox ref={childRef} />
-        </Grid>
+  const exampleCards = [
+    {
+      title: "Home screen",
+      description:
+        "Make your app home screen colorful and bright with one of the Doably templates.",
+      footer: "App example",
+      image: ExampleAppHomeGridImage,
+    },
+    {
+      title: "Photo gallery",
+      description:
+        "Present your ideas in a stylish photo gallery. Choose your favorite template and code blocks.",
+      footer: "App example",
+      image: ExampleAppPhotoGalleryImage,
+    },
+  ];
+
+  return (
+    <main>
+      <Header post={headerPost} />
+      <Grid container spacing={4}>
+        {exampleCards.map((card) => (
+          <ExampleCard key={card.title} card={card} />
+        ))}
       </Grid>
-    </div>
-        
-    );
+        &#160; &#160; &#160;
+      <Post />
+        &#160; &#160; &#160;
+      <BeginSection
+        onCreateApp={() => handleCreateAppBtn()}
+      />
+    </main>
+  );
 }
 
 export default HomePage;
