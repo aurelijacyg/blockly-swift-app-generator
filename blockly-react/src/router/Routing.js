@@ -14,7 +14,6 @@ import HomePage from '../pages/HomePage';
 import WorkspacePage from '../pages/WorkSpacePage';
 import GetStartedPage from '../pages/GetStartedPage';
 
-
 const useStyles = makeStyles(() => ({
     root: {
         flexGrow: 1,
@@ -26,20 +25,20 @@ const Routing = () => {
 
     return (
         <Router>
-            <div className={classes.root}>
+            <div className={classes.root} >
                 <Grid
                     container
                     spacing={0}
                     direction="column"
                     justify="center"
                     alignItems="center"
-                    style={{ maxHeight: '100%', overflow: 'auto' }}
+                    style={{maxHeight: '100%', overflow: 'auto'}}
                 >
                     <Grid item xs={12}>
                         <TopBar />
                         &#160; &#160; &#160;
                     </Grid>
-                    <Grid item xs={12}>
+                    <Grid item xs={12} style={{maxHeight: '100%'}}>
                         <Switch>
                             <Route path="/workspace">
                                 <WorkspacePage />
@@ -53,10 +52,6 @@ const Routing = () => {
                             <Route path="*" component={() => '404 NOT FOUND'} />
                         </Switch>
                     </Grid>
-                    <Grid item xs={12}>
-                        &#160; &#160; &#160; &#160;
-                        <BottomBar />
-                    </Grid>
                 </Grid>
             </div>
         </Router>
@@ -64,3 +59,11 @@ const Routing = () => {
 };
 
 export default Routing;
+
+/*
+<Grid item xs={12}>
+                        &#160; &#160; &#160; &#160;
+                        <BottomBar />
+                    </Grid>
+
+*/

@@ -19,7 +19,7 @@ const HomePage = () => {
 
     return (
     <div className={classes.root}>
-      <Grid container spacing={3} justify="center" alignItems="center">
+      <Grid container spacing={3} justify="center" alignItems="center" style={{maxHeight: '100%'}}>
         <Grid item xs={12} justify="center" alignItems="center">
           <Header 
             onCreateApp={() => handleCreateAppBtn()}
