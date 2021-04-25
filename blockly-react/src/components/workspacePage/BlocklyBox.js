@@ -33,7 +33,7 @@ const BlocklyBox = forwardRef((props, ref) => {
         console.log(swiftCode);
 
         download("AppConfigData.swift", swiftCode);
-        alert("Code was sucessfully generated")
+        alert("Code was sucessfully generated") //TODO: DIALOG UI COMPONENT 
 
     };
 

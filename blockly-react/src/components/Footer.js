@@ -28,8 +28,8 @@ const Footer = () => {
 
   return (
     <footer className={classes.footer}>
-        <Typography variant="h5" align="center" gutterBottom>
-          -- Doably --
+        <Typography variant="h5" align="center" color="textSecondary" gutterBottom>
+          • Doably •
         </Typography>
         <Typography variant="subtitle1" align="center" color="textSecondary" component="p">
           Do Magic

@@ -22,7 +22,7 @@ const BeginSection = ({ onCreateApp }) => {
     return (
         <div className={classes.content}>
             <Container maxWidth="sm">
-                <Typography component="h1" variant="h2" align="center" color="textPrimary" gutterBottom>
+                <Typography component="h1" variant="h2" align="center" color="primary" gutterBottom>
                     Doably
                 </Typography>
                 <Typography variant="h5" align="center" color="textSecondary" paragraph>
