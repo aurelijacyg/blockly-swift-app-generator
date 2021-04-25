@@ -1,14 +1,6 @@
 import React from 'react';
-
-import { makeStyles } from '@material-ui/core/styles';
 import { MuiThemeProvider, createMuiTheme } from '@material-ui/core/styles';
 import Routing from './router/Routing';
-
-const useStyles = makeStyles(() => ({
-  root: {
-    flexGrow: 1,
-  },
-}));
 
 const theme = createMuiTheme({
   palette: {
@@ -19,21 +11,20 @@ const theme = createMuiTheme({
       contrastText: "#fff",
     },
     secondary: {
-      light: "#c7f7d4",
-      main: "#b9f6ca",
-      dark: "#81ac8d",
+      light: "#33ab9f",
+      main: "#009688",
+      dark: "#00695f",
     },
+    background: {
+      default: "#fafafa",
+    }
   },
 });
 
-const App = () => {
-  const classes = useStyles();
-  
+const App = () => {  
   return (
     <MuiThemeProvider theme={theme}>
-      <div className={classes.root}>
         <Routing />
-      </div>
     </MuiThemeProvider>
   );
 }

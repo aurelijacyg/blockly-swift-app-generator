@@ -1,64 +1,64 @@
 import React from 'react';
-
+import PropTypes from 'prop-types';
 import { makeStyles } from '@material-ui/core/styles';
+import Paper from '@material-ui/core/Paper';
 import Typography from '@material-ui/core/Typography';
 import Grid from '@material-ui/core/Grid';
-import Fab from '@material-ui/core/Fab';
-import AppsIcon from '@material-ui/icons/Apps';
-
-import headerImg from '../../images/logo.png'
+import WidgetsRoundedIcon from '@material-ui/icons/WidgetsRounded';
 
 const useStyles = makeStyles((theme) => ({
-  root: {
-    flexGrow: 1,
-    maxWidth: 1200
+  headerPost: {
+    position: 'relative',
+    backgroundColor: theme.palette.grey[800],
+    color: theme.palette.common.white,
+    marginBottom: theme.spacing(4),
+    backgroundSize: 'cover',
+    backgroundRepeat: 'no-repeat',
+    backgroundPosition: 'center',
   },
-  media: {
-    height: 320,
-    width: 1200,
+  overlay: {
+    position: 'absolute',
+    top: 0,
+    bottom: 0,
+    right: 0,
+    left: 0,
+    backgroundColor: 'rgba(0,0,0,.1)',
   },
-  paper: {
-    padding: theme.spacing(2),
-    textAlign: 'center',
-    color: theme.palette.text.secondary,
+  headerPostContent: {
+    position: 'relative',
+    padding: theme.spacing(3),
+    [theme.breakpoints.up('md')]: {
+      padding: theme.spacing(6),
+      paddingRight: 0,
+    },
   },
 }));
 
-const Header = ({ onCreateApp }) => {
+const Header = ( props ) => {
   const classes = useStyles();
-
-  const handleCreateAppBtn = () => { 
-    onCreateApp();
-  }
+  const { post } = props;
 
   return (
-    <div className={classes.root}>
-      <Grid container spacing={3}>
-        <Grid item xs={12}>
-          <img src={headerImg} className={classes.media} />
-        </Grid>
-        <Grid item xs={12}>
-          <Typography gutterBottom variant="h5" component="h2" color="primary">
-            Build your own iOS app
-        </Typography>
-          <Typography variant="body1" color="textSecondary" component="p">
-            This is a fun method for creating small iOS apps.
-            This tool allows you to place blocks like a puzzle and create your custom iOS app design and program buttons for a simple actions.
-        </Typography>
-        </Grid>
-        <Grid item xs={3}>
-          <Fab
-            variant="extended"
-            color="secondary"
-            onClick={() => handleCreateAppBtn()}
-          > 
-            <AppsIcon className={classes.extendedIcon} />
-            Create App
-          </Fab>
+    <Paper className={classes.headerPost} style={{ backgroundImage: `url(${post.image})` }}>
+      <div className={classes.overlay} />
+      <Grid container>
+        <Grid item md={6}>
+          <div className={classes.headerPostContent}>
+            <Typography component="h1" variant="h3" color="inherit" gutterBottom>
+              {post.title} <WidgetsRoundedIcon fontSize="large"/>
+            </Typography>
+            <Typography variant="h5" color="inherit" paragraph>
+              {post.description}
+            </Typography>
+          </div>
         </Grid>
       </Grid>
-    </div>
+    </Paper>
   );
 }
+
+Header.propTypes = {
+  post: PropTypes.object,
+};
 
 export default Header;
