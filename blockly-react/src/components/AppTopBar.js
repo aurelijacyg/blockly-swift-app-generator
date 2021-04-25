@@ -4,8 +4,10 @@ import { makeStyles } from '@material-ui/core/styles';
 import Toolbar from '@material-ui/core/Toolbar';
 import Typography from '@material-ui/core/Typography';
 import Button from '@material-ui/core/Button';
+
 import HomeIcon from '@material-ui/icons/Home';
 import ArrowUpwardIcon from '@material-ui/icons/ArrowUpward';
+import BorderAllIcon from '@material-ui/icons/BorderAll';
 
 
 const useStyles = makeStyles((theme) => ({
@@ -27,6 +29,7 @@ const AppTopBar = () => {
 
   const handleHomeBtnClick = () => history.push('/');
   const handleGetStartedBtnClick = () => history.push('/getstarted');
+  const handleTemplatesBtnClick = () => history.push('/templates');
 
   return (
     <React.Fragment>
@@ -41,6 +44,15 @@ const AppTopBar = () => {
         >
           Home
         </Button>
+        &#160; &#160;
+        <Button
+          className={classes.button}
+          onClick={() => handleTemplatesBtnClick()}
+          startIcon={<BorderAllIcon />}
+        >
+          Templates
+        </Button>
+        &#160; &#160;
         <Button
           className={classes.button}
           onClick={() => handleGetStartedBtnClick()}

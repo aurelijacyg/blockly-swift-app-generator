@@ -13,6 +13,7 @@ import Footer from '../components/Footer';
 import HomePage from '../pages/HomePage';
 import WorkspacePage from '../pages/WorkSpacePage';
 import GetStartedPage from '../pages/GetStartedPage';
+import TemplatesPage from '../pages/TemplatesPage';
 
 const Routing = () => {
     return (
@@ -28,6 +29,9 @@ const Routing = () => {
                         </Route>
                         <Route path="/getstarted">
                             <GetStartedPage />
+                        </Route>
+                        <Route path="/templates">
+                            <TemplatesPage />
                         </Route>
                         <Route path="/">
                             <HomePage />
