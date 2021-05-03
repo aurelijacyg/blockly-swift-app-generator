@@ -1,27 +1,30 @@
 import * as Blockly from 'blockly/core';
 
 // Block Definition:
+
 Blockly.Blocks['app'] = {
-  init: function() {
+  init: function () {
     this.appendDummyInput()
-        .appendField("APP");
+      .appendField("MY APP");
     this.appendDummyInput()
-        .appendField("Name")
-        .appendField(new Blockly.FieldTextInput(""), "appName");
-    this.appendStatementInput("NAME")
-        .setCheck(null);
+      .appendField("Name")
+      .appendField(new Blockly.FieldTextInput(""), "app_name");
+    this.appendStatementInput("screens")
+      .setCheck(null);
     this.setColour(230);
- this.setTooltip("Come up with an app idea and name.");
- this.setHelpUrl("");
+    this.setTooltip("Come up with an app idea and name.");
+    this.setHelpUrl("");
   }
 };
 
 // Generator stub:
-Blockly.JavaScript['app'] = function(block) {
-  var text_appname = block.getFieldValue('appName');
-  var statements_name = Blockly.JavaScript.statementToCode(block, 'NAME');
+
+Blockly.JavaScript['app'] = function (block) {
+  var text_app_name = block.getFieldValue('app_name');
+  var statements_screens = Blockly.JavaScript.statementToCode(block, 'screens');
 
   // Assemble JavaScript into code variable.
-  var code = `let appName="${text_appname}"\n${statements_name}`;
+  var code = `let appName="${text_app_name}"\n${statements_screens}`;
+  
   return code;
 };
