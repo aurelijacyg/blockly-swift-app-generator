@@ -8,13 +8,34 @@ import { Typography, Link } from "@material-ui/core";
 import Alert from "../Alert";
 
 import "../../blocks/appBlock";
-import "../../blocks/galleryPhotoBlock";
-import "../../blocks/gridElementBlock";
-import "../../blocks/homeScreenBlock";
-import "../../blocks/imageBlock";
-import "../../blocks/infoScreenBlock";
-import "../../blocks/listElementBlock";
-import "../../blocks/photoGalleryScreenBlock";
+
+import "../../blocks/colors/colorAquamarineBlock";
+import "../../blocks/colors/colorBlackBlock";
+import "../../blocks/colors/colorBlueBlock";
+import "../../blocks/colors/colorGrayBlock";
+import "../../blocks/colors/colorGreenBlock";
+import "../../blocks/colors/colorMakeBlock";
+import "../../blocks/colors/colorOrangeBlock";
+import "../../blocks/colors/colorPinkBlock";
+import "../../blocks/colors/colorPrimaryBlock";
+import "../../blocks/colors/colorPurpleBlock";
+import "../../blocks/colors/colorRedBlock";
+import "../../blocks/colors/colorSecondaryBlock";
+import "../../blocks/colors/colorWhiteBlock";
+import "../../blocks/colors/colorYellowBlock";
+
+import "../../blocks/elements/cardBlock";
+import "../../blocks/elements/gridElementBlock";
+import "../../blocks/elements/listElementBlock";
+import "../../blocks/elements/photoBlock";
+import "../../blocks/elements/textBlock";
+
+import "../../blocks/layouts/layoutGridBlock";
+import "../../blocks/layouts/layoutListBlock";
+
+import "../../blocks/screens/cardGalleryScreenBlock";
+import "../../blocks/screens/homeScreenBlock";
+import "../../blocks/screens/paperViewScreenBlock";
 
 
 const BlocklyBox = forwardRef((props, ref) => {
@@ -26,10 +47,10 @@ const BlocklyBox = forwardRef((props, ref) => {
         title: "Code was sucessfully generated!",
         text:
             <Typography>
-                {"Insert the configurated file to the main app code. You can download a full code "}
+                {"Insert the configurated file into the main app code. You can download a full code "}
                 <Link color="primary" href="https://github.com/aurelijacyg/blockly-swift-app-generator">
                     here.
-          </Link>{" "}
+                </Link>{" "}
             </Typography>,
     };
 
@@ -46,10 +67,11 @@ const BlocklyBox = forwardRef((props, ref) => {
             simpleWorkspace.current.workspace
         );
 
-        var swiftCode = "//\n//--- APP CONFIG ---\n//\n\n\nimport SwiftUI\n\n" + code + "\n]"
+        var date = new Date();
+        var swiftCode = "//\n// AppConfiguration.swift\n// MyApp\n//\n// Created at: " + date + "\n\n\nimport SwiftUI\n\n" + code;
 
         setModalOpen(true);
-        download("AppConfigData.swift", swiftCode);
+        download("AppConfiguration.swift", swiftCode);
     };
 
     const download = (filename, text) => {
@@ -86,72 +108,46 @@ const BlocklyBox = forwardRef((props, ref) => {
                     </xml>
                 `}>
 
-                <Category name="Beginning of the app">
+                <Category name="App">
                     <Block type="app">
-                        <Field name="appName" />
+                        <Field name="app_name" />
                     </Block>
                 </Category>
 
                 <Category name="Screens" >
-                    <Block type="home_screen">
-                        <Field name="header">My app</Field>
-                        <Field name="subtitleText">A sentence about your app</Field>
-                        <Field name="subtitleTextColorDropdown">black</Field>
-                        <Field name="logoURL">https://image.com</Field>
-                        <Field name="layoutDropdown">grid</Field>
-                        <Field name="columnsNumber">2</Field>
-                    </Block>
-
-                    <Block type="destination_content">
-                        <Field name="titleText">title</Field>
-                        <Field name="titleColorDropdown">black</Field>
-                        <Field name="bodyText">body</Field>
-                        <Field name="bodyColorDropdown">black</Field>
-                    </Block>
-
-                    <Block type="destination_photos">
-                        <Field name="galleryName">default</Field>
-                        <Field name="navigationBarTextTitle">screen</Field>
-                        <Field name="categoryColor">primary</Field>
-                        <Field name="headingColor">primary</Field>
-                        <Field name="labelColor">primary</Field>
-                    </Block>
+                    <Block type="home_screen" />
+                    <Block type="card_gallery_screen" />
+                    <Block type="paper_view_screen" />
                 </Category>
 
-                <Category name="Layout elements">
-                    <Block type="list_element">
-                        <Field name="text">Element text</Field>
-                        <Field name="textColor">black</Field>
-                        <Field name="icon">travel-icon</Field>
-                        <Field name="backgroundColor">black</Field>
-                        <Field name="destinationScreenName">screenName</Field>
-                        <Field name="destinationDropdwon">content</Field>
-                    </Block>
-
-                    <Block type="grid_element">
-                        <Field name="Text">Element text</Field>
-                        <Field name="textColorDropdown">black</Field>
-                        <Field name="cornerRadius">10</Field>
-                        <Field name="backgroundDropdown">black</Field>
-                        <Field name="destinationScreenName">screenName</Field>
-                        <Field name="destinationDropdown">content</Field>
-                    </Block>
+                <Category name="Elements">
+                    <Block type="text_block" />
+                    <Block type="list_element" />
+                    <Block type="grid_element" />
+                    <Block type="card" />
+                    <Block type="photo" />
                 </Category>
 
-                <Category name="Images">
-                    <Block type="image">
-                        <Field name="imageURL">https://www...</Field>
-                        <Field name="width">250</Field>
-                        <Field name="height">250</Field>
-                        <Field name="imageType">rounded</Field>
-                    </Block>
+                <Category name="Layouts">
+                    <Block type="layout_grid" />
+                    <Block type="layout_list" />
+                </Category>
 
-                    <Block type="photo">
-                        <Field name="imageURL">https://www...</Field>
-                        <Field name="category">category</Field>
-                        <Field name="heading">heading</Field>
-                        <Field name="label">label</Field>
-                    </Block>
+                <Category name="Colors">
+                    <Block type="color_aquamarine" />
+                    <Block type="color_black" />
+                    <Block type="color_blue" />
+                    <Block type="color_gray" />
+                    <Block type="color_green" />     
+                    <Block type="color_orange" />
+                    <Block type="color_pink" />
+                    <Block type="color_purple" />
+                    <Block type="color_red" />
+                    <Block type="color_white" />
+                    <Block type="color_yellow" />
+                    <Block type="color_primary" />
+                    <Block type="color_secondary" />
+                    <Block type="color_make" />
                 </Category>
 
             </BlocklyComponent>

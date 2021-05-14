@@ -10,7 +10,7 @@ import SwiftUI
 struct CardGalleryModel {
     var categoryColor: Color
     var headingColor: Color
-    var infoTextColor: Color
+    var labelColor: Color
     var navigationBarTextTitle: String
     var cards: [CardModel]
 }

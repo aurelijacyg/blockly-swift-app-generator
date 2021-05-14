@@ -11,7 +11,7 @@ struct CardGalleryView: View {
 
     var categoryColor: Color
     var headingColor: Color
-    var infoTextColor: Color
+    var labelColor: Color
     var navigationBarTextTitle: String
     var cards: [CardModel]
 
@@ -23,10 +23,10 @@ struct CardGalleryView: View {
                     photoURL: card.imageURL,
                     category: card.category,
                     heading: card.heading,
-                    infoText: card.infoText,
+                    label: card.label,
                     categoryColor: categoryColor,
                     headingColor: headingColor,
-                    infoTextColor: infoTextColor
+                    labelColor: labelColor
                 )
             }
         }.navigationBarTitle(
@@ -41,7 +41,7 @@ struct CardGalleryView_Previews: PreviewProvider {
         CardGalleryView(
             categoryColor: Color.secondary,
             headingColor: Color.primary,
-            infoTextColor: Color.secondary,
+            labelColor: Color.secondary,
             navigationBarTextTitle: "Photos",
             cards: []
         )

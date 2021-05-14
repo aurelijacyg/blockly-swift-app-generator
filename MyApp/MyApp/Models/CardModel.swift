@@ -12,5 +12,5 @@ struct CardModel : Identifiable {
     var imageURL: String
     var category: String
     var heading: String
-    var infoText: String
+    var label: String
 }

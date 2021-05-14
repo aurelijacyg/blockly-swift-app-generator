@@ -11,10 +11,10 @@ struct Card: View {
     var photoURL: String
     var category: String
     var heading: String
-    var infoText: String
+    var label: String
     var categoryColor: Color
     var headingColor: Color
-    var infoTextColor: Color
+    var labelColor: Color
 
     var body: some View {
         VStack {
@@ -31,9 +31,9 @@ struct Card: View {
                         .fontWeight(.black)
                         .foregroundColor(headingColor)
                         .lineLimit(3)
-                    Text(infoText.uppercased())
+                    Text(label.uppercased())
                         .font(.caption)
-                        .foregroundColor(infoTextColor)
+                        .foregroundColor(labelColor)
                 }
                 .layoutPriority(100)
 
@@ -56,10 +56,10 @@ struct Card_Previews: PreviewProvider {
             photoURL: "https://img.traveltriangle.com/blog/wp-content/uploads/2018/11/Canada-Mountains.jpg",
             category: "SwiftUI",
             heading: "Drawing a Border with Rounded Corners",
-            infoText: "AC",
+            label: "AC",
             categoryColor: Color.secondary,
             headingColor: Color.primary,
-            infoTextColor: Color.secondary
+            labelColor: Color.secondary
         )
     }
 }

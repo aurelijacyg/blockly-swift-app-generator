@@ -10,13 +10,12 @@ import SwiftUI
 
 struct AppConfiguration {
     let data = MainModel(
-        columnsNumber: 2,
-        layout: Layout.grid(gridElements),
         photoURL: "https://us.123rf.com/450wm/sergeiminsk/sergeiminsk1709/sergeiminsk170900006/86139704-abbellisca-con-le-siluette-blu-e-porpora-delle-montagne-e-colline-con-il-bello-cielo-sanguinante-di-.jpg?ver=6",
         header: "Tripify",
         headerColor: Color.white,
         subtitleText: "Find your vacation spot...",
-        subtitleTextColor: Color.pink
+        subtitleTextColor: Color(rgb: 0xB2FF33),
+        layout: Layout.grid(gridElements, 2)
     )
 }
 
@@ -32,7 +31,7 @@ private let listElements =
                 CardGalleryView(
                     categoryColor: Color.secondary,
                     headingColor: Color.primary,
-                    infoTextColor: Color.secondary,
+                    labelColor: Color.secondary,
                     navigationBarTextTitle: "Photo gallery - Iceland",
                     cards: [
                         CardModel(
@@ -40,14 +39,14 @@ private let listElements =
                             imageURL: "https://thumb2.holidaypirates.com/fJb5wMJGjT4BPYzX4vY_vBFH94A=/1314x600/https://media.mv.urlaubspiraten.de/images/2018/07/5b472ef9864a98992261485w7bx42y.jpg",
                             category: "Iceland",
                             heading: "Blue lagoon",
-                            infoText: "By AC"
+                            label: "By AC"
                         ),
                         CardModel(
                             id: 12,
                             imageURL: "https://guidetoiceland.imgix.net/190432/x/0/w4a5319fb-jpg?w=860&h=480&fit=crop&auto=format%2C%20compress&dpr=2&ixlib=react-8.6.4",
                             category: "Iceland",
                             heading: "Landscape",
-                            infoText: "By AC2"
+                            label: "By AC2"
                         ),
                     ]
                 )
@@ -89,7 +88,7 @@ private let gridElements =
                 CardGalleryView(
                     categoryColor: Color.secondary,
                     headingColor: Color.primary,
-                    infoTextColor: Color.secondary,
+                    labelColor: Color.secondary,
                     navigationBarTextTitle: "Photo gallery - Iceland",
                     cards: [
                         CardModel(
@@ -97,21 +96,21 @@ private let gridElements =
                             imageURL: "https://thumb2.holidaypirates.com/fJb5wMJGjT4BPYzX4vY_vBFH94A=/1314x600/https://media.mv.urlaubspiraten.de/images/2018/07/5b472ef9864a98992261485w7bx42y.jpg",
                             category: "Iceland",
                             heading: "Blue lagoon",
-                            infoText: "By AC"
+                            label: "By AC"
                         ),
                         CardModel(
                             id: 12,
                             imageURL: "https://guidetoiceland.imgix.net/190432/x/0/w4a5319fb-jpg?w=860&h=480&fit=crop&auto=format%2C%20compress&dpr=2&ixlib=react-8.6.4",
                             category: "Iceland",
                             heading: "Landscape",
-                            infoText: "By AC2"
+                            label: "By AC2"
                         ),
                         CardModel(
                             id: 13,
                             imageURL: "https://guidetoiceland.imgix.net/279996/x/0/horse-riding2-copy-jpg?w=860&h=480&fit=crop&auto=format%2C%20compress&dpr=2&ixlib=react-8.6.4",
                             category: "Iceland",
                             heading: "Mountains",
-                            infoText: "By AC"
+                            label: "By AC"
                         ),
                     ]
                 )

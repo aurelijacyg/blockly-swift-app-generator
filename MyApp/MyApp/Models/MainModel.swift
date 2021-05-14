@@ -8,11 +8,10 @@
 import SwiftUI
 
 struct MainModel {
-    var columnsNumber: Int
-    var layout: Layout
     var photoURL: String
     var header: String
     var headerColor: Color
     var subtitleText: String
     var subtitleTextColor: Color
+    var layout: Layout
 }
