@@ -35,30 +35,19 @@ Blockly.JavaScript['photo'] = function (block) {
   var dropdown_photo_type = block.getFieldValue('photo_type');
 
   // Assemble JavaScript into code variable.
-  var code = '...';
-
-  return [code, Blockly.JavaScript.ORDER_NONE];
-};
-
-/*
-
-// Generator stub:
-Blockly.JavaScript['image'] = function(block) {
-  var text_imageurl = block.getFieldValue('imageURL');
-  var number_width = block.getFieldValue('width');
-  var number_height = block.getFieldValue('height');
-  var dropdown_imagetype = block.getFieldValue('imageType');
-
-  if (dropdown_imagetype === 'rounded') {
+  
+  if (dropdown_photo_type === 'rounded') {
     var isImageRouded = true
   } else {
     var isImageRouded = false
   }
 
-  // Assemble JavaScript into code variable.
-  var code = 'URL: "' + text_imageurl + '",\nwidth: ' + number_width + ',\nheight: ' + number_height + ',\nisRounded: ' + isImageRouded + '\n';
+  var code = `PhotoModel(
+                URL: ${value_photo_url},
+                width: ${number_width},
+                height: ${number_height},
+                isRounded: ${isImageRouded}
+              )`;
 
   return [code, Blockly.JavaScript.ORDER_NONE];
 };
-
-*/

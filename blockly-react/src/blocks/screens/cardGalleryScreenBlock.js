@@ -45,27 +45,17 @@ Blockly.JavaScript['card_gallery_screen'] = function (block) {
   var statements_cards = Blockly.JavaScript.statementToCode(block, 'cards');
 
   // Assemble JavaScript into code variable.
-  var code = '...';
+  var code = `Routing.cards(
+                CardGalleryView(
+                  categoryColor: ${value_category_color},
+                  headingColor: ${value_heading_color},
+                  labelColor: ${value_label_color},
+                  navigationBarTextTitle: ${value_gallery_name},
+                  cards: [
+                    ${statements_cards}
+                  ]
+                )
+              )`;
 
   return [code, Blockly.JavaScript.ORDER_NONE];
 };
-
-/*
-
-// Generator stub:
-Blockly.JavaScript['destination_photos'] = function(block) {
-  var text_galleryname = block.getFieldValue('galleryName');
-  var text_navigationbartexttitle = block.getFieldValue('navigationBarTextTitle');
-  var dropdown_categorycolor = block.getFieldValue('categoryColor');
-  var dropdown_headingcolor = block.getFieldValue('headingColor');
-  var dropdown_labelcolor = block.getFieldValue('labelColor');
-  var statements_photogallery = Blockly.JavaScript.statementToCode(block, 'photoGallery');
-
-  // Assemble JavaScript into code variable.
-  var code = 'ContentPhotos(\ncategoryColor: Color.' + dropdown_categorycolor + ',\nheadingColor: Color.' + dropdown_headingcolor +
-    ',\ninfoTextColor: Color.' + dropdown_labelcolor + ',\nnavigationBarTextTitle: "' + text_navigationbartexttitle + '",\nphotosArray: [\n' + statements_photogallery + ']\n\n)';
-
-  return [code, Blockly.JavaScript.ORDER_NONE];
-};
-
-*/

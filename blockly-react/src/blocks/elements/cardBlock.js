@@ -37,25 +37,15 @@ Blockly.JavaScript['card'] = function (block) {
   var value_label = Blockly.JavaScript.valueToCode(block, 'label', Blockly.JavaScript.ORDER_ATOMIC);
 
   // Assemble JavaScript into code variable.
-  var code = '...;\n';
-
-  return code;
-};
-
-/*
-
-// Generator stub:
-Blockly.JavaScript['photo'] = function(block) {
-  var text_imageurl = block.getFieldValue('imageURL');
-  var text_category = block.getFieldValue('category');
-  var text_heading = block.getFieldValue('heading');
-  var text_label = block.getFieldValue('label');
-
   var random_id = Math.floor(Math.random() * 1000);
 
-  // Assemble JavaScript into code variable.
-  var code = 'PhotoData(\nid: ' + random_id + ',\nimageURL: "' + text_imageurl + '",\ncategory: "' + text_category + '",\nheading: "' + text_heading + '",\ninfoText: "' + text_label + '"\n),\n';
+  var code = `CardModel(
+                id: ${random_id},
+                imageURL: ${value_photo_url},
+                category: ${value_category_name},
+                heading: ${value_heading},
+                label: ${value_label}
+              ),`;
+
   return code;
 };
-
-*/

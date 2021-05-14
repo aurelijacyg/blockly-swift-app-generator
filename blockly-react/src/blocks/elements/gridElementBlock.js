@@ -41,33 +41,15 @@ Blockly.JavaScript['grid_element'] = function (block) {
   var value_route_to = Blockly.JavaScript.valueToCode(block, 'route_to', Blockly.JavaScript.ORDER_ATOMIC);
 
   // Assemble JavaScript into code variable.
-  var code = '...;\n';
-  return code;
-};
-
-/*
-
-
-// Generator stub:
-Blockly.JavaScript['grid_element'] = function(block) {
-  var text_text = block.getFieldValue('Text');
-  var dropdown_textcolordropdown = block.getFieldValue('textColorDropdown');
-  var number_cornerradius = block.getFieldValue('cornerRadius');
-  var dropdown_backgrounddropdown = block.getFieldValue('backgroundDropdown');
-  var value_destination = Blockly.JavaScript.valueToCode(block, 'Destination', Blockly.JavaScript.ORDER_ATOMIC);
-
   var random_id = Math.floor(Math.random() * 1000);
 
-  if (value_destination.includes('ContentDetail')) {
-    var additionalCode = 'Destination.content'
-  } else {
-    var additionalCode = 'Destination.photos'
-  }
-
-  // Assemble JavaScript into code variable.
-  var code = 'GridConfigData(\nid: ' + random_id + ',\ntext: "' + text_text + '",\nbackgroundColor: Color.' + dropdown_backgrounddropdown
-    + ',\ncornerRadius: ' + number_cornerradius + ',\ntextColor: Color.' + dropdown_textcolordropdown + ',\ndestination: ' + additionalCode + value_destination + '\n),\n\n';
+  var code = `GridItemModel(
+                id: ${random_id},
+                text: ${value_text},
+                backgroundColor: ${value_background_color},
+                cornerRadius: ${number_corner_radius},
+                textColor: ${value_text_color},
+                routeTo: ${value_route_to}
+              ),\n`;
   return code;
-
-
-*/
+};

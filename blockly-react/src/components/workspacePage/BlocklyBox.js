@@ -67,10 +67,11 @@ const BlocklyBox = forwardRef((props, ref) => {
             simpleWorkspace.current.workspace
         );
 
-        var swiftCode = "//\n//--- APP CONFIG ---\n//\n\n\nimport SwiftUI\n\n" + code + "\n]"
+        var date = new Date();
+        var swiftCode = "//\n// AppConfiguration.swift\n// MyApp\n//\n// Created at: " + date + "\n\n\nimport SwiftUI\n\n" + code;
 
         setModalOpen(true);
-        download("AppConfigData.swift", swiftCode);
+        download("AppConfiguration.swift", swiftCode);
     };
 
     const download = (filename, text) => {
@@ -155,22 +156,3 @@ const BlocklyBox = forwardRef((props, ref) => {
 })
 
 export default BlocklyBox;
-
-/*
-
-<Category name="Images">
-                    <Block type="image">
-                        <Field name="imageURL">https://www...</Field>
-                        <Field name="width">250</Field>
-                        <Field name="height">250</Field>
-                        <Field name="imageType">rounded</Field>
-                    </Block>
-
-                    <Block type="photo">
-                        <Field name="imageURL">https://www...</Field>
-                        <Field name="category">category</Field>
-                        <Field name="heading">heading</Field>
-                        <Field name="label">label</Field>
-                    </Block>
-                </Category>
-*/

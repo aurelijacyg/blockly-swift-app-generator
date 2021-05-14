@@ -23,7 +23,11 @@ Blockly.JavaScript['layout_list'] = function (block) {
     var statements_list_elements = Blockly.JavaScript.statementToCode(block, 'list_elements');
     
     // Assemble JavaScript into code variable.
-    var code = '...';
+    var code = `Layout.list(
+                    [
+                        ${statements_list_elements}
+                    ]
+                )`;
 
     return [code, Blockly.JavaScript.ORDER_NONE];
 };

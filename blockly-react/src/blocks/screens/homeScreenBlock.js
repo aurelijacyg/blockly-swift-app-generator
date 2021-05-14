@@ -42,31 +42,13 @@ Blockly.JavaScript['home_screen'] = function (block) {
   var value_layout_type = Blockly.JavaScript.valueToCode(block, 'layout_type', Blockly.JavaScript.ORDER_ATOMIC);
 
   // Assemble JavaScript into code variable.
-  var code = '...;\n';
+  var code = `let data = MainModel(
+                photoURL: ${value_photo_url},
+                header: ${value_header},
+                headerColor: Color.white,
+                subtitleText: ${value_subtitle},
+                subtitleTextColor: ${value_subtitle_color},
+                layout: ${value_layout_type}
+              )`;
   return code;
 };
-
-
-/*
-// Generator stub:
-Blockly.JavaScript['home_screen'] = function(block) {
-  var text_header = block.getFieldValue('header');
-  var text_subtitletext = block.getFieldValue('subtitleText');
-  var dropdown_subtitletextcolordropdown = block.getFieldValue('subtitleTextColorDropdown');
-  var text_logourl = block.getFieldValue('logoURL');
-  var dropdown_layoutdropdown = block.getFieldValue('layoutDropdown');
-  var number_columnsnumber = block.getFieldValue('columnsNumber');
-
-  if (dropdown_layoutdropdown === 'grid') {
-    var isLayoutList = false
-    var additionalCode = 'var listElements = [ListConfigData]()\n\nlet gridElements =\n[\n'
-  } else {
-    var isLayoutList = true
-    var additionalCode = 'var gridElements = [GridConfigData]()\n\nlet listElements =\n[\n'
-  }
-
-  // Assemble JavaScript into code variable.
-  var code = 'let homePage = HomePageData(\ncolumnsNumber: ' + number_columnsnumber + ',\nisLayoutList: ' + isLayoutList + ',\nlogoURL: "' + text_logourl +
-      '",\nheader: "' + text_header + '",\nheaderColor: Color.white,\nsubtitleText: "' + text_subtitletext + '",\nsubtitleTextColor: Color.' + dropdown_subtitletextcolordropdown + '\n)\n\n' + additionalCode;
-  return code;
-*/

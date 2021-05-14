@@ -39,28 +39,16 @@ Blockly.JavaScript['paper_view_screen'] = function (block) {
   var value_photo = Blockly.JavaScript.valueToCode(block, 'photo', Blockly.JavaScript.ORDER_ATOMIC);
 
   // Assemble JavaScript into code variable.
-  var code = '...';
+
+  var code = `Routing.paper(
+    PaperView(
+      titleText: ${value_title},
+      bodyText: ${value_body},
+      titleColor: ${value_title_color},
+      bodyTextColor: ${value_body_color},
+      photo: ${value_photo}
+    )
+  )`;
 
   return [code, Blockly.JavaScript.ORDER_NONE];
 };
-
-
-/*
-
-// Generator stub:
-Blockly.JavaScript['destination_content'] = function(block) {
-  var text_titletext = block.getFieldValue('titleText');
-  var dropdown_titlecolordropdown = block.getFieldValue('titleColorDropdown');
-  var text_bodytext = block.getFieldValue('bodyText');
-  var dropdown_bodycolordropdown = block.getFieldValue('bodyColorDropdown');
-  var value_contentimage = Blockly.JavaScript.valueToCode(block, 'contentImage', Blockly.JavaScript.ORDER_ATOMIC);
-
-
-  // Assemble JavaScript into code variable.
-  var code = 'ContentDetail(\ntitleText: "' + text_titletext + '",\nbodyText: "' + text_bodytext + '",\ntitleColor: Color.' + dropdown_titlecolordropdown +
-    ',\nbodyTextColor: Color.' + dropdown_bodycolordropdown + ',\nimage: ImageData' + value_contentimage + ')\n';
-
-  return [code, Blockly.JavaScript.ORDER_NONE];
-};
-
-*/

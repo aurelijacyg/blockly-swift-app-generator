@@ -43,34 +43,17 @@ Blockly.JavaScript['list_element'] = function (block) {
   var value_route_to = Blockly.JavaScript.valueToCode(block, 'route_to', Blockly.JavaScript.ORDER_ATOMIC);
 
   // Assemble JavaScript into code variable.
-  var code = '...;\n';
+  
+  var random_id = Math.floor(Math.random() * 1000);
+
+  var code = `ListItemModel(
+                id: ${random_id},
+                text: ${value_text},
+                backgroundColor: ${value_background_color},
+                textColor: ${value_text_color},
+                icon: "${dropdown_icon}",
+                routeTo: ${value_route_to}
+              ),\n`;
 
   return code;
 };
-
-/*
-
-// Generator stub:
-Blockly.JavaScript['list_element'] = function(block) {
-  var text_text = block.getFieldValue('text');
-  var dropdown_textcolor = block.getFieldValue('textColor');
-  var dropdown_icon = block.getFieldValue('icon');
-  var dropdown_backgroundcolor = block.getFieldValue('backgroundColor');
-  var value_destination = Blockly.JavaScript.valueToCode(block, 'Destination', Blockly.JavaScript.ORDER_ATOMIC);
-
-  var random_id = Math.floor(Math.random() * 1000);
-
-  if (value_destination.includes('ContentDetail')) {
-    var additionalCode = 'Destination.content'
-  } else {
-    var additionalCode = 'Destination.photos'
-  }
-
-  // Assemble JavaScript into code variable.
-  var code = 'ListConfigData(\nid: ' + random_id + ',\ntext: "' + text_text + '",\nbackgroundColor: Color.' + dropdown_backgroundcolor
-    + ',\ntextColor: Color.' + dropdown_textcolor + ',\nicon: "' + dropdown_icon + '",\ndestination: ' + additionalCode + value_destination + '\n),\n\n';
-
-  return code;
-
-
-*/

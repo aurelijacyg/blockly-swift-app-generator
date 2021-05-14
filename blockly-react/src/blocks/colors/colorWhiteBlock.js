@@ -16,10 +16,10 @@ Blockly.Blocks['color_white'] = {
 // Generator stub:
 
 Blockly.JavaScript['color_white'] = function (block) {
-    var colour_white = block.getFieldValue('white');
+    var colour_white = block.getFieldValue('white').substring(1);
 
     // Assemble JavaScript into code variable.
-    var code = '...';
+    var code = `Color(rgb: 0x${colour_white})`;
 
     return [code, Blockly.JavaScript.ORDER_NONE];
 };

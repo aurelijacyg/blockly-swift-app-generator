@@ -17,7 +17,7 @@ Blockly.Blocks['color_primary'] = {
 
 Blockly.JavaScript['color_primary'] = function (block) {
     // Assemble JavaScript into code variable.
-    var code = '...';
+    var code = `Color.primary`;
 
     return [code, Blockly.JavaScript.ORDER_NONE];
 };

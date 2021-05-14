@@ -21,6 +21,7 @@ Blockly.JavaScript['text_block'] = function (block) {
     var text_textname = block.getFieldValue('textName');
 
     // Assemble JavaScript into code variable.
-    var code = '...';
+    var code = `"${text_textname}"`;
+
     return [code, Blockly.JavaScript.ORDER_NONE];
 };
