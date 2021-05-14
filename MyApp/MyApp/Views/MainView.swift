@@ -8,7 +8,6 @@
 import SwiftUI
 
 struct MainView: View {
-    let columns: [GridItem] = Array(repeating: .init(.flexible()), count: AppConfiguration().data.columnsNumber)
     let data: MainModel
 
     init() {
@@ -27,8 +26,8 @@ struct MainView: View {
                     switch data.layout {
                     case .list(let elements):
                         listView(elements)
-                    case .grid(let elements):
-                        gridView(elements)
+                    case .grid(let elements, let columnsNumber):
+                        gridView(elements, columnsNumber: columnsNumber)
                     }
                 }
             }
@@ -82,8 +81,10 @@ struct MainView: View {
         }.padding(.all, 30).background(element.backgroundColor)
     }
 
-    private func gridView(_ elements: [GridItemModel]) -> some View {
-        LazyVGrid(columns: columns, spacing: 5, pinnedViews: [.sectionHeaders]) {
+    private func gridView(_ elements: [GridItemModel], columnsNumber: Int) -> some View {
+        let columns: [GridItem] = Array(repeating: .init(.flexible()), count: columnsNumber)
+
+        return LazyVGrid(columns: columns, spacing: 5, pinnedViews: [.sectionHeaders]) {
             Section(header: headerView()) {
 
                 ForEach(elements){ element in

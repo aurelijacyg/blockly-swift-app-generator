@@ -7,6 +7,6 @@
 
 enum Layout {
     case list([ListItemModel])
-    case grid([GridItemModel])
+    case grid([GridItemModel], Int)
 }
 

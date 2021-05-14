@@ -10,8 +10,7 @@ import SwiftUI
 
 struct AppConfiguration {
     let data = MainModel(
-        columnsNumber: 2,
-        layout: Layout.grid(gridElements),
+        layout: Layout.grid(gridElements, 2),
         photoURL: "https://us.123rf.com/450wm/sergeiminsk/sergeiminsk1709/sergeiminsk170900006/86139704-abbellisca-con-le-siluette-blu-e-porpora-delle-montagne-e-colline-con-il-bello-cielo-sanguinante-di-.jpg?ver=6",
         header: "Tripify",
         headerColor: Color.white,
