@@ -73,6 +73,7 @@ struct GridListView: View {
 
     private func gridView(_ elements: [GridItemModel], columnsNumber: Int) -> some View {
         let columns: [GridItem] = Array(repeating: .init(.flexible()), count: columnsNumber)
+        let frameSize = gridFrameSize(with: columnsNumber)
 
         return LazyVGrid(columns: columns, spacing: 20, pinnedViews: [.sectionHeaders]) {
             Section() {
@@ -82,12 +83,12 @@ struct GridListView: View {
 
                     case .paper(let paperView):
                         NavigationLink(destination: paperView){
-                            gridElement(element)
+                            gridElement(element, frameSize: frameSize)
                         }.foregroundColor(element.textColor)
 
                     case .cards(let cardGalleryView):
                         NavigationLink(destination: cardGalleryView){
-                            gridElement(element)
+                            gridElement(element, frameSize: frameSize)
                         }.foregroundColor(element.textColor)
                     }
 
@@ -96,11 +97,21 @@ struct GridListView: View {
         }
     }
 
-    private func gridElement(_ element: GridItemModel) -> some View {
-        Text(element.text)
-            .frame(width: 195, height: 195, alignment: .center)
+    private func gridElement(_ element: GridItemModel, frameSize: CGFloat) -> some View {
+        return Text(element.text)
+            .frame(width: frameSize, height: frameSize, alignment: .center)
             .background(element.backgroundColor)
             .cornerRadius(element.cornerRadius)
             .multilineTextAlignment(.center)
+    }
+
+    private func gridFrameSize(with columnsNumber: Int) -> CGFloat {
+        if columnsNumber == 1 {
+            return 400
+        } else if columnsNumber == 2 {
+            return 195
+        } else {
+            return 130
+        }
     }
 }
