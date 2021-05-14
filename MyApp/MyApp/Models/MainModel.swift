@@ -8,10 +8,9 @@
 import SwiftUI
 
 struct MainModel {
-    var photoURL: String
+    var photoURL: String?
     var header: String
     var headerColor: Color
-    var subtitleText: String
-    var subtitleTextColor: Color
+    var navigationBarColor: Color
     var layout: Layout
 }

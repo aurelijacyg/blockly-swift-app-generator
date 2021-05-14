@@ -9,109 +9,28 @@ import SwiftUI
 
 struct MainView: View {
     let data: MainModel
+    let coloredNavAppearance = UINavigationBarAppearance()
+    let backButtonColor: Color
 
     init() {
         self.data = AppConfiguration().data
+        coloredNavAppearance.configureWithOpaqueBackground()
+        coloredNavAppearance.backgroundColor = UIColor(data.navigationBarColor)
+        coloredNavAppearance.titleTextAttributes = [.foregroundColor: UIColor(data.headerColor)]
+        coloredNavAppearance.largeTitleTextAttributes = [.foregroundColor: UIColor(data.headerColor)]
+        backButtonColor = data.headerColor
+
+        UINavigationBar.appearance().standardAppearance = coloredNavAppearance
+        UINavigationBar.appearance().scrollEdgeAppearance = coloredNavAppearance
     }
 
     var body: some View {
         NavigationView {
-            ScrollView(.vertical) {
-                VStack {
-                    Spacer(minLength: 10)
-                    RemoteImage(url: data.photoURL)
-                        .frame(width: UIScreen.screenWidth, height: 150, alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/)
-                    Spacer(minLength: 20)
-
-                    switch data.layout {
-                    case .list(let elements):
-                        listView(elements)
-                    case .grid(let elements, let columnsNumber):
-                        gridView(elements, columnsNumber: columnsNumber)
-                    }
-                }
+            HStack {
+                GridListView.init()
             }
-            .navigationBarTitle(
-                Text(data.header),
-                displayMode: .large
-            )
-        }
-    }
+        }.accentColor(backButtonColor)
 
-    private func headerView() -> some View {
-        HStack() {
-            // Spacer() - display text in the middle
-            Text(data.subtitleText)
-                .italic()
-                .foregroundColor(data.subtitleTextColor)
-                .font(.title2)
-            Spacer()
-        }.padding(.all, 10).background(Color.white)
-    }
-
-    private func listView(_ elements: [ListItemModel]) -> some View {
-        LazyVStack(spacing: 3, pinnedViews: [.sectionHeaders]) {
-            Section(header: headerView()) {
-
-                ForEach(elements){ element in
-                    switch element.routeTo {
-
-                    case .paper(let paperView):
-                        NavigationLink(destination: paperView){
-                            listElement(element)
-                        }.foregroundColor(element.textColor)
-
-
-                    case .cards(let cardGalleryView):
-                        NavigationLink(destination: cardGalleryView){
-                            listElement(element)
-                        }.foregroundColor(element.textColor)
-                    }
-                }
-            }
-        }
-    }
-
-    private func listElement(_ element: ListItemModel) -> some View {
-        HStack {
-            Spacer()
-            Text(element.text)
-            Image(element.icon ?? "").resizable().frame(width: 30, height: 30)
-            Spacer()
-        }.padding(.all, 30).background(element.backgroundColor)
-    }
-
-    private func gridView(_ elements: [GridItemModel], columnsNumber: Int) -> some View {
-        let columns: [GridItem] = Array(repeating: .init(.flexible()), count: columnsNumber)
-
-        return LazyVGrid(columns: columns, spacing: 5, pinnedViews: [.sectionHeaders]) {
-            Section(header: headerView()) {
-
-                ForEach(elements){ element in
-                    switch element.routeTo {
-
-                    case .paper(let paperView):
-                        NavigationLink(destination: paperView){
-                            gridElement(element)
-                        }.foregroundColor(element.textColor)
-
-                    case .cards(let cardGalleryView):
-                        NavigationLink(destination: cardGalleryView){
-                            gridElement(element)
-                        }.foregroundColor(element.textColor)
-                    }
-
-                }
-            }
-        }
-    }
-
-    private func gridElement(_ element: GridItemModel) -> some View {
-        Text(element.text)
-            .frame(width: 205, height: 205, alignment: .center)
-            .background(element.backgroundColor)
-            .cornerRadius(element.cornerRadius)
-            .multilineTextAlignment(.center)
     }
 }
 
