@@ -16,7 +16,7 @@ struct AppConfiguration {
         header: "Tripify",
         headerColor: Color.white,
         subtitleText: "Find your vacation spot...",
-        subtitleTextColor: Color.pink
+        subtitleTextColor: Color(rgb: 0xB2FF33)
     )
 }
 
