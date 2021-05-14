@@ -47,7 +47,7 @@ const BlocklyBox = forwardRef((props, ref) => {
         title: "Code was sucessfully generated!",
         text:
             <Typography>
-                {"Insert the configurated file to the main app code. You can download a full code "}
+                {"Insert the configurated file into the main app code. You can download a full code "}
                 <Link color="primary" href="https://github.com/aurelijacyg/blockly-swift-app-generator">
                     here.
                 </Link>{" "}
