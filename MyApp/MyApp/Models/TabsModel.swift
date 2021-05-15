@@ -1,16 +1,17 @@
 //
-//  MainModel.swift
+//  TabsModel.swift
 //  MyApp
 //
 //  Created by Aurelija Cygaite
 //
 
+
 import SwiftUI
 
-struct MainModel {
-    var photoURL: String?
+struct TabsModel {
     var header: String
     var headerColor: Color
     var navigationBarColor: Color
-    var layout: Layout
+    var regularItemsMainViewData: RegularItemsModel?
 }
+

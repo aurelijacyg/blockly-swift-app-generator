@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct MainView: View {
-    let data: MainModel
+    let data: TabsModel
     let coloredNavAppearance = UINavigationBarAppearance()
     let backButtonColor: Color
 
@@ -25,12 +25,23 @@ struct MainView: View {
     }
 
     var body: some View {
+        TabView {
+            tabItem
+            tabItem
+        }
+    }
+
+    private var tabItem: some View {
         NavigationView {
             HStack {
-                GridListView.init()
+                RegularItemsMainView(
+                    headerTitle: data.header,
+                    data: data.regularItemsMainViewData!
+                )
             }
-        }.accentColor(backButtonColor)
-
+        }
+        .accentColor(backButtonColor)
+        .tabItem { Label("Menu", systemImage: "list.dash") }
     }
 }
 

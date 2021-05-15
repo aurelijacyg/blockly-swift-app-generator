@@ -1,5 +1,5 @@
 //
-//  GridListView.swift
+//  RegularItemsMainView.swift
 //  MyApp
 //
 //  Created by Aurelija Cygaite
@@ -7,11 +7,13 @@
 
 import SwiftUI
 
-struct GridListView: View {
-    let data: MainModel
+struct RegularItemsMainView: View {
+    let data: RegularItemsModel
+    let headerTitle: String
 
-    init() {
-        self.data = AppConfiguration().data
+    init(headerTitle: String, data: RegularItemsModel) {
+        self.headerTitle = headerTitle
+        self.data = data
     }
 
     var body: some View {
@@ -33,7 +35,7 @@ struct GridListView: View {
             }
         }
         .navigationBarTitle(
-            Text(data.header),
+            Text(headerTitle),
             displayMode: .large
         )
     }

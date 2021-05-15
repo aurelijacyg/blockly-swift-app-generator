@@ -9,12 +9,14 @@
 import SwiftUI
 
 struct AppConfiguration {
-    let data = MainModel(
-        photoURL: "https://us.123rf.com/450wm/sergeiminsk/sergeiminsk1709/sergeiminsk170900006/86139704-abbellisca-con-le-siluette-blu-e-porpora-delle-montagne-e-colline-con-il-bello-cielo-sanguinante-di-.jpg?ver=6",
-        header: "Tripify",
-        headerColor: Color.blue,
+    let data = TabsModel(
+        header: "My app",
+        headerColor: Color.pink,
         navigationBarColor: Color.white,
-        layout: Layout.grid(gridElements, 2)
+        regularItemsMainViewData: .init(
+            photoURL: nil,
+            layout: Layout.grid(gridElements, 2)
+        )
     )
 }
 

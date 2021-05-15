@@ -9,4 +9,3 @@ enum Layout {
     case list([ListItemModel])
     case grid([GridItemModel], Int)
 }
-
