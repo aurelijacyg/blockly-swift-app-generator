@@ -1,5 +1,5 @@
 //
-//  GridItemModel.swift
+//  GridModel.swift
 //  MyApp
 //
 //  Created by Aurelija Cygaite
@@ -7,12 +7,18 @@
 
 import SwiftUI
 
+struct GridModel {
+    var columnsNumber: Int
+    var items: [GridItemModel]
+}
+
 struct GridItemModel : Identifiable {
     var id: Int
     var text: String?
     var icon: String?
     var backgroundColor: Color
+    var backgroundGradientColor: Color?
     var cornerRadius: CGFloat
     var textColor: Color
-    var routeTo: Routing
+    var routeTo: Routing?
 }

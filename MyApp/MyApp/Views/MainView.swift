@@ -32,13 +32,24 @@ struct MainView: View {
     }
 
     private var tabItem: some View {
-        NavigationView {
+        let backgroundColor = LinearGradient(
+            gradient: Gradient(
+                colors: [
+                    data.screenBackgroundColor,
+                    data.screenBackgroundGradientColor ?? data.screenBackgroundColor
+                ]
+            ),
+            startPoint: .topTrailing,
+            endPoint: .bottomTrailing
+        )
+
+        return NavigationView {
             HStack {
                 RegularItemsMainView(
                     headerTitle: data.header,
                     data: data.regularItemsMainViewData!
                 )
-            }
+            }.background(backgroundColor)
         }
         .accentColor(backButtonColor)
         .tabItem { Label("Menu", systemImage: "list.dash") }
