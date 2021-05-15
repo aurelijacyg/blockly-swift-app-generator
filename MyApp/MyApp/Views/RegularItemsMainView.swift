@@ -305,9 +305,9 @@ struct RegularItemsMainView: View {
         let columns: [GridItem] = Array(repeating: .init(.flexible()), count: 2)
         let frameSize = gridFrameSize(with: 2)
 
-        return LazyVGrid(columns: columns, spacing: 40, pinnedViews: [.sectionHeaders]) {
-            Section() {
 
+        let grid = LazyVGrid(columns: columns, spacing: 40, pinnedViews: [.sectionHeaders]) {
+            Section() {
                 ForEach(elements){ element in
                     switch element.routeTo {
 
@@ -329,6 +329,20 @@ struct RegularItemsMainView: View {
                 }
             }
         }.padding(20)
+
+        return VStack(alignment: .leading, spacing: 10) {
+            Text(model.title)
+                .font(.system(size: 25))
+                .fontWeight(.bold)
+                .foregroundColor(model.titleColor)
+                .padding(EdgeInsets(top: 20, leading: 20, bottom: 0, trailing: 20))
+
+            Divider()
+                .frame(width: UIScreen.main.bounds.width * 0.7)
+                .padding(EdgeInsets(top: 5, leading: 20, bottom: 0, trailing: 20))
+
+            grid
+        }
     }
 
     private func catalogGridElement(_ element: CatalogGridItemModel, frameSize: CGFloat) -> some View {

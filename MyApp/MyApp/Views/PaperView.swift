@@ -18,7 +18,7 @@ struct PaperView: View {
     var body: some View {
 
         ScrollView(.vertical) {
-            VStack(spacing:25) {
+            VStack(spacing:15) {
                 if photo.isRounded {
                     RemoteImageCircle(url: photo.URL)
                         .aspectRatio(contentMode: .fit)
@@ -34,12 +34,13 @@ struct PaperView: View {
                     .fontWeight(.black)
                     .foregroundColor(titleColor)
                     .lineLimit(3)
-                HStack {
-                    Spacer()
+                    .multilineTextAlignment(.center)
+                HStack(alignment: .center) {
                     Text(bodyText)
-                        .font(.footnote)
+                        .font(.body)
+                        .lineSpacing(7)
                         .foregroundColor(bodyTextColor)
-                    Spacer()
+                        .multilineTextAlignment(.center)
                 }
             }
             .cornerRadius(10)

@@ -265,6 +265,8 @@ private let bubbleListElements = BubbleListModel(
 )
 
 private let catalogGridElements = CatalogGridModel(
+    title: "Long long text",
+    titleColor: .blue,
     items:
         [
             CatalogGridItemModel(
