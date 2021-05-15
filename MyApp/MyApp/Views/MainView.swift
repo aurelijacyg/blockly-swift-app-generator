@@ -28,9 +28,11 @@ struct MainView: View {
         if data.tabs.count == 1 {
             regularItem(data.tabs.first!)
         } else {
-            TabView {
-                ForEach(data.tabs) {
-                    tabItem($0)
+            ZStack {
+                TabView {
+                    ForEach(data.tabs) {
+                        tabItem($0)
+                    }
                 }
             }
         }

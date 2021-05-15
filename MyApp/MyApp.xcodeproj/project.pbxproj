@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -21,6 +21,9 @@
 		983F463A2650043400AFBF25 /* ListModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 983F46392650043400AFBF25 /* ListModel.swift */; };
 		983F463C2650048300AFBF25 /* GridModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 983F463B2650048300AFBF25 /* GridModel.swift */; };
 		983F463E2650460B00AFBF25 /* CatalogGridModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 983F463D2650460B00AFBF25 /* CatalogGridModel.swift */; };
+		983F464026504FF800AFBF25 /* PhraseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 983F463F26504FF800AFBF25 /* PhraseModel.swift */; };
+		983F46422650511000AFBF25 /* PhraseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 983F46412650511000AFBF25 /* PhraseView.swift */; };
+		983F46472650693200AFBF25 /* Introspect in Frameworks */ = {isa = PBXBuildFile; productRef = 983F46462650693200AFBF25 /* Introspect */; };
 		983FE884263ECA860087213B /* Layout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 983FE883263ECA860087213B /* Layout.swift */; };
 		988CB63525AA18FF00E87FEA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 988CB63425AA18FF00E87FEA /* AppDelegate.swift */; };
 		988CB63725AA18FF00E87FEA /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 988CB63625AA18FF00E87FEA /* SceneDelegate.swift */; };
@@ -70,6 +73,8 @@
 		983F46392650043400AFBF25 /* ListModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListModel.swift; sourceTree = "<group>"; };
 		983F463B2650048300AFBF25 /* GridModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GridModel.swift; sourceTree = "<group>"; };
 		983F463D2650460B00AFBF25 /* CatalogGridModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatalogGridModel.swift; sourceTree = "<group>"; };
+		983F463F26504FF800AFBF25 /* PhraseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhraseModel.swift; sourceTree = "<group>"; };
+		983F46412650511000AFBF25 /* PhraseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhraseView.swift; sourceTree = "<group>"; };
 		983FE883263ECA860087213B /* Layout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Layout.swift; sourceTree = "<group>"; };
 		988CB63125AA18FF00E87FEA /* MyApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		988CB63425AA18FF00E87FEA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -98,6 +103,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				983F46472650693200AFBF25 /* Introspect in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -148,6 +154,7 @@
 				983F46392650043400AFBF25 /* ListModel.swift */,
 				983F463B2650048300AFBF25 /* GridModel.swift */,
 				983F463D2650460B00AFBF25 /* CatalogGridModel.swift */,
+				983F463F26504FF800AFBF25 /* PhraseModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -160,6 +167,7 @@
 				983F462D264ED78300AFBF25 /* RegularItemsMainView.swift */,
 				988CB67125AA1C4800E87FEA /* PaperView.swift */,
 				988CB68325AA5DCC00E87FEA /* CardGalleryView.swift */,
+				983F46412650511000AFBF25 /* PhraseView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -271,6 +279,9 @@
 			dependencies = (
 			);
 			name = MyApp;
+			packageProductDependencies = (
+				983F46462650693200AFBF25 /* Introspect */,
+			);
 			productName = SimpleApp;
 			productReference = 988CB63125AA18FF00E87FEA /* MyApp.app */;
 			productType = "com.apple.product-type.application";
@@ -342,6 +353,9 @@
 				Base,
 			);
 			mainGroup = 988CB62825AA18FF00E87FEA;
+			packageReferences = (
+				983F46452650693200AFBF25 /* XCRemoteSwiftPackageReference "SwiftUI-Introspect" */,
+			);
 			productRefGroup = 988CB63225AA18FF00E87FEA /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -386,6 +400,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				983F462E264ED78300AFBF25 /* RegularItemsMainView.swift in Sources */,
+				983F46422650511000AFBF25 /* PhraseView.swift in Sources */,
 				988CB67225AA1C4800E87FEA /* PaperView.swift in Sources */,
 				988CB68925AA612400E87FEA /* Card.swift in Sources */,
 				988CB63525AA18FF00E87FEA /* AppDelegate.swift in Sources */,
@@ -402,6 +417,7 @@
 				988CB63725AA18FF00E87FEA /* SceneDelegate.swift in Sources */,
 				983F463A2650043400AFBF25 /* ListModel.swift in Sources */,
 				98F7161825B0CF9000885D54 /* PhotoModel.swift in Sources */,
+				983F464026504FF800AFBF25 /* PhraseModel.swift in Sources */,
 				983F463C2650048300AFBF25 /* GridModel.swift in Sources */,
 				983FE884263ECA860087213B /* Layout.swift in Sources */,
 				983F463E2650460B00AFBF25 /* CatalogGridModel.swift in Sources */,
@@ -731,6 +747,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		983F46452650693200AFBF25 /* XCRemoteSwiftPackageReference "SwiftUI-Introspect" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/siteline/SwiftUI-Introspect.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.1.3;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		983F46462650693200AFBF25 /* Introspect */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 983F46452650693200AFBF25 /* XCRemoteSwiftPackageReference "SwiftUI-Introspect" */;
+			productName = Introspect;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 988CB62925AA18FF00E87FEA /* Project object */;
 }

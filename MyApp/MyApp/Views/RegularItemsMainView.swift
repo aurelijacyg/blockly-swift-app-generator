@@ -69,6 +69,11 @@ struct RegularItemsMainView: View {
                             listElement(element)
                         }.foregroundColor(element.textColor)
 
+                    case .phrase(let phraseView):
+                        NavigationLink(destination: phraseView){
+                            listElement(element)
+                        }.foregroundColor(element.textColor)
+
                     case _:
                         VStack{
                             listElement(element)
@@ -128,6 +133,11 @@ struct RegularItemsMainView: View {
 
                     case .cards(let cardGalleryView):
                         NavigationLink(destination: cardGalleryView){
+                            gridElement(element, frameSize: frameSize)
+                        }.foregroundColor(element.textColor)
+
+                    case .phrase(let phraseView):
+                        NavigationLink(destination: phraseView){
                             gridElement(element, frameSize: frameSize)
                         }.foregroundColor(element.textColor)
 
@@ -244,6 +254,11 @@ struct RegularItemsMainView: View {
                             bubbleListElement(element, isItemBig: model.isItemsBig)
                         }.foregroundColor(element.titleColor)
 
+                    case .phrase(let phraseView):
+                        NavigationLink(destination: phraseView){
+                            bubbleListElement(element, isItemBig: model.isItemsBig)
+                        }.foregroundColor(element.titleColor)
+
                     case _:
                         VStack{
                             bubbleListElement(element, isItemBig: model.isItemsBig)
@@ -251,8 +266,7 @@ struct RegularItemsMainView: View {
                     }
                 }
             }
-        }
-        .padding(model.isItemsBig ? UIScreen.main.bounds.height * 0.02 : UIScreen.main.bounds.height * 0.075)
+        }.padding(model.isItemsBig ? UIScreen.main.bounds.height * 0.02 : UIScreen.main.bounds.height * 0.075)
     }
 
     private func bubbleListElement(_ element: BubbleListItemModel, isItemBig: Bool) -> some View {
@@ -318,6 +332,11 @@ struct RegularItemsMainView: View {
 
                     case .cards(let cardGalleryView):
                         NavigationLink(destination: cardGalleryView){
+                            catalogGridElement(element, frameSize: frameSize)
+                        }.foregroundColor(element.textColor)
+
+                    case .phrase(let phraseView):
+                        NavigationLink(destination: phraseView){
                             catalogGridElement(element, frameSize: frameSize)
                         }.foregroundColor(element.textColor)
 
