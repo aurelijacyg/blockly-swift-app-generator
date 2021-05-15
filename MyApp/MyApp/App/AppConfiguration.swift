@@ -14,10 +14,23 @@ struct AppConfiguration {
         headerColor: Color.pink,
         navigationBarColor: Color.white,
         screenBackgroundColor: Color.white,
-        regularItemsMainViewData: .init(
-            photoURL: nil,
-            layout: Layout.bubbleList(bubbleListElements)
-        )
+        screenBackgroundGradientColor: nil,
+        tabs:
+            [
+                .init(
+                    regularItemsMainView: RegularItemsModel(
+                        photoURL: nil,
+                        layout: Layout.bubbleList(bubbleListElements)
+                    )
+                ),
+
+                .init(
+                    regularItemsMainView: RegularItemsModel(
+                        photoURL: nil,
+                        layout: Layout.grid(gridElements)
+                    )
+                ),
+            ]
     )
 }
 
@@ -26,7 +39,6 @@ private let listElements =
         items:
             [
                 ListItemModel(
-                    id: Int.random(in: 0...10000),
                     text: "Photo gallery - Iceland",
                     backgroundColor: Color.pink,
                     backgroundGradientColor: Color.purple,
@@ -40,14 +52,12 @@ private let listElements =
                             navigationBarTextTitle: "Photo gallery - Iceland",
                             cards: [
                                 CardModel(
-                                    id: 11,
                                     imageURL: "https://thumb2.holidaypirates.com/fJb5wMJGjT4BPYzX4vY_vBFH94A=/1314x600/https://media.mv.urlaubspiraten.de/images/2018/07/5b472ef9864a98992261485w7bx42y.jpg",
                                     category: "Iceland",
                                     heading: "Blue lagoon",
                                     label: "By AC"
                                 ),
                                 CardModel(
-                                    id: 12,
                                     imageURL: "https://guidetoiceland.imgix.net/190432/x/0/w4a5319fb-jpg?w=860&h=480&fit=crop&auto=format%2C%20compress&dpr=2&ixlib=react-8.6.4",
                                     category: "Iceland",
                                     heading: "Landscape",
@@ -59,7 +69,6 @@ private let listElements =
                 ),
 
                 ListItemModel(
-                    id: Int.random(in: 0...10000),
                     text: "Iceland",
                     backgroundColor: Color.purple,
                     textColor: Color.white,
@@ -88,7 +97,6 @@ private let gridElements =
         items:
             [
                 GridItemModel(
-                    id: 1,
                     text: "Photo gallery - Iceland",
                     icon: "gallery-icon",
                     backgroundColor: Color.pink,
@@ -103,21 +111,18 @@ private let gridElements =
                             navigationBarTextTitle: "Photo gallery - Iceland",
                             cards: [
                                 CardModel(
-                                    id: 11,
                                     imageURL: "https://thumb2.holidaypirates.com/fJb5wMJGjT4BPYzX4vY_vBFH94A=/1314x600/https://media.mv.urlaubspiraten.de/images/2018/07/5b472ef9864a98992261485w7bx42y.jpg",
                                     category: "Iceland",
                                     heading: "Blue lagoon",
                                     label: "By AC"
                                 ),
                                 CardModel(
-                                    id: 12,
                                     imageURL: "https://guidetoiceland.imgix.net/190432/x/0/w4a5319fb-jpg?w=860&h=480&fit=crop&auto=format%2C%20compress&dpr=2&ixlib=react-8.6.4",
                                     category: "Iceland",
                                     heading: "Landscape",
                                     label: "By AC2"
                                 ),
                                 CardModel(
-                                    id: 13,
                                     imageURL: "https://guidetoiceland.imgix.net/279996/x/0/horse-riding2-copy-jpg?w=860&h=480&fit=crop&auto=format%2C%20compress&dpr=2&ixlib=react-8.6.4",
                                     category: "Iceland",
                                     heading: "Mountains",
@@ -129,7 +134,6 @@ private let gridElements =
                 ),
 
                 GridItemModel(
-                    id: 2,
                     text: "Iceland",
                     backgroundColor: Color.white,
                     cornerRadius: 10.0,
@@ -151,7 +155,6 @@ private let gridElements =
                 ),
 
                 GridItemModel(
-                    id: 3,
                     text: "Norway",
                     backgroundColor: Color.white,
                     cornerRadius: 10.0,
@@ -160,7 +163,6 @@ private let gridElements =
                 ),
 
                 GridItemModel(
-                    id: 4,
                     text: "Norway-gallery",
                     backgroundColor: Color.pink,
                     cornerRadius: 10.0,
@@ -182,7 +184,6 @@ private let gridElements =
                 ),
 
                 GridItemModel(
-                    id: 5,
                     backgroundColor: Color.pink,
                     cornerRadius: 10.0,
                     textColor: Color.white,
@@ -203,7 +204,6 @@ private let gridElements =
                 ),
 
                 GridItemModel(
-                    id: 6,
                     text: "Canada",
                     backgroundColor: Color.white,
                     cornerRadius: 10.0,
@@ -232,7 +232,6 @@ private let bubbleListElements = BubbleListModel(
     items:
         [
             BubbleListItemModel(
-                id: 1,
                 title: "Title 1",
                 subtitle: "Subtitle 1",
                 icon: "developer",
@@ -240,7 +239,6 @@ private let bubbleListElements = BubbleListModel(
                 routeTo: nil
             ),
             BubbleListItemModel(
-                id: 2,
                 title: "Title 2",
                 subtitle: nil,
                 icon: nil,
@@ -249,7 +247,6 @@ private let bubbleListElements = BubbleListModel(
                 routeTo: nil
             ),
             BubbleListItemModel(
-                id: 3,
                 title: nil,
                 subtitle: "Subtitle 2",
                 icon: nil,

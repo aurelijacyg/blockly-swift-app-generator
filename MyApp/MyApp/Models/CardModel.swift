@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct CardModel : Identifiable {
-    var id: Int
+    var id = UUID()
     var imageURL: String
     var category: String
     var heading: String

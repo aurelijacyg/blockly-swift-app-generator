@@ -10,7 +10,7 @@ import SwiftUI
 struct MainView: View {
     let data: TabsModel
     let coloredNavAppearance = UINavigationBarAppearance()
-    let backButtonColor: Color
+    let buttonsColor: Color
 
     init() {
         self.data = AppConfiguration().data
@@ -18,21 +18,60 @@ struct MainView: View {
         coloredNavAppearance.backgroundColor = UIColor(data.navigationBarColor)
         coloredNavAppearance.titleTextAttributes = [.foregroundColor: UIColor(data.headerColor)]
         coloredNavAppearance.largeTitleTextAttributes = [.foregroundColor: UIColor(data.headerColor)]
-        backButtonColor = data.headerColor
+        buttonsColor = data.headerColor
 
         UINavigationBar.appearance().standardAppearance = coloredNavAppearance
         UINavigationBar.appearance().scrollEdgeAppearance = coloredNavAppearance
     }
 
     var body: some View {
-        TabView {
-            tabItem
-            tabItem
+        if data.tabs.count == 1 {
+            regularItem(data.tabs.first!)
+        } else {
+            TabView {
+                ForEach(data.tabs) {
+                    tabItem($0)
+                }
+            }
         }
     }
 
-    private var tabItem: some View {
-        let backgroundColor = LinearGradient(
+    private func regularItem(_ tab: Tab) -> some View {
+        NavigationView {
+            modelItem(tab)
+                .background(screenBackgroundColor)
+                .edgesIgnoringSafeArea(.bottom)
+        }
+        .accentColor(buttonsColor)
+    }
+
+    private func tabItem(_ tab: Tab) -> some View {
+        NavigationView {
+            modelItem(tab)
+                .background(screenBackgroundColor)
+                .edgesIgnoringSafeArea(.bottom)
+        }
+        .accentColor(buttonsColor)
+        .tabItem { Label(tab.label ?? "", systemImage: tab.image ?? "list.dash") }
+    }
+
+    private func modelItem(_ tab: Tab) -> some View {
+        var tabStack: HStack<RegularItemsMainView>?
+
+        if let regularItemsMainViewModel = tab.regularItemsMainView {
+            tabStack = HStack {
+                RegularItemsMainView(
+                    headerTitle: data.header,
+                    data: regularItemsMainViewModel
+                )
+            }
+        }
+
+        return tabStack
+    }
+
+    private var screenBackgroundColor: LinearGradient {
+        LinearGradient(
             gradient: Gradient(
                 colors: [
                     data.screenBackgroundColor,
@@ -42,17 +81,6 @@ struct MainView: View {
             startPoint: .topTrailing,
             endPoint: .bottomTrailing
         )
-
-        return NavigationView {
-            HStack {
-                RegularItemsMainView(
-                    headerTitle: data.header,
-                    data: data.regularItemsMainViewData!
-                )
-            }.background(backgroundColor)
-        }
-        .accentColor(backButtonColor)
-        .tabItem { Label("Menu", systemImage: "list.dash") }
     }
 }
 

@@ -12,7 +12,7 @@ struct ListModel {
 }
 
 struct ListItemModel : Identifiable {
-    var id: Int
+    var id = UUID()
     var text: String
     var backgroundColor: Color
     var backgroundGradientColor: Color?

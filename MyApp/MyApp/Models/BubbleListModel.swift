@@ -14,7 +14,7 @@ struct BubbleListModel {
 }
 
 struct BubbleListItemModel : Identifiable {
-    var id: Int
+    var id = UUID()
     var title: String?
     var subtitle: String?
     var icon: String?

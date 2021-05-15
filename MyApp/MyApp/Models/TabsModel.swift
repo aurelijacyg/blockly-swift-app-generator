@@ -14,6 +14,12 @@ struct TabsModel {
     var navigationBarColor: Color
     var screenBackgroundColor: Color
     var screenBackgroundGradientColor: Color?
-    var regularItemsMainViewData: RegularItemsModel?
+    var tabs: [Tab]
 }
 
+struct Tab: Identifiable {
+    var id = UUID()
+    var label: String?
+    var image: String?
+    var regularItemsMainView: RegularItemsModel?
+}
