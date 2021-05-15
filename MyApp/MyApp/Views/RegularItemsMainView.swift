@@ -37,6 +37,8 @@ struct RegularItemsMainView: View {
                     gridView(model)
                 case .bubbleList(let model):
                     bubbleListView(model)
+                case .catalogGrid(let model):
+                    catalogGridView(model)
                 }
             }
         }
@@ -295,6 +297,64 @@ struct RegularItemsMainView: View {
                         .foregroundColor(element.subtitleColor)
                 }.padding(isItemBig ? 40 : 30)
             }
+        }
+    }
+
+    private func catalogGridView(_ model: CatalogGridModel) -> some View {
+        let elements = model.items
+        let columns: [GridItem] = Array(repeating: .init(.flexible()), count: 2)
+        let frameSize = gridFrameSize(with: 2)
+
+        return LazyVGrid(columns: columns, spacing: 40, pinnedViews: [.sectionHeaders]) {
+            Section() {
+
+                ForEach(elements){ element in
+                    switch element.routeTo {
+
+                    case .paper(let paperView):
+                        NavigationLink(destination: paperView){
+                            catalogGridElement(element, frameSize: frameSize)
+                        }.foregroundColor(element.textColor)
+
+                    case .cards(let cardGalleryView):
+                        NavigationLink(destination: cardGalleryView){
+                            catalogGridElement(element, frameSize: frameSize)
+                        }.foregroundColor(element.textColor)
+
+                    case _:
+                        VStack{
+                            catalogGridElement(element, frameSize: frameSize)
+                        }.foregroundColor(element.textColor)
+                    }
+                }
+            }
+        }.padding(20)
+    }
+
+    private func catalogGridElement(_ element: CatalogGridItemModel, frameSize: CGFloat) -> some View {
+        let elementBackgroundColor = LinearGradient(
+            gradient: Gradient(
+                colors: [
+                    element.backgroundColor,
+                    element.backgroundGradientColor ?? element.backgroundColor
+                ]
+            ),
+            startPoint: .leading,
+            endPoint: .trailing
+        )
+
+        let imageStack = VStack {
+            Image(element.icon)
+                .resizable()
+                .frame(width: frameSize * 0.6, height: frameSize * 0.6, alignment: .center)
+        }
+        .frame(width: frameSize, height: frameSize, alignment: .center)
+        .background(elementBackgroundColor)
+        .cornerRadius(10.0)
+
+        return VStack(alignment: .center, spacing: 10) {
+            imageStack
+            Text(element.text).fontWeight(.bold).padding(10).multilineTextAlignment(.center)
         }
     }
 }

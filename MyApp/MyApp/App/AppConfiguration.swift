@@ -20,7 +20,7 @@ struct AppConfiguration {
                 .init(
                     regularItemsMainView: RegularItemsModel(
                         photoURL: nil,
-                        layout: Layout.bubbleList(bubbleListElements)
+                        layout: Layout.catalogGrid(catalogGridElements)
                     )
                 ),
 
@@ -28,6 +28,13 @@ struct AppConfiguration {
                     regularItemsMainView: RegularItemsModel(
                         photoURL: nil,
                         layout: Layout.grid(gridElements)
+                    )
+                ),
+                
+                .init(
+                    regularItemsMainView: RegularItemsModel(
+                        photoURL: nil,
+                        layout: Layout.bubbleList(bubbleListElements)
                     )
                 ),
             ]
@@ -254,5 +261,43 @@ private let bubbleListElements = BubbleListModel(
                 backgroundGradientColor: .yellow,
                 routeTo: nil
             )
+        ]
+)
+
+private let catalogGridElements = CatalogGridModel(
+    items:
+        [
+            CatalogGridItemModel(
+                text: "Title 1",
+                icon: "developer",
+                backgroundColor: .white,
+                backgroundGradientColor: nil,
+                textColor: .blue,
+                routeTo: nil
+            ),
+            CatalogGridItemModel(
+                text: "Title 2",
+                icon: "developer",
+                backgroundColor: .blue,
+                backgroundGradientColor: nil,
+                textColor: .blue,
+                routeTo: nil
+            ),
+            CatalogGridItemModel(
+                text: "Title 3",
+                icon: "developer",
+                backgroundColor: .white,
+                backgroundGradientColor: nil,
+                textColor: .blue,
+                routeTo: nil
+            ),
+            CatalogGridItemModel(
+                text: "Title 4",
+                icon: "developer",
+                backgroundColor: .blue,
+                backgroundGradientColor: nil,
+                textColor: .blue,
+                routeTo: nil
+            ),
         ]
 )
