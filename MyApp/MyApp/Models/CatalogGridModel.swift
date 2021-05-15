@@ -8,8 +8,8 @@
 import SwiftUI
 
 struct CatalogGridModel {
-    var title: String
-    var titleColor: Color
+    var title: String?
+    var titleColor: Color? = .gray
     var items: [CatalogGridItemModel]
 }
 

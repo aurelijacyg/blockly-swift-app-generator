@@ -331,16 +331,18 @@ struct RegularItemsMainView: View {
         }.padding(20)
 
         return VStack(alignment: .leading, spacing: 10) {
-            Text(model.title)
-                .font(.system(size: 25))
-                .fontWeight(.bold)
-                .foregroundColor(model.titleColor)
-                .padding(EdgeInsets(top: 20, leading: 20, bottom: 0, trailing: 20))
+            if let title = model.title {
+                Text(title)
+                    .font(.system(size: 25))
+                    .fontWeight(.bold)
+                    .foregroundColor(model.titleColor)
+                    .padding(EdgeInsets(top: 20, leading: 20, bottom: 0, trailing: 20))
 
-            Divider()
-                .frame(width: UIScreen.main.bounds.width * 0.7)
-                .padding(EdgeInsets(top: 5, leading: 20, bottom: 0, trailing: 20))
-
+                Divider()
+                    .frame(width: UIScreen.main.bounds.width * 0.7)
+                    .padding(EdgeInsets(top: 5, leading: 20, bottom: 0, trailing: 20))
+            }
+            
             grid
         }
     }
