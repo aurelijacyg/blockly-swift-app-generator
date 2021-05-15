@@ -82,6 +82,7 @@ private let gridElements =
         GridItemModel(
             id: 1,
             text: "Photo gallery - Iceland",
+            icon: "gallery-icon",
             backgroundColor: Color.pink,
             cornerRadius: 10.0,
             textColor: Color.white,
@@ -186,7 +187,6 @@ private let gridElements =
 
         GridItemModel(
             id: 5,
-            text: "Canada-gallery",
             backgroundColor: Color.pink,
             cornerRadius: 10.0,
             textColor: Color.white,

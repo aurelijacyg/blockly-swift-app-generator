@@ -100,11 +100,53 @@ struct RegularItemsMainView: View {
     }
 
     private func gridElement(_ element: GridItemModel, frameSize: CGFloat) -> some View {
-        return Text(element.text)
+        if let _ = element.text, let _ = element.icon {
+            return AnyView(gridElementWithTextAndIcon(element, frameSize: frameSize))
+        } else if let _ = element.text {
+            return AnyView(gridElementWithText(element, frameSize: frameSize))
+        } else if let _ = element.icon {
+            return AnyView(gridElementWithIcon(element, frameSize: frameSize))
+        } else {
+            return AnyView(emptyGridElement(element, frameSize: frameSize))
+        }
+    }
+
+    private func gridElementWithTextAndIcon(_ element: GridItemModel, frameSize: CGFloat) -> some View {
+        VStack {
+            Image(element.icon!)
+                .resizable()
+                .frame(width: frameSize * 0.6, height: frameSize * 0.6, alignment: .center)
+            Text(element.text!)
+        }
+        .frame(width: frameSize, height: frameSize, alignment: .center)
+        .background(element.backgroundColor)
+        .cornerRadius(element.cornerRadius)
+    }
+
+    private func gridElementWithText(_ element: GridItemModel, frameSize: CGFloat) -> some View {
+        Text(element.text!)
             .frame(width: frameSize, height: frameSize, alignment: .center)
             .background(element.backgroundColor)
             .cornerRadius(element.cornerRadius)
             .multilineTextAlignment(.center)
+    }
+
+    private func gridElementWithIcon(_ element: GridItemModel, frameSize: CGFloat) -> some View {
+        VStack {
+            Image(element.icon!)
+                .resizable()
+                .frame(width: frameSize * 0.6, height: frameSize * 0.6, alignment: .center)
+        }
+        .frame(width: frameSize, height: frameSize, alignment: .center)
+        .background(element.backgroundColor)
+        .cornerRadius(element.cornerRadius)
+    }
+
+    private func emptyGridElement(_ element: GridItemModel, frameSize: CGFloat) -> some View {
+        VStack{}
+            .frame(width: frameSize, height: frameSize, alignment: .center)
+            .background(element.backgroundColor)
+            .cornerRadius(element.cornerRadius)
     }
 
     private func gridFrameSize(with columnsNumber: Int) -> CGFloat {
