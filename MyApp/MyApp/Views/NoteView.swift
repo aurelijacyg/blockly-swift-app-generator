@@ -99,6 +99,8 @@ struct NoteView: View {
             )
         case .flipCard(let card):
             return AnyView(FlipCardView(card: card))
+        case .photo(let photo):
+            return AnyView(PhotoView(photo: photo))
         }
     }
 }

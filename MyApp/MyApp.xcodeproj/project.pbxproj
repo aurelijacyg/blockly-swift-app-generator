@@ -54,6 +54,7 @@
 		98E7B34A26518294002980B8 /* Component.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98E7B34926518294002980B8 /* Component.swift */; };
 		98E7B34C265182FA002980B8 /* FlipCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98E7B34B265182FA002980B8 /* FlipCardView.swift */; };
 		98E7B34E26518343002980B8 /* FlipCardModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98E7B34D26518343002980B8 /* FlipCardModel.swift */; };
+		98E7B35026518AF7002980B8 /* PhotoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98E7B34F26518AF7002980B8 /* PhotoView.swift */; };
 		98F7161825B0CF9000885D54 /* PhotoModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98F7161725B0CF9000885D54 /* PhotoModel.swift */; };
 /* End PBXBuildFile section */
 
@@ -126,6 +127,7 @@
 		98E7B34926518294002980B8 /* Component.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Component.swift; sourceTree = "<group>"; };
 		98E7B34B265182FA002980B8 /* FlipCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlipCardView.swift; sourceTree = "<group>"; };
 		98E7B34D26518343002980B8 /* FlipCardModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlipCardModel.swift; sourceTree = "<group>"; };
+		98E7B34F26518AF7002980B8 /* PhotoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoView.swift; sourceTree = "<group>"; };
 		98F7161725B0CF9000885D54 /* PhotoModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -221,6 +223,7 @@
 				98E7B341265155E9002980B8 /* RemoteImages */,
 				988CB68825AA612400E87FEA /* CardView.swift */,
 				98E7B34B265182FA002980B8 /* FlipCardView.swift */,
+				98E7B34F26518AF7002980B8 /* PhotoView.swift */,
 				98E7B33326513E54002980B8 /* PolygonShape.swift */,
 			);
 			path = UI;
@@ -465,6 +468,7 @@
 				98E7B34C265182FA002980B8 /* FlipCardView.swift in Sources */,
 				98E7B33C26514FEA002980B8 /* ArticleView.swift in Sources */,
 				988CB63525AA18FF00E87FEA /* AppDelegate.swift in Sources */,
+				98E7B35026518AF7002980B8 /* PhotoView.swift in Sources */,
 				98E7B33626513E9E002980B8 /* HoneycombModel.swift in Sources */,
 				98E7B34826515EAD002980B8 /* NoteModel.swift in Sources */,
 				98E7B33426513E54002980B8 /* PolygonShape.swift in Sources */,

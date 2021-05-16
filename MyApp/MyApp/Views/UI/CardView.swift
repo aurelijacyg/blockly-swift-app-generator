@@ -13,8 +13,6 @@ struct CardView: View {
     let headingColor: Color
     let labelColor: Color
 
-    @State private var bouncing = false
-
     init(card: CardModel,
          categoryColor: Color?,
          headingColor: Color?,

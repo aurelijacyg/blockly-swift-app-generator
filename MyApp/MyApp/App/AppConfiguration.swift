@@ -416,3 +416,12 @@ let flipCard = Component.flipCard(
         hiddenText: "Venus"
     )
 )
+
+let photoCard = Component.photo(
+    PhotoModel(
+        URL: "https://c4.wallpaperflare.com/wallpaper/599/356/1019/digital-art-nature-mountains-portrait-display-wallpaper-preview.jpg",
+        width: 200,
+        height: 200,
+        isRounded: false
+    )
+)

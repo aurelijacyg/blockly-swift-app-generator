@@ -2,11 +2,10 @@
 //  FlipCardView.swift
 //  MyApp
 //
-//  Created by Aurelija Cygaite on 2021-05-16.
+//  Created by Aurelija Cygaite 
 //
 
 import SwiftUI
-
 
 struct FlipCardView: View {
     let card: FlipCardModel
