@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct RegularItemsModel {
+struct PrimaryViewModel {
     var photoURL: String?
     var layout: Layout
 }

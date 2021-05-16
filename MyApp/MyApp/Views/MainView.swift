@@ -58,13 +58,13 @@ struct MainView: View {
     }
 
     private func modelItem(_ tab: Tab) -> some View {
-        var tabStack: HStack<RegularItemsMainView>?
+        var tabStack: HStack<PrimaryView>?
 
-        if let regularItemsMainViewModel = tab.regularItemsMainView {
+        if let primaryViewModel = tab.primaryView {
             tabStack = HStack {
-                RegularItemsMainView(
+                PrimaryView(
                     headerTitle: data.header,
-                    data: regularItemsMainViewModel
+                    data: primaryViewModel
                 )
             }
         }

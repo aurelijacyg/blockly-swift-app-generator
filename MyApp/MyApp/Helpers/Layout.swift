@@ -10,4 +10,5 @@ enum Layout {
     case grid(GridModel)
     case bubbleList(BubbleListModel)
     case catalogGrid(CatalogGridModel)
+    case honeycomb(HoneycombModel)
 }

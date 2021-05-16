@@ -21,5 +21,5 @@ struct Tab: Identifiable {
     var id = UUID()
     var label: String?
     var image: String?
-    var regularItemsMainView: RegularItemsModel?
+    var primaryView: PrimaryViewModel?
 }

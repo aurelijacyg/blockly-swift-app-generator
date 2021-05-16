@@ -18,21 +18,35 @@ struct AppConfiguration {
         tabs:
             [
                 .init(
-                    regularItemsMainView: RegularItemsModel(
+                    primaryView: PrimaryViewModel(
+                        photoURL: nil,
+                        layout: Layout.honeycomb(honeycombElements)
+                    )
+                ),
+
+                .init(
+                    primaryView: PrimaryViewModel(
+                        photoURL: nil,
+                        layout: Layout.list(listElements)
+                    )
+                ),
+
+                .init(
+                    primaryView: PrimaryViewModel(
                         photoURL: nil,
                         layout: Layout.catalogGrid(catalogGridElements)
                     )
                 ),
 
                 .init(
-                    regularItemsMainView: RegularItemsModel(
+                    primaryView: PrimaryViewModel(
                         photoURL: nil,
                         layout: Layout.grid(gridElements)
                     )
                 ),
                 
                 .init(
-                    regularItemsMainView: RegularItemsModel(
+                    primaryView: PrimaryViewModel(
                         photoURL: nil,
                         layout: Layout.bubbleList(bubbleListElements)
                     )
@@ -311,5 +325,52 @@ private let catalogGridElements = CatalogGridModel(
                 textColor: .blue,
                 routeTo: nil
             ),
+        ]
+)
+
+private let honeycombElements = HoneycombModel(
+    columnsNumber: 6,
+    items:
+        [
+            HoneycombItemModel(
+                imageURL: "https://scx2.b-cdn.net/gfx/news/2019/2-nature.jpg",
+                routeTo: nil
+            ),
+            HoneycombItemModel(
+                imageURL: "https://scx2.b-cdn.net/gfx/news/2019/2-nature.jpg",
+                routeTo: nil
+            ),
+            HoneycombItemModel(
+                imageURL: "https://scx2.b-cdn.net/gfx/news/2019/2-nature.jpg",
+                routeTo: nil
+            ),
+            HoneycombItemModel(
+                imageURL: "https://scx2.b-cdn.net/gfx/news/2019/2-nature.jpg",
+                routeTo: nil
+            ),
+            HoneycombItemModel(
+                imageURL: "https://scx2.b-cdn.net/gfx/news/2019/2-nature.jpg",
+                routeTo: nil
+            ),
+            HoneycombItemModel(
+                imageURL: "https://scx2.b-cdn.net/gfx/news/2019/2-nature.jpg",
+                routeTo: nil
+            ),
+            HoneycombItemModel(
+                imageURL: "https://scx2.b-cdn.net/gfx/news/2019/2-nature.jpg",
+                routeTo: nil
+            ),
+            HoneycombItemModel(
+                imageURL: "https://scx2.b-cdn.net/gfx/news/2019/2-nature.jpg",
+                routeTo: nil
+            ),
+            HoneycombItemModel(
+                imageURL: "https://scx2.b-cdn.net/gfx/news/2019/2-nature.jpg",
+                routeTo: nil
+            ),
+            HoneycombItemModel(
+                imageURL: "https://scx2.b-cdn.net/gfx/news/2019/2-nature.jpg",
+                routeTo: nil
+            )
         ]
 )
