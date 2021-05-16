@@ -9,6 +9,24 @@
           "revision": "2e09be8af614401bc9f87d40093ec19ce56ccaf2",
           "version": "0.1.3"
         }
+      },
+      {
+        "package": "SwiftUIGeometryUtils",
+        "repositoryURL": "https://github.com/CypherPoet/SwiftUIGeometryUtils",
+        "state": {
+          "branch": null,
+          "revision": "39964a10318f78601e289cfd18a61fa9c26a46df",
+          "version": "0.0.3"
+        }
+      },
+      {
+        "package": "SwiftUITrapezoidShape",
+        "repositoryURL": "https://github.com/CypherPoet/SwiftUITrapezoidShape",
+        "state": {
+          "branch": null,
+          "revision": "88bfe333c90d83871bf3c696039b76a0ddce881b",
+          "version": "0.1.1"
+        }
       }
     ]
   },

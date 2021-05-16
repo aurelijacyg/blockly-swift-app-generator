@@ -20,20 +20,6 @@ struct AppConfiguration {
                 .init(
                     primaryView: PrimaryViewModel(
                         photoURL: nil,
-                        layout: Layout.honeycomb(honeycombElements)
-                    )
-                ),
-
-                .init(
-                    primaryView: PrimaryViewModel(
-                        photoURL: nil,
-                        layout: Layout.list(listElements)
-                    )
-                ),
-
-                .init(
-                    primaryView: PrimaryViewModel(
-                        photoURL: nil,
                         layout: Layout.catalogGrid(catalogGridElements)
                     )
                 ),
@@ -49,6 +35,20 @@ struct AppConfiguration {
                     primaryView: PrimaryViewModel(
                         photoURL: nil,
                         layout: Layout.bubbleList(bubbleListElements)
+                    )
+                ),
+
+                .init(
+                    primaryView: PrimaryViewModel(
+                        photoURL: nil,
+                        layout: Layout.honeycomb(honeycombElements)
+                    )
+                ),
+
+                .init(
+                    primaryView: PrimaryViewModel(
+                        photoURL: nil,
+                        layout: Layout.list(listElements)
                     )
                 ),
             ]
@@ -307,7 +307,18 @@ private let catalogGridElements = CatalogGridModel(
                 backgroundColor: .blue,
                 backgroundGradientColor: nil,
                 textColor: .blue,
-                routeTo: nil
+                routeTo: Routing.article(
+                    ArticleView(
+                        data: ArticleModel(
+                            title: "Article title should be long to see whats",
+                            subtitle: "AC",
+                            body: "Everyone fails, but only the wise find humility. Everyone fails, but only the wise find humility.Everyone fails, but only the wise find humility. Everyone fails, but only the wise find humility. Everyone fails, but only the wise find humility. Everyone fails, but only the wise find humility. Everyone fails, but only the wise find humility. Everyone fails, but only the wise find humility. Everyone fails, but only the wise find humility.  Everyone fails, but only the wise find humility. ",
+                            titleColor: .blue,
+                            bodyColor: .secondary,
+                            photoURL: "https://scx2.b-cdn.net/gfx/news/2019/2-nature.jpg"
+                        )
+                    )
+                )
             ),
             CatalogGridItemModel(
                 text: "Title 3",

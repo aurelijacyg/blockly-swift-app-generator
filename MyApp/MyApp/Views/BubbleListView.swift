@@ -42,6 +42,11 @@ struct BubbleListView: View {
                             bubbleListElement(element, isItemBig: data.isItemsBig)
                         }.foregroundColor(element.titleColor)
 
+                    case .article(let articleView):
+                        NavigationLink(destination: articleView) {
+                            bubbleListElement(element, isItemBig: data.isItemsBig)
+                        }.foregroundColor(element.titleColor)
+
                     case _:
                         VStack{
                             bubbleListElement(element, isItemBig: data.isItemsBig)

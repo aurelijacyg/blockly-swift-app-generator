@@ -9,4 +9,5 @@ enum Routing {
     case paper(PaperView)
     case cards(CardGalleryView)
     case phrase(PhraseView)
+    case article(ArticleView)
 }

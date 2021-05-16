@@ -45,6 +45,11 @@ struct HoneycombView: View {
                             honeycombElement(element, index: index)
                         }
 
+                    case .article(let articleView):
+                        NavigationLink(destination: articleView) {
+                            honeycombElement(element, index: index)
+                        }
+
                     case _:
                         honeycombElement(element, index: index)
                     }

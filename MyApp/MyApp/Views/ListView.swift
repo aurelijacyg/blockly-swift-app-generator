@@ -24,18 +24,23 @@ struct ListView: View {
                     switch element.routeTo {
 
                     case .paper(let paperView):
-                        NavigationLink(destination: paperView){
+                        NavigationLink(destination: paperView) {
                             listElement(element)
                         }.foregroundColor(element.textColor)
 
 
                     case .cards(let cardGalleryView):
-                        NavigationLink(destination: cardGalleryView){
+                        NavigationLink(destination: cardGalleryView) {
                             listElement(element)
                         }.foregroundColor(element.textColor)
 
                     case .phrase(let phraseView):
-                        NavigationLink(destination: phraseView){
+                        NavigationLink(destination: phraseView) {
+                            listElement(element)
+                        }.foregroundColor(element.textColor)
+
+                    case .article(let articleView):
+                        NavigationLink(destination: articleView) {
                             listElement(element)
                         }.foregroundColor(element.textColor)
 

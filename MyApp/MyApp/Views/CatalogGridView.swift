@@ -40,6 +40,11 @@ struct CatalogGridView: View {
                             catalogGridElement(element, frameSize: frameSize)
                         }.foregroundColor(element.textColor)
 
+                    case .article(let articleView):
+                        NavigationLink(destination: articleView) {
+                            catalogGridElement(element, frameSize: frameSize)
+                        }.foregroundColor(element.textColor)
+
                     case _:
                         VStack{
                             catalogGridElement(element, frameSize: frameSize)

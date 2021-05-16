@@ -40,6 +40,11 @@ struct GridView: View {
                             gridElement(element, frameSize: frameSize)
                         }.foregroundColor(element.textColor)
 
+                    case .article(let articleView):
+                        NavigationLink(destination: articleView) {
+                            gridElement(element, frameSize: frameSize)
+                        }.foregroundColor(element.textColor)
+
                     case _:
                         VStack{
                             gridElement(element, frameSize: frameSize)
