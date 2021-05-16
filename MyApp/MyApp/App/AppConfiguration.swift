@@ -13,10 +13,18 @@ struct AppConfiguration {
         header: "My app",
         headerColor: Color.pink,
         navigationBarColor: Color.white,
-        screenBackgroundColor: Color.white,
+        //screenBackgroundColor: Color.white,
         screenBackgroundGradientColor: nil,
+        screenBackgroundImageUrl: "https://c4.wallpaperflare.com/wallpaper/599/356/1019/digital-art-nature-mountains-portrait-display-wallpaper-preview.jpg",
         tabs:
             [
+                .init(
+                    primaryView: PrimaryViewModel(
+                        photoURL: nil,
+                        layout: Layout.grid(gridElements)
+                    )
+                ),
+                
                 .init(
                     primaryView: PrimaryViewModel(
                         photoURL: nil,
@@ -27,13 +35,6 @@ struct AppConfiguration {
                     primaryView: PrimaryViewModel(
                         photoURL: nil,
                         layout: Layout.catalogGrid(catalogGridElements)
-                    )
-                ),
-
-                .init(
-                    primaryView: PrimaryViewModel(
-                        photoURL: nil,
-                        layout: Layout.grid(gridElements)
                     )
                 ),
                 
@@ -129,7 +130,7 @@ private let gridElements =
             [
                 GridItemModel(
                     text: "Photo gallery - Iceland",
-                    icon: "gallery-icon",
+                    icon: "books",
                     backgroundColor: Color.pink,
                     backgroundGradientColor: Color.purple,
                     cornerRadius: 10.0,

@@ -70,17 +70,38 @@ struct MainView: View {
         return tabStack
     }
 
-    private var screenBackgroundColor: LinearGradient {
-        LinearGradient(
-            gradient: Gradient(
-                colors: [
-                    data.screenBackgroundColor,
-                    data.screenBackgroundGradientColor ?? data.screenBackgroundColor
-                ]
-            ),
-            startPoint: .topTrailing,
-            endPoint: .bottomTrailing
-        )
+    private var screenBackgroundColor: some View {
+        if let screenBackgroundColor = data.screenBackgroundColor {
+            return AnyView(
+                LinearGradient(
+                    gradient: Gradient(
+                        colors: [
+                            screenBackgroundColor,
+                            data.screenBackgroundGradientColor ?? screenBackgroundColor
+                        ]
+                    ),
+                    startPoint: .topTrailing,
+                    endPoint: .bottomTrailing
+                )
+            )
+        } else if let screenBackgroundImage = data.screenBackgroundImageUrl {
+            return AnyView(
+                RemoteImage(url: screenBackgroundImage)
+                    .aspectRatio(contentMode: .fill)
+            )
+        } else {
+            return AnyView(
+                LinearGradient(
+                    gradient: Gradient(
+                        colors: [
+                            Color.white,
+                        ]
+                    ),
+                    startPoint: .topTrailing,
+                    endPoint: .bottomTrailing
+                )
+            )
+        }
     }
 }
 

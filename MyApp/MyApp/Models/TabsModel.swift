@@ -12,8 +12,9 @@ struct TabsModel {
     var header: String
     var headerColor: Color
     var navigationBarColor: Color
-    var screenBackgroundColor: Color
+    var screenBackgroundColor: Color?
     var screenBackgroundGradientColor: Color?
+    var screenBackgroundImageUrl: String?
     var tabs: [Tab]
 }
 
