@@ -20,6 +20,12 @@ struct AppConfiguration {
                 .init(
                     primaryView: PrimaryViewModel(
                         photoURL: nil,
+                        layout: Layout.note(noteElement)
+                    )
+                ),
+                .init(
+                    primaryView: PrimaryViewModel(
+                        photoURL: nil,
                         layout: Layout.catalogGrid(catalogGridElements)
                     )
                 ),
@@ -384,4 +390,29 @@ private let honeycombElements = HoneycombModel(
                 routeTo: nil
             )
         ]
+)
+
+let noteElement = NoteModel(
+    component: flipCard,
+    backgroundColor: nil,
+    backgroundGradientColor: nil,
+    backgroundPhotoURL: "https://wallpaperaccess.com/full/3227808.jpg"
+)
+
+let simpleCard = Component.card(
+    CardModel(
+        imageURL: "https://thumb2.holidaypirates.com/fJb5wMJGjT4BPYzX4vY_vBFH94A=/1314x600/https://media.mv.urlaubspiraten.de/images/2018/07/5b472ef9864a98992261485w7bx42y.jpg",
+        category: "Iceland",
+        heading: "Blue lagoon",
+        label: "By AC"
+    )
+)
+
+let flipCard = Component.flipCard(
+    FlipCardModel(
+        title: "Solar system",
+        titleColor: .blue,
+        subtitle: "What is the second planet closest to the sun?",
+        hiddenText: "Venus"
+    )
 )

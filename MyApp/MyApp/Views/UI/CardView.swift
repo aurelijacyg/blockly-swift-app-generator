@@ -1,5 +1,5 @@
 //
-//  Card.swift
+//  CardView.swift
 //  MyApp
 //
 //  Created by Aurelija Cygaite 
@@ -7,31 +7,41 @@
 
 import SwiftUI
 
-struct Card: View {
-    var photoURL: String
-    var category: String
-    var heading: String
-    var label: String
-    var categoryColor: Color
-    var headingColor: Color
-    var labelColor: Color
+struct CardView: View {
+    let card: CardModel
+    let categoryColor: Color
+    let headingColor: Color
+    let labelColor: Color
+
+    @State private var bouncing = false
+
+    init(card: CardModel,
+         categoryColor: Color?,
+         headingColor: Color?,
+         labelColor: Color?
+    ) {
+        self.card = card
+        self.categoryColor = categoryColor ?? .primary
+        self.headingColor = headingColor ?? .primary
+        self.labelColor = labelColor ?? .secondary
+    }
 
     var body: some View {
         VStack {
-            RemoteImage(url: photoURL)
+            RemoteImage(url: card.imageURL)
                 .aspectRatio(contentMode: .fit)
 
             HStack {
                 VStack(alignment: .leading) {
-                    Text(category)
+                    Text(card.category)
                         .font(.headline)
                         .foregroundColor(categoryColor)
-                    Text(heading)
+                    Text(card.heading)
                         .font(.title)
                         .fontWeight(.black)
                         .foregroundColor(headingColor)
                         .lineLimit(3)
-                    Text(label.uppercased())
+                    Text(card.label.uppercased())
                         .font(.caption)
                         .foregroundColor(labelColor)
                 }
@@ -40,6 +50,7 @@ struct Card: View {
                 Spacer()
             }
             .padding()
+            .background(Color.white)
         }
         .cornerRadius(10)
         .overlay(
@@ -47,19 +58,5 @@ struct Card: View {
                 .stroke(Color(.sRGB, red: 150/255, green: 150/255, blue: 150/255, opacity: 0.1), lineWidth: 1)
         )
         .padding([.top, .horizontal])
-    }
-}
-
-struct Card_Previews: PreviewProvider {
-    static var previews: some View {
-        Card(
-            photoURL: "https://img.traveltriangle.com/blog/wp-content/uploads/2018/11/Canada-Mountains.jpg",
-            category: "SwiftUI",
-            heading: "Drawing a Border with Rounded Corners",
-            label: "AC",
-            categoryColor: Color.secondary,
-            headingColor: Color.primary,
-            labelColor: Color.secondary
-        )
     }
 }

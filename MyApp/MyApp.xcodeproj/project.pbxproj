@@ -37,7 +37,7 @@
 		988CB67725AA29BA00E87FEA /* RemoteImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 988CB67625AA29BA00E87FEA /* RemoteImage.swift */; };
 		988CB67C25AA51FA00E87FEA /* UIScreen+size.swift in Sources */ = {isa = PBXBuildFile; fileRef = 988CB67B25AA51FA00E87FEA /* UIScreen+size.swift */; };
 		988CB68425AA5DCC00E87FEA /* CardGalleryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 988CB68325AA5DCC00E87FEA /* CardGalleryView.swift */; };
-		988CB68925AA612400E87FEA /* Card.swift in Sources */ = {isa = PBXBuildFile; fileRef = 988CB68825AA612400E87FEA /* Card.swift */; };
+		988CB68925AA612400E87FEA /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 988CB68825AA612400E87FEA /* CardView.swift */; };
 		98E7B328265133DF002980B8 /* ListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98E7B327265133DF002980B8 /* ListView.swift */; };
 		98E7B32A265134A2002980B8 /* GridView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98E7B329265134A2002980B8 /* GridView.swift */; };
 		98E7B32C2651356F002980B8 /* CatalogGridView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98E7B32B2651356F002980B8 /* CatalogGridView.swift */; };
@@ -49,6 +49,11 @@
 		98E7B33E26515028002980B8 /* ArticleModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98E7B33D26515028002980B8 /* ArticleModel.swift */; };
 		98E7B340265155C2002980B8 /* RemoteImageCropped.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98E7B33F265155C2002980B8 /* RemoteImageCropped.swift */; };
 		98E7B344265158BD002980B8 /* SwiftUITrapezoidShape in Frameworks */ = {isa = PBXBuildFile; productRef = 98E7B343265158BD002980B8 /* SwiftUITrapezoidShape */; };
+		98E7B34626515E42002980B8 /* NoteView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98E7B34526515E42002980B8 /* NoteView.swift */; };
+		98E7B34826515EAD002980B8 /* NoteModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98E7B34726515EAD002980B8 /* NoteModel.swift */; };
+		98E7B34A26518294002980B8 /* Component.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98E7B34926518294002980B8 /* Component.swift */; };
+		98E7B34C265182FA002980B8 /* FlipCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98E7B34B265182FA002980B8 /* FlipCardView.swift */; };
+		98E7B34E26518343002980B8 /* FlipCardModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98E7B34D26518343002980B8 /* FlipCardModel.swift */; };
 		98F7161825B0CF9000885D54 /* PhotoModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98F7161725B0CF9000885D54 /* PhotoModel.swift */; };
 /* End PBXBuildFile section */
 
@@ -105,7 +110,7 @@
 		988CB67625AA29BA00E87FEA /* RemoteImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteImage.swift; sourceTree = "<group>"; };
 		988CB67B25AA51FA00E87FEA /* UIScreen+size.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIScreen+size.swift"; sourceTree = "<group>"; };
 		988CB68325AA5DCC00E87FEA /* CardGalleryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardGalleryView.swift; sourceTree = "<group>"; };
-		988CB68825AA612400E87FEA /* Card.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Card.swift; sourceTree = "<group>"; };
+		988CB68825AA612400E87FEA /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
 		98E7B327265133DF002980B8 /* ListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListView.swift; sourceTree = "<group>"; };
 		98E7B329265134A2002980B8 /* GridView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GridView.swift; sourceTree = "<group>"; };
 		98E7B32B2651356F002980B8 /* CatalogGridView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatalogGridView.swift; sourceTree = "<group>"; };
@@ -116,6 +121,11 @@
 		98E7B33B26514FEA002980B8 /* ArticleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleView.swift; sourceTree = "<group>"; };
 		98E7B33D26515028002980B8 /* ArticleModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleModel.swift; sourceTree = "<group>"; };
 		98E7B33F265155C2002980B8 /* RemoteImageCropped.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteImageCropped.swift; sourceTree = "<group>"; };
+		98E7B34526515E42002980B8 /* NoteView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteView.swift; sourceTree = "<group>"; };
+		98E7B34726515EAD002980B8 /* NoteModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteModel.swift; sourceTree = "<group>"; };
+		98E7B34926518294002980B8 /* Component.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Component.swift; sourceTree = "<group>"; };
+		98E7B34B265182FA002980B8 /* FlipCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlipCardView.swift; sourceTree = "<group>"; };
+		98E7B34D26518343002980B8 /* FlipCardModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlipCardModel.swift; sourceTree = "<group>"; };
 		98F7161725B0CF9000885D54 /* PhotoModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -179,6 +189,8 @@
 				983F463D2650460B00AFBF25 /* CatalogGridModel.swift */,
 				983F463F26504FF800AFBF25 /* PhraseModel.swift */,
 				98E7B33526513E9E002980B8 /* HoneycombModel.swift */,
+				98E7B34726515EAD002980B8 /* NoteModel.swift */,
+				98E7B34D26518343002980B8 /* FlipCardModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -189,6 +201,7 @@
 				9835BBFA2632BB7B004D23E1 /* UI */,
 				988CB63825AA18FF00E87FEA /* MainView.swift */,
 				983F462D264ED78300AFBF25 /* PrimaryView.swift */,
+				98E7B34526515E42002980B8 /* NoteView.swift */,
 				98E7B327265133DF002980B8 /* ListView.swift */,
 				98E7B32D2651362D002980B8 /* BubbleListView.swift */,
 				98E7B329265134A2002980B8 /* GridView.swift */,
@@ -206,7 +219,8 @@
 			isa = PBXGroup;
 			children = (
 				98E7B341265155E9002980B8 /* RemoteImages */,
-				988CB68825AA612400E87FEA /* Card.swift */,
+				988CB68825AA612400E87FEA /* CardView.swift */,
+				98E7B34B265182FA002980B8 /* FlipCardView.swift */,
 				98E7B33326513E54002980B8 /* PolygonShape.swift */,
 			);
 			path = UI;
@@ -217,6 +231,7 @@
 			children = (
 				98110C1C25ABC2D4001D1618 /* Routing.swift */,
 				983FE883263ECA860087213B /* Layout.swift */,
+				98E7B34926518294002980B8 /* Component.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -444,11 +459,14 @@
 				983F462E264ED78300AFBF25 /* PrimaryView.swift in Sources */,
 				98E7B33226513AE4002980B8 /* HoneycombView.swift in Sources */,
 				983F46422650511000AFBF25 /* PhraseView.swift in Sources */,
+				98E7B34626515E42002980B8 /* NoteView.swift in Sources */,
 				988CB67225AA1C4800E87FEA /* PaperView.swift in Sources */,
-				988CB68925AA612400E87FEA /* Card.swift in Sources */,
+				988CB68925AA612400E87FEA /* CardView.swift in Sources */,
+				98E7B34C265182FA002980B8 /* FlipCardView.swift in Sources */,
 				98E7B33C26514FEA002980B8 /* ArticleView.swift in Sources */,
 				988CB63525AA18FF00E87FEA /* AppDelegate.swift in Sources */,
 				98E7B33626513E9E002980B8 /* HoneycombModel.swift in Sources */,
+				98E7B34826515EAD002980B8 /* NoteModel.swift in Sources */,
 				98E7B33426513E54002980B8 /* PolygonShape.swift in Sources */,
 				98110BF025AB8471001D1618 /* PrimaryViewModel.swift in Sources */,
 				983F4632264F0FD600AFBF25 /* TabsModel.swift in Sources */,
@@ -458,6 +476,7 @@
 				98E7B32A265134A2002980B8 /* GridView.swift in Sources */,
 				988CB67725AA29BA00E87FEA /* RemoteImage.swift in Sources */,
 				983F462C264E9F8200AFBF25 /* UIColor+rgb.swift in Sources */,
+				98E7B34A26518294002980B8 /* Component.swift in Sources */,
 				98110BC325AB60AA001D1618 /* RemoteImageCircle.swift in Sources */,
 				98110BC825AB63CC001D1618 /* CardModel.swift in Sources */,
 				98110BEB25AB83F5001D1618 /* CardGalleryModel.swift in Sources */,
@@ -477,6 +496,7 @@
 				98110C1D25ABC2D4001D1618 /* Routing.swift in Sources */,
 				98110BE625AB838B001D1618 /* PaperModel.swift in Sources */,
 				988CB63925AA18FF00E87FEA /* MainView.swift in Sources */,
+				98E7B34E26518343002980B8 /* FlipCardModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

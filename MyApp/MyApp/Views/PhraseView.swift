@@ -11,7 +11,6 @@ import Introspect
 struct PhraseView: View {
 
     let data: PhraseModel
-    let coloredNavAppearance = UINavigationBarAppearance()
 
     @State
     var uiTabarController: UITabBarController?

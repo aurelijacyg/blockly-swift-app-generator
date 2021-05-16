@@ -21,11 +21,8 @@ struct CardGalleryView: View {
     var body: some View {
         VStack(spacing:25) {
             List(data.cards){ card in
-                Card(
-                    photoURL: card.imageURL,
-                    category: card.category,
-                    heading: card.heading,
-                    label: card.label,
+                CardView(
+                    card: card,
                     categoryColor: data.categoryColor,
                     headingColor: data.headingColor,
                     labelColor: data.labelColor

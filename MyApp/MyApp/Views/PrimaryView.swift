@@ -17,6 +17,20 @@ struct PrimaryView: View {
     }
 
     var body: some View {
+        switch data.layout {
+        case .note(let data):
+            VStack {
+                NoteView(data: data)
+            }.navigationBarTitle(
+                Text(headerTitle),
+                displayMode: .large
+            )
+        case _:
+            scrollView
+        }
+    }
+
+    private var scrollView: some View {
         ScrollView(.vertical) {
             VStack {
                 Spacer(minLength: 10)
@@ -41,6 +55,8 @@ struct PrimaryView: View {
                     CatalogGridView(data: data)
                 case .honeycomb(let data):
                     HoneycombView(data: data)
+                case _:
+                    Text("Failed to load screen")
                 }
             }
         }
