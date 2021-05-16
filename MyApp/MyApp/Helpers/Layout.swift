@@ -6,7 +6,10 @@
 //
 
 enum Layout {
-    case list([ListItemModel])
-    case grid([GridItemModel], Int)
+    case list(ListModel)
+    case grid(GridModel)
+    case bubbleList(BubbleListModel)
+    case catalogGrid(CatalogGridModel)
+    case honeycomb(HoneycombModel)
+    case note(NoteModel)
 }
-

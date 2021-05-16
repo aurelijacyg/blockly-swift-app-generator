@@ -2,6 +2,6 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "self:/Users/aurelijacygaite/Desktop/blockly-swift-app-generator/SimpleApp/MyApp.xcodeproj">
+      location = "self:">
    </FileRef>
 </Workspace>

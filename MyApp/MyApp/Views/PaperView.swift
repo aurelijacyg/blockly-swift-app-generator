@@ -6,40 +6,44 @@
 //
 
 import SwiftUI
+import Introspect
 
 struct PaperView: View {
+    let data: PaperModel
 
-    var titleText: String
-    var bodyText: String
-    var titleColor: Color
-    var bodyTextColor: Color
-    var photo: PhotoModel
+    @State
+    var uiTabarController: UITabBarController?
+
+    init(data: PaperModel) {
+        self.data = data
+    }
 
     var body: some View {
 
         ScrollView(.vertical) {
-            VStack(spacing:25) {
-                if photo.isRounded {
-                    RemoteImageCircle(url: photo.URL)
+            VStack(spacing:15) {
+                if data.photo.isRounded {
+                    RemoteImageCircle(url: data.photo.URL)
                         .aspectRatio(contentMode: .fit)
-                        .frame(width: photo.width, height: photo.height)
+                        .frame(width: data.photo.width, height: data.photo.height)
                 } else {
-                    RemoteImage(url: photo.URL)
+                    RemoteImage(url: data.photo.URL)
                         .aspectRatio(contentMode: .fit)
-                        .frame(width: photo.width, height: photo.height)
+                        .frame(width: data.photo.width, height: data.photo.height)
                 }
 
-                Text(titleText)
+                Text(data.titleText)
                     .font(.title)
                     .fontWeight(.black)
-                    .foregroundColor(titleColor)
+                    .foregroundColor(data.titleColor)
                     .lineLimit(3)
-                HStack {
-                    Spacer()
-                    Text(bodyText)
-                        .font(.footnote)
-                        .foregroundColor(bodyTextColor)
-                    Spacer()
+                    .multilineTextAlignment(.center)
+                HStack(alignment: .center) {
+                    Text(data.bodyText)
+                        .font(.body)
+                        .lineSpacing(7)
+                        .foregroundColor(data.bodyTextColor)
+                        .multilineTextAlignment(.center)
                 }
             }
             .cornerRadius(10)
@@ -49,26 +53,15 @@ struct PaperView: View {
             )
             .padding([.top, .horizontal])
             .navigationBarTitle(
-                Text(titleText),
+                Text(data.titleText),
                 displayMode: .inline
             )
+            .introspectTabBarController { (UITabBarController) in
+                UITabBarController.tabBar.isHidden = true
+                uiTabarController = UITabBarController
+            }.onDisappear{
+                uiTabarController?.tabBar.isHidden = false
+            }
         }
-    }
-}
-
-struct PaperView_Previews: PreviewProvider {
-    static var previews: some View {
-        PaperView(
-            titleText: "Title",
-            bodyText: "text",
-            titleColor:  Color.primary,
-            bodyTextColor: Color.secondary,
-            photo: PhotoModel.init(
-                URL: "www.image",
-                width: 250,
-                height: 250,
-                isRounded: true
-            )
-        )
     }
 }

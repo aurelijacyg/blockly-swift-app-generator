@@ -8,110 +8,79 @@
 import SwiftUI
 
 struct MainView: View {
-    let data: MainModel
+    let data: TabsModel
+    let coloredNavAppearance = UINavigationBarAppearance()
+    let buttonsColor: Color
+    let screenBackground = ScreenBackground()
 
     init() {
         self.data = AppConfiguration().data
+        coloredNavAppearance.configureWithOpaqueBackground()
+        coloredNavAppearance.backgroundColor = UIColor(data.navigationBarColor)
+        coloredNavAppearance.titleTextAttributes = [.foregroundColor: UIColor(data.headerColor)]
+        coloredNavAppearance.largeTitleTextAttributes = [.foregroundColor: UIColor(data.headerColor)]
+        buttonsColor = data.headerColor
+
+        UINavigationBar.appearance().standardAppearance = coloredNavAppearance
+        UINavigationBar.appearance().scrollEdgeAppearance = coloredNavAppearance
     }
 
     var body: some View {
+        if data.tabs.count == 1 {
+            regularItem(data.tabs.first!)
+        } else {
+            TabView {
+                ForEach(data.tabs) {
+                    tabItem($0)
+                }
+            }
+        }
+    }
+
+    private func regularItem(_ tab: Tab) -> some View {
         NavigationView {
-            ScrollView(.vertical) {
-                VStack {
-                    Spacer(minLength: 10)
-                    RemoteImage(url: data.photoURL)
-                        .frame(width: UIScreen.screenWidth, height: 150, alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/)
-                    Spacer(minLength: 20)
-
-                    switch data.layout {
-                    case .list(let elements):
-                        listView(elements)
-                    case .grid(let elements, let columnsNumber):
-                        gridView(elements, columnsNumber: columnsNumber)
-                    }
-                }
-            }
-            .navigationBarTitle(
-                Text(data.header),
-                displayMode: .large
-            )
+            modelItem(tab)
+                .background(
+                    screenBackground.background(
+                        color: data.screenBackgroundColor,
+                        gradientColor: data.screenBackgroundGradientColor,
+                        imageURL: data.screenBackgroundImageUrl
+                    )
+                )
+                .edgesIgnoringSafeArea(.bottom)
         }
+        .accentColor(buttonsColor)
     }
 
-    private func headerView() -> some View {
-        HStack() {
-            // Spacer() - display text in the middle
-            Text(data.subtitleText)
-                .italic()
-                .foregroundColor(data.subtitleTextColor)
-                .font(.title2)
-            Spacer()
-        }.padding(.all, 10).background(Color.white)
+    private func tabItem(_ tab: Tab) -> some View {
+        NavigationView {
+            modelItem(tab)
+                .background(
+                    screenBackground.background(
+                        color: data.screenBackgroundColor,
+                        gradientColor: data.screenBackgroundGradientColor,
+                        imageURL: data.screenBackgroundImageUrl
+                    )
+                )
+                .edgesIgnoringSafeArea(.bottom)
+        }
+        .accentColor(buttonsColor)
+        .tabItem { Label(tab.label ?? "", systemImage: tab.image ?? "list.dash") }
     }
 
-    private func listView(_ elements: [ListItemModel]) -> some View {
-        LazyVStack(spacing: 3, pinnedViews: [.sectionHeaders]) {
-            Section(header: headerView()) {
+    private func modelItem(_ tab: Tab) -> some View {
+        var tabStack: HStack<PrimaryView>?
 
-                ForEach(elements){ element in
-                    switch element.routeTo {
-
-                    case .paper(let paperView):
-                        NavigationLink(destination: paperView){
-                            listElement(element)
-                        }.foregroundColor(element.textColor)
-
-
-                    case .cards(let cardGalleryView):
-                        NavigationLink(destination: cardGalleryView){
-                            listElement(element)
-                        }.foregroundColor(element.textColor)
-                    }
-                }
+        if let primaryViewModel = tab.primaryView {
+            tabStack = HStack {
+                PrimaryView(
+                    headerTitle: data.header,
+                    data: primaryViewModel
+                )
             }
         }
-    }
 
-    private func listElement(_ element: ListItemModel) -> some View {
-        HStack {
-            Spacer()
-            Text(element.text)
-            Image(element.icon ?? "").resizable().frame(width: 30, height: 30)
-            Spacer()
-        }.padding(.all, 30).background(element.backgroundColor)
-    }
-
-    private func gridView(_ elements: [GridItemModel], columnsNumber: Int) -> some View {
-        let columns: [GridItem] = Array(repeating: .init(.flexible()), count: columnsNumber)
-
-        return LazyVGrid(columns: columns, spacing: 5, pinnedViews: [.sectionHeaders]) {
-            Section(header: headerView()) {
-
-                ForEach(elements){ element in
-                    switch element.routeTo {
-
-                    case .paper(let paperView):
-                        NavigationLink(destination: paperView){
-                            gridElement(element)
-                        }.foregroundColor(element.textColor)
-
-                    case .cards(let cardGalleryView):
-                        NavigationLink(destination: cardGalleryView){
-                            gridElement(element)
-                        }.foregroundColor(element.textColor)
-                    }
-
-                }
-            }
-        }
-    }
-
-    private func gridElement(_ element: GridItemModel) -> some View {
-        Text(element.text)
-            .frame(width: 205, height: 205, alignment: .center)
-            .background(element.backgroundColor)
-            .cornerRadius(element.cornerRadius)
-            .multilineTextAlignment(.center)
+        return tabStack
     }
 }
 

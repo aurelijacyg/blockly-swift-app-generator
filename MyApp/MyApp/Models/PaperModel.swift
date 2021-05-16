@@ -12,5 +12,5 @@ struct PaperModel {
     var bodyText: String
     var titleColor: Color
     var bodyTextColor: Color
-    var image: Image
+    var photo: PhotoModel
 }
