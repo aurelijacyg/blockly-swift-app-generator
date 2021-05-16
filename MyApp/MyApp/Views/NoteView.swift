@@ -9,6 +9,7 @@ import SwiftUI
 
 struct NoteView: View {
     let data: NoteModel
+    let screenBackground = ScreenBackground()
 
     @State private var bouncing = false
 
@@ -17,73 +18,39 @@ struct NoteView: View {
     }
 
     var body: some View {
-        if let _ = data.backgroundColor {
-            VStack(alignment: .center) {
-                component
-            }
-            .padding(EdgeInsets(top: 0, leading: 15, bottom: 0, trailing: 15))
-            .frame(
-                minWidth: 0,
-                maxWidth: .infinity,
-                minHeight: 0,
-                maxHeight: .infinity,
-                alignment: .center
-            )
-            .background(screenBackgroundColor)
-            .ignoresSafeArea()
-        } else if let backgroundImage = data.backgroundPhotoURL {
-            VStack(alignment: .center) {
-                component
-            }
-            .padding(EdgeInsets(top: 0, leading: 15, bottom: 0, trailing: 15))
-            .frame(
-                minWidth: 0,
-                maxWidth: .infinity,
-                minHeight: 0,
-                maxHeight: .infinity,
-                alignment: .center
-            )
-            .background(
-                RemoteImage(url: backgroundImage).aspectRatio(contentMode: .fill)
-            )
-            .ignoresSafeArea()
-        } else {
-            VStack(alignment: .center) {
-                component
-            }
-            .padding(EdgeInsets(top: 0, leading: 15, bottom: 0, trailing: 15))
-            .frame(
-                minWidth: 0,
-                maxWidth: .infinity,
-                minHeight: 0,
-                maxHeight: .infinity,
-                alignment: .center
-            )
-            .background(Color.white)
-            .ignoresSafeArea()
+        VStack(alignment: .center) {
+            component
         }
-    }
-
-    private var screenBackgroundColor: LinearGradient {
-        LinearGradient(
-            gradient: Gradient(
-                colors: [
-                    data.backgroundColor!,
-                    data.backgroundGradientColor ?? data.backgroundColor!
-                ]
-            ),
-            startPoint: .leading,
-            endPoint: .trailing
+        .padding(EdgeInsets(top: 0, leading: 15, bottom: 0, trailing: 15))
+        .frame(
+            minWidth: 0,
+            maxWidth: .infinity,
+            minHeight: 0,
+            maxHeight: .infinity,
+            alignment: .center
         )
+        .background(
+            screenBackground.background(
+                color: data.backgroundColor,
+                gradientColor: data.backgroundGradientColor,
+                imageURL: data.backgroundPhotoURL
+            )
+        )
+        .ignoresSafeArea()
     }
 
     private var component: some View {
-        componentView
-            .frame(maxHeight: UIScreen.main.bounds.height * 0.65, alignment: bouncing ? .bottom : .top)
-            .animation(Animation.easeInOut(duration: 14.0).repeatForever(autoreverses: true))
-            .onAppear {
-                self.bouncing.toggle()
-            }
+        if data.animated {
+            return AnyView(componentView
+                .frame(maxHeight: UIScreen.screenHeight * 0.65, alignment: bouncing ? .bottom : .top)
+                .animation(Animation.easeInOut(duration: 14.0).repeatForever(autoreverses: true))
+                .onAppear {
+                    self.bouncing.toggle()
+                }
+            )
+        } else {
+            return AnyView(componentView)
+        }
     }
 
     private var componentView: some View {

@@ -11,6 +11,7 @@ struct MainView: View {
     let data: TabsModel
     let coloredNavAppearance = UINavigationBarAppearance()
     let buttonsColor: Color
+    let screenBackground = ScreenBackground()
 
     init() {
         self.data = AppConfiguration().data
@@ -39,7 +40,13 @@ struct MainView: View {
     private func regularItem(_ tab: Tab) -> some View {
         NavigationView {
             modelItem(tab)
-                .background(screenBackgroundColor)
+                .background(
+                    screenBackground.background(
+                        color: data.screenBackgroundColor,
+                        gradientColor: data.screenBackgroundGradientColor,
+                        imageURL: data.screenBackgroundImageUrl
+                    )
+                )
                 .edgesIgnoringSafeArea(.bottom)
         }
         .accentColor(buttonsColor)
@@ -48,7 +55,13 @@ struct MainView: View {
     private func tabItem(_ tab: Tab) -> some View {
         NavigationView {
             modelItem(tab)
-                .background(screenBackgroundColor)
+                .background(
+                    screenBackground.background(
+                        color: data.screenBackgroundColor,
+                        gradientColor: data.screenBackgroundGradientColor,
+                        imageURL: data.screenBackgroundImageUrl
+                    )
+                )
                 .edgesIgnoringSafeArea(.bottom)
         }
         .accentColor(buttonsColor)
@@ -68,40 +81,6 @@ struct MainView: View {
         }
 
         return tabStack
-    }
-
-    private var screenBackgroundColor: some View {
-        if let screenBackgroundColor = data.screenBackgroundColor {
-            return AnyView(
-                LinearGradient(
-                    gradient: Gradient(
-                        colors: [
-                            screenBackgroundColor,
-                            data.screenBackgroundGradientColor ?? screenBackgroundColor
-                        ]
-                    ),
-                    startPoint: .topTrailing,
-                    endPoint: .bottomTrailing
-                )
-            )
-        } else if let screenBackgroundImage = data.screenBackgroundImageUrl {
-            return AnyView(
-                RemoteImage(url: screenBackgroundImage)
-                    .aspectRatio(contentMode: .fill)
-            )
-        } else {
-            return AnyView(
-                LinearGradient(
-                    gradient: Gradient(
-                        colors: [
-                            Color.white,
-                        ]
-                    ),
-                    startPoint: .topTrailing,
-                    endPoint: .bottomTrailing
-                )
-            )
-        }
     }
 }
 

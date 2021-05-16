@@ -38,7 +38,7 @@ struct PrimaryView: View {
                 if let URL = data.photoURL {
                     RemoteImage(url: URL).frame(
                         width: UIScreen.screenWidth,
-                        height: UIScreen.main.bounds.height * 0.18,
+                        height: UIScreen.screenHeight * 0.18,
                         alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/
                     )
                     Spacer(minLength: 20)

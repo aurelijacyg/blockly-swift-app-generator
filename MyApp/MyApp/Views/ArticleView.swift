@@ -50,7 +50,7 @@ struct ArticleView: View {
 
             if let photoURL = data.photoURL {
                 RemoteImageCropped(url: photoURL)
-                    .frame(width: .infinity, height: UIScreen.main.bounds.width * 0.5)
+                    .frame(width: .infinity, height: UIScreen.screenWidth * 0.5)
             }
         }
         .ignoresSafeArea(edges: .bottom)

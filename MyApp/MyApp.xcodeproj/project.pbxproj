@@ -55,6 +55,7 @@
 		98E7B34C265182FA002980B8 /* FlipCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98E7B34B265182FA002980B8 /* FlipCardView.swift */; };
 		98E7B34E26518343002980B8 /* FlipCardModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98E7B34D26518343002980B8 /* FlipCardModel.swift */; };
 		98E7B35026518AF7002980B8 /* PhotoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98E7B34F26518AF7002980B8 /* PhotoView.swift */; };
+		98E7B3542651A9B8002980B8 /* ScreenBackground.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98E7B3532651A9B8002980B8 /* ScreenBackground.swift */; };
 		98F7161825B0CF9000885D54 /* PhotoModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98F7161725B0CF9000885D54 /* PhotoModel.swift */; };
 /* End PBXBuildFile section */
 
@@ -128,6 +129,7 @@
 		98E7B34B265182FA002980B8 /* FlipCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlipCardView.swift; sourceTree = "<group>"; };
 		98E7B34D26518343002980B8 /* FlipCardModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlipCardModel.swift; sourceTree = "<group>"; };
 		98E7B34F26518AF7002980B8 /* PhotoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoView.swift; sourceTree = "<group>"; };
+		98E7B3532651A9B8002980B8 /* ScreenBackground.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenBackground.swift; sourceTree = "<group>"; };
 		98F7161725B0CF9000885D54 /* PhotoModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -275,6 +277,7 @@
 				9835BC612632DB97004D23E1 /* App */,
 				9835BBEB2632B911004D23E1 /* Resources */,
 				9835BBEC2632B946004D23E1 /* Extensions */,
+				98E7B3552651A9C8002980B8 /* Utils */,
 				9835BC4F2632C92F004D23E1 /* Helpers */,
 				9835BBF12632BA1E004D23E1 /* Models */,
 				9835BBF92632BB03004D23E1 /* Views */,
@@ -319,6 +322,14 @@
 				988CB67625AA29BA00E87FEA /* RemoteImage.swift */,
 			);
 			path = RemoteImages;
+			sourceTree = "<group>";
+		};
+		98E7B3552651A9C8002980B8 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				98E7B3532651A9B8002980B8 /* ScreenBackground.swift */,
+			);
+			path = Utils;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -496,6 +507,7 @@
 				983F463C2650048300AFBF25 /* GridModel.swift in Sources */,
 				983FE884263ECA860087213B /* Layout.swift in Sources */,
 				983F463E2650460B00AFBF25 /* CatalogGridModel.swift in Sources */,
+				98E7B3542651A9B8002980B8 /* ScreenBackground.swift in Sources */,
 				988CB68425AA5DCC00E87FEA /* CardGalleryView.swift in Sources */,
 				98110C1D25ABC2D4001D1618 /* Routing.swift in Sources */,
 				98110BE625AB838B001D1618 /* PaperModel.swift in Sources */,

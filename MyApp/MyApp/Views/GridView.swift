@@ -128,11 +128,11 @@ struct GridView: View {
 
     private func gridFrameSize(with columnsNumber: Int) -> CGFloat {
         if columnsNumber == 1 {
-            return UIScreen.main.bounds.width * 0.9
+            return UIScreen.screenWidth * 0.9
         } else if columnsNumber == 2 {
-            return UIScreen.main.bounds.width * 0.45
+            return UIScreen.screenWidth * 0.45
         } else {
-            return UIScreen.main.bounds.width * 0.30
+            return UIScreen.screenWidth * 0.30
         }
     }
 }

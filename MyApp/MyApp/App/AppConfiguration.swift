@@ -395,6 +395,7 @@ private let honeycombElements = HoneycombModel(
 
 let noteElement = NoteModel(
     component: flipCard,
+    animated: true,
     backgroundColor: nil,
     backgroundGradientColor: nil,
     backgroundPhotoURL: "https://wallpaperaccess.com/full/3227808.jpg"

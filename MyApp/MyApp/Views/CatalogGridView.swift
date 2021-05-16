@@ -63,7 +63,7 @@ struct CatalogGridView: View {
                     .padding(EdgeInsets(top: 20, leading: 20, bottom: 0, trailing: 20))
 
                 Divider()
-                    .frame(width: UIScreen.main.bounds.width * 0.7)
+                    .frame(width: UIScreen.screenWidth * 0.7)
                     .padding(EdgeInsets(top: 5, leading: 20, bottom: 0, trailing: 20))
             }
 
@@ -101,11 +101,11 @@ struct CatalogGridView: View {
 
     private func gridFrameSize(with columnsNumber: Int) -> CGFloat {
         if columnsNumber == 1 {
-            return UIScreen.main.bounds.width * 0.9
+            return UIScreen.screenWidth * 0.9
         } else if columnsNumber == 2 {
-            return UIScreen.main.bounds.width * 0.45
+            return UIScreen.screenWidth * 0.45
         } else {
-            return UIScreen.main.bounds.width * 0.30
+            return UIScreen.screenWidth * 0.30
         }
     }
 }

@@ -19,7 +19,7 @@ struct BubbleListView: View {
         let elements = data.items
 
         return LazyVStack(
-            spacing: UIScreen.main.bounds.height * 0.02,
+            spacing: UIScreen.screenHeight * 0.02,
             pinnedViews: [.sectionHeaders]
         ) {
             Section() {
@@ -54,7 +54,7 @@ struct BubbleListView: View {
                     }
                 }
             }
-        }.padding(data.isItemsBig ? UIScreen.main.bounds.height * 0.02 : UIScreen.main.bounds.height * 0.075)
+        }.padding(data.isItemsBig ? UIScreen.screenHeight * 0.02 : UIScreen.screenHeight * 0.075)
     }
 
     private func bubbleListElement(_ element: BubbleListItemModel, isItemBig: Bool) -> some View {
@@ -72,7 +72,7 @@ struct BubbleListView: View {
         return ZStack(alignment: .leading) {
             Rectangle()
                 .blendMode(.overlay)
-                .frame(height: isItemBig ? UIScreen.main.bounds.height * 0.17 : 90)
+                .frame(height: isItemBig ? UIScreen.screenHeight * 0.17 : 90)
                 .background(elementBackgroundColor)
                 .cornerRadius(40)
 

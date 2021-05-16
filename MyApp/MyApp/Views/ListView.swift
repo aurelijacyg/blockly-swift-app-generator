@@ -77,13 +77,13 @@ struct ListView: View {
                 Image(icon)
                     .resizable()
                     .frame(
-                        width: UIScreen.main.bounds.width * 0.13,
-                        height: UIScreen.main.bounds.width * 0.13
+                        width: UIScreen.screenWidth * 0.13,
+                        height: UIScreen.screenWidth * 0.13
                     )
                 Spacer()
             }
         }
-        .frame(height: UIScreen.main.bounds.height * 0.08)
+        .frame(height: UIScreen.screenHeight * 0.08)
         .padding(.all, 15)
         .background(elementBackgroundColor)
     }
