@@ -17,7 +17,7 @@ struct PhotoView: View {
 
     var body: some View {
         VStack {
-            RemoteImage(url: photo.URL)
+            RemoteImage(url: photo.URL, shape: nil)
                 .aspectRatio(contentMode: .fit)
         }
         .cornerRadius(10)

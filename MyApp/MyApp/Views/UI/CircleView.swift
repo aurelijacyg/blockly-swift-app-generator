@@ -17,20 +17,37 @@ struct CircleView: View {
 
     var body: some View {
         ZStack {
-            RoundedRectangle(cornerRadius: 25, style: .continuous)
-                .fill(Color.white.opacity(0.5))
+            Circle()
+                .fill(backgroundColor(item: data)).opacity(data.backgroundOpacity ?? 0)
                 .shadow(radius: 10)
 
-            VStack(spacing: 15) {
+
+            VStack() {
+                if let photo = data.photo {
+                    RemoteImage(url: photo.URL, shape: photo.shape)
+                        .aspectRatio(contentMode: .fit)
+                        .frame(width: 300, height: 260)
+                }
+
                 Text(data.title)
-                    .font(.title2)
+                    .font(.title)
                     .bold()
                     .foregroundColor(data.titleColor)
-                    .lineSpacing(6)
                     .multilineTextAlignment(.center)
             }
-            .padding(20)
-            .multilineTextAlignment(.center)
         }
+    }
+
+    func backgroundColor(item: CircleModel) -> LinearGradient {
+        LinearGradient(
+            gradient: Gradient(
+                colors: [
+                    item.backgroundColor,
+                    item.backgroundGradientColor ?? item.backgroundColor
+                ]
+            ),
+            startPoint: .leading,
+            endPoint: .trailing
+        )
     }
 }

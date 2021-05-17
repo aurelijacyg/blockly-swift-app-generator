@@ -9,4 +9,5 @@ enum Component {
     case card(CardModel)
     case flipCard(FlipCardModel)
     case photo(PhotoModel)
+    case circle(CircleModel)
 }

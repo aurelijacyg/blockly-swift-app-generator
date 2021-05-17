@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		98110BC325AB60AA001D1618 /* RemoteImageCircle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98110BC225AB60AA001D1618 /* RemoteImageCircle.swift */; };
 		98110BC825AB63CC001D1618 /* CardModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98110BC725AB63CC001D1618 /* CardModel.swift */; };
 		98110BE625AB838B001D1618 /* PaperModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98110BE525AB838B001D1618 /* PaperModel.swift */; };
 		98110BEB25AB83F5001D1618 /* CardGalleryModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98110BEA25AB83F5001D1618 /* CardGalleryModel.swift */; };
@@ -58,6 +57,10 @@
 		98E7B3542651A9B8002980B8 /* ScreenBackground.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98E7B3532651A9B8002980B8 /* ScreenBackground.swift */; };
 		98E7B3572652655B002980B8 /* AnimatedBoardRisingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98E7B3562652655B002980B8 /* AnimatedBoardRisingView.swift */; };
 		98E7B35926527C60002980B8 /* AnimatedBoardModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98E7B35826527C60002980B8 /* AnimatedBoardModel.swift */; };
+		98E7B35B26528FF5002980B8 /* CircleModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98E7B35A26528FF5002980B8 /* CircleModel.swift */; };
+		98E7B35D26529081002980B8 /* CircleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98E7B35C26529081002980B8 /* CircleView.swift */; };
+		98E7B35F2652982F002980B8 /* ComponentShape.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98E7B35E2652982F002980B8 /* ComponentShape.swift */; };
+		98E7B36126529CA2002980B8 /* AnyShape.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98E7B36026529CA2002980B8 /* AnyShape.swift */; };
 		98F7161825B0CF9000885D54 /* PhotoModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98F7161725B0CF9000885D54 /* PhotoModel.swift */; };
 /* End PBXBuildFile section */
 
@@ -79,7 +82,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		98110BC225AB60AA001D1618 /* RemoteImageCircle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteImageCircle.swift; sourceTree = "<group>"; };
 		98110BC725AB63CC001D1618 /* CardModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardModel.swift; sourceTree = "<group>"; };
 		98110BE525AB838B001D1618 /* PaperModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaperModel.swift; sourceTree = "<group>"; };
 		98110BEA25AB83F5001D1618 /* CardGalleryModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardGalleryModel.swift; sourceTree = "<group>"; };
@@ -134,6 +136,10 @@
 		98E7B3532651A9B8002980B8 /* ScreenBackground.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenBackground.swift; sourceTree = "<group>"; };
 		98E7B3562652655B002980B8 /* AnimatedBoardRisingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimatedBoardRisingView.swift; sourceTree = "<group>"; };
 		98E7B35826527C60002980B8 /* AnimatedBoardModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimatedBoardModel.swift; sourceTree = "<group>"; };
+		98E7B35A26528FF5002980B8 /* CircleModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleModel.swift; sourceTree = "<group>"; };
+		98E7B35C26529081002980B8 /* CircleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleView.swift; sourceTree = "<group>"; };
+		98E7B35E2652982F002980B8 /* ComponentShape.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComponentShape.swift; sourceTree = "<group>"; };
+		98E7B36026529CA2002980B8 /* AnyShape.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnyShape.swift; sourceTree = "<group>"; };
 		98F7161725B0CF9000885D54 /* PhotoModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -200,6 +206,7 @@
 				98E7B34726515EAD002980B8 /* NoteModel.swift */,
 				98E7B34D26518343002980B8 /* FlipCardModel.swift */,
 				98E7B35826527C60002980B8 /* AnimatedBoardModel.swift */,
+				98E7B35A26528FF5002980B8 /* CircleModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -232,6 +239,7 @@
 				988CB68825AA612400E87FEA /* CardView.swift */,
 				98E7B34B265182FA002980B8 /* FlipCardView.swift */,
 				98E7B34F26518AF7002980B8 /* PhotoView.swift */,
+				98E7B35C26529081002980B8 /* CircleView.swift */,
 				98E7B33326513E54002980B8 /* PolygonShape.swift */,
 			);
 			path = UI;
@@ -243,6 +251,7 @@
 				98110C1C25ABC2D4001D1618 /* Routing.swift */,
 				983FE883263ECA860087213B /* Layout.swift */,
 				98E7B34926518294002980B8 /* Component.swift */,
+				98E7B35E2652982F002980B8 /* ComponentShape.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -323,7 +332,6 @@
 		98E7B341265155E9002980B8 /* RemoteImages */ = {
 			isa = PBXGroup;
 			children = (
-				98110BC225AB60AA001D1618 /* RemoteImageCircle.swift */,
 				98E7B33F265155C2002980B8 /* RemoteImageCropped.swift */,
 				988CB67625AA29BA00E87FEA /* RemoteImage.swift */,
 			);
@@ -334,6 +342,7 @@
 			isa = PBXGroup;
 			children = (
 				98E7B3532651A9B8002980B8 /* ScreenBackground.swift */,
+				98E7B36026529CA2002980B8 /* AnyShape.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -483,6 +492,7 @@
 				98E7B34626515E42002980B8 /* NoteView.swift in Sources */,
 				988CB67225AA1C4800E87FEA /* PaperView.swift in Sources */,
 				988CB68925AA612400E87FEA /* CardView.swift in Sources */,
+				98E7B35B26528FF5002980B8 /* CircleModel.swift in Sources */,
 				98E7B34C265182FA002980B8 /* FlipCardView.swift in Sources */,
 				98E7B33C26514FEA002980B8 /* ArticleView.swift in Sources */,
 				988CB63525AA18FF00E87FEA /* AppDelegate.swift in Sources */,
@@ -490,6 +500,7 @@
 				98E7B33626513E9E002980B8 /* HoneycombModel.swift in Sources */,
 				98E7B34826515EAD002980B8 /* NoteModel.swift in Sources */,
 				98E7B33426513E54002980B8 /* PolygonShape.swift in Sources */,
+				98E7B35D26529081002980B8 /* CircleView.swift in Sources */,
 				98110BF025AB8471001D1618 /* PrimaryViewModel.swift in Sources */,
 				983F4632264F0FD600AFBF25 /* TabsModel.swift in Sources */,
 				98110C0925AB87F5001D1618 /* AppConfiguration.swift in Sources */,
@@ -499,7 +510,6 @@
 				988CB67725AA29BA00E87FEA /* RemoteImage.swift in Sources */,
 				983F462C264E9F8200AFBF25 /* UIColor+rgb.swift in Sources */,
 				98E7B34A26518294002980B8 /* Component.swift in Sources */,
-				98110BC325AB60AA001D1618 /* RemoteImageCircle.swift in Sources */,
 				98110BC825AB63CC001D1618 /* CardModel.swift in Sources */,
 				98110BEB25AB83F5001D1618 /* CardGalleryModel.swift in Sources */,
 				988CB63725AA18FF00E87FEA /* SceneDelegate.swift in Sources */,
@@ -509,8 +519,10 @@
 				98E7B32C2651356F002980B8 /* CatalogGridView.swift in Sources */,
 				98E7B328265133DF002980B8 /* ListView.swift in Sources */,
 				98F7161825B0CF9000885D54 /* PhotoModel.swift in Sources */,
+				98E7B36126529CA2002980B8 /* AnyShape.swift in Sources */,
 				98E7B33E26515028002980B8 /* ArticleModel.swift in Sources */,
 				98E7B340265155C2002980B8 /* RemoteImageCropped.swift in Sources */,
+				98E7B35F2652982F002980B8 /* ComponentShape.swift in Sources */,
 				983F464026504FF800AFBF25 /* PhraseModel.swift in Sources */,
 				983F463C2650048300AFBF25 /* GridModel.swift in Sources */,
 				983FE884263ECA860087213B /* Layout.swift in Sources */,

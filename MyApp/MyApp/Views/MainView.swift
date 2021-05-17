@@ -65,7 +65,7 @@ struct MainView: View {
                 .edgesIgnoringSafeArea(.bottom)
         }
         .accentColor(buttonsColor)
-        .tabItem { Label(tab.label ?? "", systemImage: tab.image ?? "list.dash") }
+        .tabItem { Label(tab.label ?? "", systemImage: tab.systemImage ?? "list.dash") }
     }
 
     private func modelItem(_ tab: Tab) -> some View {

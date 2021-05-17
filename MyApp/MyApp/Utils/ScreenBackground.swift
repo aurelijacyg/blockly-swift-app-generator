@@ -24,7 +24,7 @@ struct ScreenBackground {
             )
         } else if let imageURL = imageURL {
             return AnyView(
-                RemoteImage(url: imageURL)
+                RemoteImage(url: imageURL, shape: .rectangle)
                     .aspectRatio(contentMode: .fill)
             )
         } else {

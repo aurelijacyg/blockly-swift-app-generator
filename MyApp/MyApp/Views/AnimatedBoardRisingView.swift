@@ -111,12 +111,14 @@ struct AnimatedBoardRisingView: View {
             return AnyView(FlipCardView(card: card))
         case .photo(let photo):
             return AnyView(PhotoView(photo: photo))
+        case .circle(let data):
+            return AnyView(CircleView(data: data))
         case _:
-            return AnyView(CustomCircle)
+            return AnyView(bubble)
         }
     }
 
-    var CustomCircle: some View {
+    var bubble: some View {
         Circle().fill(data.items[activated].backgroundColor.opacity(0.5)).frame(width: 300, height: 300)
     }
 

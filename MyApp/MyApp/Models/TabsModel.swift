@@ -21,6 +21,6 @@ struct TabsModel {
 struct Tab: Identifiable {
     var id = UUID()
     var label: String?
-    var image: String?
+    var systemImage: String?
     var primaryView: PrimaryViewModel?
 }

@@ -22,15 +22,9 @@ struct PaperView: View {
 
         ScrollView(.vertical) {
             VStack(spacing:15) {
-                if data.photo.isRounded {
-                    RemoteImageCircle(url: data.photo.URL)
-                        .aspectRatio(contentMode: .fit)
-                        .frame(width: data.photo.width, height: data.photo.height)
-                } else {
-                    RemoteImage(url: data.photo.URL)
-                        .aspectRatio(contentMode: .fit)
-                        .frame(width: data.photo.width, height: data.photo.height)
-                }
+                RemoteImage(url: data.photo.URL, shape: data.photo.shape)
+                    .aspectRatio(contentMode: .fit)
+                    .frame(width: data.photo.width, height: data.photo.height)
 
                 Text(data.titleText)
                     .font(.title)

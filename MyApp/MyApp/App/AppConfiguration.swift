@@ -88,13 +88,13 @@ private let listElements =
                                 navigationBarTextTitle: "Photo gallery - Iceland",
                                 cards: [
                                     CardModel(
-                                        imageURL: "https://thumb2.holidaypirates.com/fJb5wMJGjT4BPYzX4vY_vBFH94A=/1314x600/https://media.mv.urlaubspiraten.de/images/2018/07/5b472ef9864a98992261485w7bx42y.jpg",
+                                        photoURL: "https://thumb2.holidaypirates.com/fJb5wMJGjT4BPYzX4vY_vBFH94A=/1314x600/https://media.mv.urlaubspiraten.de/images/2018/07/5b472ef9864a98992261485w7bx42y.jpg",
                                         category: "Iceland",
                                         heading: "Blue lagoon",
                                         label: "By AC"
                                     ),
                                     CardModel(
-                                        imageURL: "https://guidetoiceland.imgix.net/190432/x/0/w4a5319fb-jpg?w=860&h=480&fit=crop&auto=format%2C%20compress&dpr=2&ixlib=react-8.6.4",
+                                        photoURL: "https://guidetoiceland.imgix.net/190432/x/0/w4a5319fb-jpg?w=860&h=480&fit=crop&auto=format%2C%20compress&dpr=2&ixlib=react-8.6.4",
                                         category: "Iceland",
                                         heading: "Landscape",
                                         label: "By AC2"
@@ -119,9 +119,9 @@ private let listElements =
                                 bodyTextColor: Color.secondary,
                                 photo: PhotoModel(
                                     URL: "https://www.telegraph.co.uk/content/dam/Travel/commerce-partners/scenic/RESTRICTED-SCENIC-icelanddiscovery-productcard-TRAVEL.jpg",
+                                    shape: .circle,
                                     width: 250,
-                                    height: 250,
-                                    isRounded: true
+                                    height: 250
                                 )
                             )
                         )
@@ -151,19 +151,19 @@ private let gridElements =
                                 navigationBarTextTitle: "Photo gallery - Iceland",
                                 cards: [
                                     CardModel(
-                                        imageURL: "https://thumb2.holidaypirates.com/fJb5wMJGjT4BPYzX4vY_vBFH94A=/1314x600/https://media.mv.urlaubspiraten.de/images/2018/07/5b472ef9864a98992261485w7bx42y.jpg",
+                                        photoURL: "https://thumb2.holidaypirates.com/fJb5wMJGjT4BPYzX4vY_vBFH94A=/1314x600/https://media.mv.urlaubspiraten.de/images/2018/07/5b472ef9864a98992261485w7bx42y.jpg",
                                         category: "Iceland",
                                         heading: "Blue lagoon",
                                         label: "By AC"
                                     ),
                                     CardModel(
-                                        imageURL: "https://guidetoiceland.imgix.net/190432/x/0/w4a5319fb-jpg?w=860&h=480&fit=crop&auto=format%2C%20compress&dpr=2&ixlib=react-8.6.4",
+                                        photoURL: "https://guidetoiceland.imgix.net/190432/x/0/w4a5319fb-jpg?w=860&h=480&fit=crop&auto=format%2C%20compress&dpr=2&ixlib=react-8.6.4",
                                         category: "Iceland",
                                         heading: "Landscape",
                                         label: "By AC2"
                                     ),
                                     CardModel(
-                                        imageURL: "https://guidetoiceland.imgix.net/279996/x/0/horse-riding2-copy-jpg?w=860&h=480&fit=crop&auto=format%2C%20compress&dpr=2&ixlib=react-8.6.4",
+                                        photoURL: "https://guidetoiceland.imgix.net/279996/x/0/horse-riding2-copy-jpg?w=860&h=480&fit=crop&auto=format%2C%20compress&dpr=2&ixlib=react-8.6.4",
                                         category: "Iceland",
                                         heading: "Mountains",
                                         label: "By AC"
@@ -188,9 +188,9 @@ private let gridElements =
                                 bodyTextColor: Color.secondary,
                                 photo: PhotoModel(
                                     URL: "https://www.telegraph.co.uk/content/dam/Travel/commerce-partners/scenic/RESTRICTED-SCENIC-icelanddiscovery-productcard-TRAVEL.jpg",
+                                    shape: .circle,
                                     width: 250,
-                                    height: 250,
-                                    isRounded: true
+                                    height: 250
                                 )
                             )
                         )
@@ -219,9 +219,9 @@ private let gridElements =
                                 bodyTextColor: Color.secondary,
                                 photo: PhotoModel(
                                     URL: "https://www.telegraph.co.uk/content/dam/Travel/commerce-partners/scenic/RESTRICTED-SCENIC-icelanddiscovery-productcard-TRAVEL.jpg",
+                                    shape: .circle,
                                     width: 250,
-                                    height: 250,
-                                    isRounded: true
+                                    height: 250
                                 )
                             )
                         )
@@ -241,9 +241,9 @@ private let gridElements =
                                 bodyTextColor: Color.secondary,
                                 photo: PhotoModel(
                                     URL: "https://www.telegraph.co.uk/content/dam/Travel/commerce-partners/scenic/RESTRICTED-SCENIC-icelanddiscovery-productcard-TRAVEL.jpg",
+                                    shape: .circle,
                                     width: 250,
-                                    height: 250,
-                                    isRounded: true
+                                    height: 250
                                 )
                             )
                         )
@@ -358,43 +358,43 @@ private let honeycombElements = HoneycombModel(
     items:
         [
             HoneycombItemModel(
-                imageURL: "https://scx2.b-cdn.net/gfx/news/2019/2-nature.jpg",
+                photoURL: "https://scx2.b-cdn.net/gfx/news/2019/2-nature.jpg",
                 routeTo: nil
             ),
             HoneycombItemModel(
-                imageURL: "https://scx2.b-cdn.net/gfx/news/2019/2-nature.jpg",
+                photoURL: "https://scx2.b-cdn.net/gfx/news/2019/2-nature.jpg",
                 routeTo: nil
             ),
             HoneycombItemModel(
-                imageURL: "https://scx2.b-cdn.net/gfx/news/2019/2-nature.jpg",
+                photoURL: "https://scx2.b-cdn.net/gfx/news/2019/2-nature.jpg",
                 routeTo: nil
             ),
             HoneycombItemModel(
-                imageURL: "https://scx2.b-cdn.net/gfx/news/2019/2-nature.jpg",
+                photoURL: "https://scx2.b-cdn.net/gfx/news/2019/2-nature.jpg",
                 routeTo: nil
             ),
             HoneycombItemModel(
-                imageURL: "https://scx2.b-cdn.net/gfx/news/2019/2-nature.jpg",
+                photoURL: "https://scx2.b-cdn.net/gfx/news/2019/2-nature.jpg",
                 routeTo: nil
             ),
             HoneycombItemModel(
-                imageURL: "https://scx2.b-cdn.net/gfx/news/2019/2-nature.jpg",
+                photoURL: "https://scx2.b-cdn.net/gfx/news/2019/2-nature.jpg",
                 routeTo: nil
             ),
             HoneycombItemModel(
-                imageURL: "https://scx2.b-cdn.net/gfx/news/2019/2-nature.jpg",
+                photoURL: "https://scx2.b-cdn.net/gfx/news/2019/2-nature.jpg",
                 routeTo: nil
             ),
             HoneycombItemModel(
-                imageURL: "https://scx2.b-cdn.net/gfx/news/2019/2-nature.jpg",
+                photoURL: "https://scx2.b-cdn.net/gfx/news/2019/2-nature.jpg",
                 routeTo: nil
             ),
             HoneycombItemModel(
-                imageURL: "https://scx2.b-cdn.net/gfx/news/2019/2-nature.jpg",
+                photoURL: "https://scx2.b-cdn.net/gfx/news/2019/2-nature.jpg",
                 routeTo: nil
             ),
             HoneycombItemModel(
-                imageURL: "https://scx2.b-cdn.net/gfx/news/2019/2-nature.jpg",
+                photoURL: "https://scx2.b-cdn.net/gfx/news/2019/2-nature.jpg",
                 routeTo: nil
             )
         ]
@@ -410,7 +410,7 @@ let noteElement = NoteModel(
 
 let simpleCard = Component.card(
     CardModel(
-        imageURL: "https://thumb2.holidaypirates.com/fJb5wMJGjT4BPYzX4vY_vBFH94A=/1314x600/https://media.mv.urlaubspiraten.de/images/2018/07/5b472ef9864a98992261485w7bx42y.jpg",
+        photoURL: "https://thumb2.holidaypirates.com/fJb5wMJGjT4BPYzX4vY_vBFH94A=/1314x600/https://media.mv.urlaubspiraten.de/images/2018/07/5b472ef9864a98992261485w7bx42y.jpg",
         category: "Iceland",
         heading: "Blue lagoon",
         label: "By AC"
@@ -429,9 +429,9 @@ let flipCard = Component.flipCard(
 let photoCard = Component.photo(
     PhotoModel(
         URL: "https://c4.wallpaperflare.com/wallpaper/599/356/1019/digital-art-nature-mountains-portrait-display-wallpaper-preview.jpg",
+        shape: .circle,
         width: 200,
-        height: 200,
-        isRounded: false
+        height: 200
     )
 )
 
@@ -448,7 +448,7 @@ let animatedBoardModel = AnimatedBoardModel(
             yPosition: 30,
             risingComponent: Component.card(
                 CardModel(
-                    imageURL: "https://cdn.mos.cms.futurecdn.net/4UdEs7tTKwLJbxZPUYR3hF-1200-80.jpg",
+                    photoURL: "https://cdn.mos.cms.futurecdn.net/4UdEs7tTKwLJbxZPUYR3hF-1200-80.jpg",
                     category: "Fish",
                     heading: "Nice fish",
                     label: ""
@@ -464,12 +464,19 @@ let animatedBoardModel = AnimatedBoardModel(
             size: 100,
             xPosition: 300,
             yPosition: 30,
-            risingComponent: Component.card(
-                CardModel(
-                    imageURL: "https://4animalmagnetism.com/wp-content/uploads/2019/03/fish.jpeg",
-                    category: "Fish",
-                    heading: "Nice fish",
-                    label: ""
+            risingComponent: Component.circle(
+                CircleModel(
+                    title: "Fish",
+                    photo: PhotoModel(
+                        URL: "https://4animalmagnetism.com/wp-content/uploads/2019/03/fish.jpeg",
+                        shape: .roundedRectangle(20),
+                        width: nil,
+                        height: nil
+                    ),
+                    titleColor: .white,
+                    backgroundColor: Color(rgb: 0x333FFF),
+                    backgroundGradientColor: .blue,
+                    backgroundOpacity: 0.5
                 )
             )
         ),
@@ -495,9 +502,9 @@ let animatedBoardModel = AnimatedBoardModel(
             risingComponent: Component.photo(
                 PhotoModel(
                     URL: "https://www.wideopenpets.com/wp-content/uploads/2019/10/Fish-Names-770x405.png",
+                    shape: .rectangle,
                     width: 120,
-                    height: 120,
-                    isRounded: false
+                    height: 120
                 )
             )
         ),

@@ -26,7 +26,7 @@ struct CardView: View {
 
     var body: some View {
         VStack {
-            RemoteImage(url: card.imageURL)
+            RemoteImage(url: card.photoURL, shape: nil)
                 .aspectRatio(contentMode: .fit)
 
             HStack {

@@ -39,16 +39,19 @@ struct RemoteImage: View {
     @StateObject private var loader: Loader
     var loading: Image
     var failure: Image
+    var shape: ComponentShape?
 
     var body: some View {
         selectImage()
             .resizable()
+            .clipShape(getShape)
     }
 
-    init(url: String, loading: Image = Image(systemName: "photo"), failure: Image = Image(systemName: "multiply.circle")) {
+    init(url: String, shape: ComponentShape?, loading: Image = Image(systemName: "photo"), failure: Image = Image(systemName: "multiply.circle")) {
         _loader = StateObject(wrappedValue: Loader(url: url))
         self.loading = loading
         self.failure = failure
+        self.shape = shape
     }
 
     private func selectImage() -> Image {
@@ -63,6 +66,23 @@ struct RemoteImage: View {
             } else {
                 return failure
             }
+        }
+    }
+
+    private var getShape: some Shape {
+        switch shape {
+        case .capsule:
+            return AnyShape(Capsule())
+        case .circle:
+            return AnyShape(Circle())
+        case .ellipse:
+            return AnyShape(Ellipse())
+        case .rectangle:
+            return AnyShape(Rectangle())
+        case .roundedRectangle(let cornerRadius):
+            return AnyShape(RoundedRectangle(cornerRadius: cornerRadius))
+        case _:
+            return AnyShape(Rectangle())
         }
     }
 }

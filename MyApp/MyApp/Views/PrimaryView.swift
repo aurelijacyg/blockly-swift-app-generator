@@ -43,7 +43,7 @@ struct PrimaryView: View {
                 Spacer(minLength: 10)
 
                 if let URL = data.photoURL {
-                    RemoteImage(url: URL).frame(
+                    RemoteImage(url: URL, shape: nil).frame(
                         width: UIScreen.screenWidth,
                         height: UIScreen.screenHeight * 0.18,
                         alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/

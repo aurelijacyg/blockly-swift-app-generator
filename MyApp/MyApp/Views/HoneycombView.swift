@@ -61,7 +61,7 @@ struct HoneycombView: View {
 
     private func honeycombElement(_ element: HoneycombItemModel, index: Int) -> some View {
         VStack(spacing: 0) {
-            RemoteImage(url: element.imageURL ?? "")
+            RemoteImage(url: element.photoURL ?? "", shape: nil)
                 .frame(width: imgsize.width, height: imgsize.height)
                 .clipShape(PolygonShape(sides: 6).rotation(Angle.degrees(90)))
                 .offset(x: isEvenRow(index) ? 0 : hexagonWidth / 2 + (spacing/2))
