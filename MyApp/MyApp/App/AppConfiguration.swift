@@ -13,11 +13,18 @@ struct AppConfiguration {
         header: "My app",
         headerColor: Color.pink,
         navigationBarColor: Color.white,
-        //screenBackgroundColor: Color.white,
+        screenBackgroundColor: Color.white,
         screenBackgroundGradientColor: nil,
-        screenBackgroundImageUrl: "https://c4.wallpaperflare.com/wallpaper/599/356/1019/digital-art-nature-mountains-portrait-display-wallpaper-preview.jpg",
+        //screenBackgroundImageUrl: "https://c4.wallpaperflare.com/wallpaper/599/356/1019/digital-art-nature-mountains-portrait-display-wallpaper-preview.jpg",
         tabs:
             [
+                .init(
+                    primaryView: PrimaryViewModel(
+                        photoURL: nil,
+                        layout: Layout.animatedBoard(animatedBoardModel)
+                    )
+                ),
+
                 .init(
                     primaryView: PrimaryViewModel(
                         photoURL: nil,
@@ -426,4 +433,84 @@ let photoCard = Component.photo(
         height: 200,
         isRounded: false
     )
+)
+
+let animatedBoardModel = AnimatedBoardModel(
+    backgroundPhotoURL: "https://static.vecteezy.com/system/resources/previews/000/273/920/original/deep-ocean-background-vector.jpg",
+    items: [
+        AnimatedBoardItemModel(
+            title: "Fish 1",
+            backgroundColor: .blue,
+            backgroundGradientColor: nil,
+            textColor: .white,
+            size: 120,
+            xPosition: 70,
+            yPosition: 30,
+            risingComponent: Component.card(
+                CardModel(
+                    imageURL: "https://cdn.mos.cms.futurecdn.net/4UdEs7tTKwLJbxZPUYR3hF-1200-80.jpg",
+                    category: "Fish",
+                    heading: "Nice fish",
+                    label: ""
+                )
+            )
+        ),
+
+        AnimatedBoardItemModel(
+            title: "Fish 2",
+            backgroundColor: Color(rgb: 0x333FFF),
+            backgroundGradientColor: nil,
+            textColor: .white,
+            size: 100,
+            xPosition: 300,
+            yPosition: 30,
+            risingComponent: Component.card(
+                CardModel(
+                    imageURL: "https://4animalmagnetism.com/wp-content/uploads/2019/03/fish.jpeg",
+                    category: "Fish",
+                    heading: "Nice fish",
+                    label: ""
+                )
+            )
+        ),
+
+        AnimatedBoardItemModel(
+            title: "Fish 3",
+            backgroundColor: .blue,
+            backgroundGradientColor: nil,
+            textColor: .white,
+            size: 70,
+            xPosition: 45,
+            yPosition: 100
+        ),
+
+        AnimatedBoardItemModel(
+            title: "Fish4",
+            backgroundColor: .blue,
+            backgroundGradientColor: nil,
+            textColor: .white,
+            size: 130,
+            xPosition: 200,
+            yPosition: 200,
+            risingComponent: Component.photo(
+                PhotoModel(
+                    URL: "https://www.wideopenpets.com/wp-content/uploads/2019/10/Fish-Names-770x405.png",
+                    width: 120,
+                    height: 120,
+                    isRounded: false
+                )
+            )
+        ),
+
+        AnimatedBoardItemModel(
+            title: "Title 5",
+            backgroundColor: Color(rgb: 0x333FFF),
+            backgroundGradientColor: .purple,
+            textColor: .white,
+            size: 140,
+            xPosition: 300,
+            yPosition: 450
+        ),
+
+    ]
 )

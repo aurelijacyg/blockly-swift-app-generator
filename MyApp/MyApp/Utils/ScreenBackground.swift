@@ -28,17 +28,7 @@ struct ScreenBackground {
                     .aspectRatio(contentMode: .fill)
             )
         } else {
-            return AnyView(
-                LinearGradient(
-                    gradient: Gradient(
-                        colors: [
-                            Color.white,
-                        ]
-                    ),
-                    startPoint: .topTrailing,
-                    endPoint: .bottomTrailing
-                )
-            )
+            return AnyView(Color.white.opacity(0))
         }
     }
 }

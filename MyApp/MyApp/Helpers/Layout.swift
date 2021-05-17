@@ -12,4 +12,5 @@ enum Layout {
     case catalogGrid(CatalogGridModel)
     case honeycomb(HoneycombModel)
     case note(NoteModel)
+    case animatedBoard(AnimatedBoardModel)
 }

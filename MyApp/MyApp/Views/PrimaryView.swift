@@ -25,6 +25,13 @@ struct PrimaryView: View {
                 Text(headerTitle),
                 displayMode: .large
             )
+        case .animatedBoard(let data):
+            VStack {
+                AnimatedBoardRisingView(data: data)
+            }.navigationBarTitle(
+                Text(headerTitle),
+                displayMode: .large
+            )
         case _:
             scrollView
         }
