@@ -40,7 +40,7 @@ struct NoteView: View {
     }
 
     private var component: some View {
-        if data.animated {
+        if data.isAnimated {
             return AnyView(componentView
                 .frame(maxHeight: UIScreen.screenHeight * 0.65, alignment: bouncing ? .bottom : .top)
                 .animation(Animation.easeInOut(duration: 14.0).repeatForever(autoreverses: true))

@@ -30,7 +30,7 @@ struct CardGalleryView: View {
             }
         }
         .navigationBarTitle(
-            Text(data.navigationBarTextTitle),
+            Text(data.navigationBarTitle),
             displayMode: .inline
         )
         .introspectTabBarController { (UITabBarController) in

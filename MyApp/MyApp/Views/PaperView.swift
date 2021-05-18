@@ -26,17 +26,17 @@ struct PaperView: View {
                     .aspectRatio(contentMode: .fit)
                     .frame(width: data.photo.width, height: data.photo.height)
 
-                Text(data.titleText)
+                Text(data.title)
                     .font(.title)
                     .fontWeight(.black)
                     .foregroundColor(data.titleColor)
                     .lineLimit(3)
                     .multilineTextAlignment(.center)
                 HStack(alignment: .center) {
-                    Text(data.bodyText)
+                    Text(data.body)
                         .font(.body)
                         .lineSpacing(7)
-                        .foregroundColor(data.bodyTextColor)
+                        .foregroundColor(data.bodyColor)
                         .multilineTextAlignment(.center)
                 }
             }
@@ -47,7 +47,7 @@ struct PaperView: View {
             )
             .padding([.top, .horizontal])
             .navigationBarTitle(
-                Text(data.titleText),
+                Text(data.title),
                 displayMode: .inline
             )
             .introspectTabBarController { (UITabBarController) in

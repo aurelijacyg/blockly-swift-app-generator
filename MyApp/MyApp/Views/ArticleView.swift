@@ -27,13 +27,13 @@ struct ArticleView: View {
                         Text(data.title)
                             .font(.title)
                             .fontWeight(.black)
-                            .foregroundColor(data.titleColor)
+                            .foregroundColor(data.titlesColor)
                             .lineLimit(3)
                             .multilineTextAlignment(.leading)
 
                         Text(data.subtitle)
                             .font(.subheadline)
-                            .foregroundColor(data.titleColor)
+                            .foregroundColor(data.titlesColor)
                             .lineLimit(3)
                             .multilineTextAlignment(.leading)
 

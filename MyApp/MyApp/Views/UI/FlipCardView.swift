@@ -22,7 +22,7 @@ struct FlipCardView: View {
                 Text(card.title)
                     .font(.title2)
                     .bold()
-                    .foregroundColor(card.titleColor ?? .black)
+                    .foregroundColor(card.textColor ?? .black)
                     .lineSpacing(6)
                     .multilineTextAlignment(.center)
 
@@ -36,7 +36,7 @@ struct FlipCardView: View {
                 if isShowingAnswer {
                     Text(card.hiddenText)
                         .font(.title)
-                        .foregroundColor(card.titleColor)
+                        .foregroundColor(card.textColor)
                 }
             }
             .padding(20)

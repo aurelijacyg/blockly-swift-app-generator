@@ -9,6 +9,6 @@ import SwiftUI
 
 struct NoteModel {
     var component: Component
-    var animated: Bool
+    var isAnimated: Bool
     var backgroundColor: BackgroundModel
 }

@@ -21,6 +21,8 @@ struct AppConfiguration {
         tabs:
             [
                 .init(
+                    label: "Label",
+                    systemImage: "",
                     primaryView: PrimaryViewModel(
                         photoURL: nil,
                         layout: Layout.bubbleList(bubbleListElements)
@@ -87,7 +89,7 @@ private let listElements =
                                 categoryColor: Color.secondary,
                                 headingColor: Color.primary,
                                 labelColor: Color.secondary,
-                                navigationBarTextTitle: "Photo gallery - Iceland",
+                                navigationBarTitle: "Photo gallery - Iceland",
                                 cards: [
                                     CardModel(
                                         photoURL: "https://thumb2.holidaypirates.com/fJb5wMJGjT4BPYzX4vY_vBFH94A=/1314x600/https://media.mv.urlaubspiraten.de/images/2018/07/5b472ef9864a98992261485w7bx42y.jpg",
@@ -115,10 +117,10 @@ private let listElements =
                     routeTo: Routing.paper(
                         PaperView(
                             data: PaperModel(
-                                titleText: "Iceland",
-                                bodyText: "Iceland is a Nordic island country in the North Atlantic Ocean, with a population of 356,991 and an area of 103,000 km2 (40,000 sq mi), making it the most sparsely populated country in Europe.[e][13] The capital and largest city is Reykjavík. Reykjavík and the surrounding areas in the southwest of the country are home to over two-thirds of the population. Iceland is volcanically and geologically active. The interior consists of a plateau characterised by sand and lava fields, mountains, and glaciers, and many glacial rivers flow to the sea through the lowlands. Iceland is warmed by the Gulf Stream and has a temperate climate, despite a high latitude just outside the Arctic Circle. Its high latitude and marine influence keep summers chilly, with most of the archipelago having a polar climate.",
+                                title: "Iceland",
+                                body: "Iceland is a Nordic island country in the North Atlantic Ocean, with a population of 356,991 and an area of 103,000 km2 (40,000 sq mi), making it the most sparsely populated country in Europe.[e][13] The capital and largest city is Reykjavík. Reykjavík and the surrounding areas in the southwest of the country are home to over two-thirds of the population. Iceland is volcanically and geologically active. The interior consists of a plateau characterised by sand and lava fields, mountains, and glaciers, and many glacial rivers flow to the sea through the lowlands. Iceland is warmed by the Gulf Stream and has a temperate climate, despite a high latitude just outside the Arctic Circle. Its high latitude and marine influence keep summers chilly, with most of the archipelago having a polar climate.",
                                 titleColor: Color.primary,
-                                bodyTextColor: Color.secondary,
+                                bodyColor: Color.secondary,
                                 photo: PhotoModel(
                                     URL: "https://www.telegraph.co.uk/content/dam/Travel/commerce-partners/scenic/RESTRICTED-SCENIC-icelanddiscovery-productcard-TRAVEL.jpg",
                                     shape: .circle,
@@ -150,7 +152,7 @@ private let gridElements =
                                 categoryColor: Color.secondary,
                                 headingColor: Color.primary,
                                 labelColor: Color.secondary,
-                                navigationBarTextTitle: "Photo gallery - Iceland",
+                                navigationBarTitle: "Photo gallery - Iceland",
                                 cards: [
                                     CardModel(
                                         photoURL: "https://thumb2.holidaypirates.com/fJb5wMJGjT4BPYzX4vY_vBFH94A=/1314x600/https://media.mv.urlaubspiraten.de/images/2018/07/5b472ef9864a98992261485w7bx42y.jpg",
@@ -184,10 +186,10 @@ private let gridElements =
                     routeTo: Routing.paper(
                         PaperView(
                             data: PaperModel(
-                                titleText: "Iceland",
-                                bodyText: "Iceland is a Nordic island country in the North Atlantic Ocean, with a population of 356,991 and an area of 103,000 km2 (40,000 sq mi), making it the most sparsely populated country in Europe.[e][13] The capital and largest city is Reykjavík. Reykjavík and the surrounding areas in the southwest of the country are home to over two-thirds of the population. Iceland is volcanically and geologically active. The interior consists of a plateau characterised by sand and lava fields, mountains, and glaciers, and many glacial rivers flow to the sea through the lowlands. Iceland is warmed by the Gulf Stream and has a temperate climate, despite a high latitude just outside the Arctic Circle. Its high latitude and marine influence keep summers chilly, with most of the archipelago having a polar climate.",
+                                title: "Iceland",
+                                body: "Iceland is a Nordic island country in the North Atlantic Ocean, with a population of 356,991 and an area of 103,000 km2 (40,000 sq mi), making it the most sparsely populated country in Europe.[e][13] The capital and largest city is Reykjavík. Reykjavík and the surrounding areas in the southwest of the country are home to over two-thirds of the population. Iceland is volcanically and geologically active. The interior consists of a plateau characterised by sand and lava fields, mountains, and glaciers, and many glacial rivers flow to the sea through the lowlands. Iceland is warmed by the Gulf Stream and has a temperate climate, despite a high latitude just outside the Arctic Circle. Its high latitude and marine influence keep summers chilly, with most of the archipelago having a polar climate.",
                                 titleColor: Color.primary,
-                                bodyTextColor: Color.secondary,
+                                bodyColor: Color.secondary,
                                 photo: PhotoModel(
                                     URL: "https://www.telegraph.co.uk/content/dam/Travel/commerce-partners/scenic/RESTRICTED-SCENIC-icelanddiscovery-productcard-TRAVEL.jpg",
                                     shape: .circle,
@@ -215,10 +217,10 @@ private let gridElements =
                     routeTo: Routing.paper(
                         PaperView(
                             data: PaperModel(
-                                titleText: "Iceland",
-                                bodyText: "Iceland is a Nordic island country in the North Atlantic Ocean, with a population of 356,991 and an area of 103,000 km2 (40,000 sq mi), making it the most sparsely populated country in Europe.[e][13] The capital and largest city is Reykjavík. Reykjavík and the surrounding areas in the southwest of the country are home to over two-thirds of the population. Iceland is volcanically and geologically active. The interior consists of a plateau characterised by sand and lava fields, mountains, and glaciers, and many glacial rivers flow to the sea through the lowlands. Iceland is warmed by the Gulf Stream and has a temperate climate, despite a high latitude just outside the Arctic Circle. Its high latitude and marine influence keep summers chilly, with most of the archipelago having a polar climate.",
+                                title: "Iceland",
+                                body: "Iceland is a Nordic island country in the North Atlantic Ocean, with a population of 356,991 and an area of 103,000 km2 (40,000 sq mi), making it the most sparsely populated country in Europe.[e][13] The capital and largest city is Reykjavík. Reykjavík and the surrounding areas in the southwest of the country are home to over two-thirds of the population. Iceland is volcanically and geologically active. The interior consists of a plateau characterised by sand and lava fields, mountains, and glaciers, and many glacial rivers flow to the sea through the lowlands. Iceland is warmed by the Gulf Stream and has a temperate climate, despite a high latitude just outside the Arctic Circle. Its high latitude and marine influence keep summers chilly, with most of the archipelago having a polar climate.",
                                 titleColor: Color.primary,
-                                bodyTextColor: Color.secondary,
+                                bodyColor: Color.secondary,
                                 photo: PhotoModel(
                                     URL: "https://www.telegraph.co.uk/content/dam/Travel/commerce-partners/scenic/RESTRICTED-SCENIC-icelanddiscovery-productcard-TRAVEL.jpg",
                                     shape: .circle,
@@ -237,10 +239,10 @@ private let gridElements =
                     routeTo: Routing.paper(
                         PaperView(
                             data: PaperModel(
-                                titleText: "Iceland",
-                                bodyText: "Iceland is a Nordic island country in the North Atlantic Ocean, with a population of 356,991 and an area of 103,000 km2 (40,000 sq mi), making it the most sparsely populated country in Europe.[e][13] The capital and largest city is Reykjavík. Reykjavík and the surrounding areas in the southwest of the country are home to over two-thirds of the population. Iceland is volcanically and geologically active. The interior consists of a plateau characterised by sand and lava fields, mountains, and glaciers, and many glacial rivers flow to the sea through the lowlands. Iceland is warmed by the Gulf Stream and has a temperate climate, despite a high latitude just outside the Arctic Circle. Its high latitude and marine influence keep summers chilly, with most of the archipelago having a polar climate.",
+                                title: "Iceland",
+                                body: "Iceland is a Nordic island country in the North Atlantic Ocean, with a population of 356,991 and an area of 103,000 km2 (40,000 sq mi), making it the most sparsely populated country in Europe.[e][13] The capital and largest city is Reykjavík. Reykjavík and the surrounding areas in the southwest of the country are home to over two-thirds of the population. Iceland is volcanically and geologically active. The interior consists of a plateau characterised by sand and lava fields, mountains, and glaciers, and many glacial rivers flow to the sea through the lowlands. Iceland is warmed by the Gulf Stream and has a temperate climate, despite a high latitude just outside the Arctic Circle. Its high latitude and marine influence keep summers chilly, with most of the archipelago having a polar climate.",
                                 titleColor: Color.primary,
-                                bodyTextColor: Color.secondary,
+                                bodyColor: Color.secondary,
                                 photo: PhotoModel(
                                     URL: "https://www.telegraph.co.uk/content/dam/Travel/commerce-partners/scenic/RESTRICTED-SCENIC-icelanddiscovery-productcard-TRAVEL.jpg",
                                     shape: .circle,
@@ -331,7 +333,7 @@ private let catalogGridElements = CatalogGridModel(
                             title: "Article title should be long to see whats",
                             subtitle: "AC",
                             body: "Everyone fails, but only the wise find humility. Everyone fails, but only the wise find humility.Everyone fails, but only the wise find humility. Everyone fails, but only the wise find humility. Everyone fails, but only the wise find humility. Everyone fails, but only the wise find humility. Everyone fails, but only the wise find humility. Everyone fails, but only the wise find humility. Everyone fails, but only the wise find humility.  Everyone fails, but only the wise find humility. ",
-                            titleColor: .blue,
+                            titlesColor: .blue,
                             bodyColor: .secondary,
                             photoURL: "https://scx2.b-cdn.net/gfx/news/2019/2-nature.jpg"
                         )
@@ -406,7 +408,7 @@ private let honeycombElements = HoneycombModel(
 
 let noteElement = NoteModel(
     component: flipCard,
-    animated: true,
+    isAnimated: true,
     backgroundColor: BackgroundModel(
         color: nil,
         gradientColor: nil,
@@ -426,7 +428,7 @@ let simpleCard = Component.card(
 let flipCard = Component.flipCard(
     FlipCardModel(
         title: "Solar system",
-        titleColor: .blue,
+        textColor: .blue,
         subtitle: "What is the second planet closest to the sun?",
         hiddenText: "Venus"
     )

@@ -8,9 +8,9 @@
 import SwiftUI
 
 struct PaperModel {
-    var titleText: String
-    var bodyText: String
+    var title: String
+    var body: String
     var titleColor: Color
-    var bodyTextColor: Color
+    var bodyColor: Color
     var photo: PhotoModel
 }
