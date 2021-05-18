@@ -8,7 +8,6 @@
 import SwiftUI
 
 struct BubbleListModel {
-    var backgroundColor: Color = .white
     var isItemsBig: Bool
     var items: [BubbleListItemModel]
 }

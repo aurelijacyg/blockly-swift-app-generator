@@ -8,9 +8,7 @@
 import SwiftUI
 
 struct AnimatedBoardModel {
-    var backgroundColor: Color?
-    var backgroundGradientColor: Color?
-    var backgroundPhotoURL: String?
+    var backgroundColor: BackgroundModel
     var items: [AnimatedBoardItemModel]
 }
 

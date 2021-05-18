@@ -11,6 +11,7 @@ import Introspect
 struct PhraseView: View {
 
     let data: PhraseModel
+    let screenBackground = ScreenBackground()
 
     @State
     var uiTabarController: UITabBarController?
@@ -20,17 +21,6 @@ struct PhraseView: View {
     }
 
     var body: some View {
-        let backgroundColor = LinearGradient(
-            gradient: Gradient(
-                colors: [
-                    data.backgroundColor,
-                    data.backgroundGradientColor ?? data.backgroundColor
-                ]
-            ),
-            startPoint: .topTrailing,
-            endPoint: .bottomTrailing
-        )
-
         VStack(alignment: .leading) {
             Text(data.title)
                 .font(.custom(data.typeface, size: 30, relativeTo: .title))
@@ -50,7 +40,10 @@ struct PhraseView: View {
             maxHeight: .infinity,
             alignment: .leading
         )
-        .background(backgroundColor)
+        .background(screenBackground.background(
+                        color: data.backgroundColor.color,
+                        gradientColor: data.backgroundColor.gradientColor,
+                        photoURL: data.backgroundColor.photoURL))
         .ignoresSafeArea()
         .introspectTabBarController { (UITabBarController) in
             UITabBarController.tabBar.isHidden = true

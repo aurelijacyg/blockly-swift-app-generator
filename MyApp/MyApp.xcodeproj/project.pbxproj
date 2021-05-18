@@ -61,6 +61,7 @@
 		98E7B35D26529081002980B8 /* CircleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98E7B35C26529081002980B8 /* CircleView.swift */; };
 		98E7B35F2652982F002980B8 /* ComponentShape.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98E7B35E2652982F002980B8 /* ComponentShape.swift */; };
 		98E7B36126529CA2002980B8 /* AnyShape.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98E7B36026529CA2002980B8 /* AnyShape.swift */; };
+		98E7B3632653B391002980B8 /* BackgroundModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98E7B3622653B391002980B8 /* BackgroundModel.swift */; };
 		98F7161825B0CF9000885D54 /* PhotoModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98F7161725B0CF9000885D54 /* PhotoModel.swift */; };
 /* End PBXBuildFile section */
 
@@ -140,6 +141,7 @@
 		98E7B35C26529081002980B8 /* CircleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleView.swift; sourceTree = "<group>"; };
 		98E7B35E2652982F002980B8 /* ComponentShape.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComponentShape.swift; sourceTree = "<group>"; };
 		98E7B36026529CA2002980B8 /* AnyShape.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnyShape.swift; sourceTree = "<group>"; };
+		98E7B3622653B391002980B8 /* BackgroundModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackgroundModel.swift; sourceTree = "<group>"; };
 		98F7161725B0CF9000885D54 /* PhotoModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -207,6 +209,7 @@
 				98E7B34D26518343002980B8 /* FlipCardModel.swift */,
 				98E7B35826527C60002980B8 /* AnimatedBoardModel.swift */,
 				98E7B35A26528FF5002980B8 /* CircleModel.swift */,
+				98E7B3622653B391002980B8 /* BackgroundModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -517,6 +520,7 @@
 				98E7B32E2651362D002980B8 /* BubbleListView.swift in Sources */,
 				98E7B35926527C60002980B8 /* AnimatedBoardModel.swift in Sources */,
 				98E7B32C2651356F002980B8 /* CatalogGridView.swift in Sources */,
+				98E7B3632653B391002980B8 /* BackgroundModel.swift in Sources */,
 				98E7B328265133DF002980B8 /* ListView.swift in Sources */,
 				98F7161825B0CF9000885D54 /* PhotoModel.swift in Sources */,
 				98E7B36126529CA2002980B8 /* AnyShape.swift in Sources */,

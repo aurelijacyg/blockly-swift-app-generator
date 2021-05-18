@@ -9,7 +9,7 @@ import SwiftUI
 
 struct BubbleListView: View {
     let data: BubbleListModel
-
+    let screenBackground = ScreenBackground()
 
     init(data: BubbleListModel) {
         self.data = data
@@ -54,7 +54,8 @@ struct BubbleListView: View {
                     }
                 }
             }
-        }.padding(data.isItemsBig ? UIScreen.screenHeight * 0.02 : UIScreen.screenHeight * 0.075)
+        }
+        .padding(data.isItemsBig ? UIScreen.screenHeight * 0.02 : UIScreen.screenHeight * 0.075)
     }
 
     private func bubbleListElement(_ element: BubbleListItemModel, isItemBig: Bool) -> some View {

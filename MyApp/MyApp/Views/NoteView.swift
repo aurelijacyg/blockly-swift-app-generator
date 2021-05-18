@@ -31,9 +31,9 @@ struct NoteView: View {
         )
         .background(
             screenBackground.background(
-                color: data.backgroundColor,
-                gradientColor: data.backgroundGradientColor,
-                imageURL: data.backgroundPhotoURL
+                color: data.backgroundColor.color,
+                gradientColor: data.backgroundColor.gradientColor,
+                photoURL: data.backgroundColor.photoURL
             )
         )
         .ignoresSafeArea()

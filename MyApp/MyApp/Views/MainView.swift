@@ -42,9 +42,9 @@ struct MainView: View {
             modelItem(tab)
                 .background(
                     screenBackground.background(
-                        color: data.screenBackgroundColor,
-                        gradientColor: data.screenBackgroundGradientColor,
-                        imageURL: data.screenBackgroundImageUrl
+                        color: data.screenBackground.color,
+                        gradientColor: data.screenBackground.gradientColor,
+                        photoURL: data.screenBackground.photoURL
                     )
                 )
                 .edgesIgnoringSafeArea(.bottom)
@@ -57,9 +57,9 @@ struct MainView: View {
             modelItem(tab)
                 .background(
                     screenBackground.background(
-                        color: data.screenBackgroundColor,
-                        gradientColor: data.screenBackgroundGradientColor,
-                        imageURL: data.screenBackgroundImageUrl
+                        color: data.screenBackground.color,
+                        gradientColor: data.screenBackground.gradientColor,
+                        photoURL: data.screenBackground.photoURL
                     )
                 )
                 .edgesIgnoringSafeArea(.bottom)

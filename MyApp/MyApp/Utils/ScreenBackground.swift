@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct ScreenBackground {
-    func background(color: Color?, gradientColor: Color?, imageURL: String?) -> some View {
+    func background(color: Color?, gradientColor: Color?, photoURL: String?) -> some View {
         if let color = color {
             return AnyView(
                 LinearGradient(
@@ -22,9 +22,9 @@ struct ScreenBackground {
                     endPoint: .bottomTrailing
                 )
             )
-        } else if let imageURL = imageURL {
+        } else if let photoURL = photoURL {
             return AnyView(
-                RemoteImage(url: imageURL, shape: .rectangle)
+                RemoteImage(url: photoURL, shape: .rectangle)
                     .aspectRatio(contentMode: .fill)
             )
         } else {

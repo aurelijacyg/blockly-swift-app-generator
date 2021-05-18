@@ -12,6 +12,5 @@ struct PhraseModel {
     var label: String
     var textColor: Color
     var typeface: String
-    var backgroundColor: Color
-    var backgroundGradientColor: Color?
+    var backgroundColor: BackgroundModel
 }

@@ -13,11 +13,20 @@ struct AppConfiguration {
         header: "My app",
         headerColor: Color.pink,
         navigationBarColor: Color.white,
-        screenBackgroundColor: Color.white,
-        screenBackgroundGradientColor: nil,
-        //screenBackgroundImageUrl: "https://c4.wallpaperflare.com/wallpaper/599/356/1019/digital-art-nature-mountains-portrait-display-wallpaper-preview.jpg",
+        screenBackground: BackgroundModel(
+            color: Color.white,
+            gradientColor: nil
+            //imageURL: "https://c4.wallpaperflare.com/wallpaper/599/356/1019/digital-art-nature-mountains-portrait-display-wallpaper-preview.jpg"
+        ),
         tabs:
             [
+                .init(
+                    primaryView: PrimaryViewModel(
+                        photoURL: nil,
+                        layout: Layout.bubbleList(bubbleListElements)
+                    )
+                ),
+                
                 .init(
                     primaryView: PrimaryViewModel(
                         photoURL: nil,
@@ -42,13 +51,6 @@ struct AppConfiguration {
                     primaryView: PrimaryViewModel(
                         photoURL: nil,
                         layout: Layout.catalogGrid(catalogGridElements)
-                    )
-                ),
-                
-                .init(
-                    primaryView: PrimaryViewModel(
-                        photoURL: nil,
-                        layout: Layout.bubbleList(bubbleListElements)
                     )
                 ),
 
@@ -261,7 +263,6 @@ private let gridElements =
     )
 
 private let bubbleListElements = BubbleListModel(
-    backgroundColor: .red,
     isItemsBig: true,
     items:
         [
@@ -309,8 +310,11 @@ private let catalogGridElements = CatalogGridModel(
                             label: "--- C. Bradatan",
                             textColor: .white,
                             typeface: "Geneva",
-                            backgroundColor: .pink,
-                            backgroundGradientColor: .purple
+                            backgroundColor: .init(
+                                color: nil,
+                                gradientColor: nil,
+                                photoURL: "https://www.wideopenpets.com/wp-content/uploads/2019/10/Fish-Names-770x405.png"
+                            )
                         )
                     )
                 )
@@ -403,9 +407,11 @@ private let honeycombElements = HoneycombModel(
 let noteElement = NoteModel(
     component: flipCard,
     animated: true,
-    backgroundColor: nil,
-    backgroundGradientColor: nil,
-    backgroundPhotoURL: "https://wallpaperaccess.com/full/3227808.jpg"
+    backgroundColor: BackgroundModel(
+        color: nil,
+        gradientColor: nil,
+        photoURL: "https://wallpaperaccess.com/full/3227808.jpg"
+    )
 )
 
 let simpleCard = Component.card(
@@ -436,7 +442,11 @@ let photoCard = Component.photo(
 )
 
 let animatedBoardModel = AnimatedBoardModel(
-    backgroundPhotoURL: "https://static.vecteezy.com/system/resources/previews/000/273/920/original/deep-ocean-background-vector.jpg",
+    backgroundColor: BackgroundModel(
+        color: nil,
+        gradientColor: nil,
+        photoURL: "https://static.vecteezy.com/system/resources/previews/000/273/920/original/deep-ocean-background-vector.jpg"
+    ),
     items: [
         AnimatedBoardItemModel(
             title: "Fish 1",
