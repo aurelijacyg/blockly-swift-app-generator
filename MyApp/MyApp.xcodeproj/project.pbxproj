@@ -220,19 +220,8 @@
 			isa = PBXGroup;
 			children = (
 				9835BBFA2632BB7B004D23E1 /* UI */,
-				988CB63825AA18FF00E87FEA /* MainView.swift */,
-				983F462D264ED78300AFBF25 /* PrimaryView.swift */,
-				98E7B34526515E42002980B8 /* NoteView.swift */,
-				98E7B327265133DF002980B8 /* ListView.swift */,
-				98E7B32D2651362D002980B8 /* BubbleListView.swift */,
-				98E7B329265134A2002980B8 /* GridView.swift */,
-				98E7B32B2651356F002980B8 /* CatalogGridView.swift */,
-				98E7B33126513AE4002980B8 /* HoneycombView.swift */,
-				98E7B3562652655B002980B8 /* AnimatedBoardRisingView.swift */,
-				988CB67125AA1C4800E87FEA /* PaperView.swift */,
-				98E7B33B26514FEA002980B8 /* ArticleView.swift */,
-				988CB68325AA5DCC00E87FEA /* CardGalleryView.swift */,
-				983F46412650511000AFBF25 /* PhraseView.swift */,
+				98E7B36726543804002980B8 /* Layouts */,
+				98E7B366265437FB002980B8 /* Screens */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -253,11 +242,11 @@
 		9835BC4F2632C92F004D23E1 /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
+				98E7B36426542B5B002980B8 /* Screen.swift */,
 				98110C1C25ABC2D4001D1618 /* Routing.swift */,
 				983FE883263ECA860087213B /* Layout.swift */,
 				98E7B34926518294002980B8 /* Component.swift */,
 				98E7B35E2652982F002980B8 /* ComponentShape.swift */,
-				98E7B36426542B5B002980B8 /* Screen.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -302,6 +291,7 @@
 				9835BC4F2632C92F004D23E1 /* Helpers */,
 				9835BBF12632BA1E004D23E1 /* Models */,
 				9835BBF92632BB03004D23E1 /* Views */,
+				988CB63825AA18FF00E87FEA /* MainView.swift */,
 				988CB63F25AA190100E87FEA /* LaunchScreen.storyboard */,
 				988CB64225AA190100E87FEA /* Info.plist */,
 				988CB63C25AA190100E87FEA /* Preview Content */,
@@ -351,6 +341,32 @@
 				98E7B36026529CA2002980B8 /* AnyShape.swift */,
 			);
 			path = Utils;
+			sourceTree = "<group>";
+		};
+		98E7B366265437FB002980B8 /* Screens */ = {
+			isa = PBXGroup;
+			children = (
+				983F462D264ED78300AFBF25 /* PrimaryView.swift */,
+				988CB67125AA1C4800E87FEA /* PaperView.swift */,
+				98E7B33B26514FEA002980B8 /* ArticleView.swift */,
+				988CB68325AA5DCC00E87FEA /* CardGalleryView.swift */,
+				983F46412650511000AFBF25 /* PhraseView.swift */,
+			);
+			path = Screens;
+			sourceTree = "<group>";
+		};
+		98E7B36726543804002980B8 /* Layouts */ = {
+			isa = PBXGroup;
+			children = (
+				98E7B327265133DF002980B8 /* ListView.swift */,
+				98E7B32D2651362D002980B8 /* BubbleListView.swift */,
+				98E7B329265134A2002980B8 /* GridView.swift */,
+				98E7B32B2651356F002980B8 /* CatalogGridView.swift */,
+				98E7B34526515E42002980B8 /* NoteView.swift */,
+				98E7B33126513AE4002980B8 /* HoneycombView.swift */,
+				98E7B3562652655B002980B8 /* AnimatedBoardRisingView.swift */,
+			);
+			path = Layouts;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

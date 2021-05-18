@@ -44,6 +44,11 @@ struct ListView: View {
                             listElement(element)
                         }.foregroundColor(element.textColor)
 
+                    case .primary(let primaryView):
+                        NavigationLink(destination: primaryView) {
+                            listElement(element)
+                        }.foregroundColor(element.textColor)
+
                     case _:
                         VStack{
                             listElement(element)

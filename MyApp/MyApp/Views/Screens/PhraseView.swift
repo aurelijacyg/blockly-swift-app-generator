@@ -14,7 +14,7 @@ struct PhraseView: View {
     let screenBackground = ScreenBackground()
 
     @State
-    var uiTabarController: UITabBarController?
+    var uiTabBarController: UITabBarController?
 
     init(data: PhraseModel) {
         self.data = data
@@ -47,9 +47,9 @@ struct PhraseView: View {
         .ignoresSafeArea()
         .introspectTabBarController { (UITabBarController) in
             UITabBarController.tabBar.isHidden = data.isTabBarHidden
-            uiTabarController = UITabBarController
+            uiTabBarController = UITabBarController
         }.onDisappear{
-            uiTabarController?.tabBar.isHidden = false
+            uiTabBarController?.tabBar.isHidden = false
         }
     }
 }

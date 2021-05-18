@@ -6,9 +6,13 @@
 //
 
 import SwiftUI
+import Introspect
 
 struct PrimaryView: View {
     let data: PrimaryViewModel
+
+    @State
+    var uiTabBarController: UITabBarController?
 
     init(data: PrimaryViewModel) {
         self.data = data
@@ -58,6 +62,11 @@ struct PrimaryView: View {
                     Text("Failed to load screen")
                 }
             }
+        }.introspectTabBarController { (UITabBarController) in
+            UITabBarController.tabBar.isHidden = true
+            uiTabBarController = UITabBarController
+        }.onDisappear{
+            uiTabBarController?.tabBar.isHidden = false
         }
     }
 }

@@ -13,7 +13,7 @@ struct ArticleView: View {
     let data: ArticleModel
 
     @State
-    var uiTabarController: UITabBarController?
+    var uiTabBarController: UITabBarController?
 
     init(data: ArticleModel) {
         self.data = data
@@ -56,9 +56,9 @@ struct ArticleView: View {
         .ignoresSafeArea(edges: .bottom)
         .introspectTabBarController { (UITabBarController) in
             UITabBarController.tabBar.isHidden = data.isTabBarHidden
-            uiTabarController = UITabBarController
+            uiTabBarController = UITabBarController
         }.onDisappear{
-            uiTabarController?.tabBar.isHidden = false
+            uiTabBarController?.tabBar.isHidden = false
         }
     }
 }

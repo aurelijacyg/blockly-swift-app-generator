@@ -45,6 +45,11 @@ struct CatalogGridView: View {
                             catalogGridElement(element, frameSize: frameSize)
                         }.foregroundColor(element.textColor)
 
+                    case .primary(let primaryView):
+                        NavigationLink(destination: primaryView) {
+                            catalogGridElement(element, frameSize: frameSize)
+                        }.foregroundColor(element.textColor)
+
                     case _:
                         VStack{
                             catalogGridElement(element, frameSize: frameSize)

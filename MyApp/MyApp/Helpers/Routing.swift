@@ -10,4 +10,5 @@ enum Routing {
     case cards(CardGalleryView)
     case phrase(PhraseView)
     case article(ArticleView)
+    case primary(PrimaryView)
 }

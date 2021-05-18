@@ -12,7 +12,7 @@ struct PaperView: View {
     let data: PaperModel
 
     @State
-    var uiTabarController: UITabBarController?
+    var uiTabBarController: UITabBarController?
 
     init(data: PaperModel) {
         self.data = data
@@ -52,9 +52,9 @@ struct PaperView: View {
             )
             .introspectTabBarController { (UITabBarController) in
                 UITabBarController.tabBar.isHidden = data.isTabBarHidden
-                uiTabarController = UITabBarController
+                uiTabBarController = UITabBarController
             }.onDisappear{
-                uiTabarController?.tabBar.isHidden = false
+                uiTabBarController?.tabBar.isHidden = false
             }
         }
     }

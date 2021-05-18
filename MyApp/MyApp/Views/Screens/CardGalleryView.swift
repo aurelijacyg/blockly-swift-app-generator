@@ -12,7 +12,7 @@ struct CardGalleryView: View {
     let data: CardGalleryModel
 
     @State
-    var uiTabarController: UITabBarController?
+    var uiTabBarController: UITabBarController?
 
     init(data: CardGalleryModel) {
         self.data = data
@@ -35,9 +35,9 @@ struct CardGalleryView: View {
         )
         .introspectTabBarController { (UITabBarController) in
             UITabBarController.tabBar.isHidden = data.isTabBarHidden
-            uiTabarController = UITabBarController
+            uiTabBarController = UITabBarController
         }.onDisappear{
-            uiTabarController?.tabBar.isHidden = false
+            uiTabBarController?.tabBar.isHidden = false
         }
     }
 }

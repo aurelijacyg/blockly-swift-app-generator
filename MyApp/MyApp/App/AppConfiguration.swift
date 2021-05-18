@@ -267,7 +267,14 @@ private let bubbleListElements = BubbleListModel(
                 subtitle: "Subtitle 1",
                 icon: "developer",
                 backgroundColor: .pink,
-                routeTo: nil
+                routeTo: Routing.primary(
+                    PrimaryView(
+                        data: PrimaryViewModel(
+                            photoURL: nil,
+                            layout: Layout.animatedBoard(animatedBoardModel)
+                        )
+                    )
+                )
             ),
             BubbleListItemModel(
                 title: "Title 2",
