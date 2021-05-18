@@ -9,10 +9,8 @@ import SwiftUI
 
 struct PrimaryView: View {
     let data: PrimaryViewModel
-    let headerTitle: String
 
-    init(headerTitle: String, data: PrimaryViewModel) {
-        self.headerTitle = headerTitle
+    init(data: PrimaryViewModel) {
         self.data = data
     }
 
@@ -21,17 +19,11 @@ struct PrimaryView: View {
         case .note(let data):
             VStack {
                 NoteView(data: data)
-            }.navigationBarTitle(
-                Text(headerTitle),
-                displayMode: .large
-            )
+            }
         case .animatedBoard(let data):
             VStack {
                 AnimatedBoardRisingView(data: data)
-            }.navigationBarTitle(
-                Text(headerTitle),
-                displayMode: .large
-            )
+            }
         case _:
             scrollView
         }
@@ -67,9 +59,5 @@ struct PrimaryView: View {
                 }
             }
         }
-        .navigationBarTitle(
-            Text(headerTitle),
-            displayMode: .large
-        )
     }
 }

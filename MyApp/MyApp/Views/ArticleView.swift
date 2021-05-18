@@ -55,7 +55,7 @@ struct ArticleView: View {
         }
         .ignoresSafeArea(edges: .bottom)
         .introspectTabBarController { (UITabBarController) in
-            UITabBarController.tabBar.isHidden = true
+            UITabBarController.tabBar.isHidden = data.isTabBarHidden
             uiTabarController = UITabBarController
         }.onDisappear{
             uiTabarController?.tabBar.isHidden = false

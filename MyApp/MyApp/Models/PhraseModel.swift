@@ -13,4 +13,5 @@ struct PhraseModel {
     var textColor: Color
     var typeface: String
     var backgroundColor: BackgroundModel
+    var isTabBarHidden: Bool
 }

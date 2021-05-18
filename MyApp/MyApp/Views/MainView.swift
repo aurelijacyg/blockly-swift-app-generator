@@ -69,18 +69,58 @@ struct MainView: View {
     }
 
     private func modelItem(_ tab: Tab) -> some View {
-        var tabStack: HStack<PrimaryView>?
-
-        if let primaryViewModel = tab.primaryView {
-            tabStack = HStack {
-                PrimaryView(
-                    headerTitle: data.header,
-                    data: primaryViewModel
-                )
-            }
+        HStack {
+            getScreen(tab.screen)
         }
+    }
 
-        return tabStack
+    private func getScreen(_ screen: Screen) -> some View {
+        switch screen {
+        case .primary(let viewModel):
+            return AnyView(
+                PrimaryView(data: viewModel)
+                    .navigationBarTitle(
+                        Text(data.header),
+                        displayMode: .large
+                    )
+            )
+
+        case .article(let viewModel):
+            return AnyView(
+                ArticleView(data: viewModel)
+                    .navigationBarTitle(
+                        Text(data.header),
+                        displayMode: .large
+                    )
+            )
+
+        case .cards(let viewModel):
+            return AnyView(
+                CardGalleryView(data: viewModel)
+                    .navigationBarTitle(
+                        Text(data.header),
+                        displayMode: .large
+                    )
+            )
+
+        case .paper(let viewModel):
+            return AnyView(
+                PaperView(data: viewModel)
+                    .navigationBarTitle(
+                        Text(data.header),
+                        displayMode: .large
+                    )
+            )
+
+        case .phrase(let viewModel):
+            return AnyView(
+                PhraseView(data: viewModel)
+                    .navigationBarTitle(
+                        Text(data.header),
+                        displayMode: .large
+                    )
+            )
+        }
     }
 }
 

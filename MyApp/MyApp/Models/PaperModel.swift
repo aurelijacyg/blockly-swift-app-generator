@@ -12,5 +12,6 @@ struct PaperModel {
     var body: String
     var titleColor: Color
     var bodyColor: Color
+    var isTabBarHidden: Bool
     var photo: PhotoModel
 }

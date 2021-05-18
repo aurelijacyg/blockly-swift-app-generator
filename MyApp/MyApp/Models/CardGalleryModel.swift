@@ -12,5 +12,6 @@ struct CardGalleryModel {
     var headingColor: Color
     var labelColor: Color
     var navigationBarTitle: String
+    var isTabBarHidden: Bool
     var cards: [CardModel]
 }

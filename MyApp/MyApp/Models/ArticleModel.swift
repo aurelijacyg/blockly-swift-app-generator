@@ -14,4 +14,5 @@ struct ArticleModel {
     var titlesColor: Color
     var bodyColor: Color
     var photoURL: String?
+    var isTabBarHidden: Bool
 }
