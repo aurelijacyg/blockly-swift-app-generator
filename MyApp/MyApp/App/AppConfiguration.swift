@@ -26,6 +26,7 @@ struct AppConfiguration {
                     screen: Screen.primary(
                         PrimaryViewModel(
                             photoURL: nil,
+                            isTabBarHidden: false,
                             layout: Layout.bubbleList(bubbleListElements)
                         )
                     )
@@ -52,6 +53,7 @@ struct AppConfiguration {
                     screen: Screen.primary(
                         PrimaryViewModel(
                             photoURL: nil,
+                            isTabBarHidden: false,
                             layout: Layout.animatedBoard(animatedBoardModel)
                         )
                     )
@@ -271,6 +273,7 @@ private let bubbleListElements = BubbleListModel(
                     PrimaryView(
                         data: PrimaryViewModel(
                             photoURL: nil,
+                            isTabBarHidden: true,
                             layout: Layout.animatedBoard(animatedBoardModel)
                         )
                     )
@@ -282,7 +285,22 @@ private let bubbleListElements = BubbleListModel(
                 icon: nil,
                 backgroundColor: .blue,
                 backgroundGradientColor: .purple,
-                routeTo: nil
+                routeTo: Routing.phrase(
+                    PhraseView(
+                        data: .init(
+                            title: "Everyone fails, but only the wise find humility.",
+                            label: "--- C. Bradatan",
+                            textColor: .white,
+                            typeface: "Geneva",
+                            backgroundColor: .init(
+                                color: nil,
+                                gradientColor: nil,
+                                photoURL: "https://www.wideopenpets.com/wp-content/uploads/2019/10/Fish-Names-770x405.png"
+                            ),
+                            isTabBarHidden: true
+                        )
+                    )
+                )
             ),
             BubbleListItemModel(
                 title: nil,

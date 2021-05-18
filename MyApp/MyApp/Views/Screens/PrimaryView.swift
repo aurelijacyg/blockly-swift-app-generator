@@ -63,7 +63,7 @@ struct PrimaryView: View {
                 }
             }
         }.introspectTabBarController { (UITabBarController) in
-            UITabBarController.tabBar.isHidden = true
+            UITabBarController.tabBar.isHidden = data.isTabBarHidden
             uiTabBarController = UITabBarController
         }.onDisappear{
             uiTabBarController?.tabBar.isHidden = false
