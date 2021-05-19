@@ -6,10 +6,10 @@ Blockly.Blocks['color_white'] = {
     init: function () {
         this.appendDummyInput()
             .appendField(new Blockly.FieldColour("#ffffff"), "white");
-        this.setOutput(true, null);
         this.setColour(195);
         this.setTooltip("");
         this.setHelpUrl("");
+        this.setOutput(true, 'Color');
     }
 };
 
@@ -21,5 +21,5 @@ Blockly.JavaScript['color_white'] = function (block) {
     // Assemble JavaScript into code variable.
     var code = `Color(rgb: 0x${colour_white})`;
 
-    return [code, Blockly.JavaScript.ORDER_NONE];
+    return [code, Blockly.JavaScript.ORDER_ATOMIC];
 };

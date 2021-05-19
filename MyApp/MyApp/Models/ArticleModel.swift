@@ -11,7 +11,8 @@ struct ArticleModel {
     var title: String
     var subtitle: String
     var body: String
-    var titleColor: Color
+    var titlesColor: Color
     var bodyColor: Color
     var photoURL: String?
+    var isTabBarHidden: Bool
 }

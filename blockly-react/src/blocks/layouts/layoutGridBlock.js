@@ -5,18 +5,18 @@ import * as Blockly from 'blockly/core';
 Blockly.Blocks['layout_grid'] = {
     init: function () {
         this.appendDummyInput()
-            .appendField("Layout - grid");
+            .appendField("LAYOUT - regular grid");
         this.appendDummyInput()
             .appendField("Columns number: ")
             .appendField(new Blockly.FieldDropdown([["1", "one"], ["2", "two"], ["3", "three"], ["4", "four"]]), "columns_number");
         this.appendDummyInput();
         this.appendStatementInput("grid_elements")
-            .setCheck(null)
+            .setCheck("GridElement")
             .appendField("Elements:");
-        this.setOutput(true, null);
         this.setColour(255);
         this.setTooltip("");
         this.setHelpUrl("");
+        this.setOutput(true, 'Layout');
     }
 };
 
@@ -24,15 +24,18 @@ Blockly.Blocks['layout_grid'] = {
 
 Blockly.JavaScript['layout_grid'] = function (block) {
     var dropdown_columns_number = block.getFieldValue('columns_number');
-    var statements_grid_elements = Blockly.JavaScript.statementToCode(block, 'grid_elements');
+    var statements_grid_elements = Blockly.JavaScript.statementToCode(block, 'grid_elements', Blockly.JavaScript.ORDER_COMMA);
 
     // Assemble JavaScript into code variable.
+    
     var code = `Layout.grid(
-                    [
-                        ${statements_grid_elements}
-                    ],
-                    ${dropdown_columns_number}
-                )`;
+        GridModel(
+            columnsNumber: ${dropdown_columns_number},
+            items: [
+                ${statements_grid_elements}
+            ]
+        )
+    )`;
 
-    return [code, Blockly.JavaScript.ORDER_NONE];
+    return [code, Blockly.JavaScript.ORDER_ATOMIC];
 };

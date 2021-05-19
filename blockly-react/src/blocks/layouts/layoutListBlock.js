@@ -5,29 +5,32 @@ import * as Blockly from 'blockly/core';
 Blockly.Blocks['layout_list'] = {
     init: function () {
         this.appendDummyInput()
-            .appendField("Layout - list");
+            .appendField("LAYOUT - regular list");
         this.appendDummyInput();
         this.appendStatementInput("list_elements")
-            .setCheck(null)
+            .setCheck("ListElement")
             .appendField("Elements:");
-        this.setOutput(true, null);
         this.setColour(255);
         this.setTooltip("");
         this.setHelpUrl("");
+        this.setOutput(true, 'Layout');
     }
 };
 
 // Generator stub:
 
 Blockly.JavaScript['layout_list'] = function (block) {
-    var statements_list_elements = Blockly.JavaScript.statementToCode(block, 'list_elements');
+    var statements_list_elements = Blockly.JavaScript.statementToCode(block, 'list_elements', Blockly.JavaScript.ORDER_COMMA);
     
     // Assemble JavaScript into code variable.
-    var code = `Layout.list(
-                    [
-                        ${statements_list_elements}
-                    ]
-                )`;
 
-    return [code, Blockly.JavaScript.ORDER_NONE];
+    var code = `Layout.list(
+        ListModel(
+            items: [
+                ${statements_list_elements}
+            ]
+        )
+    )`;
+
+    return [code, Blockly.JavaScript.ORDER_ATOMIC];
 };

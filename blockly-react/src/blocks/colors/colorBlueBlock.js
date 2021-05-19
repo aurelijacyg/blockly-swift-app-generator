@@ -7,10 +7,10 @@ Blockly.Blocks['color_blue'] = {
         this.appendDummyInput()
             .appendField(new Blockly.FieldColour("#3366ff"), "blue");
         this.setInputsInline(true);
-        this.setOutput(true, null);
         this.setColour(195);
         this.setTooltip("");
         this.setHelpUrl("");
+        this.setOutput(true, 'Color');
     }
 };
 
@@ -22,5 +22,5 @@ Blockly.JavaScript['color_blue'] = function (block) {
     // Assemble JavaScript into code variable.
     var code = `Color(rgb: 0x${colour_blue})`;
 
-    return [code, Blockly.JavaScript.ORDER_NONE];
+    return [code, Blockly.JavaScript.ORDER_ATOMIC];
 };

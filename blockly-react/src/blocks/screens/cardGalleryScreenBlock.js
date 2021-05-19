@@ -2,60 +2,62 @@ import * as Blockly from 'blockly/core';
 
 // Block Definition:
 
-Blockly.Blocks['card_gallery_screen'] = {
+Blockly.Blocks['screen_card_gallery'] = {
   init: function () {
     this.appendDummyInput()
       .appendField("CARD GALLERY SCREEN");
     this.appendDummyInput();
-    this.appendValueInput("gallery_name")
-      .setCheck(null)
-      .appendField("Gallery name");
-    this.appendValueInput("screen_title")
-      .setCheck(null)
+    this.appendValueInput("navigation_bar_text")
+      .setCheck("String")
       .appendField("Screen title");
     this.appendValueInput("category_color")
-      .setCheck(null)
+      .setCheck("Color")
       .appendField("Category color");
     this.appendValueInput("heading_color")
-      .setCheck(null)
+      .setCheck("Color")
       .appendField("Heading color");
     this.appendValueInput("label_color")
-      .setCheck(null)
+      .setCheck("Color")
       .appendField("Label color");
+    this.appendValueInput("is_tabbar_hidden")
+      .setCheck("Bool")
+      .appendField("Is tabbar hidden ?");
     this.appendDummyInput();
     this.appendStatementInput("cards")
-      .setCheck(null)
+      .setCheck("Component")
       .appendField("Cards");
     this.setInputsInline(false);
-    this.setOutput(true, null);
     this.setColour(210);
     this.setTooltip("");
     this.setHelpUrl("");
+    this.setOutput(true, 'Screen');
   }
 };
 
 // Generator stub:
 
-Blockly.JavaScript['card_gallery_screen'] = function (block) {
-  var value_gallery_name = Blockly.JavaScript.valueToCode(block, 'gallery_name', Blockly.JavaScript.ORDER_ATOMIC);
-  var value_screen_title = Blockly.JavaScript.valueToCode(block, 'screen_title', Blockly.JavaScript.ORDER_ATOMIC);
+Blockly.JavaScript['screen_card_gallery'] = function (block) {
+  var value_navigation_bar_text = Blockly.JavaScript.valueToCode(block, 'navigation_bar_text', Blockly.JavaScript.ORDER_ATOMIC);
   var value_category_color = Blockly.JavaScript.valueToCode(block, 'category_color', Blockly.JavaScript.ORDER_ATOMIC);
   var value_heading_color = Blockly.JavaScript.valueToCode(block, 'heading_color', Blockly.JavaScript.ORDER_ATOMIC);
   var value_label_color = Blockly.JavaScript.valueToCode(block, 'label_color', Blockly.JavaScript.ORDER_ATOMIC);
+  var value_is_tabbar_hidden = Blockly.JavaScript.valueToCode(block, 'is_tabbar_hidden', Blockly.JavaScript.ORDER_ATOMIC) || 'false';
   var statements_cards = Blockly.JavaScript.statementToCode(block, 'cards');
 
   // Assemble JavaScript into code variable.
-  var code = `Routing.cards(
-                CardGalleryView(
-                  categoryColor: ${value_category_color},
-                  headingColor: ${value_heading_color},
-                  labelColor: ${value_label_color},
-                  navigationBarTextTitle: ${value_gallery_name},
-                  cards: [
-                    ${statements_cards}
-                  ]
-                )
-              )`;
 
-  return [code, Blockly.JavaScript.ORDER_NONE];
+  var code = `Screen.cards(
+    CardGalleryModel(
+      categoryColor: ${value_category_color},
+      headingColor: ${value_heading_color},
+      labelColor: ${value_label_color},
+      navigationBarTitle: ${value_navigation_bar_text},
+      isTabBarHidden: ${value_is_tabbar_hidden},
+      cards: [
+        ${statements_cards}
+      ]
+    )
+  )`;
+  
+  return [code, Blockly.JavaScript.ORDER_ATOMIC];
 };

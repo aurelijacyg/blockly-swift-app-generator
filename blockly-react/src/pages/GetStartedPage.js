@@ -1,11 +1,10 @@
 import React from "react";
-import { Grid } from "@material-ui/core";
+import { Grid, Divider, Link, Typography } from "@material-ui/core";
+
 import Header from "../components/getStartedPage/Header";
 import StepsList from "../components/getStartedPage/StepsList";
 import Network from "../components/getStartedPage/Network";
-import Divider from "@material-ui/core/Divider";
-import Link from "@material-ui/core/Link";
-import Typography from "@material-ui/core/Typography";
+import UsefulLinks from "../components/getStartedPage/AdditionalInfo";
 
 import GitHubIcon from "@material-ui/icons/GitHub";
 import MailOutlineIcon from "@material-ui/icons/MailOutline";
@@ -49,11 +48,11 @@ const GetStartedPage = () => {
           {"The app configuration code will be generated and downloaded into your computer from the blocks you have created. You need to add generated file into the main code which could be found "}
           <Link color="primary" href="https://github.com/aurelijacyg/blockly-swift-app-generator">
             here.
-      </Link>{" "}
+          </Link>{" "}
           {"Clone repository and follow steps from "}
           <Link color="primary" href="https://github.com/aurelijacyg/blockly-swift-app-generator/tree/main/MyApp">
             description
-      </Link>{" "}
+          </Link>{" "}
           {"in a README section: HOW TO RUN THE APP."}
         </Typography>,
     },
@@ -67,7 +66,7 @@ const GetStartedPage = () => {
       icon: <WidgetsRoundedIcon color="primary" />,
       title: `Start "blocking"`,
       description:
-        `Start creating your app! Start making your wish app by placing blocks like a puzzle. As soon as you are done, click the button “Generate Code”. App configuration will be downloaded into your computer, then insert it into the main code and build the app!`,
+        `Start creating your app! Start making your wish app by placing blocks like a puzzle. Start with the main "App" block, place "Tab" blocks into the main block and continue with screens. Tabs represent main screens of your app. Tab bar of your app will dot be displayed if you will place only one tab. You can assign a design or behavior for each element of the screen. Pay attention to question mark. If variable of the component has this mark, it means that this variable is optional, you can choose assign value to it or not. If the variable doesn't have question mark, it means that you must assign the value to it, otherwise your app won't compile. As soon as you are done, click the button “Generate Code”. App configuration will be downloaded into your computer, then insert it into the main code and run the app!`,
     },
   ];
 
@@ -79,6 +78,9 @@ const GetStartedPage = () => {
         </Grid>
         <Grid item xs={12} justify="center" alignItems="center">
           <StepsList steps={steps} />
+        </Grid>
+        <Grid item xs={12} justify="center" alignItems="center">
+          <UsefulLinks />
         </Grid>
         <Grid item xs={12} justify="center" alignItems="center">
           <Divider />

@@ -12,9 +12,7 @@ struct TabsModel {
     var header: String
     var headerColor: Color
     var navigationBarColor: Color
-    var screenBackgroundColor: Color?
-    var screenBackgroundGradientColor: Color?
-    var screenBackgroundImageUrl: String?
+    var screenBackground: BackgroundModel
     var tabs: [Tab]
 }
 
@@ -22,5 +20,5 @@ struct Tab: Identifiable {
     var id = UUID()
     var label: String?
     var systemImage: String?
-    var primaryView: PrimaryViewModel?
+    var screen: Screen
 }

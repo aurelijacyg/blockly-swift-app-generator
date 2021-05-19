@@ -9,5 +9,6 @@ import SwiftUI
 
 struct PrimaryViewModel {
     var photoURL: String?
+    var isTabBarHidden: Bool
     var layout: Layout
 }

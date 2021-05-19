@@ -6,10 +6,10 @@ Blockly.Blocks['color_secondary'] = {
     init: function () {
         this.appendDummyInput()
             .appendField("Secondary");
-        this.setOutput(true, null);
         this.setColour(195);
         this.setTooltip("");
         this.setHelpUrl("");
+        this.setOutput(true, 'Color');
     }
 };
 
@@ -19,5 +19,5 @@ Blockly.JavaScript['color_secondary'] = function (block) {
     // Assemble JavaScript into code variable.
     var code = `Color.secondary`;
 
-    return [code, Blockly.JavaScript.ORDER_NONE];
+    return [code, Blockly.JavaScript.ORDER_ATOMIC];
 };

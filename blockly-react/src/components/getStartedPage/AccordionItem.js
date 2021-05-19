@@ -15,7 +15,7 @@ const AccordionItem = ({ item }) => {
       >
         {item.icon}
           &#160; &#160;
-          <Typography color="primary">
+          <Typography color="textPrimary">
           {item.title}
         </Typography>
       </AccordionSummary>

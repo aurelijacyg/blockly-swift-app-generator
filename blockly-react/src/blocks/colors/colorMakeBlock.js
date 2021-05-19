@@ -8,10 +8,10 @@ Blockly.Blocks['color_make'] = {
             .appendField("Hex Code  #")
             .appendField(new Blockly.FieldTextInput(""), "code");
         this.setInputsInline(true);
-        this.setOutput(true, null);
         this.setColour(195);
         this.setTooltip("");
         this.setHelpUrl("");
+        this.setOutput(true, 'Color');
     }
 };
 
@@ -24,5 +24,5 @@ Blockly.JavaScript['color_make'] = function (block) {
 
     var code = `Color(rgb: 0x${text_code})`;
 
-    return [code, Blockly.JavaScript.ORDER_NONE];
+    return [code, Blockly.JavaScript.ORDER_ATOMIC];
 };

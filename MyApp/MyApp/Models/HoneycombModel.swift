@@ -15,5 +15,5 @@ struct HoneycombModel {
 struct HoneycombItemModel : Identifiable {
     var id = UUID()
     var photoURL: String?
-    var routeTo: Routing?
+    var routeTo: Screen?
 }

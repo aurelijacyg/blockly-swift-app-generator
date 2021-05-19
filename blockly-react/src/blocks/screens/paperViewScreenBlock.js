@@ -2,53 +2,58 @@ import * as Blockly from 'blockly/core';
 
 // Block Definition:
 
-Blockly.Blocks['paper_view_screen'] = {
+Blockly.Blocks['screen_paper_view'] = {
   init: function () {
     this.appendDummyInput()
       .appendField("PAPER VIEW SCREEN");
     this.appendDummyInput();
     this.appendValueInput("title")
-      .setCheck(null)
+      .setCheck("String")
       .appendField("Title");
     this.appendValueInput("title_color")
-      .setCheck(null)
+      .setCheck("Color")
       .appendField("Title color");
     this.appendValueInput("body")
-      .setCheck(null)
+      .setCheck("String")
       .appendField("Body");
     this.appendValueInput("body_color")
-      .setCheck(null)
+      .setCheck("Color")
       .appendField("Body color");
+    this.appendValueInput("is_tabbar_hidden")
+      .setCheck("Bool")
+      .appendField("Is tabbar hidden ?");
     this.appendValueInput("photo")
-      .setCheck(null)
+      .setCheck("Component")
       .appendField("Photo");
-    this.setOutput(true, null);
     this.setColour(210);
     this.setTooltip("");
     this.setHelpUrl("");
+    this.setOutput(true, 'Screen');
   }
 };
 
 // Generator stub:
 
-Blockly.JavaScript['paper_view_screen'] = function (block) {
+Blockly.JavaScript['screen_paper_view'] = function (block) {
   var value_title = Blockly.JavaScript.valueToCode(block, 'title', Blockly.JavaScript.ORDER_ATOMIC);
   var value_title_color = Blockly.JavaScript.valueToCode(block, 'title_color', Blockly.JavaScript.ORDER_ATOMIC);
   var value_body = Blockly.JavaScript.valueToCode(block, 'body', Blockly.JavaScript.ORDER_ATOMIC);
   var value_body_color = Blockly.JavaScript.valueToCode(block, 'body_color', Blockly.JavaScript.ORDER_ATOMIC);
+  var value_is_tabbar_hidden = Blockly.JavaScript.valueToCode(block, 'is_tabbar_hidden', Blockly.JavaScript.ORDER_ATOMIC) || 'false';
   var value_photo = Blockly.JavaScript.valueToCode(block, 'photo', Blockly.JavaScript.ORDER_ATOMIC);
 
   // Assemble JavaScript into code variable.
 
-  var code = `Routing.paper(
-    PaperView(
-      titleText: ${value_title},
-      bodyText: ${value_body},
+  var code = `Screen.paper(
+    PaperModel(
+      title: ${value_title},
+      body: ${value_body},
       titleColor: ${value_title_color},
-      bodyTextColor: ${value_body_color},
+      bodyColor: ${value_body_color},
+      isTabBarHidden: ${value_is_tabbar_hidden},
       photo: ${value_photo}
     )
   )`;
-
-  return [code, Blockly.JavaScript.ORDER_NONE];
+  
+  return [code, Blockly.JavaScript.ORDER_ATOMIC];
 };
