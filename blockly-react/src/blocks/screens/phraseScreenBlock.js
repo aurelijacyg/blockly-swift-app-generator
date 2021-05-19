@@ -21,7 +21,7 @@ Blockly.Blocks['screen_phrase'] = {
             .appendField("Typeface");
         this.appendValueInput("is_tabbar_hidden")
             .setCheck(null)
-            .appendField("Is tabbar hidden");
+            .appendField("Is tabbar hidden ?");
         this.appendValueInput("background_color")
             .setCheck(null)
             .appendField("Background color");
@@ -40,7 +40,7 @@ Blockly.JavaScript['screen_phrase'] = function (block) {
     var value_label = Blockly.JavaScript.valueToCode(block, 'label', Blockly.JavaScript.ORDER_ATOMIC);
     var value_text_color = Blockly.JavaScript.valueToCode(block, 'text_color', Blockly.JavaScript.ORDER_ATOMIC);
     var value_typeface = Blockly.JavaScript.valueToCode(block, 'typeface', Blockly.JavaScript.ORDER_ATOMIC);
-    var value_is_tabbar_hidden = Blockly.JavaScript.valueToCode(block, 'is_tabbar_hidden', Blockly.JavaScript.ORDER_ATOMIC);
+    var value_is_tabbar_hidden = Blockly.JavaScript.valueToCode(block, 'is_tabbar_hidden', Blockly.JavaScript.ORDER_ATOMIC) || 'false';
     var value_background_color = Blockly.JavaScript.valueToCode(block, 'background_color', Blockly.JavaScript.ORDER_ATOMIC);
 
     // Assemble JavaScript into code variable.

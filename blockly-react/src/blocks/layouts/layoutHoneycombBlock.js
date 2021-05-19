@@ -33,7 +33,7 @@ Blockly.JavaScript['layout_honeycomb'] = function (block) {
         HoneycombModel(
             columnsNumber: ${dropdown_columns_number},
             items: [
-                ${statements_elements},
+                ${statements_elements}
             ]
         )
     )`;

@@ -25,7 +25,7 @@ Blockly.Blocks['element_list_item'] = {
     this.appendDummyInput();
     this.appendValueInput("route_to")
       .setCheck(null)
-      .appendField("On Click");
+      .appendField("On Click ?");
     this.setInputsInline(false);
     this.setPreviousStatement(true, null);
     this.setNextStatement(true, null);
@@ -41,9 +41,9 @@ Blockly.JavaScript['element_list_item'] = function (block) {
   var value_text = Blockly.JavaScript.valueToCode(block, 'text', Blockly.JavaScript.ORDER_ATOMIC);
   var value_text_color = Blockly.JavaScript.valueToCode(block, 'text_color', Blockly.JavaScript.ORDER_ATOMIC);
   var value_background_color = Blockly.JavaScript.valueToCode(block, 'background_color', Blockly.JavaScript.ORDER_ATOMIC);
-  var value_background_color_gradient = Blockly.JavaScript.valueToCode(block, 'background_color_gradient', Blockly.JavaScript.ORDER_ATOMIC);
-  var value_icon = Blockly.JavaScript.valueToCode(block, 'icon', Blockly.JavaScript.ORDER_ATOMIC);
-  var value_route_to = Blockly.JavaScript.valueToCode(block, 'route_to', Blockly.JavaScript.ORDER_ATOMIC);
+  var value_background_color_gradient = Blockly.JavaScript.valueToCode(block, 'background_color_gradient', Blockly.JavaScript.ORDER_ATOMIC) || 'nil';
+  var value_icon = Blockly.JavaScript.valueToCode(block, 'icon', Blockly.JavaScript.ORDER_ATOMIC) || 'nil';
+  var value_route_to = Blockly.JavaScript.valueToCode(block, 'route_to', Blockly.JavaScript.ORDER_ATOMIC) || 'nil';
 
   // Assemble JavaScript into code variable.
 
@@ -54,7 +54,7 @@ Blockly.JavaScript['element_list_item'] = function (block) {
     textColor: ${value_text_color},
     icon: ${value_icon},
     routeTo: ${value_route_to}
-  )`;
+  ),`;
 
   return code;
 };

@@ -49,7 +49,7 @@ Blockly.JavaScript['app_block'] = function (block) {
       screenBackground: ${value_background},
       tabs: 
         [
-          ${statements_screens},
+          ${statements_screens}
         ]
       )
   }`;

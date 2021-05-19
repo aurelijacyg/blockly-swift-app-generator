@@ -33,7 +33,7 @@ Blockly.JavaScript['layout_bubble_list'] = function (block) {
         BubbleListModel(
             isItemsBig: ${value_is_items_big},
             items: [
-                ${statements_name},
+                ${statements_name}
             ]
         )
     )`;

@@ -9,13 +9,13 @@ Blockly.Blocks['element_bubble_list_item'] = {
         this.appendDummyInput();
         this.appendValueInput("title")
             .setCheck(null)
-            .appendField("Title");
+            .appendField("Title ?");
         this.appendValueInput("title_color")
             .setCheck(null)
             .appendField("Title color ?");
         this.appendValueInput("subtitle")
             .setCheck(null)
-            .appendField("Subtitle");
+            .appendField("Subtitle ?");
         this.appendValueInput("subtitle_color")
             .setCheck(null)
             .appendField("Subtitle color ?");
@@ -31,7 +31,7 @@ Blockly.Blocks['element_bubble_list_item'] = {
         this.appendDummyInput();
         this.appendValueInput("route_to")
             .setCheck(null)
-            .appendField("On Click");
+            .appendField("On Click ?");
         this.setPreviousStatement(true, null);
         this.setNextStatement(true, null);
         this.setColour(290);
@@ -43,14 +43,14 @@ Blockly.Blocks['element_bubble_list_item'] = {
 // Generator stub:
 
 Blockly.JavaScript['element_bubble_list_item'] = function (block) {
-    var value_title = Blockly.JavaScript.valueToCode(block, 'title', Blockly.JavaScript.ORDER_ATOMIC);
-    var value_title_color = Blockly.JavaScript.valueToCode(block, 'title_color', Blockly.JavaScript.ORDER_ATOMIC);
-    var value_subtitle = Blockly.JavaScript.valueToCode(block, 'subtitle', Blockly.JavaScript.ORDER_ATOMIC);
-    var value_subtitle_color = Blockly.JavaScript.valueToCode(block, 'subtitle_color', Blockly.JavaScript.ORDER_ATOMIC);
-    var value_icon = Blockly.JavaScript.valueToCode(block, 'icon', Blockly.JavaScript.ORDER_ATOMIC);
+    var value_title = Blockly.JavaScript.valueToCode(block, 'title', Blockly.JavaScript.ORDER_ATOMIC) || 'nil';
+    var value_title_color = Blockly.JavaScript.valueToCode(block, 'title_color', Blockly.JavaScript.ORDER_ATOMIC) || 'nil';
+    var value_subtitle = Blockly.JavaScript.valueToCode(block, 'subtitle', Blockly.JavaScript.ORDER_ATOMIC) || 'nil';
+    var value_subtitle_color = Blockly.JavaScript.valueToCode(block, 'subtitle_color', Blockly.JavaScript.ORDER_ATOMIC) || 'nil';
+    var value_icon = Blockly.JavaScript.valueToCode(block, 'icon', Blockly.JavaScript.ORDER_ATOMIC) || 'nil';
     var value_background_color = Blockly.JavaScript.valueToCode(block, 'background_color', Blockly.JavaScript.ORDER_ATOMIC);
-    var value_background_color_gradient = Blockly.JavaScript.valueToCode(block, 'background_color_gradient', Blockly.JavaScript.ORDER_ATOMIC);
-    var value_route_to = Blockly.JavaScript.valueToCode(block, 'route_to', Blockly.JavaScript.ORDER_ATOMIC);
+    var value_background_color_gradient = Blockly.JavaScript.valueToCode(block, 'background_color_gradient', Blockly.JavaScript.ORDER_ATOMIC) || 'nil';
+    var value_route_to = Blockly.JavaScript.valueToCode(block, 'route_to', Blockly.JavaScript.ORDER_ATOMIC) || 'nil';
 
     // Assemble JavaScript into code variable.
 
@@ -63,7 +63,7 @@ Blockly.JavaScript['element_bubble_list_item'] = function (block) {
         titleColor: ${value_title_color},
         subtitleColor: ${value_subtitle_color},
         routeTo: ${value_route_to}
-    )`;
+    ),`;
 
     return code;
 };

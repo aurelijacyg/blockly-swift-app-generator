@@ -33,7 +33,7 @@ Blockly.JavaScript['layout_animated_board'] = function (block) {
         AnimatedBoardModel(
             backgroundColor: ${value_background_color},
             items: [
-                ${statements_elements},
+                ${statements_elements}
             ]
         )
     )`;

@@ -12,10 +12,10 @@ Blockly.Blocks['component_circle'] = {
             .appendField("Title");
         this.appendValueInput("photo")
             .setCheck(null)
-            .appendField("Photo");
+            .appendField("Photo ?");
         this.appendValueInput("title_color")
             .setCheck(null)
-            .appendField("Title color");
+            .appendField("Title color ?");
         this.appendValueInput("background_color")
             .setCheck(null)
             .appendField("Background color");
@@ -36,11 +36,11 @@ Blockly.Blocks['component_circle'] = {
 
 Blockly.JavaScript['component_circle'] = function (block) {
     var value_title = Blockly.JavaScript.valueToCode(block, 'title', Blockly.JavaScript.ORDER_ATOMIC);
-    var value_photo = Blockly.JavaScript.valueToCode(block, 'photo', Blockly.JavaScript.ORDER_ATOMIC);
-    var value_title_color = Blockly.JavaScript.valueToCode(block, 'title_color', Blockly.JavaScript.ORDER_ATOMIC);
+    var value_photo = Blockly.JavaScript.valueToCode(block, 'photo', Blockly.JavaScript.ORDER_ATOMIC) || 'nil';
+    var value_title_color = Blockly.JavaScript.valueToCode(block, 'title_color', Blockly.JavaScript.ORDER_ATOMIC) || 'nil';
     var value_background_color = Blockly.JavaScript.valueToCode(block, 'background_color', Blockly.JavaScript.ORDER_ATOMIC);
-    var value_background_color_gradient = Blockly.JavaScript.valueToCode(block, 'background_color_gradient', Blockly.JavaScript.ORDER_ATOMIC);
-    var value_background_opacity = Blockly.JavaScript.valueToCode(block, 'background_opacity', Blockly.JavaScript.ORDER_ATOMIC);
+    var value_background_color_gradient = Blockly.JavaScript.valueToCode(block, 'background_color_gradient', Blockly.JavaScript.ORDER_ATOMIC) || 'nil';
+    var value_background_opacity = Blockly.JavaScript.valueToCode(block, 'background_opacity', Blockly.JavaScript.ORDER_ATOMIC) || 'nil';
 
     // Assemble JavaScript into code variable.
 

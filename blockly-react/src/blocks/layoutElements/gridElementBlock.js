@@ -28,7 +28,7 @@ Blockly.Blocks['element_grid_item'] = {
     this.appendDummyInput();
     this.appendValueInput("route_to")
       .setCheck(null)
-      .appendField("On Click");
+      .appendField("On Click ?");
     this.setPreviousStatement(true, null);
     this.setNextStatement(true, null);
     this.setColour(290);
@@ -40,13 +40,13 @@ Blockly.Blocks['element_grid_item'] = {
 // Generator stub:
 
 Blockly.JavaScript['element_grid_item'] = function (block) {
-  var value_text = Blockly.JavaScript.valueToCode(block, 'text', Blockly.JavaScript.ORDER_ATOMIC);
-  var value_text_color = Blockly.JavaScript.valueToCode(block, 'text_color', Blockly.JavaScript.ORDER_ATOMIC);
-  var value_icon = Blockly.JavaScript.valueToCode(block, 'icon', Blockly.JavaScript.ORDER_ATOMIC);
+  var value_text = Blockly.JavaScript.valueToCode(block, 'text', Blockly.JavaScript.ORDER_ATOMIC) || 'nil';
+  var value_text_color = Blockly.JavaScript.valueToCode(block, 'text_color', Blockly.JavaScript.ORDER_ATOMIC) || 'nil';
+  var value_icon = Blockly.JavaScript.valueToCode(block, 'icon', Blockly.JavaScript.ORDER_ATOMIC) || 'nil';
   var value_corner_radius = Blockly.JavaScript.valueToCode(block, 'corner_radius', Blockly.JavaScript.ORDER_ATOMIC);
   var value_background_color = Blockly.JavaScript.valueToCode(block, 'background_color', Blockly.JavaScript.ORDER_ATOMIC);
-  var value_background_color_gradient = Blockly.JavaScript.valueToCode(block, 'background_color_gradient', Blockly.JavaScript.ORDER_ATOMIC);
-  var value_route_to = Blockly.JavaScript.valueToCode(block, 'route_to', Blockly.JavaScript.ORDER_ATOMIC);
+  var value_background_color_gradient = Blockly.JavaScript.valueToCode(block, 'background_color_gradient', Blockly.JavaScript.ORDER_ATOMIC) || 'nil';
+  var value_route_to = Blockly.JavaScript.valueToCode(block, 'route_to', Blockly.JavaScript.ORDER_ATOMIC) || 'nil';
 
   // Assemble JavaScript into code variable.
 
@@ -58,7 +58,7 @@ Blockly.JavaScript['element_grid_item'] = function (block) {
     cornerRadius: ${value_corner_radius},
     textColor: ${value_text_color},
     routeTo: ${value_route_to}
-  )`;
+  ),`;
 
   return code;
 };

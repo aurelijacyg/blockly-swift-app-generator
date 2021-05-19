@@ -13,7 +13,7 @@ Blockly.Blocks['screen_primary'] = {
             .appendField("Photo URL ?");
         this.appendValueInput("is_tabbar_hidden")
             .setCheck(null)
-            .appendField("Is tabbar hidden");
+            .appendField("Is tabbar hidden ?");
         this.appendValueInput("layout_type")
             .setCheck(null)
             .appendField("Layout Type");
@@ -27,8 +27,8 @@ Blockly.Blocks['screen_primary'] = {
 // Generator stub:
 
 Blockly.JavaScript['screen_primary'] = function (block) {
-    var value_photo_url = Blockly.JavaScript.valueToCode(block, 'photo_url', Blockly.JavaScript.ORDER_ATOMIC);
-    var value_is_tabbar_hidden = Blockly.JavaScript.valueToCode(block, 'is_tabbar_hidden', Blockly.JavaScript.ORDER_ATOMIC);
+    var value_photo_url = Blockly.JavaScript.valueToCode(block, 'photo_url', Blockly.JavaScript.ORDER_ATOMIC) || 'nil';
+    var value_is_tabbar_hidden = Blockly.JavaScript.valueToCode(block, 'is_tabbar_hidden', Blockly.JavaScript.ORDER_ATOMIC) || 'false';
     var value_layout_type = Blockly.JavaScript.valueToCode(block, 'layout_type', Blockly.JavaScript.ORDER_ATOMIC);
 
     // Assemble JavaScript into code variable.

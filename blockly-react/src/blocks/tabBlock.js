@@ -28,8 +28,8 @@ Blockly.Blocks['tab_block'] = {
 // Generator stub:
 
 Blockly.JavaScript['tab_block'] = function (block) {
-    var value_label = Blockly.JavaScript.valueToCode(block, 'label', Blockly.JavaScript.ORDER_ATOMIC);
-    var value_system_image = Blockly.JavaScript.valueToCode(block, 'system_image', Blockly.JavaScript.ORDER_ATOMIC);
+    var value_label = Blockly.JavaScript.valueToCode(block, 'label', Blockly.JavaScript.ORDER_ATOMIC) || 'nil';
+    var value_system_image = Blockly.JavaScript.valueToCode(block, 'system_image', Blockly.JavaScript.ORDER_ATOMIC)  || 'nil';
     var screen = Blockly.JavaScript.valueToCode(block, 'screen', Blockly.JavaScript.ORDER_ATOMIC);
 
     // Assemble JavaScript into code variable.
@@ -38,7 +38,7 @@ Blockly.JavaScript['tab_block'] = function (block) {
         label: ${value_label},
         systemImage: ${value_system_image},
         screen: ${screen}
-    )`;
+    ),`;
 
     return code;
 };

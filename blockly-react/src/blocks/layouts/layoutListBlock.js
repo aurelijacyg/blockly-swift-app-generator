@@ -26,7 +26,7 @@ Blockly.JavaScript['layout_list'] = function (block) {
     var code = `Layout.list(
         ListModel(
             items: [
-                ${statements_list_elements},
+                ${statements_list_elements}
             ]
         )
     )`;

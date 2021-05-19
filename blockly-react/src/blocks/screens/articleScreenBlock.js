@@ -27,7 +27,7 @@ Blockly.Blocks['screen_article'] = {
             .appendField("Photo URL ?");
         this.appendValueInput("is_tabbar_hidden")
             .setCheck(null)
-            .appendField("Is tabbar hidden");
+            .appendField("Is tabbar hidden ?");
         this.setInputsInline(false);
         this.setOutput(true, null);
         this.setColour(210);
@@ -44,8 +44,8 @@ Blockly.JavaScript['screen_article'] = function (block) {
     var value_body = Blockly.JavaScript.valueToCode(block, 'body', Blockly.JavaScript.ORDER_ATOMIC);
     var value_title_color = Blockly.JavaScript.valueToCode(block, 'title_color', Blockly.JavaScript.ORDER_ATOMIC);
     var value_body_color = Blockly.JavaScript.valueToCode(block, 'body_color', Blockly.JavaScript.ORDER_ATOMIC);
-    var value_photo_url = Blockly.JavaScript.valueToCode(block, 'photo_url', Blockly.JavaScript.ORDER_ATOMIC);
-    var value_is_tabbar_hidden = Blockly.JavaScript.valueToCode(block, 'is_tabbar_hidden', Blockly.JavaScript.ORDER_ATOMIC);
+    var value_photo_url = Blockly.JavaScript.valueToCode(block, 'photo_url', Blockly.JavaScript.ORDER_ATOMIC) || 'nil';
+    var value_is_tabbar_hidden = Blockly.JavaScript.valueToCode(block, 'is_tabbar_hidden', Blockly.JavaScript.ORDER_ATOMIC) || 'false';
 
     // Assemble JavaScript into code variable.
 

@@ -26,9 +26,9 @@ Blockly.Blocks['func_make_background'] = {
 // Generator stub:
 
 Blockly.JavaScript['func_make_background'] = function (block) {
-    var value_color = Blockly.JavaScript.valueToCode(block, 'color', Blockly.JavaScript.ORDER_ATOMIC);
-    var value_gradient_color = Blockly.JavaScript.valueToCode(block, 'gradient_color', Blockly.JavaScript.ORDER_ATOMIC);
-    var value_photo_url = Blockly.JavaScript.valueToCode(block, 'photo_url', Blockly.JavaScript.ORDER_ATOMIC);
+    var value_color = Blockly.JavaScript.valueToCode(block, 'color', Blockly.JavaScript.ORDER_ATOMIC) || 'nil';
+    var value_gradient_color = Blockly.JavaScript.valueToCode(block, 'gradient_color', Blockly.JavaScript.ORDER_ATOMIC) || 'nil';
+    var value_photo_url = Blockly.JavaScript.valueToCode(block, 'photo_url', Blockly.JavaScript.ORDER_ATOMIC) || 'nil';
 
     // Assemble JavaScript into code variable.
 

@@ -19,7 +19,7 @@ Blockly.Blocks['component_photo'] = {
       .appendField("Height (CGFloat) ?");
     this.appendValueInput("shape")
       .setCheck(null)
-      .appendField("Shape");
+      .appendField("Shape ?");
     this.setOutput(true, null);
     this.setColour(15);
     this.setTooltip("");
@@ -31,9 +31,9 @@ Blockly.Blocks['component_photo'] = {
 
 Blockly.JavaScript['component_photo'] = function (block) {
   var value_photo_url = Blockly.JavaScript.valueToCode(block, 'photo_url', Blockly.JavaScript.ORDER_ATOMIC);
-  var value_width = Blockly.JavaScript.valueToCode(block, 'width', Blockly.JavaScript.ORDER_ATOMIC);
-  var value_height = Blockly.JavaScript.valueToCode(block, 'height', Blockly.JavaScript.ORDER_ATOMIC);
-  var value_shape = Blockly.JavaScript.valueToCode(block, 'shape', Blockly.JavaScript.ORDER_ATOMIC);
+  var value_width = Blockly.JavaScript.valueToCode(block, 'width', Blockly.JavaScript.ORDER_ATOMIC) || 'nil';
+  var value_height = Blockly.JavaScript.valueToCode(block, 'height', Blockly.JavaScript.ORDER_ATOMIC) || 'nil';
+  var value_shape = Blockly.JavaScript.valueToCode(block, 'shape', Blockly.JavaScript.ORDER_ATOMIC) || 'nil';
 
   // Assemble JavaScript into code variable.
 

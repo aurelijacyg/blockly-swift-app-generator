@@ -27,8 +27,8 @@ Blockly.Blocks['layout_catalog_grid'] = {
 // Generator stub:
 
 Blockly.JavaScript['layout_catalog_grid'] = function (block) {
-    var value_title = Blockly.JavaScript.valueToCode(block, 'title', Blockly.JavaScript.ORDER_ATOMIC);
-    var value_title_color = Blockly.JavaScript.valueToCode(block, 'title_color', Blockly.JavaScript.ORDER_ATOMIC);
+    var value_title = Blockly.JavaScript.valueToCode(block, 'title', Blockly.JavaScript.ORDER_ATOMIC) || 'nil';
+    var value_title_color = Blockly.JavaScript.valueToCode(block, 'title_color', Blockly.JavaScript.ORDER_ATOMIC) || 'nil';
     var statements_elements = Blockly.JavaScript.statementToCode(block, 'elements');
 
     // Assemble JavaScript into code variable.
@@ -38,7 +38,7 @@ Blockly.JavaScript['layout_catalog_grid'] = function (block) {
             title: ${value_title},
             titleColor: ${value_title_color},
             items: [
-                ${statements_elements},
+                ${statements_elements}
             ]
         )
     )`;

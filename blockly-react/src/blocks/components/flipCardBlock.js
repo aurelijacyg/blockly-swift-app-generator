@@ -16,7 +16,7 @@ Blockly.Blocks['component_flip_card'] = {
         this.appendValueInput("hidden_text")
             .setCheck(null)
             .appendField("Hidden text");
-        this.appendValueInput("title_color")
+        this.appendValueInput("text_color")
             .setCheck(null)
             .appendField("Text color ?");
         this.setOutput(true, null);
@@ -32,13 +32,13 @@ Blockly.JavaScript['component_flip_card'] = function (block) {
     var value_title = Blockly.JavaScript.valueToCode(block, 'title', Blockly.JavaScript.ORDER_ATOMIC);
     var value_subtitle = Blockly.JavaScript.valueToCode(block, 'subtitle', Blockly.JavaScript.ORDER_ATOMIC);
     var value_hidden_text = Blockly.JavaScript.valueToCode(block, 'hidden_text', Blockly.JavaScript.ORDER_ATOMIC);
-    var value_title_color = Blockly.JavaScript.valueToCode(block, 'title_color', Blockly.JavaScript.ORDER_ATOMIC);
+    var value_text_color = Blockly.JavaScript.valueToCode(block, 'text_color', Blockly.JavaScript.ORDER_ATOMIC) || 'nil';
 
     // Assemble JavaScript into code variable.
 
     var code = `FlipCardModel(
         title: ${value_title},
-        textColor: ${value_title_color},
+        textColor: ${value_text_color},
         subtitle: ${value_subtitle},
         hiddenText: ${value_hidden_text}
     )`;

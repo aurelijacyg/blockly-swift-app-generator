@@ -31,7 +31,7 @@ Blockly.JavaScript['layout_grid'] = function (block) {
         GridModel(
             columnsNumber: ${dropdown_columns_number},
             items: [
-                ${statements_grid_elements},
+                ${statements_grid_elements}
             ]
         )
     )`;
