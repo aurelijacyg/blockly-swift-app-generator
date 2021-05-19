@@ -54,7 +54,16 @@ Blockly.JavaScript['element_bubble_list_item'] = function (block) {
 
     // Assemble JavaScript into code variable.
 
-    var code = '...;\n';
+    var code = `BubbleListItemModel(
+        title: ${value_title},
+        subtitle: ${value_subtitle},
+        icon: ${value_icon},
+        backgroundColor: ${value_background_color},
+        backgroundGradientColor: ${value_background_color_gradient},
+        titleColor: ${value_title_color},
+        subtitleColor: ${value_subtitle_color},
+        routeTo: ${value_route_to}
+    )`;
 
     return code;
 };

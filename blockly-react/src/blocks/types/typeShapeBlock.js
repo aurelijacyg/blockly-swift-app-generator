@@ -27,7 +27,14 @@ Blockly.JavaScript['type_shape'] = function (block) {
 
     // Assemble JavaScript into code variable.
 
-    var code = '...';
+    var shape;
+    if (dropdown_selected_shape === 'rounded_rectangle') {
+        shape = `roundedRectangle(${value_corner_radius})`
+    } else {
+        shape = `${dropdown_selected_shape}`
+    }
+
+    var code = `ComponentShape.${shape}`;
 
     // Change ORDER_NONE to the correct strength.
 

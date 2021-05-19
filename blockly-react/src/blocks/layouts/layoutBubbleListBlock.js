@@ -29,7 +29,14 @@ Blockly.JavaScript['layout_bubble_list'] = function (block) {
 
     // Assemble JavaScript into code variable.
 
-    var code = '...';
+    var code = `Layout.bubbleList(
+        BubbleListModel(
+            isItemsBig: ${value_is_items_big},
+            items: [
+                ${statements_name},
+            ]
+        )
+    )`;
 
     // Change ORDER_NONE to the correct strength.
 

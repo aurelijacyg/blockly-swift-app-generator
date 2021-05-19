@@ -6,9 +6,9 @@ Blockly.Blocks['layout_honeycomb'] = {
     init: function () {
         this.appendDummyInput()
             .appendField("LAYOUT - honeycomb");
-        this.appendValueInput("columns_number")
-            .setCheck(null)
-            .appendField("Columns number");
+        this.appendDummyInput()
+            .appendField("Columns number")
+            .appendField(new Blockly.FieldDropdown([["1", "1"], ["2", "2"], ["3", "3"], ["4", "4"], ["5", "5"], ["6", "6"], ["7", "7"], ["8", "8"]]), "columns_number");
         this.appendDummyInput();
         this.appendStatementInput("elements")
             .setCheck(null)
@@ -24,14 +24,21 @@ Blockly.Blocks['layout_honeycomb'] = {
 // Generator stub:
 
 Blockly.JavaScript['layout_honeycomb'] = function (block) {
-    var value_columns_number = Blockly.JavaScript.valueToCode(block, 'columns_number', Blockly.JavaScript.ORDER_ATOMIC);
+    var dropdown_columns_number = block.getFieldValue('columns_number');
     var statements_elements = Blockly.JavaScript.statementToCode(block, 'elements');
 
-    // Assemble JavaScript into code variable.
+    // TODO: Assemble JavaScript into code variable.
 
-    var code = '...';
+    var code = `Layout.honeycomb(
+        HoneycombModel(
+            columnsNumber: ${dropdown_columns_number},
+            items: [
+                ${statements_elements},
+            ]
+        )
+    )`;
 
-    // Change ORDER_NONE to the correct strength.
+    // TODO: Change ORDER_NONE to the correct strength.
 
     return [code, Blockly.JavaScript.ORDER_NONE];
 };

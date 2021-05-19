@@ -55,7 +55,16 @@ Blockly.JavaScript['element_animated_board_item'] = function (block) {
 
     // Assemble JavaScript into code variable.
 
-    var code = '...;\n';
+    var code = `AnimatedBoardItemModel(
+        title: ${value_title},
+        backgroundColor: ${value_background_color},
+        backgroundGradientColor: ${value_background_color_gradient},
+        textColor: ${value_text_color},
+        size: ${value_size},
+        xPosition: ${value_x_position},
+        yPosition: ${value_y_position},
+        risingComponent: ${value_component}
+    )`;
 
     return code;
 };

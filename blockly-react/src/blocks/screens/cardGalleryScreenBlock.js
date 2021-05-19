@@ -63,19 +63,3 @@ Blockly.JavaScript['screen_card_gallery'] = function (block) {
   
   return [code, Blockly.JavaScript.ORDER_NONE];
 };
-
-/*
-
-  var code = `Routing.cards(
-                CardGalleryView(
-                  categoryColor: ${value_category_color},
-                  headingColor: ${value_heading_color},
-                  labelColor: ${value_label_color},
-                  navigationBarTextTitle: ${value_gallery_name},
-                  cards: [
-                    ${statements_cards}
-                  ]
-                )
-              )`;
-
-*/

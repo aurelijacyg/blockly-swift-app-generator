@@ -44,7 +44,14 @@ Blockly.JavaScript['component_circle'] = function (block) {
 
     // Assemble JavaScript into code variable.
 
-    var code = '...';
+    var code = `CircleModel(
+        title: ${value_title},
+        photo: ${value_photo},
+        titleColor: ${value_title_color},
+        backgroundColor: ${value_background_color},
+        backgroundGradientColor: ${value_background_color_gradient},
+        backgroundOpacity: ${value_background_opacity}
+    )`;
 
     // Change ORDER_NONE to the correct strength.
 

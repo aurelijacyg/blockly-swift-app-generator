@@ -38,19 +38,12 @@ Blockly.JavaScript['component_card'] = function (block) {
 
   // Assemble JavaScript into code variable.
 
-  var code = '...;\n';
+  var code = `CardModel(
+    photoURL: ${value_photo_url},
+    category: ${value_category_name},
+    heading: ${value_heading},
+    label: ${value_label}
+  )`;
 
   return code;
 };
-
-/*
-
-var code = `CardModel(
-                id: ${random_id},
-                imageURL: ${value_photo_url},
-                category: ${value_category_name},
-                heading: ${value_heading},
-                label: ${value_label}
-              ),`;
-
-*/

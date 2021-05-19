@@ -24,10 +24,12 @@ Blockly.JavaScript['layout_list'] = function (block) {
     
     // Assemble JavaScript into code variable.
     var code = `Layout.list(
-                    [
-                        ${statements_list_elements}
-                    ]
-                )`;
+        ListModel(
+            items: [
+                ${statements_list_elements},
+            ]
+        )
+    )`;
 
     return [code, Blockly.JavaScript.ORDER_NONE];
 };

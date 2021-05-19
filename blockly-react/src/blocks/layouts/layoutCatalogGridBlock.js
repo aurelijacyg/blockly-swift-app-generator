@@ -33,7 +33,15 @@ Blockly.JavaScript['layout_catalog_grid'] = function (block) {
 
     // Assemble JavaScript into code variable.
 
-    var code = '...';
+    var code = `Layout.catalogGrid(
+        CatalogGridModel(
+            title: ${value_title},
+            titleColor: ${value_title_color},
+            items: [
+                ${statements_elements},
+            ]
+        )
+    )`;
 
     // Change ORDER_NONE to the correct strength.
 

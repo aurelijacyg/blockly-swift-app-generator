@@ -29,7 +29,14 @@ Blockly.JavaScript['layout_animated_board'] = function (block) {
 
     // Assemble JavaScript into code variable.
 
-    var code = '...';
+    var code = `Layout.animatedBoard(
+        AnimatedBoardModel(
+            backgroundColor: ${value_background_color},
+            items: [
+                ${statements_elements},
+            ]
+        )
+    )`;
 
     // Change ORDER_NONE to the correct strength.
 

@@ -22,7 +22,7 @@ Blockly.JavaScript['math_cgfloat'] = function (block) {
 
     // Assemble JavaScript into code variable.
 
-    var code = '...';
+    var code = `${number_value}`;
 
     // Change ORDER_NONE to the correct strength.
 

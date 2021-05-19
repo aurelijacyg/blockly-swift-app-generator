@@ -17,7 +17,7 @@ Blockly.Blocks['component_photo'] = {
     this.appendValueInput("height")
       .setCheck(null)
       .appendField("Height (CGFloat) ?");
-    this.appendValueInput("NAME")
+    this.appendValueInput("shape")
       .setCheck(null)
       .appendField("Shape");
     this.setOutput(true, null);
@@ -33,24 +33,18 @@ Blockly.JavaScript['component_photo'] = function (block) {
   var value_photo_url = Blockly.JavaScript.valueToCode(block, 'photo_url', Blockly.JavaScript.ORDER_ATOMIC);
   var value_width = Blockly.JavaScript.valueToCode(block, 'width', Blockly.JavaScript.ORDER_ATOMIC);
   var value_height = Blockly.JavaScript.valueToCode(block, 'height', Blockly.JavaScript.ORDER_ATOMIC);
-  var value_name = Blockly.JavaScript.valueToCode(block, 'NAME', Blockly.JavaScript.ORDER_ATOMIC);
+  var value_shape = Blockly.JavaScript.valueToCode(block, 'shape', Blockly.JavaScript.ORDER_ATOMIC);
 
   // Assemble JavaScript into code variable.
 
-  var code = '...';
+  var code = `PhotoModel(
+    URL: ${value_photo_url},
+    shape: ${value_shape},
+    width: ${value_width},
+    height: ${value_height}
+  )`;
 
   // Change ORDER_NONE to the correct strength.
 
   return [code, Blockly.JavaScript.ORDER_NONE];
 };
-
-/*
-
-var code = `PhotoModel(
-                URL: ${value_photo_url},
-                width: ${number_width},
-                height: ${number_height},
-                isRounded: ${isImageRouded}
-              )`;
-
-*/

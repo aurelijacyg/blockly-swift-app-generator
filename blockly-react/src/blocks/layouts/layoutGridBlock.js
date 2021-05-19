@@ -28,11 +28,13 @@ Blockly.JavaScript['layout_grid'] = function (block) {
 
     // Assemble JavaScript into code variable.
     var code = `Layout.grid(
-                    [
-                        ${statements_grid_elements}
-                    ],
-                    ${dropdown_columns_number}
-                )`;
+        GridModel(
+            columnsNumber: ${dropdown_columns_number},
+            items: [
+                ${statements_grid_elements},
+            ]
+        )
+    )`;
 
     return [code, Blockly.JavaScript.ORDER_NONE];
 };

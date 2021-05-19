@@ -36,7 +36,12 @@ Blockly.JavaScript['component_flip_card'] = function (block) {
 
     // Assemble JavaScript into code variable.
 
-    var code = '...';
+    var code = `FlipCardModel(
+        title: ${value_title},
+        textColor: ${value_title_color},
+        subtitle: ${value_subtitle},
+        hiddenText: ${value_hidden_text}
+    )`;
 
     // Change ORDER_NONE to the correct strength.
 

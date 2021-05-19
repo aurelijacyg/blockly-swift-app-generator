@@ -24,7 +24,7 @@ Blockly.JavaScript['text_url'] = function (block) {
 
     // Assemble JavaScript into code variable.
 
-    var code = '...';
+    var code = `"${text_url}"`;
 
     // Change ORDER_NONE to the correct strength.
 

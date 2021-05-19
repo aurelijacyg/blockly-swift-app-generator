@@ -50,20 +50,15 @@ Blockly.JavaScript['element_grid_item'] = function (block) {
 
   // Assemble JavaScript into code variable.
 
-  var code = '...;\n';
+  var code = `GridItemModel(
+    text: ${value_text},
+    icon: ${value_icon},
+    backgroundColor: ${value_background_color},
+    backgroundGradientColor: ${value_background_color_gradient},
+    cornerRadius: ${value_corner_radius},
+    textColor: ${value_text_color},
+    routeTo: ${value_route_to}
+  )`;
 
   return code;
 };
-
-/*
-
-var code = `GridItemModel(
-                id: ${random_id},
-                text: ${value_text},
-                backgroundColor: ${value_background_color},
-                cornerRadius: ${number_corner_radius},
-                textColor: ${value_text_color},
-                routeTo: ${value_route_to}
-              ),\n`;
-
-*/

@@ -22,7 +22,7 @@ Blockly.JavaScript['logic_bool_false'] = function (block) {
 
     // Assemble JavaScript into code variable.
 
-    var code = '...';
+    var code = `${dropdown_value}`;
 
     // Change ORDER_NONE to the correct strength.
 

@@ -33,7 +33,13 @@ Blockly.JavaScript['layout_note'] = function (block) {
 
     // Assemble JavaScript into code variable.
 
-    var code = '...';
+    var code = `Layout.note(
+        NoteModel(
+            component: ${value_component},
+            isAnimated: ${value_animated},
+            backgroundColor: ${value_background_color}
+        )
+    )`;
 
     // Change ORDER_NONE to the correct strength.
 

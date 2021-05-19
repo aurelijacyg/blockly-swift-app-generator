@@ -32,7 +32,11 @@ Blockly.JavaScript['func_make_background'] = function (block) {
 
     // Assemble JavaScript into code variable.
 
-    var code = '...';
+    var code = `BackgroundModel(
+        color: ${value_color},
+        gradientColor: ${value_gradient_color},
+        photoURL: ${value_photo_url}
+    )`;
 
     // Change ORDER_NONE to the correct strength.
 

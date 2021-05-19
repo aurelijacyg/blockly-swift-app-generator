@@ -36,7 +36,7 @@ Blockly.JavaScript['icon_colorful'] = function (block) {
 
     // Assemble JavaScript into code variable.
 
-    var code = '...';
+    var code = `"${dropdown_icon}"`;
 
     // Change ORDER_NONE to the correct strength.
 

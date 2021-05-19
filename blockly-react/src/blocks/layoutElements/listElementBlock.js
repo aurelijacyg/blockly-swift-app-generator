@@ -47,20 +47,14 @@ Blockly.JavaScript['element_list_item'] = function (block) {
 
   // Assemble JavaScript into code variable.
 
-  var code = '...;\n';
+  var code = `ListItemModel(
+    text: ${value_text},
+    backgroundColor: ${value_background_color},
+    backgroundGradientColor: ${value_background_color_gradient},
+    textColor: ${value_text_color},
+    icon: ${value_icon},
+    routeTo: ${value_route_to}
+  )`;
 
   return code;
 };
-
-/*
-
-var code = `ListItemModel(
-                id: ${random_id},
-                text: ${value_text},
-                backgroundColor: ${value_background_color},
-                textColor: ${value_text_color},
-                icon: "${dropdown_icon}",
-                routeTo: ${value_route_to}
-              ),\n`;
-
-*/
