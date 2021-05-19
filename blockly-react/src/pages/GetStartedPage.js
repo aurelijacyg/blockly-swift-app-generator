@@ -66,7 +66,7 @@ const GetStartedPage = () => {
       icon: <WidgetsRoundedIcon color="primary" />,
       title: `Start "blocking"`,
       description:
-        `Start creating your app! Start making your wish app by placing blocks like a puzzle. Start with the main "App" block, place "Tab" blocks into the main block and continue with screens. Tabs represent main screens of your app. Tab bar of your app will dot be displayed if you will place only one tab. You can assign a design or behavior for each element of the screen. As soon as you are done, click the button “Generate Code”. App configuration will be downloaded into your computer, then insert it into the main code and run the app!`,
+        `Start creating your app! Start making your wish app by placing blocks like a puzzle. Start with the main "App" block, place "Tab" blocks into the main block and continue with screens. Tabs represent main screens of your app. Tab bar of your app will dot be displayed if you will place only one tab. You can assign a design or behavior for each element of the screen. Pay attention to question mark. If variable of the component has this mark, it means that this variable is optional, you can choose assign value to it or not. If the variable doesn't have question mark, it means that you must assign the value to it, otherwise your app won't compile. As soon as you are done, click the button “Generate Code”. App configuration will be downloaded into your computer, then insert it into the main code and run the app!`,
     },
   ];
 

@@ -1,7 +1,6 @@
 import React from "react";
 import { makeStyles } from "@material-ui/core/styles";
 import Carousel from 'react-material-ui-carousel';
-import { Paper, Button } from '@material-ui/core';
 import Item from './Item';
 
 const useStyles = makeStyles((theme) => ({
@@ -18,8 +17,8 @@ const CustomCorousel = ({ templates }) => {
     return (
         <div className={classes.content}>
             <Carousel
-                next={ () => {/* Do stuff */} }
-                prev={ () => {/* Do other stuff */} }
+                next={() => {/* Do stuff */ }}
+                prev={() => {/* Do other stuff */ }}
                 animation={"slide"}
                 swipe={"true"}
                 timeout={300}

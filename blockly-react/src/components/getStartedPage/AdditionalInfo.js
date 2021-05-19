@@ -22,30 +22,26 @@ const AdditionalInfo = () => {
                 </Grid>
                 <Grid item xs={12}>
                     <Typography>
-                        <Link color="primary" href="https://apps.apple.com/us/app/xcode/id497799835?mt=12">
-                            Install
-                        </Link>
-                        {" Xcode in your Mac"}
-                    </Typography>
-                    &#160;
-                    <Typography>
-                        <Link color="primary" href="https://developer.apple.com/documentation/xcode/running-your-app-in-the-simulator-or-on-a-device">
-                            Running
-                        </Link>
-                        {" Your App in the Simulator or on a Device"}
-                    </Typography>
-                    &#160;
-                    <Typography>
-                        {"Xcode "}
-                        <Link color="primary" href="https://developer.apple.com/xcode/">
-                            documentation
+                        <Link color="textPrimary" href="https://apps.apple.com/us/app/xcode/id497799835?mt=12">
+                            Install Xcode in your Mac
                         </Link>
                     </Typography>
                     &#160;
                     <Typography>
-                        {"How to use "}
-                        <Link color="primary" href="https://git-scm.com/docs/gittutorial">
-                            GIT
+                        <Link color="textPrimary" href="https://developer.apple.com/documentation/xcode/running-your-app-in-the-simulator-or-on-a-device">
+                            Running Your App in the Simulator or on a Device
+                        </Link>
+                    </Typography>
+                    &#160;
+                    <Typography>
+                        <Link color="textPrimary" href="https://developer.apple.com/xcode/">
+                            Xcode documentation
+                        </Link>
+                    </Typography>
+                    &#160;
+                    <Typography>
+                        <Link color="textPrimary" href="https://git-scm.com/docs/gittutorial">
+                            How to use GIT
                         </Link>
                     </Typography>
                 </Grid>

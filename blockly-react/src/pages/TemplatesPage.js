@@ -3,23 +3,95 @@ import { Typography, Grid } from "@material-ui/core";
 
 import CustomCarousel from "../components/templatesPage/CustomCarousel";
 
-var templates = [
+import ScreenPrimaryImg from "../images/logo.png";
+
+var screens = [
+  {
+    title: "Primary screen",
+    description: "This is most flexible template of the screens. You can assign layouts for it.",
+    image: ScreenPrimaryImg,
+  },
+  {
+    title: "Cards gallery screen",
+    description: "",
+    image: ScreenPrimaryImg,
+  },
+  {
+    title: "Phrase screen",
+    description: "",
+    image: ScreenPrimaryImg,
+  },
+  {
+    title: "Article screen",
+    description: "",
+    image: ScreenPrimaryImg,
+  },
+  {
+    title: "Paper screen",
+    description: "",
+    image: ScreenPrimaryImg,
+  },
+];
+
+var layouts = [
+  {
+    title: "Animated board",
+    description: "This layout has animations.",
+    image: ScreenPrimaryImg,
+  },
+  {
+    title: "Note",
+    description: "This layout could have animation for floating component up and down.",
+    image: ScreenPrimaryImg,
+  },
+  {
+    title: "Honeycomb",
+    description: "",
+    image: ScreenPrimaryImg,
+  },
+  {
+    title: "List",
+    description: "",
+    image: ScreenPrimaryImg,
+  },
   {
     title: "Grid",
-    image: "",
+    description: "",
+    image: ScreenPrimaryImg,
   },
   {
-    title: "Photo gallery",
-    image: "",
+    title: "Bubble list",
+    description: "",
+    image: ScreenPrimaryImg,
   },
   {
-    title: "Photo gallery",
-    image: "",
+    title: "Catalog grid",
+    description: "",
+    image: ScreenPrimaryImg,
+  },
+];
+
+var components = [
+  {
+    title: "Photo",
+    description: "",
+    image: ScreenPrimaryImg,
   },
   {
-    title: "Photo gallery",
-    image: "",
+    title: "Circle component",
+    description: "",
+    image: ScreenPrimaryImg,
   },
+  {
+    title: "Card",
+    description: "",
+    image: ScreenPrimaryImg,
+  },
+  {
+    title: "Flip card",
+    description: "",
+    image: ScreenPrimaryImg,
+  }
 ];
 
 const TemplatesPage = () => {
@@ -41,7 +113,7 @@ const TemplatesPage = () => {
           </Typography>
         </Grid>
         <Grid item xs={12} justify="center" alignItems="center">
-          <CustomCarousel templates={templates}/>
+          <CustomCarousel templates={screens}/>
         </Grid>
         &#160;
         <Grid item xs={12} justify="center" alignItems="center">
@@ -50,7 +122,7 @@ const TemplatesPage = () => {
           </Typography>
         </Grid>
         <Grid item xs={12} justify="center" alignItems="center">
-          <CustomCarousel templates={templates}/>
+          <CustomCarousel templates={layouts}/>
         </Grid>
         &#160;
         <Grid item xs={12} justify="center" alignItems="center">
@@ -59,7 +131,7 @@ const TemplatesPage = () => {
           </Typography>
         </Grid>
         <Grid item xs={12} justify="center" alignItems="center">
-          <CustomCarousel templates={templates}/>
+          <CustomCarousel templates={components}/>
         </Grid>
       </Grid>
     </main>
