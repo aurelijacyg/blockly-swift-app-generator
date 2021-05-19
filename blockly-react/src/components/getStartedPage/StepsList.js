@@ -22,7 +22,7 @@ const StepsList = ({ steps }) => {
         <Grid item xs={12}>
           <Typography gutterBottom variant="h6" color="primary" component="h2">
             First Steps
-        </Typography>
+          </Typography>
         </Grid>
         <Grid item xs={12}>
           {steps.map((step) => (
