@@ -54,7 +54,7 @@ Blockly.JavaScript['element_list_item'] = function (block) {
     textColor: ${value_text_color},
     icon: ${value_icon},
     routeTo: ${value_route_to}
-  ),`;
+  )`;
 
   return code;
 };

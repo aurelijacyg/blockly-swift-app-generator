@@ -54,8 +54,6 @@ Blockly.JavaScript['screen_paper_view'] = function (block) {
       photo: ${value_photo}
     )
   )`;
-
-  // Change ORDER_NONE to the correct strength.
   
-  return [code, Blockly.JavaScript.ORDER_NONE];
+  return [code, Blockly.JavaScript.ORDER_ATOMIC];
 };

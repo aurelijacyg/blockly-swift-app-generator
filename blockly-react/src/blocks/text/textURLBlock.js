@@ -26,7 +26,5 @@ Blockly.JavaScript['text_url'] = function (block) {
 
     var code = `"${text_url}"`;
 
-    // Change ORDER_NONE to the correct strength.
-
-    return [code, Blockly.JavaScript.ORDER_NONE];
+    return [code, Blockly.JavaScript.ORDER_ATOMIC];
 };

@@ -24,5 +24,5 @@ Blockly.JavaScript['color_make'] = function (block) {
 
     var code = `Color(rgb: 0x${text_code})`;
 
-    return [code, Blockly.JavaScript.ORDER_NONE];
+    return [code, Blockly.JavaScript.ORDER_ATOMIC];
 };

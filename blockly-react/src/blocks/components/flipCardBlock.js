@@ -43,7 +43,5 @@ Blockly.JavaScript['component_flip_card'] = function (block) {
         hiddenText: ${value_hidden_text}
     )`;
 
-    // Change ORDER_NONE to the correct strength.
-
-    return [code, Blockly.JavaScript.ORDER_NONE];
+    return [code, Blockly.JavaScript.ORDER_ATOMIC];
 };

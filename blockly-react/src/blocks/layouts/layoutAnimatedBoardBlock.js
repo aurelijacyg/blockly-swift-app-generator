@@ -25,7 +25,7 @@ Blockly.Blocks['layout_animated_board'] = {
 
 Blockly.JavaScript['layout_animated_board'] = function (block) {
     var value_background_color = Blockly.JavaScript.valueToCode(block, 'background_color', Blockly.JavaScript.ORDER_ATOMIC);
-    var statements_elements = Blockly.JavaScript.statementToCode(block, 'elements');
+    var statements_elements = Blockly.JavaScript.statementToCode(block, 'elements', Blockly.JavaScript.ORDER_COMMA);
 
     // Assemble JavaScript into code variable.
 
@@ -38,7 +38,5 @@ Blockly.JavaScript['layout_animated_board'] = function (block) {
         )
     )`;
 
-    // Change ORDER_NONE to the correct strength.
-
-    return [code, Blockly.JavaScript.ORDER_NONE];
+    return [code, Blockly.JavaScript.ORDER_ATOMIC];
 };

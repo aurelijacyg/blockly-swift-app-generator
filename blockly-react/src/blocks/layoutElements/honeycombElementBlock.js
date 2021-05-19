@@ -32,7 +32,7 @@ Blockly.JavaScript['element_honeycomb_item'] = function (block) {
     var code = `HoneycombItemModel(
         photoURL: ${value_photo_url},
         routeTo: ${value_route_to}
-    ),`;
+    )`;
 
     return code;
 };

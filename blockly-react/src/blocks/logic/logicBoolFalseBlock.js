@@ -24,7 +24,5 @@ Blockly.JavaScript['logic_bool_false'] = function (block) {
 
     var code = `${dropdown_value}`;
 
-    // Change ORDER_NONE to the correct strength.
-
-    return [code, Blockly.JavaScript.ORDER_NONE];
+    return [code, Blockly.JavaScript.ORDER_ATOMIC];
 };

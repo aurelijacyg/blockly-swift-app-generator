@@ -22,5 +22,5 @@ Blockly.JavaScript['color_blue'] = function (block) {
     // Assemble JavaScript into code variable.
     var code = `Color(rgb: 0x${colour_blue})`;
 
-    return [code, Blockly.JavaScript.ORDER_NONE];
+    return [code, Blockly.JavaScript.ORDER_ATOMIC];
 };

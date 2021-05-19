@@ -24,7 +24,5 @@ Blockly.JavaScript['math_int'] = function (block) {
 
     var code = `${number_value}`;
 
-    // Change ORDER_NONE to the correct strength.
-
-    return [code, Blockly.JavaScript.ORDER_NONE];
+    return [code, Blockly.JavaScript.ORDER_ATOMIC];
 };

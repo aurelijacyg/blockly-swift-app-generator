@@ -41,7 +41,5 @@ Blockly.JavaScript['layout_note'] = function (block) {
         )
     )`;
 
-    // Change ORDER_NONE to the correct strength.
-
-    return [code, Blockly.JavaScript.ORDER_NONE];
+    return [code, Blockly.JavaScript.ORDER_ATOMIC];
 };

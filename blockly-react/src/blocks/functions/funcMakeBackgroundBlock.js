@@ -38,7 +38,5 @@ Blockly.JavaScript['func_make_background'] = function (block) {
         photoURL: ${value_photo_url}
     )`;
 
-    // Change ORDER_NONE to the correct strength.
-
-    return [code, Blockly.JavaScript.ORDER_NONE];
+    return [code, Blockly.JavaScript.ORDER_ATOMIC];
 };

@@ -53,7 +53,5 @@ Blockly.JavaScript['component_circle'] = function (block) {
         backgroundOpacity: ${value_background_opacity}
     )`;
 
-    // Change ORDER_NONE to the correct strength.
-
-    return [code, Blockly.JavaScript.ORDER_NONE];
+    return [code, Blockly.JavaScript.ORDER_ATOMIC];
 };

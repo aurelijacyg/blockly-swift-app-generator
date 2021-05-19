@@ -36,7 +36,5 @@ Blockly.JavaScript['type_shape'] = function (block) {
 
     var code = `ComponentShape.${shape}`;
 
-    // Change ORDER_NONE to the correct strength.
-
-    return [code, Blockly.JavaScript.ORDER_NONE];
+    return [code, Blockly.JavaScript.ORDER_ATOMIC];
 };

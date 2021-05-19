@@ -20,9 +20,10 @@ Blockly.Blocks['layout_list'] = {
 // Generator stub:
 
 Blockly.JavaScript['layout_list'] = function (block) {
-    var statements_list_elements = Blockly.JavaScript.statementToCode(block, 'list_elements');
+    var statements_list_elements = Blockly.JavaScript.statementToCode(block, 'list_elements', Blockly.JavaScript.ORDER_COMMA);
     
     // Assemble JavaScript into code variable.
+
     var code = `Layout.list(
         ListModel(
             items: [
@@ -31,5 +32,5 @@ Blockly.JavaScript['layout_list'] = function (block) {
         )
     )`;
 
-    return [code, Blockly.JavaScript.ORDER_NONE];
+    return [code, Blockly.JavaScript.ORDER_ATOMIC];
 };

@@ -25,7 +25,5 @@ Blockly.JavaScript['text_string'] = function (block) {
     // Assemble JavaScript into code variable.
     var code = `"${text_textname}"`;
 
-    // Change ORDER_NONE to the correct strength.
-
-    return [code, Blockly.JavaScript.ORDER_NONE];
+    return [code, Blockly.JavaScript.ORDER_ATOMIC];
 };

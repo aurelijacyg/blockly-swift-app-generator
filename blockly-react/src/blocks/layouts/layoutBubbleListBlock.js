@@ -10,7 +10,7 @@ Blockly.Blocks['layout_bubble_list'] = {
             .setCheck(null)
             .appendField("Is elements big");
         this.appendDummyInput();
-        this.appendStatementInput("NAME")
+        this.appendStatementInput("items")
             .setCheck(null)
             .appendField("Elements");
         this.setInputsInline(false);
@@ -25,7 +25,7 @@ Blockly.Blocks['layout_bubble_list'] = {
 
 Blockly.JavaScript['layout_bubble_list'] = function (block) {
     var value_is_items_big = Blockly.JavaScript.valueToCode(block, 'is_items_big', Blockly.JavaScript.ORDER_ATOMIC);
-    var statements_name = Blockly.JavaScript.statementToCode(block, 'NAME');
+    var statements_items = Blockly.JavaScript.statementToCode(block, 'items', Blockly.JavaScript.ORDER_COMMA);
 
     // Assemble JavaScript into code variable.
 
@@ -33,12 +33,10 @@ Blockly.JavaScript['layout_bubble_list'] = function (block) {
         BubbleListModel(
             isItemsBig: ${value_is_items_big},
             items: [
-                ${statements_name}
+                ${statements_items}
             ]
         )
     )`;
 
-    // Change ORDER_NONE to the correct strength.
-
-    return [code, Blockly.JavaScript.ORDER_NONE];
+    return [code, Blockly.JavaScript.ORDER_ATOMIC];
 };

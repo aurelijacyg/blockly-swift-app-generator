@@ -44,7 +44,5 @@ Blockly.JavaScript['component_photo'] = function (block) {
     height: ${value_height}
   )`;
 
-  // Change ORDER_NONE to the correct strength.
-
-  return [code, Blockly.JavaScript.ORDER_NONE];
+  return [code, Blockly.JavaScript.ORDER_ATOMIC];
 };

@@ -24,9 +24,10 @@ Blockly.Blocks['layout_grid'] = {
 
 Blockly.JavaScript['layout_grid'] = function (block) {
     var dropdown_columns_number = block.getFieldValue('columns_number');
-    var statements_grid_elements = Blockly.JavaScript.statementToCode(block, 'grid_elements');
+    var statements_grid_elements = Blockly.JavaScript.statementToCode(block, 'grid_elements', Blockly.JavaScript.ORDER_COMMA);
 
     // Assemble JavaScript into code variable.
+    
     var code = `Layout.grid(
         GridModel(
             columnsNumber: ${dropdown_columns_number},
@@ -36,5 +37,5 @@ Blockly.JavaScript['layout_grid'] = function (block) {
         )
     )`;
 
-    return [code, Blockly.JavaScript.ORDER_NONE];
+    return [code, Blockly.JavaScript.ORDER_ATOMIC];
 };

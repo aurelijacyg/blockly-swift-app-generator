@@ -40,8 +40,6 @@ Blockly.JavaScript['screen_primary'] = function (block) {
             layout: ${value_layout_type}
         )
     )`;
-
-    // Change ORDER_NONE to the correct strength.
     
-    return [code, Blockly.JavaScript.ORDER_NONE];
+    return [code, Blockly.JavaScript.ORDER_ATOMIC];
 };

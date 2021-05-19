@@ -61,7 +61,5 @@ Blockly.JavaScript['screen_article'] = function (block) {
         )
       )`;
 
-    // Change ORDER_NONE to the correct strength.
-
-    return [code, Blockly.JavaScript.ORDER_NONE];
+    return [code, Blockly.JavaScript.ORDER_ATOMIC];
 };
