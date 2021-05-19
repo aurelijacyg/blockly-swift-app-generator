@@ -1,8 +1,9 @@
 import React from "react";
 import { Typography, Grid } from "@material-ui/core";
-import Template from "../components/templatesPage/Template";
 
-const templates = [
+import CustomCarousel from "../components/templatesPage/CustomCarousel";
+
+var templates = [
   {
     title: "Grid",
     image: "",
@@ -40,9 +41,7 @@ const TemplatesPage = () => {
           </Typography>
         </Grid>
         <Grid item xs={12} justify="center" alignItems="center">
-          {templates.map((template) => (
-            <Template key={template.title} template={template} />
-          ))}
+          <CustomCarousel templates={templates}/>
         </Grid>
         &#160;
         <Grid item xs={12} justify="center" alignItems="center">
@@ -51,9 +50,7 @@ const TemplatesPage = () => {
           </Typography>
         </Grid>
         <Grid item xs={12} justify="center" alignItems="center">
-          {templates.map((template) => (
-            <Template key={template.title} template={template} />
-          ))}
+          <CustomCarousel templates={templates}/>
         </Grid>
         &#160;
         <Grid item xs={12} justify="center" alignItems="center">
@@ -62,9 +59,7 @@ const TemplatesPage = () => {
           </Typography>
         </Grid>
         <Grid item xs={12} justify="center" alignItems="center">
-          {templates.map((template) => (
-            <Template key={template.title} template={template} />
-          ))}
+          <CustomCarousel templates={templates}/>
         </Grid>
       </Grid>
     </main>
