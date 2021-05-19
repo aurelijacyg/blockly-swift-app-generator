@@ -2,7 +2,7 @@ import * as Blockly from 'blockly/core';
 
 // Block Definition:
 
-Blockly.Blocks['list_element'] = {
+Blockly.Blocks['element_list_item'] = {
   init: function () {
     this.appendDummyInput()
       .appendField("LIST ELEMENT");
@@ -16,10 +16,12 @@ Blockly.Blocks['list_element'] = {
     this.appendValueInput("background_color")
       .setCheck(null)
       .appendField("Backround color");
-    this.appendDummyInput()
-      .appendField(new Blockly.FieldImage("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ7nfKUveELIB27pwJdvD3tYUWAIFOX_GSv3w&usqp=CAU", 15, 15, { alt: "*", flipRtl: "FALSE" }))
-      .appendField("Icon")
-      .appendField(new Blockly.FieldDropdown([["none", "nil"], ["account", "account-icon"], ["airplane", "airplane-icon"], ["article", "article-icon"], ["blog", "blog-icon"], ["book", "book-icon"], ["gallery", "galerry-icon"], ["idea", "idea-icon"], ["info", "info-icon"], ["learning", "learning-icon"], ["location", "location-icon"], ["note", "note-icon"], ["travel", "travel-icon"]]), "icon");
+    this.appendValueInput("background_color_gradient")
+      .setCheck(null)
+      .appendField("Background gradient color ?");
+    this.appendValueInput("icon")
+      .setCheck(null)
+      .appendField("Icon ?");
     this.appendDummyInput();
     this.appendValueInput("route_to")
       .setCheck(null)
@@ -35,18 +37,24 @@ Blockly.Blocks['list_element'] = {
 
 // Generator stub:
 
-Blockly.JavaScript['list_element'] = function (block) {
+Blockly.JavaScript['element_list_item'] = function (block) {
   var value_text = Blockly.JavaScript.valueToCode(block, 'text', Blockly.JavaScript.ORDER_ATOMIC);
   var value_text_color = Blockly.JavaScript.valueToCode(block, 'text_color', Blockly.JavaScript.ORDER_ATOMIC);
   var value_background_color = Blockly.JavaScript.valueToCode(block, 'background_color', Blockly.JavaScript.ORDER_ATOMIC);
-  var dropdown_icon = block.getFieldValue('icon');
+  var value_background_color_gradient = Blockly.JavaScript.valueToCode(block, 'background_color_gradient', Blockly.JavaScript.ORDER_ATOMIC);
+  var value_icon = Blockly.JavaScript.valueToCode(block, 'icon', Blockly.JavaScript.ORDER_ATOMIC);
   var value_route_to = Blockly.JavaScript.valueToCode(block, 'route_to', Blockly.JavaScript.ORDER_ATOMIC);
 
   // Assemble JavaScript into code variable.
-  
-  var random_id = Math.floor(Math.random() * 1000);
 
-  var code = `ListItemModel(
+  var code = '...;\n';
+
+  return code;
+};
+
+/*
+
+var code = `ListItemModel(
                 id: ${random_id},
                 text: ${value_text},
                 backgroundColor: ${value_background_color},
@@ -55,5 +63,4 @@ Blockly.JavaScript['list_element'] = function (block) {
                 routeTo: ${value_route_to}
               ),\n`;
 
-  return code;
-};
+*/

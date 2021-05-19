@@ -2,23 +2,29 @@ import * as Blockly from 'blockly/core';
 
 // Block Definition:
 
-Blockly.Blocks['grid_element'] = {
+Blockly.Blocks['element_grid_item'] = {
   init: function () {
     this.appendDummyInput()
       .appendField("GRID ELEMENT");
     this.appendDummyInput();
     this.appendValueInput("text")
       .setCheck(null)
-      .appendField("Text");
+      .appendField("Text ?");
     this.appendValueInput("text_color")
       .setCheck(null)
-      .appendField("Text color");
-    this.appendDummyInput()
-      .appendField("Element corner radius")
-      .appendField(new Blockly.FieldNumber(10, 0, 100), "corner_radius");
+      .appendField("Text color ?");
+    this.appendValueInput("icon")
+      .setCheck(null)
+      .appendField("Icon ?");
+    this.appendValueInput("corner_radius")
+      .setCheck(null)
+      .appendField("Element corner radius (CGFloat)");
     this.appendValueInput("background_color")
       .setCheck(null)
       .appendField("Background color");
+    this.appendValueInput("background_color_gradient")
+      .setCheck(null)
+      .appendField("Background gradient color ?");
     this.appendDummyInput();
     this.appendValueInput("route_to")
       .setCheck(null)
@@ -26,24 +32,32 @@ Blockly.Blocks['grid_element'] = {
     this.setPreviousStatement(true, null);
     this.setNextStatement(true, null);
     this.setColour(290);
-    this.setTooltip("");
-    this.setHelpUrl("Layout element (grid)");
+    this.setTooltip("Layout element (grid)");
+    this.setHelpUrl("");
   }
 };
 
 // Generator stub:
 
-Blockly.JavaScript['grid_element'] = function (block) {
+Blockly.JavaScript['element_grid_item'] = function (block) {
   var value_text = Blockly.JavaScript.valueToCode(block, 'text', Blockly.JavaScript.ORDER_ATOMIC);
   var value_text_color = Blockly.JavaScript.valueToCode(block, 'text_color', Blockly.JavaScript.ORDER_ATOMIC);
-  var number_corner_radius = block.getFieldValue('corner_radius');
+  var value_icon = Blockly.JavaScript.valueToCode(block, 'icon', Blockly.JavaScript.ORDER_ATOMIC);
+  var value_corner_radius = Blockly.JavaScript.valueToCode(block, 'corner_radius', Blockly.JavaScript.ORDER_ATOMIC);
   var value_background_color = Blockly.JavaScript.valueToCode(block, 'background_color', Blockly.JavaScript.ORDER_ATOMIC);
+  var value_background_color_gradient = Blockly.JavaScript.valueToCode(block, 'background_color_gradient', Blockly.JavaScript.ORDER_ATOMIC);
   var value_route_to = Blockly.JavaScript.valueToCode(block, 'route_to', Blockly.JavaScript.ORDER_ATOMIC);
 
   // Assemble JavaScript into code variable.
-  var random_id = Math.floor(Math.random() * 1000);
 
-  var code = `GridItemModel(
+  var code = '...;\n';
+
+  return code;
+};
+
+/*
+
+var code = `GridItemModel(
                 id: ${random_id},
                 text: ${value_text},
                 backgroundColor: ${value_background_color},
@@ -51,5 +65,5 @@ Blockly.JavaScript['grid_element'] = function (block) {
                 textColor: ${value_text_color},
                 routeTo: ${value_route_to}
               ),\n`;
-  return code;
-};
+
+*/

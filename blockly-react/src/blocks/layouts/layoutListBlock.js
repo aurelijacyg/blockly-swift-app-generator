@@ -5,7 +5,7 @@ import * as Blockly from 'blockly/core';
 Blockly.Blocks['layout_list'] = {
     init: function () {
         this.appendDummyInput()
-            .appendField("Layout - list");
+            .appendField("LAYOUT - regular list");
         this.appendDummyInput();
         this.appendStatementInput("list_elements")
             .setCheck(null)

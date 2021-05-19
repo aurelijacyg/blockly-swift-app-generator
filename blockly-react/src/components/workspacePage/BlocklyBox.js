@@ -8,6 +8,39 @@ import { Typography, Link } from "@material-ui/core";
 import Alert from "../Alert";
 
 import "../../blocks/appBlock";
+import "../../blocks/tabBlock";
+
+import "../../blocks/screens/cardGalleryScreenBlock";
+import "../../blocks/screens/paperViewScreenBlock";
+import "../../blocks/screens/primaryScreenBlock";
+import "../../blocks/screens/phraseScreenBlock";
+import "../../blocks/screens/articleScreenBlock";
+
+import "../../blocks/layouts/layoutGridBlock";
+import "../../blocks/layouts/layoutListBlock";
+import "../../blocks/layouts/layoutBubbleListBlock";
+import "../../blocks/layouts/layoutCatalogGridBlock";
+import "../../blocks/layouts/layoutHoneycombBlock";
+import "../../blocks/layouts/layoutNoteBlock";
+import "../../blocks/layouts/layoutAnimatedBoardBlock";
+
+import "../../blocks/layoutElements/listElementBlock";
+import "../../blocks/layoutElements/gridElementBlock";
+import "../../blocks/layoutElements/bubbleListElementBlock";
+import "../../blocks/layoutElements/catalogGridElementBlock";
+import "../../blocks/layoutElements/honeycombElementBlock";
+import "../../blocks/layoutElements/animatedBoardElementBlock";
+
+import "../../blocks/components/cardBlock";
+import "../../blocks/components/flipCardBlock";
+import "../../blocks/components/photoBlock";
+import "../../blocks/components/circleComponentBlock";
+
+import "../../blocks/icons/iconColorfulAstronomyBlock";
+import "../../blocks/icons/iconColorfulFoodBlock";
+import "../../blocks/icons/iconColorfulSenseBlock";
+import "../../blocks/icons/iconColorfulBlock";
+import "../../blocks/icons/iconRegularBlock";
 
 import "../../blocks/colors/colorAquamarineBlock";
 import "../../blocks/colors/colorBlackBlock";
@@ -24,18 +57,19 @@ import "../../blocks/colors/colorSecondaryBlock";
 import "../../blocks/colors/colorWhiteBlock";
 import "../../blocks/colors/colorYellowBlock";
 
-import "../../blocks/elements/cardBlock";
-import "../../blocks/elements/gridElementBlock";
-import "../../blocks/elements/listElementBlock";
-import "../../blocks/elements/photoBlock";
-import "../../blocks/elements/textBlock";
+import "../../blocks/logic/logicBoolFalseBlock";
+import "../../blocks/logic/logicBoolTrueBlock";
 
-import "../../blocks/layouts/layoutGridBlock";
-import "../../blocks/layouts/layoutListBlock";
+import "../../blocks/math/mathIntBlock";
+import "../../blocks/math/mathDoubleBlock";
+import "../../blocks/math/mathCGFloatBlock";
 
-import "../../blocks/screens/cardGalleryScreenBlock";
-import "../../blocks/screens/homeScreenBlock";
-import "../../blocks/screens/paperViewScreenBlock";
+import "../../blocks/text/textStringBlock";
+import "../../blocks/text/textURLBlock";
+
+import "../../blocks/functions/funcMakeBackgroundBlock";
+
+import "../../blocks/types/typeShapeBlock";
 
 
 const BlocklyBox = forwardRef((props, ref) => {
@@ -109,28 +143,66 @@ const BlocklyBox = forwardRef((props, ref) => {
                 `}>
 
                 <Category name="App">
-                    <Block type="app">
-                        <Field name="app_name" />
-                    </Block>
+                    <Block type="app_block" />
+                    <Block type="tab_block" />
                 </Category>
 
                 <Category name="Screens" >
-                    <Block type="home_screen" />
-                    <Block type="card_gallery_screen" />
-                    <Block type="paper_view_screen" />
-                </Category>
-
-                <Category name="Elements">
-                    <Block type="text_block" />
-                    <Block type="list_element" />
-                    <Block type="grid_element" />
-                    <Block type="card" />
-                    <Block type="photo" />
+                    <Block type="screen_primary" />
+                    <Block type="screen_card_gallery" />
+                    <Block type="screen_paper_view" />
+                    <Block type="screen_phrase" />
+                    <Block type="screen_article" />
                 </Category>
 
                 <Category name="Layouts">
                     <Block type="layout_grid" />
+                    <Block type="layout_catalog_grid" />
                     <Block type="layout_list" />
+                    <Block type="layout_bubble_list" />
+                    <Block type="layout_honeycomb" />
+                    <Block type="layout_note" />
+                    <Block type="layout_animated_board" />
+                </Category>
+
+                <Category name="Layout elements">
+                    <Block type="element_grid_item" />
+                    <Block type="element_catalog_grid_item" />
+                    <Block type="element_list_item" />
+                    <Block type="element_bubble_list_item" />
+                    <Block type="element_honeycomb_item" />
+                    <Block type="element_animated_board_item" />
+                </Category>
+
+                <Category name="Components">
+                    <Block type="component_card" />
+                    <Block type="component_flip_card" />
+                    <Block type="component_photo" />
+                    <Block type="component_circle" />
+                </Category>
+
+                <Category name="Text">
+                    <Block type="text_string" />
+                    <Block type="text_url" />
+                </Category>
+
+                <Category name="Math">
+                    <Block type="math_int" />
+                    <Block type="math_double" />
+                    <Block type="math_cgfloat" />
+                </Category>
+
+                <Category name="Logic">
+                    <Block type="logic_bool_true" />
+                    <Block type="logic_bool_false" />
+                </Category>
+
+                <Category name="Functions">
+                    <Block type="func_make_background" />
+                </Category>
+
+                <Category name="Types">
+                    <Block type="type_shape" />
                 </Category>
 
                 <Category name="Colors">
@@ -148,6 +220,14 @@ const BlocklyBox = forwardRef((props, ref) => {
                     <Block type="color_primary" />
                     <Block type="color_secondary" />
                     <Block type="color_make" />
+                </Category>
+
+                <Category name="Icons">
+                    <Block type="icon_regular" />
+                    <Block type="icon_colorful" />
+                    <Block type="icon_food_colorful" />
+                    <Block type="icon_sense_colorful" />
+                    <Block type="icon_astronomy_colorful" />
                 </Category>
 
             </BlocklyComponent>

@@ -2,7 +2,7 @@ import * as Blockly from 'blockly/core';
 
 // Block Definition:
 
-Blockly.Blocks['card'] = {
+Blockly.Blocks['component_card'] = {
   init: function () {
     this.appendDummyInput()
       .appendField("CARD");
@@ -22,7 +22,7 @@ Blockly.Blocks['card'] = {
     this.setInputsInline(false);
     this.setPreviousStatement(true, null);
     this.setNextStatement(true, null);
-    this.setColour(290);
+    this.setColour(15);
     this.setTooltip("");
     this.setHelpUrl("");
   }
@@ -30,16 +30,22 @@ Blockly.Blocks['card'] = {
 
 // Generator stub:
 
-Blockly.JavaScript['card'] = function (block) {
+Blockly.JavaScript['component_card'] = function (block) {
   var value_photo_url = Blockly.JavaScript.valueToCode(block, 'photo_url', Blockly.JavaScript.ORDER_ATOMIC);
   var value_category_name = Blockly.JavaScript.valueToCode(block, 'category_name', Blockly.JavaScript.ORDER_ATOMIC);
   var value_heading = Blockly.JavaScript.valueToCode(block, 'heading', Blockly.JavaScript.ORDER_ATOMIC);
   var value_label = Blockly.JavaScript.valueToCode(block, 'label', Blockly.JavaScript.ORDER_ATOMIC);
 
   // Assemble JavaScript into code variable.
-  var random_id = Math.floor(Math.random() * 1000);
 
-  var code = `CardModel(
+  var code = '...;\n';
+
+  return code;
+};
+
+/*
+
+var code = `CardModel(
                 id: ${random_id},
                 imageURL: ${value_photo_url},
                 category: ${value_category_name},
@@ -47,5 +53,4 @@ Blockly.JavaScript['card'] = function (block) {
                 label: ${value_label}
               ),`;
 
-  return code;
-};
+*/

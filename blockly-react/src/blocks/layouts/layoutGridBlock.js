@@ -5,7 +5,7 @@ import * as Blockly from 'blockly/core';
 Blockly.Blocks['layout_grid'] = {
     init: function () {
         this.appendDummyInput()
-            .appendField("Layout - grid");
+            .appendField("LAYOUT - regular grid");
         this.appendDummyInput()
             .appendField("Columns number: ")
             .appendField(new Blockly.FieldDropdown([["1", "one"], ["2", "two"], ["3", "three"], ["4", "four"]]), "columns_number");

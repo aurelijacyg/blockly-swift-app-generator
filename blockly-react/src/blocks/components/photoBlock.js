@@ -2,7 +2,7 @@ import * as Blockly from 'blockly/core';
 
 // Block Definition:
 
-Blockly.Blocks['photo'] = {
+Blockly.Blocks['component_photo'] = {
   init: function () {
     this.appendDummyInput()
       .appendField("PHOTO")
@@ -11,16 +11,17 @@ Blockly.Blocks['photo'] = {
     this.appendValueInput("photo_url")
       .setCheck(null)
       .appendField("URL");
-    this.appendDummyInput()
-      .appendField("Width")
-      .appendField(new Blockly.FieldNumber(250, 100, 1000), "width")
-      .appendField("Height")
-      .appendField(new Blockly.FieldNumber(250, 100, 1000), "height");
-    this.appendDummyInput()
-      .appendField("Type")
-      .appendField(new Blockly.FieldDropdown([["rounded", "rounded"], ["rectangle", "rectangle"]]), "photo_type");
+    this.appendValueInput("width")
+      .setCheck(null)
+      .appendField("Width (CGFloat) ?");
+    this.appendValueInput("height")
+      .setCheck(null)
+      .appendField("Height (CGFloat) ?");
+    this.appendValueInput("NAME")
+      .setCheck(null)
+      .appendField("Shape");
     this.setOutput(true, null);
-    this.setColour(290);
+    this.setColour(15);
     this.setTooltip("");
     this.setHelpUrl("");
   }
@@ -28,26 +29,28 @@ Blockly.Blocks['photo'] = {
 
 // Generator stub:
 
-Blockly.JavaScript['photo'] = function (block) {
+Blockly.JavaScript['component_photo'] = function (block) {
   var value_photo_url = Blockly.JavaScript.valueToCode(block, 'photo_url', Blockly.JavaScript.ORDER_ATOMIC);
-  var number_width = block.getFieldValue('width');
-  var number_height = block.getFieldValue('height');
-  var dropdown_photo_type = block.getFieldValue('photo_type');
+  var value_width = Blockly.JavaScript.valueToCode(block, 'width', Blockly.JavaScript.ORDER_ATOMIC);
+  var value_height = Blockly.JavaScript.valueToCode(block, 'height', Blockly.JavaScript.ORDER_ATOMIC);
+  var value_name = Blockly.JavaScript.valueToCode(block, 'NAME', Blockly.JavaScript.ORDER_ATOMIC);
 
   // Assemble JavaScript into code variable.
-  
-  if (dropdown_photo_type === 'rounded') {
-    var isImageRouded = true
-  } else {
-    var isImageRouded = false
-  }
 
-  var code = `PhotoModel(
+  var code = '...';
+
+  // Change ORDER_NONE to the correct strength.
+
+  return [code, Blockly.JavaScript.ORDER_NONE];
+};
+
+/*
+
+var code = `PhotoModel(
                 URL: ${value_photo_url},
                 width: ${number_width},
                 height: ${number_height},
                 isRounded: ${isImageRouded}
               )`;
 
-  return [code, Blockly.JavaScript.ORDER_NONE];
-};
+*/

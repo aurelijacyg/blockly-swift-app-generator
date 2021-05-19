@@ -2,13 +2,26 @@ import * as Blockly from 'blockly/core';
 
 // Block Definition:
 
-Blockly.Blocks['app'] = {
+Blockly.Blocks['app_block'] = {
   init: function () {
     this.appendDummyInput()
       .appendField("MY APP");
+    this.appendDummyInput();
+    this.appendValueInput("header")
+      .setCheck(null)
+      .appendField("Name");
+    this.appendValueInput("header_color")
+      .setCheck(null)
+      .appendField("Navigation bar text color");
+    this.appendValueInput("nav_bar_color")
+      .setCheck(null)
+      .appendField("Navigation bar color");
+    this.appendValueInput("background")
+      .setCheck(null)
+      .appendField("App background color");
+    this.appendDummyInput();
     this.appendDummyInput()
-      .appendField("Name")
-      .appendField(new Blockly.FieldTextInput(""), "app_name");
+      .appendField("Tabs");
     this.appendStatementInput("screens")
       .setCheck(null);
     this.setColour(230);
@@ -19,15 +32,24 @@ Blockly.Blocks['app'] = {
 
 // Generator stub:
 
-Blockly.JavaScript['app'] = function (block) {
-  var text_app_name = block.getFieldValue('app_name');
+Blockly.JavaScript['app_block'] = function (block) {
+  var value_header = Blockly.JavaScript.valueToCode(block, 'header', Blockly.JavaScript.ORDER_ATOMIC);
+  var value_header_color = Blockly.JavaScript.valueToCode(block, 'header_color', Blockly.JavaScript.ORDER_ATOMIC);
+  var value_nav_bar_color = Blockly.JavaScript.valueToCode(block, 'nav_bar_color', Blockly.JavaScript.ORDER_ATOMIC);
+  var value_background = Blockly.JavaScript.valueToCode(block, 'background', Blockly.JavaScript.ORDER_ATOMIC);
   var statements_screens = Blockly.JavaScript.statementToCode(block, 'screens');
 
   // Assemble JavaScript into code variable.
-  
-  var code = `struct AppConfiguration {
-                 ${statements_screens}
-              }`;
-                
+
+  var code = '...;\n';
+
   return code;
 };
+
+/*
+
+var code = `struct AppConfiguration {
+                 ${statements_screens}
+              }`;
+
+*/
