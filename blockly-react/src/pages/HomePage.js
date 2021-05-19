@@ -18,7 +18,7 @@ const HomePage = () => {
   const headerPost = {
     title: "Doably",
     description:
-      "This is a fun method for creating iOS apps. This tool allows you to place blocks like a puzzle and create your custom iOS app design and program buttons for actions.",
+      "This is a fun method for creating iOS apps. This tool allows you to place blocks like a puzzle and create your custom iOS app.",
     image: HeaderImage
   };
 

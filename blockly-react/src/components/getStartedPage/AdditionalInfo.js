@@ -25,14 +25,14 @@ const AdditionalInfo = () => {
                         <Link color="primary" href="https://apps.apple.com/us/app/xcode/id497799835?mt=12">
                             Install
                         </Link>
-                        {" Xcode in your Mac: "}
+                        {" Xcode in your Mac"}
                     </Typography>
                     &#160;
                     <Typography>
                         <Link color="primary" href="https://developer.apple.com/documentation/xcode/running-your-app-in-the-simulator-or-on-a-device">
                             Running
                         </Link>
-                        {" Your App in the Simulator or on a Device: "}
+                        {" Your App in the Simulator or on a Device"}
                     </Typography>
                     &#160;
                     <Typography>

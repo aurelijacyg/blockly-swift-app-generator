@@ -23,7 +23,7 @@ const Header = () => {
                 <Grid item xs={12}>
                     <Typography variant="body1" color="textSecondary" component="p">
                         Doably is an intuitive, visual programming environment that allows everyone – even children – to build apps for smartphones.
-                        Apps are build by placing blocks like a puzzle and assigning a behavior or design to the blocks. Apps could be built from pre-built templates which can be found in this section.
+                        Apps are build by placing blocks like a puzzle and assigning a behavior or design to the blocks. Apps could be built from pre-built templates which can be found in "Templates" section.
                     </Typography>
                     &#160;
                     <Typography variant="body1" color="textSecondary" component="p">

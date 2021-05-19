@@ -29,6 +29,37 @@ const TemplatesPage = () => {
           <Typography gutterBottom variant="h5" color="primary" component="h2">
             Templates
           </Typography>
+          &#160;
+          <Typography variant="body1" color="textSecondary" component="p">
+            Doably suggests you 5 screen templates and each of them could have different variations. Primary screen could have different layouts and you can choose of 7 amazing layouts.
+            Some layouts could have a component. There are 4 suggested components to your wish app.
+          </Typography>
+          &#160;
+          <Typography gutterBottom variant="h6" color="primary" component="h2">
+            Screens
+          </Typography>
+        </Grid>
+        <Grid item xs={12} justify="center" alignItems="center">
+          {templates.map((template) => (
+            <Template key={template.title} template={template} />
+          ))}
+        </Grid>
+        &#160;
+        <Grid item xs={12} justify="center" alignItems="center">
+          <Typography gutterBottom variant="h6" color="primary" component="h2">
+            Layouts
+          </Typography>
+        </Grid>
+        <Grid item xs={12} justify="center" alignItems="center">
+          {templates.map((template) => (
+            <Template key={template.title} template={template} />
+          ))}
+        </Grid>
+        &#160;
+        <Grid item xs={12} justify="center" alignItems="center">
+          <Typography gutterBottom variant="h6" color="primary" component="h2">
+            Components
+          </Typography>
         </Grid>
         <Grid item xs={12} justify="center" alignItems="center">
           {templates.map((template) => (
