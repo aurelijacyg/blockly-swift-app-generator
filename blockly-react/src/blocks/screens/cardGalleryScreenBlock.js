@@ -46,7 +46,18 @@ Blockly.JavaScript['screen_card_gallery'] = function (block) {
 
   // Assemble JavaScript into code variable.
 
-  var code = '...';
+  var code = `Screen.cards(
+    CardGalleryModel(
+      categoryColor: ${value_category_color},
+      headingColor: ${value_heading_color},
+      labelColor: ${value_label_color},
+      navigationBarTitle: ${value_navigation_bar_text},
+      isTabBarHidden: ${value_is_tabbar_hidden},
+      cards: [
+        ${statements_cards},
+      ]
+    )
+  )`;
 
   // Change ORDER_NONE to the correct strength.
   

@@ -45,7 +45,16 @@ Blockly.JavaScript['screen_phrase'] = function (block) {
 
     // Assemble JavaScript into code variable.
 
-    var code = '...';
+    var code = `Screen.phrase(
+        PhraseModel(
+            title: ${value_title},
+            label: ${value_label},
+            textColor: ${value_text_color},
+            typeface: ${value_typeface},
+            backgroundColor: ${value_background_color},
+            isTabBarHidden: ${value_is_tabbar_hidden}
+        )
+    )`;
 
     // Change ORDER_NONE to the correct strength.
 

@@ -49,7 +49,17 @@ Blockly.JavaScript['screen_article'] = function (block) {
 
     // Assemble JavaScript into code variable.
 
-    var code = '...';
+    var code = `Screen.article(
+        ArticleModel(
+            title: ${value_title},
+            subtitle: ${value_subtitle},
+            body: ${value_body},
+            titlesColor: ${value_title_color},
+            bodyColor: ${value_body_color},
+            photoURL: ${value_photo_url},
+            isTabBarHidden: ${value_is_tabbar_hidden}
+        )
+      )`;
 
     // Change ORDER_NONE to the correct strength.
 

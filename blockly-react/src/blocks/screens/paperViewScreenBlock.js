@@ -44,23 +44,18 @@ Blockly.JavaScript['screen_paper_view'] = function (block) {
 
   // Assemble JavaScript into code variable.
 
-  var code = '...';
+  var code = `Screen.paper(
+    PaperModel(
+      title: ${value_title},
+      body: ${value_body},
+      titleColor: ${value_title_color},
+      bodyColor: ${value_body_color},
+      isTabBarHidden: ${value_is_tabbar_hidden},
+      photo: ${value_photo}
+    )
+  )`;
 
   // Change ORDER_NONE to the correct strength.
   
   return [code, Blockly.JavaScript.ORDER_NONE];
 };
-
-/*
-
-var code = `Routing.paper(
-    PaperView(
-      titleText: ${value_title},
-      bodyText: ${value_body},
-      titleColor: ${value_title_color},
-      bodyTextColor: ${value_body_color},
-      photo: ${value_photo}
-    )
-  )`;
-
-*/

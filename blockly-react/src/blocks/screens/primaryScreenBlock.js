@@ -11,6 +11,9 @@ Blockly.Blocks['screen_primary'] = {
         this.appendValueInput("photo_url")
             .setCheck(null)
             .appendField("Photo URL ?");
+        this.appendValueInput("is_tabbar_hidden")
+            .setCheck(null)
+            .appendField("Is tabbar hidden");
         this.appendValueInput("layout_type")
             .setCheck(null)
             .appendField("Layout Type");
@@ -25,11 +28,18 @@ Blockly.Blocks['screen_primary'] = {
 
 Blockly.JavaScript['screen_primary'] = function (block) {
     var value_photo_url = Blockly.JavaScript.valueToCode(block, 'photo_url', Blockly.JavaScript.ORDER_ATOMIC);
+    var value_is_tabbar_hidden = Blockly.JavaScript.valueToCode(block, 'is_tabbar_hidden', Blockly.JavaScript.ORDER_ATOMIC);
     var value_layout_type = Blockly.JavaScript.valueToCode(block, 'layout_type', Blockly.JavaScript.ORDER_ATOMIC);
 
     // Assemble JavaScript into code variable.
 
-    var code = '...';
+    var code = `Screen.primary(
+        PrimaryViewModel(
+            photoURL: ${value_photo_url},
+            isTabBarHidden: ${value_is_tabbar_hidden},
+            layout: ${value_layout_type}
+        )
+    )`;
 
     // Change ORDER_NONE to the correct strength.
     

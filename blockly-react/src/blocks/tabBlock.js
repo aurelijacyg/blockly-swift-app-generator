@@ -13,7 +13,7 @@ Blockly.Blocks['tab_block'] = {
         this.appendValueInput("system_image")
             .setCheck(null)
             .appendField("System image ?");
-        this.appendValueInput("primary_screen")
+        this.appendValueInput("screen")
             .setCheck(null)
             .appendField("Screen");
         this.setInputsInline(false);
@@ -30,11 +30,15 @@ Blockly.Blocks['tab_block'] = {
 Blockly.JavaScript['tab_block'] = function (block) {
     var value_label = Blockly.JavaScript.valueToCode(block, 'label', Blockly.JavaScript.ORDER_ATOMIC);
     var value_system_image = Blockly.JavaScript.valueToCode(block, 'system_image', Blockly.JavaScript.ORDER_ATOMIC);
-    var value_primary_screen = Blockly.JavaScript.valueToCode(block, 'primary_screen', Blockly.JavaScript.ORDER_ATOMIC);
+    var screen = Blockly.JavaScript.valueToCode(block, 'screen', Blockly.JavaScript.ORDER_ATOMIC);
 
     // Assemble JavaScript into code variable.
 
-    var code = '...;\n';
+    var code = `Tab(
+        label: ${value_label},
+        systemImage: ${value_system_image},
+        screen: ${screen}
+    )`;
 
     return code;
 };

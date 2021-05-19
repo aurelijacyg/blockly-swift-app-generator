@@ -41,15 +41,18 @@ Blockly.JavaScript['app_block'] = function (block) {
 
   // Assemble JavaScript into code variable.
 
-  var code = '...;\n';
+  var code = `struct AppConfiguration {
+    let data = TabsModel(
+      header: ${value_header},
+      headerColor: ${value_header_color},
+      navigationBarColor: ${value_nav_bar_color},
+      screenBackground: ${value_background},
+      tabs: 
+        [
+          ${statements_screens},
+        ]
+      )
+  }`;
 
   return code;
 };
-
-/*
-
-var code = `struct AppConfiguration {
-                 ${statements_screens}
-              }`;
-
-*/
