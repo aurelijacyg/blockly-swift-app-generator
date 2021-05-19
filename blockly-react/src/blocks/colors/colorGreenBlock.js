@@ -6,10 +6,10 @@ Blockly.Blocks['color_green'] = {
     init: function () {
         this.appendDummyInput()
             .appendField(new Blockly.FieldColour("#33cc00"), "green");
-        this.setOutput(true, null);
         this.setColour(195);
         this.setTooltip("");
         this.setHelpUrl("");
+        this.setOutput(true, 'Color');
     }
 };
 

@@ -8,31 +8,31 @@ Blockly.Blocks['screen_article'] = {
             .appendField("ARTICLE SCREEN");
         this.appendDummyInput();
         this.appendValueInput("title")
-            .setCheck(null)
+            .setCheck("String")
             .appendField("Title");
         this.appendValueInput("subtitle")
-            .setCheck(null)
+            .setCheck("String")
             .appendField("Subtitle");
         this.appendValueInput("body")
-            .setCheck(null)
+            .setCheck("String")
             .appendField("Body");
         this.appendValueInput("title_color")
-            .setCheck(null)
+            .setCheck("Color")
             .appendField("Title and subtitle color");
         this.appendValueInput("body_color")
-            .setCheck(null)
+            .setCheck("Color")
             .appendField("Body color");
         this.appendValueInput("photo_url")
-            .setCheck(null)
+            .setCheck("Url")
             .appendField("Photo URL ?");
         this.appendValueInput("is_tabbar_hidden")
-            .setCheck(null)
+            .setCheck("Bool")
             .appendField("Is tabbar hidden ?");
         this.setInputsInline(false);
-        this.setOutput(true, null);
         this.setColour(210);
         this.setTooltip("");
         this.setHelpUrl("");
+        this.setOutput(true, 'Screen');
     }
 };
 

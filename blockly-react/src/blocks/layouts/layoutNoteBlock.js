@@ -8,19 +8,19 @@ Blockly.Blocks['layout_note'] = {
             .appendField("LAYOUT - note");
         this.appendDummyInput();
         this.appendValueInput("Animated")
-            .setCheck(null)
+            .setCheck("Bool")
             .appendField("Is animated");
         this.appendValueInput("background_color")
-            .setCheck(null)
+            .setCheck("FunctionMakeBackground")
             .appendField("Background color");
         this.appendValueInput("component")
-            .setCheck(null)
+            .setCheck("Component")
             .appendField("Component");
         this.setInputsInline(false);
-        this.setOutput(true, null);
         this.setColour(255);
         this.setTooltip("");
         this.setHelpUrl("");
+        this.setOutput(true, 'Layout');
     }
 };
 

@@ -11,13 +11,13 @@ Blockly.Blocks['layout_honeycomb'] = {
             .appendField(new Blockly.FieldDropdown([["1", "1"], ["2", "2"], ["3", "3"], ["4", "4"], ["5", "5"], ["6", "6"], ["7", "7"], ["8", "8"]]), "columns_number");
         this.appendDummyInput();
         this.appendStatementInput("elements")
-            .setCheck(null)
+            .setCheck("HoneycombElement")
             .appendField("Elements");
         this.setInputsInline(false);
-        this.setOutput(true, null);
         this.setColour(255);
         this.setTooltip("");
         this.setHelpUrl("");
+        this.setOutput(true, 'Layout');
     }
 };
 

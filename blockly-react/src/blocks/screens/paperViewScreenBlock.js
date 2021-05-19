@@ -8,27 +8,27 @@ Blockly.Blocks['screen_paper_view'] = {
       .appendField("PAPER VIEW SCREEN");
     this.appendDummyInput();
     this.appendValueInput("title")
-      .setCheck(null)
+      .setCheck("String")
       .appendField("Title");
     this.appendValueInput("title_color")
-      .setCheck(null)
+      .setCheck("Color")
       .appendField("Title color");
     this.appendValueInput("body")
-      .setCheck(null)
+      .setCheck("String")
       .appendField("Body");
     this.appendValueInput("body_color")
-      .setCheck(null)
+      .setCheck("Color")
       .appendField("Body color");
     this.appendValueInput("is_tabbar_hidden")
-      .setCheck(null)
+      .setCheck("Bool")
       .appendField("Is tabbar hidden ?");
     this.appendValueInput("photo")
-      .setCheck(null)
+      .setCheck("Component")
       .appendField("Photo");
-    this.setOutput(true, null);
     this.setColour(210);
     this.setTooltip("");
     this.setHelpUrl("");
+    this.setOutput(true, 'Screen');
   }
 };
 

@@ -8,29 +8,29 @@ Blockly.Blocks['screen_card_gallery'] = {
       .appendField("CARD GALLERY SCREEN");
     this.appendDummyInput();
     this.appendValueInput("navigation_bar_text")
-      .setCheck(null)
+      .setCheck("String")
       .appendField("Screen title");
     this.appendValueInput("category_color")
-      .setCheck(null)
+      .setCheck("Color")
       .appendField("Category color");
     this.appendValueInput("heading_color")
-      .setCheck(null)
+      .setCheck("Color")
       .appendField("Heading color");
     this.appendValueInput("label_color")
-      .setCheck(null)
+      .setCheck("Color")
       .appendField("Label color");
     this.appendValueInput("is_tabbar_hidden")
-      .setCheck(null)
+      .setCheck("Bool")
       .appendField("Is tabbar hidden ?");
     this.appendDummyInput();
     this.appendStatementInput("cards")
-      .setCheck(null)
+      .setCheck("Component")
       .appendField("Cards");
     this.setInputsInline(false);
-    this.setOutput(true, null);
     this.setColour(210);
     this.setTooltip("");
     this.setHelpUrl("");
+    this.setOutput(true, 'Screen');
   }
 };
 

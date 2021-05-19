@@ -8,10 +8,10 @@ Blockly.Blocks['math_double'] = {
             .appendField("DOUBLE");
         this.appendDummyInput()
             .appendField(new Blockly.FieldNumber(0), "value");
-        this.setOutput(true, null);
         this.setColour(90);
         this.setTooltip("");
         this.setHelpUrl("");
+        this.setOutput(true, 'Double');
     }
 };
 

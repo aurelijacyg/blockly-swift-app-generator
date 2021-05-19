@@ -8,18 +8,18 @@ Blockly.Blocks['func_make_background'] = {
             .appendField("MAKE BACKGROUND");
         this.appendDummyInput();
         this.appendValueInput("color")
-            .setCheck(null)
+            .setCheck("Color")
             .appendField("Color ?");
         this.appendValueInput("gradient_color")
-            .setCheck(null)
+            .setCheck("Color")
             .appendField("Gradient color ?");
         this.appendValueInput("photo_url")
-            .setCheck(null)
+            .setCheck("Url")
             .appendField("Photo URL ?");
-        this.setOutput(true, null);
         this.setColour(0);
         this.setTooltip("");
         this.setHelpUrl("");
+        this.setOutput(true, 'FunctionMakeBackground');
     }
 };
 

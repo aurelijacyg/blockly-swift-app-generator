@@ -8,33 +8,33 @@ Blockly.Blocks['element_animated_board_item'] = {
             .appendField("ANIMATED BOARD ELEMENT");
         this.appendDummyInput();
         this.appendValueInput("title")
-            .setCheck(null)
+            .setCheck("String")
             .appendField("Title");
         this.appendValueInput("text_color")
-            .setCheck(null)
+            .setCheck("Color")
             .appendField("Text color");
         this.appendValueInput("background_color")
-            .setCheck(null)
+            .setCheck("Color")
             .appendField("Background color");
         this.appendValueInput("background_color_gradient")
-            .setCheck(null)
+            .setCheck("Color")
             .appendField("Background gradient color ?");
         this.appendDummyInput();
         this.appendValueInput("size")
-            .setCheck(null)
+            .setCheck("CGFloat")
             .appendField("Size (CGFloat)");
         this.appendValueInput("x_position")
-            .setCheck(null)
+            .setCheck("Int")
             .appendField("X Position");
         this.appendValueInput("y_position")
-            .setCheck(null)
+            .setCheck("Int")
             .appendField("Y Position");
         this.appendDummyInput();
         this.appendValueInput("component")
-            .setCheck(null)
+            .setCheck("Component")
             .appendField("Rising component ?");
-        this.setPreviousStatement(true, null);
-        this.setNextStatement(true, null);
+        this.setPreviousStatement(true, 'AnimatedBoardElement');
+        this.setNextStatement(true, 'AnimatedBoardElement');
         this.setColour(290);
         this.setTooltip("Layout element (animated board)");
         this.setHelpUrl("");

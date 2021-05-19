@@ -7,17 +7,17 @@ Blockly.Blocks['layout_bubble_list'] = {
         this.appendDummyInput()
             .appendField("LAYOUT - bubble list");
         this.appendValueInput("is_items_big")
-            .setCheck(null)
+            .setCheck("Bool")
             .appendField("Is elements big");
         this.appendDummyInput();
         this.appendStatementInput("items")
-            .setCheck(null)
+            .setCheck("BubbleListElement")
             .appendField("Elements");
         this.setInputsInline(false);
-        this.setOutput(true, null);
         this.setColour(255);
         this.setTooltip("");
         this.setHelpUrl("");
+        this.setOutput(true, 'Layout');
     }
 };
 

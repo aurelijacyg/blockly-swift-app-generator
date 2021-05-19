@@ -8,10 +8,10 @@ Blockly.Blocks['math_int'] = {
             .appendField("INT");
         this.appendDummyInput()
             .appendField(new Blockly.FieldNumber(0, -Infinity, Infinity, 1), "value");
-        this.setOutput(true, null);
         this.setColour(90);
         this.setTooltip("");
         this.setHelpUrl("");
+        this.setOutput(true, 'Int');
     }
 };
 

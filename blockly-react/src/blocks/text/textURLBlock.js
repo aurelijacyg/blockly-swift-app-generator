@@ -10,10 +10,10 @@ Blockly.Blocks['text_url'] = {
             .appendField("\"")
             .appendField(new Blockly.FieldTextInput(""), "url")
             .appendField("\"");
-        this.setOutput(true, null);
         this.setColour(120);
         this.setTooltip("");
         this.setHelpUrl("");
+        this.setOutput(true, 'Url');
     }
 };
 

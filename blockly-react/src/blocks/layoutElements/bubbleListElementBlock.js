@@ -8,32 +8,32 @@ Blockly.Blocks['element_bubble_list_item'] = {
             .appendField("BUBBLE LIST ELEMENT");
         this.appendDummyInput();
         this.appendValueInput("title")
-            .setCheck(null)
+            .setCheck("String")
             .appendField("Title ?");
         this.appendValueInput("title_color")
-            .setCheck(null)
+            .setCheck("Color")
             .appendField("Title color ?");
         this.appendValueInput("subtitle")
-            .setCheck(null)
+            .setCheck("String")
             .appendField("Subtitle ?");
         this.appendValueInput("subtitle_color")
-            .setCheck(null)
+            .setCheck("Color")
             .appendField("Subtitle color ?");
         this.appendValueInput("icon")
-            .setCheck(null)
+            .setCheck("Icon")
             .appendField("Icon ?");
         this.appendValueInput("background_color")
-            .setCheck(null)
+            .setCheck("Color")
             .appendField("Background color");
         this.appendValueInput("background_color_gradient")
-            .setCheck(null)
+            .setCheck("Color")
             .appendField("Background gradient color ?");
         this.appendDummyInput();
         this.appendValueInput("route_to")
-            .setCheck(null)
+            .setCheck("Screen")
             .appendField("On Click ?");
-        this.setPreviousStatement(true, null);
-        this.setNextStatement(true, null);
+        this.setPreviousStatement(true, 'BubbleListElement');
+        this.setNextStatement(true, 'BubbleListElement');
         this.setColour(290);
         this.setTooltip("Layout element (bubble list)");
         this.setHelpUrl("");

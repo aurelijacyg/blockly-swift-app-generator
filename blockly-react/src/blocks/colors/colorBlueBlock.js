@@ -7,10 +7,10 @@ Blockly.Blocks['color_blue'] = {
         this.appendDummyInput()
             .appendField(new Blockly.FieldColour("#3366ff"), "blue");
         this.setInputsInline(true);
-        this.setOutput(true, null);
         this.setColour(195);
         this.setTooltip("");
         this.setHelpUrl("");
+        this.setOutput(true, 'Color');
     }
 };
 

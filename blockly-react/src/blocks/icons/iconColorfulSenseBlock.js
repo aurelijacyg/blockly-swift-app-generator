@@ -17,10 +17,10 @@ Blockly.Blocks['icon_sense_colorful'] = {
                     ["touch", "icon-touch"]
                 ]
             ), "icon");
-        this.setOutput(true, null);
         this.setColour(165);
         this.setTooltip("");
         this.setHelpUrl("");
+        this.setOutput(true, 'Icon');
     }
 };
 

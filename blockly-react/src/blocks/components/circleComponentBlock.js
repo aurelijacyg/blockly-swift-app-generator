@@ -8,27 +8,27 @@ Blockly.Blocks['component_circle'] = {
             .appendField("CIRCLE COMPONENT");
         this.appendDummyInput();
         this.appendValueInput("title")
-            .setCheck(null)
+            .setCheck("String")
             .appendField("Title");
         this.appendValueInput("photo")
-            .setCheck(null)
+            .setCheck("Component")
             .appendField("Photo ?");
         this.appendValueInput("title_color")
-            .setCheck(null)
+            .setCheck("Color")
             .appendField("Title color ?");
         this.appendValueInput("background_color")
-            .setCheck(null)
+            .setCheck("Color")
             .appendField("Background color");
         this.appendValueInput("background_color_gradient")
-            .setCheck(null)
+            .setCheck("Color")
             .appendField("Background gradient color ?");
         this.appendValueInput("background_opacity")
-            .setCheck(null)
+            .setCheck("Double")
             .appendField("Background opacity (Double) ?");
-        this.setOutput(true, null);
         this.setColour(15);
         this.setTooltip("");
         this.setHelpUrl("");
+        this.setOutput(true, 'Component');
     }
 };
 

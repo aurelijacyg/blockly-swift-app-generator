@@ -22,10 +22,10 @@ Blockly.Blocks['icon_colorful'] = {
                     ["user profile", "icon-user-profile"]
                 ]
             ), "icon");
-        this.setOutput(true, null);
         this.setColour(165);
         this.setTooltip("");
         this.setHelpUrl("");
+        this.setOutput(true, 'Icon');
     }
 };
 

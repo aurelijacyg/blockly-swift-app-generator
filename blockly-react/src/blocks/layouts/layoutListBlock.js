@@ -8,12 +8,12 @@ Blockly.Blocks['layout_list'] = {
             .appendField("LAYOUT - regular list");
         this.appendDummyInput();
         this.appendStatementInput("list_elements")
-            .setCheck(null)
+            .setCheck("ListElement")
             .appendField("Elements:");
-        this.setOutput(true, null);
         this.setColour(255);
         this.setTooltip("");
         this.setHelpUrl("");
+        this.setOutput(true, 'Layout');
     }
 };
 

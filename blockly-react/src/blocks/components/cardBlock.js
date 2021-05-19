@@ -8,20 +8,20 @@ Blockly.Blocks['component_card'] = {
       .appendField("CARD");
     this.appendDummyInput();
     this.appendValueInput("photo_url")
-      .setCheck(null)
+      .setCheck("Url")
       .appendField("Photo URL");
     this.appendValueInput("category_name")
-      .setCheck(null)
+      .setCheck("String")
       .appendField("Category name");
     this.appendValueInput("heading")
-      .setCheck(null)
+      .setCheck("String")
       .appendField("Heading");
     this.appendValueInput("label")
-      .setCheck(null)
+      .setCheck("String")
       .appendField("Label");
     this.setInputsInline(false);
-    this.setPreviousStatement(true, null);
-    this.setNextStatement(true, null);
+    this.setPreviousStatement(true, 'Component');
+    this.setNextStatement(true, 'Component');
     this.setColour(15);
     this.setTooltip("");
     this.setHelpUrl("");

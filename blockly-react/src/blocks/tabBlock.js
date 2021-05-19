@@ -8,17 +8,17 @@ Blockly.Blocks['tab_block'] = {
             .appendField("TAB");
         this.appendDummyInput();
         this.appendValueInput("label")
-            .setCheck(null)
+            .setCheck("String")
             .appendField("Label ?");
         this.appendValueInput("system_image")
-            .setCheck(null)
+            .setCheck("String")
             .appendField("System image ?");
         this.appendValueInput("screen")
-            .setCheck(null)
+            .setCheck("Screen")
             .appendField("Screen");
         this.setInputsInline(false);
-        this.setPreviousStatement(true, null);
-        this.setNextStatement(true, null);
+        this.setPreviousStatement(true, 'Tab');
+        this.setNextStatement(true, 'Tab');
         this.setColour(230);
         this.setTooltip("Check system images in URL");
         this.setHelpUrl("https://developer.apple.com/design/human-interface-guidelines/sf-symbols/overview/");

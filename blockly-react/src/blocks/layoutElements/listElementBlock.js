@@ -8,27 +8,27 @@ Blockly.Blocks['element_list_item'] = {
       .appendField("LIST ELEMENT");
     this.appendDummyInput();
     this.appendValueInput("text")
-      .setCheck(null)
+      .setCheck("String")
       .appendField("Text");
     this.appendValueInput("text_color")
-      .setCheck(null)
+      .setCheck("Color")
       .appendField("Text color");
     this.appendValueInput("background_color")
-      .setCheck(null)
+      .setCheck("Color")
       .appendField("Backround color");
     this.appendValueInput("background_color_gradient")
-      .setCheck(null)
+      .setCheck("Color")
       .appendField("Background gradient color ?");
     this.appendValueInput("icon")
-      .setCheck(null)
+      .setCheck("Icon")
       .appendField("Icon ?");
     this.appendDummyInput();
     this.appendValueInput("route_to")
-      .setCheck(null)
+      .setCheck("Screen")
       .appendField("On Click ?");
     this.setInputsInline(false);
-    this.setPreviousStatement(true, null);
-    this.setNextStatement(true, null);
+    this.setPreviousStatement(true, 'ListElement');
+    this.setNextStatement(true, 'ListElement');
     this.setColour(290);
     this.setTooltip("Layout element (list)");
     this.setHelpUrl("");

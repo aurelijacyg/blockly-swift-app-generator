@@ -18,10 +18,10 @@ Blockly.Blocks['icon_astronomy_colorful'] = {
                     ["saturn", "icon-saturn"]
                 ]
             ), "icon");
-        this.setOutput(true, null);
         this.setColour(165);
         this.setTooltip("");
         this.setHelpUrl("");
+        this.setOutput(true, 'Icon');
     }
 };
 

@@ -8,21 +8,21 @@ Blockly.Blocks['component_flip_card'] = {
             .appendField("FLIP CARD");
         this.appendDummyInput();
         this.appendValueInput("title")
-            .setCheck(null)
+            .setCheck("String")
             .appendField("Title");
         this.appendValueInput("subtitle")
-            .setCheck(null)
+            .setCheck("String")
             .appendField("Subtitle");
         this.appendValueInput("hidden_text")
-            .setCheck(null)
+            .setCheck("String")
             .appendField("Hidden text");
         this.appendValueInput("text_color")
-            .setCheck(null)
+            .setCheck("Color")
             .appendField("Text color ?");
-        this.setOutput(true, null);
         this.setColour(15);
         this.setTooltip("");
         this.setHelpUrl("");
+        this.setOutput(true, 'Component');
     }
 };
 

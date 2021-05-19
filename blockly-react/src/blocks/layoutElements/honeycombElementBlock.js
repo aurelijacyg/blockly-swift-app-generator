@@ -8,13 +8,13 @@ Blockly.Blocks['element_honeycomb_item'] = {
             .appendField("HONEYCOMB ELEMENT");
         this.appendDummyInput();
         this.appendValueInput("photo_url")
-            .setCheck(null)
+            .setCheck("Url")
             .appendField("Photo URL ?");
         this.appendValueInput("route_to")
-            .setCheck(null)
+            .setCheck("Screen")
             .appendField("On Click ?");
-        this.setPreviousStatement(true, null);
-        this.setNextStatement(true, null);
+        this.setPreviousStatement(true, 'HoneycombElement');
+        this.setNextStatement(true, 'HoneycombElement');
         this.setColour(290);
         this.setTooltip("Layout element (honeycomb)");
         this.setHelpUrl("");

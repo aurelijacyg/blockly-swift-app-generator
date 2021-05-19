@@ -8,10 +8,10 @@ Blockly.Blocks['logic_bool_false'] = {
             .appendField("BOOL");
         this.appendDummyInput()
             .appendField(new Blockly.FieldDropdown([["false", "false"], ["true", "true"]]), "value");
-        this.setOutput(true, null);
         this.setColour(45);
         this.setTooltip("");
         this.setHelpUrl("");
+        this.setOutput(true, 'Bool');
     }
 };
 

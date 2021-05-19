@@ -7,20 +7,20 @@ Blockly.Blocks['layout_catalog_grid'] = {
         this.appendDummyInput()
             .appendField("LAYOUT - catalog grid");
         this.appendValueInput("title")
-            .setCheck(null)
+            .setCheck("String")
             .appendField("Title ?");
         this.appendValueInput("title_color")
-            .setCheck(null)
+            .setCheck("Color")
             .appendField("Title color ?");
         this.appendDummyInput();
         this.appendStatementInput("elements")
-            .setCheck(null)
+            .setCheck("CatalogGridElement")
             .appendField("Elements");
         this.setInputsInline(false);
-        this.setOutput(true, null);
         this.setColour(255);
         this.setTooltip("");
         this.setHelpUrl("");
+        this.setOutput(true, 'Layout');
     }
 };
 

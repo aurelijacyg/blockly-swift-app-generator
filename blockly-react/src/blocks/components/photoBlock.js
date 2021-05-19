@@ -9,21 +9,21 @@ Blockly.Blocks['component_photo'] = {
       .appendField(new Blockly.FieldImage("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSyxFs3Ujjg8mBGCb1FIfVPb_e1teRB1Hw-7w&usqp=CAU", 20, 20, { alt: "*", flipRtl: "FALSE" }));
     this.appendDummyInput();
     this.appendValueInput("photo_url")
-      .setCheck(null)
+      .setCheck("Url")
       .appendField("URL");
     this.appendValueInput("width")
-      .setCheck(null)
+      .setCheck("CGFloat")
       .appendField("Width (CGFloat) ?");
     this.appendValueInput("height")
-      .setCheck(null)
+      .setCheck("CGFloat")
       .appendField("Height (CGFloat) ?");
     this.appendValueInput("shape")
-      .setCheck(null)
+      .setCheck("TypeShape")
       .appendField("Shape ?");
-    this.setOutput(true, null);
     this.setColour(15);
     this.setTooltip("");
     this.setHelpUrl("");
+    this.setOutput(true, 'Component');
   }
 };
 

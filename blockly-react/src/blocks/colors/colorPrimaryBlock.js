@@ -6,10 +6,10 @@ Blockly.Blocks['color_primary'] = {
     init: function () {
         this.appendDummyInput()
             .appendField("Primary");
-        this.setOutput(true, null);
         this.setColour(195);
         this.setTooltip("");
         this.setHelpUrl("");
+        this.setOutput(true, 'Color');
     }
 };
 

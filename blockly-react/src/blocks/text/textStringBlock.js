@@ -10,10 +10,10 @@ Blockly.Blocks['text_string'] = {
             .appendField("\"")
             .appendField(new Blockly.FieldTextInput(""), "textName")
             .appendField("\"");
-        this.setOutput(true, null);
         this.setColour(120);
         this.setTooltip("");
         this.setHelpUrl("");
+        this.setOutput(true, 'String');
     }
 };
 

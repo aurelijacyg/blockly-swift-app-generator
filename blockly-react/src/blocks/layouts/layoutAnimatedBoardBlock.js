@@ -7,17 +7,17 @@ Blockly.Blocks['layout_animated_board'] = {
         this.appendDummyInput()
             .appendField("LAYOUT - animated board");
         this.appendValueInput("background_color")
-            .setCheck(null)
+            .setCheck("FunctionMakeBackground")
             .appendField("Background color");
         this.appendDummyInput();
         this.appendStatementInput("elements")
-            .setCheck(null)
+            .setCheck("AnimatedBoardElement")
             .appendField("Elements");
         this.setInputsInline(false);
-        this.setOutput(true, null);
         this.setColour(255);
         this.setTooltip("");
         this.setHelpUrl("");
+        this.setOutput(true, 'Layout');
     }
 };
 

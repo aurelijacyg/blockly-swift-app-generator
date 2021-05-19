@@ -8,10 +8,10 @@ Blockly.Blocks['math_cgfloat'] = {
             .appendField("CGFloat");
         this.appendDummyInput()
             .appendField(new Blockly.FieldNumber(0), "value");
-        this.setOutput(true, null);
         this.setColour(90);
         this.setTooltip("");
         this.setHelpUrl("");
+        this.setOutput(true, 'CGFloat');
     }
 };
 

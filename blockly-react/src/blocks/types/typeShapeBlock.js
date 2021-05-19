@@ -12,10 +12,10 @@ Blockly.Blocks['type_shape'] = {
         this.appendValueInput("corner_radius")
             .setCheck(null)
             .appendField("If rounded, corner radius (CGFloat)");
-        this.setOutput(true, null);
         this.setColour(345);
         this.setTooltip("");
         this.setHelpUrl("");
+        this.setOutput(true, 'TypeShape');
     }
 };
 

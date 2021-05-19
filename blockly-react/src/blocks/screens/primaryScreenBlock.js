@@ -9,18 +9,18 @@ Blockly.Blocks['screen_primary'] = {
             .appendField("PRIMARY SCREEN:");
         this.appendDummyInput();
         this.appendValueInput("photo_url")
-            .setCheck(null)
+            .setCheck("Url")
             .appendField("Photo URL ?");
         this.appendValueInput("is_tabbar_hidden")
-            .setCheck(null)
+            .setCheck("Bool")
             .appendField("Is tabbar hidden ?");
         this.appendValueInput("layout_type")
-            .setCheck(null)
+            .setCheck("Layout")
             .appendField("Layout Type");
-        this.setOutput(true, null);
         this.setColour(210);
         this.setTooltip("Tab");
         this.setHelpUrl("");
+        this.setOutput(true, 'Screen');
     }
 };
 

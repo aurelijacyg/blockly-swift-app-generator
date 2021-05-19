@@ -11,12 +11,12 @@ Blockly.Blocks['layout_grid'] = {
             .appendField(new Blockly.FieldDropdown([["1", "one"], ["2", "two"], ["3", "three"], ["4", "four"]]), "columns_number");
         this.appendDummyInput();
         this.appendStatementInput("grid_elements")
-            .setCheck(null)
+            .setCheck("GridElement")
             .appendField("Elements:");
-        this.setOutput(true, null);
         this.setColour(255);
         this.setTooltip("");
         this.setHelpUrl("");
+        this.setOutput(true, 'Layout');
     }
 };
 

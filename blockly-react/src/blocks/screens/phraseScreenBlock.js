@@ -8,28 +8,28 @@ Blockly.Blocks['screen_phrase'] = {
             .appendField("PHRASE SCREEN");
         this.appendDummyInput();
         this.appendValueInput("title")
-            .setCheck(null)
+            .setCheck("String")
             .appendField("Title");
         this.appendValueInput("label")
-            .setCheck(null)
+            .setCheck("String")
             .appendField("Label");
         this.appendValueInput("text_color")
-            .setCheck(null)
+            .setCheck("Color")
             .appendField("Text color");
         this.appendValueInput("typeface")
-            .setCheck(null)
+            .setCheck("String")
             .appendField("Typeface");
         this.appendValueInput("is_tabbar_hidden")
-            .setCheck(null)
+            .setCheck("Bool")
             .appendField("Is tabbar hidden ?");
         this.appendValueInput("background_color")
-            .setCheck(null)
+            .setCheck("FunctionMakeBackground")
             .appendField("Background color");
         this.setInputsInline(false);
-        this.setOutput(true, null);
         this.setColour(210);
         this.setTooltip("");
         this.setHelpUrl("");
+        this.setOutput(true, 'Screen');
     }
 };
 

@@ -19,10 +19,10 @@ Blockly.Blocks['icon_food_colorful'] = {
                     ["watermelon", "icon-watermelon"]
                 ]
             ), "icon");
-        this.setOutput(true, null);
         this.setColour(165);
         this.setTooltip("");
         this.setHelpUrl("");
+        this.setOutput(true, 'Icon');
     }
 };
 

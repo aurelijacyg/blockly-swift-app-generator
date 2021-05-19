@@ -24,10 +24,10 @@ Blockly.Blocks['icon_regular'] = {
                     ["gallery", "icon-gallery"]
                 ]
             ), "icon");
-        this.setOutput(true, null);
         this.setColour(165);
         this.setTooltip("");
         this.setHelpUrl("");
+        this.setOutput(true, 'Icon');
     }
 };
 

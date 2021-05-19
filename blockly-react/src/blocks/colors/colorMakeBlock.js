@@ -8,10 +8,10 @@ Blockly.Blocks['color_make'] = {
             .appendField("Hex Code  #")
             .appendField(new Blockly.FieldTextInput(""), "code");
         this.setInputsInline(true);
-        this.setOutput(true, null);
         this.setColour(195);
         this.setTooltip("");
         this.setHelpUrl("");
+        this.setOutput(true, 'Color');
     }
 };
 

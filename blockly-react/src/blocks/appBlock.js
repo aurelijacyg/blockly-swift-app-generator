@@ -8,22 +8,22 @@ Blockly.Blocks['app_block'] = {
       .appendField("MY APP");
     this.appendDummyInput();
     this.appendValueInput("header")
-      .setCheck(null)
+      .setCheck("String")
       .appendField("Name");
     this.appendValueInput("header_color")
-      .setCheck(null)
+      .setCheck("Color")
       .appendField("Navigation bar text color");
     this.appendValueInput("nav_bar_color")
-      .setCheck(null)
+      .setCheck("Color")
       .appendField("Navigation bar color");
     this.appendValueInput("background")
-      .setCheck(null)
+      .setCheck("FunctionMakeBackground")
       .appendField("App background color");
     this.appendDummyInput();
     this.appendDummyInput()
       .appendField("Tabs");
     this.appendStatementInput("screens")
-      .setCheck(null);
+      .setCheck("Tab");
     this.setColour(230);
     this.setTooltip("Come up with an app idea and name.");
     this.setHelpUrl("");

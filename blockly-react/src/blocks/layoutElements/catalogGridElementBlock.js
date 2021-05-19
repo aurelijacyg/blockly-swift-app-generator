@@ -8,26 +8,26 @@ Blockly.Blocks['element_catalog_grid_item'] = {
             .appendField("CATALOG GRID ELEMENT");
         this.appendDummyInput();
         this.appendValueInput("text")
-            .setCheck(null)
+            .setCheck("String")
             .appendField("Text");
         this.appendValueInput("text_color")
-            .setCheck(null)
+            .setCheck("Color")
             .appendField("Text color");
         this.appendValueInput("icon")
-            .setCheck(null)
+            .setCheck("Icon")
             .appendField("Icon");
         this.appendValueInput("background_color")
-            .setCheck(null)
+            .setCheck("Color")
             .appendField("Background color");
         this.appendValueInput("background_color_gradient")
-            .setCheck(null)
+            .setCheck("Color")
             .appendField("Background gradient color ?");
         this.appendDummyInput();
         this.appendValueInput("route to")
-            .setCheck(null)
+            .setCheck("Screen")
             .appendField("On Click ?");
-        this.setPreviousStatement(true, null);
-        this.setNextStatement(true, null);
+        this.setPreviousStatement(true, 'CatalogGridElement');
+        this.setNextStatement(true, 'CatalogGridElement');
         this.setColour(290);
         this.setTooltip("Layout element (catalog grid)");
         this.setHelpUrl("");
