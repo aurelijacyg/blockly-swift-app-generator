@@ -19,6 +19,6 @@ struct GridItemModel : Identifiable {
     var backgroundColor: Color
     var backgroundGradientColor: Color?
     var cornerRadius: CGFloat
-    var textColor: Color
+    var textColor: Color? = .primary
     var routeTo: Screen?
 }

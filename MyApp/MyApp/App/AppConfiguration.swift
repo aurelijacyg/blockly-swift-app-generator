@@ -48,17 +48,6 @@ struct AppConfiguration {
                         )
                     )
                 ),
-                
-                .init(
-                    screen: Screen.primary(
-                        PrimaryViewModel(
-                            photoURL: nil,
-                            isTabBarHidden: false,
-                            layout: Layout.animatedBoard(animatedBoardModel)
-                        )
-                    )
-                ),
-
             ]
     )
 }
