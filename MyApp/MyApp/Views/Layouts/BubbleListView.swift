@@ -26,29 +26,29 @@ struct BubbleListView: View {
                 ForEach(elements){ element in
                     switch element.routeTo {
 
-                    case .paper(let paperView):
-                        NavigationLink(destination: paperView){
+                    case .paper(let model):
+                        NavigationLink(destination: PaperView(data: model)){
                             bubbleListElement(element, isItemBig: data.isItemsBig)
                         }.foregroundColor(element.titleColor)
 
 
-                    case .cards(let cardGalleryView):
-                        NavigationLink(destination: cardGalleryView){
+                    case .cards(let model):
+                        NavigationLink(destination: CardGalleryView(data: model)){
                             bubbleListElement(element, isItemBig: data.isItemsBig)
                         }.foregroundColor(element.titleColor)
 
-                    case .phrase(let phraseView):
-                        NavigationLink(destination: phraseView){
+                    case .phrase(let model):
+                        NavigationLink(destination: PhraseView(data: model)){
                             bubbleListElement(element, isItemBig: data.isItemsBig)
                         }.foregroundColor(element.titleColor)
 
-                    case .article(let articleView):
-                        NavigationLink(destination: articleView) {
+                    case .article(let model):
+                        NavigationLink(destination: ArticleView(data: model)) {
                             bubbleListElement(element, isItemBig: data.isItemsBig)
                         }.foregroundColor(element.titleColor)
 
-                    case .primary(let primaryView):
-                        NavigationLink(destination: primaryView) {
+                    case .primary(let model):
+                        NavigationLink(destination: PrimaryView(data: model)) {
                             bubbleListElement(element, isItemBig: data.isItemsBig)
                         }.foregroundColor(element.titleColor)
 

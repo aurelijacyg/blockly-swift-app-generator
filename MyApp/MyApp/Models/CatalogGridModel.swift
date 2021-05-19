@@ -20,5 +20,5 @@ struct CatalogGridItemModel : Identifiable {
     var backgroundColor: Color
     var backgroundGradientColor: Color?
     var textColor: Color
-    var routeTo: Routing?
+    var routeTo: Screen?
 }

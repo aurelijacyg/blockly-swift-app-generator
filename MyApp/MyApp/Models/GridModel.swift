@@ -20,5 +20,5 @@ struct GridItemModel : Identifiable {
     var backgroundGradientColor: Color?
     var cornerRadius: CGFloat
     var textColor: Color
-    var routeTo: Routing?
+    var routeTo: Screen?
 }

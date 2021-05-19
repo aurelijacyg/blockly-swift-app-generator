@@ -21,5 +21,5 @@ struct BubbleListItemModel : Identifiable {
     var backgroundGradientColor: Color?
     var titleColor: Color? = .white
     var subtitleColor: Color? = .black
-    var routeTo: Routing?
+    var routeTo: Screen?
 }

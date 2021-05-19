@@ -25,28 +25,28 @@ struct CatalogGridView: View {
                 ForEach(elements){ element in
                     switch element.routeTo {
 
-                    case .paper(let paperView):
-                        NavigationLink(destination: paperView){
+                    case .paper(let model):
+                        NavigationLink(destination: PaperView(data: model)){
                             catalogGridElement(element, frameSize: frameSize)
                         }.foregroundColor(element.textColor)
 
-                    case .cards(let cardGalleryView):
-                        NavigationLink(destination: cardGalleryView){
+                    case .cards(let model):
+                        NavigationLink(destination: CardGalleryView(data: model)){
                             catalogGridElement(element, frameSize: frameSize)
                         }.foregroundColor(element.textColor)
 
-                    case .phrase(let phraseView):
-                        NavigationLink(destination: phraseView){
+                    case .phrase(let model):
+                        NavigationLink(destination: PhraseView(data: model)){
                             catalogGridElement(element, frameSize: frameSize)
                         }.foregroundColor(element.textColor)
 
-                    case .article(let articleView):
-                        NavigationLink(destination: articleView) {
+                    case .article(let model):
+                        NavigationLink(destination: ArticleView(data: model)) {
                             catalogGridElement(element, frameSize: frameSize)
                         }.foregroundColor(element.textColor)
 
-                    case .primary(let primaryView):
-                        NavigationLink(destination: primaryView) {
+                    case .primary(let model):
+                        NavigationLink(destination: PrimaryView(data: model)) {
                             catalogGridElement(element, frameSize: frameSize)
                         }.foregroundColor(element.textColor)
 

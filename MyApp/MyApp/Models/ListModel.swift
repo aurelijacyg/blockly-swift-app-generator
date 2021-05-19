@@ -18,5 +18,5 @@ struct ListItemModel : Identifiable {
     var backgroundGradientColor: Color?
     var textColor: Color
     var icon: String? = ""
-    var routeTo: Routing?
+    var routeTo: Screen?
 }
