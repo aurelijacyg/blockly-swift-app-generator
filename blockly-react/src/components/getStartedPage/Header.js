@@ -21,14 +21,16 @@ const Header = () => {
                     </Typography>
                 </Grid>
                 <Grid item xs={12}>
-                    <Typography variant="body1" color="textSecondary" component="p">
-                        Doably is an intuitive, visual programming environment that allows everyone – even children – to build apps for smartphones.
-                        Apps are build by placing blocks like a puzzle and assigning a behavior or design to the blocks. Apps could be built from pre-built templates which can be found in "Templates" section.
+                    <Typography gutterBottom variant="h6" color="primary" component="h2">
+                        What is Doably?
                     </Typography>
                     &#160;
                     <Typography variant="body1" color="textSecondary" component="p">
-                        The main purpose of designed app is to attractively display information of your choosing. It could become the app of your Recipes’ book or an app designated to share your life hacks and advices with others. It might even become an app to introduce you interior design ideas by sharing the pictures of your best works.
-                        Sky is the limit – your app, your ideas!
+                        Doably is an intuitive, visual programming environment that allows everyone - even children - to build Apps for smartphones. Apps are built by placing blocks like a puzzle and assigning a behaviour to them. Doably environment allows to personalise your App by suggesting many different designs for blocks. To save time and be stress-free in your creative process, you can use pre-built templates for your App (could be found in the section “Templates”).
+                    </Typography>
+                    &#160;
+                    <Typography variant="body1" color="textSecondary" component="p">
+                        The App you create using Doably attractively displays information of your choosing. It could become the App of your recipes’ book or an App designed to share your life hacks and advices with others. The purpose can be personal - such as your own individualised travel journal; or it can become a step forward in your career - for example to introduce your interior design ideas by sharing pictures of your best works with potential clients. Sky is the limit - your App, your ideas!
                     </Typography>
                 </Grid>
             </Grid>

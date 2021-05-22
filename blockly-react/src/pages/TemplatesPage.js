@@ -104,8 +104,14 @@ const TemplatesPage = () => {
           </Typography>
           &#160;
           <Typography variant="body1" color="textSecondary" component="p">
-            Doably suggests you 5 screen templates and each of them could have different variations. Primary screen could have different layouts and you can choose of 7 amazing layouts.
-            Some layouts could have a component. There are 4 suggested components to your wish app.
+            Doably also suggests you 5 options for screen templates and each of them could be modified to reflect your needs.
+          </Typography>
+          <Typography variant="body1" color="textSecondary" component="p">
+            To create your Primary screen you can choose out of 7 amazing layouts. Some of the layouts are designed to have a component. Bring your individuality to the Primary screen by choosing one or more components out of selection of 4.
+          </Typography>
+          &#160;
+          <Typography variant="body1" color="textSecondary" component="p">
+            Mix and Match screens templates, layouts and components to make your perfect iOS App!
           </Typography>
           &#160;
           <Typography gutterBottom variant="h6" color="primary" component="h2">

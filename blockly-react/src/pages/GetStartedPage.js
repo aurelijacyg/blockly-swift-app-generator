@@ -4,7 +4,7 @@ import { Grid, Divider, Link, Typography } from "@material-ui/core";
 import Header from "../components/getStartedPage/Header";
 import StepsList from "../components/getStartedPage/StepsList";
 import Network from "../components/getStartedPage/Network";
-import UsefulLinks from "../components/getStartedPage/AdditionalInfo";
+import UsefulLinks from "../components/getStartedPage/LinksSection";
 
 import GitHubIcon from "@material-ui/icons/GitHub";
 import MailOutlineIcon from "@material-ui/icons/MailOutline";
@@ -37,15 +37,14 @@ const GetStartedPage = () => {
     {
       icon: <SettingsRoundedIcon color="primary" />,
       title: "Set up",
-      description:
-        "You need a computer with macOS. To build an app and see the result you have to be installed development environment - Xcode.",
+      description: "To create iOS App, you will need a computer, which uses Mac’OS. Install development environment - Xcode. Xcode is a place where you build an App and see results."
     },
     {
       icon: <GetAppRoundedIcon color="primary" />,
       title: "Get app code",
       description:
         <Typography>
-          {"The app configuration code will be generated and downloaded into your computer from the blocks you have created. You need to add generated file into the main code which could be found "}
+          {"The app configuration code will be generated and downloaded into your computer from the blocks you have created. You need to add generated file into the main code, which could be found "}
           <Link color="primary" href="https://github.com/aurelijacyg/blockly-swift-app-generator">
             here.
           </Link>{" "}
@@ -54,19 +53,26 @@ const GetStartedPage = () => {
             description
           </Link>{" "}
           {"in a README section: HOW TO RUN THE APP."}
-        </Typography>,
+        </Typography>
     },
     {
       icon: <FindInPageRoundedIcon color="primary" />,
       title: "Look for the templates",
       description:
-        `Go to the section "Templates" and keep up with our suggested templates for your app design.`,
+        `Go to the section “Templates” and choose your favourites for your App.`,
     },
     {
       icon: <WidgetsRoundedIcon color="primary" />,
       title: `Start "blocking"`,
-      description:
-        `Start creating your app! Start making your wish app by placing blocks like a puzzle. Start with the main "App" block, place "Tab" blocks into the main block and continue with screens. Tabs represent main screens of your app. Tab bar of your app will dot be displayed if you will place only one tab. You can assign a design or behavior for each element of the screen. Pay attention to question mark. If variable of the component has this mark, it means that this variable is optional, you can choose assign value to it or not. If the variable doesn't have question mark, it means that you must assign the value to it, otherwise your app won't compile. As soon as you are done, click the button “Generate Code”. App configuration will be downloaded into your computer, then insert it into the main code and run the app!`,
+      description: 
+        <Typography display="block">
+            Start creating your App by placing blocks like a puzzle! <br />
+            1) Begin with the main “App” block, place “Tab” blocks into the main block and continue with the screens. Tabs represent the main screens of your App. Keep in mind, Tab bar will not be displayed in your App, if you place only one tab. <br />
+            2) You can assign a design or behaviour for each element of the screen by choosing blocks. <br />
+            3) Pay attention to the question mark. If the variable of the component has this mark, it means that this variable is optional - you can choose to sign value to it or not. If the variable doesn’t have question mark, it means that you must assign the value to it (otherwise your App won’t compile).<br />
+            4) As soon as you are done, click the button “Generate Code”.<br />
+            5) App configuration file will download into your computer. Insert the downloaded file into the main code and run your own, personal and well designed App!<br />
+        </Typography>
     },
   ];
 

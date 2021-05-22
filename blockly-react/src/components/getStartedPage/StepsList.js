@@ -23,6 +23,10 @@ const StepsList = ({ steps }) => {
           <Typography gutterBottom variant="h6" color="primary" component="h2">
             First Steps
           </Typography>
+          &#160;
+          <Typography variant="body1" color="textSecondary" component="p">
+            All you will need for the first steps is down below.
+          </Typography>
         </Grid>
         <Grid item xs={12}>
           {steps.map((step) => (

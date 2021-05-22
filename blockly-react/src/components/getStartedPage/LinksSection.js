@@ -9,7 +9,7 @@ const useStyles = makeStyles(() => ({
     },
 }));
 
-const AdditionalInfo = () => {
+const LinksSection = () => {
     const classes = useStyles();
 
     return (
@@ -50,4 +50,4 @@ const AdditionalInfo = () => {
     );
 }
 
-export default AdditionalInfo;
+export default LinksSection;

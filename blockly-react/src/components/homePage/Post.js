@@ -9,8 +9,17 @@ const Post = () => {
             </Typography>
             <Divider />
             &#160; &#160; &#160;
+
             <Typography variant="body1" color="textSecondary" component="p">
-                The digitization process is an integral part of today’s world, especially in 2020. In the face of the prevailing pandemic, societies around the world have felt the need to incorporate as many innovative digital processes as possible into their activities, enabling some of their activities to be transferred to the digital space. However, it is obvious that such processes require specific knowledge and skills, time costs. Not everyone who comes up with the idea of ​​sharing their experiences, ideas or doing business in the digital space has enough programming knowledge and skills or resources to hire a professional programmer or company to create the right platform to run the business. That is why there is a need for a simpler, more efficient, cheaper solution that allows you to create platforms where you can carry out your desired activities. This makes application development more widely available. Not only is it a good technological solution, but it also contributes to solving the problem of social digitization by reducing the gap between those for whom programming or programming services are more accessible and those who, without programming experience, would like to create simple programs themselves. Doably allows you to write code intuitively using visual aids - blocks.
+                Creating your own iOS App sounds complicated? Not with Doably! This is an easy and entertaining method to build your personalised iOS App. Place blocks like a puzzle and enjoy the visually attractive, functional result!
+            </Typography>
+            &#160;
+            <Typography variant="body1" color="textSecondary" component="p">
+                Doably is innovative tool that allows everyone to build their iOS App without having specific knowledge and skills. Ultimately, there is a way to have an App for personal or professional purposes without needing to spend significant amount of money. All you need is to turn on your creative mood and get started.
+            </Typography>
+            &#160;
+            <Typography variant="body1" color="textSecondary" component="p">
+                Programming should not be perceived as boring or unnecessary complicated. It is a process, which begins with small steps. Doably is user friendly, attractive and guarantees result - it is a tool that makes the first steps in programming world stress-free.
             </Typography>
         </Grid>
     );

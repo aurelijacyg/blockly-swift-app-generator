@@ -17,8 +17,7 @@ const HomePage = () => {
 
   const headerPost = {
     title: "Doably",
-    description:
-      "This is a fun method for creating iOS apps. This tool allows you to place blocks like a puzzle and create your wish app.",
+    description: "Designed to let people easily make their dream App come true",
     image: HeaderImage
   };
 
@@ -26,14 +25,14 @@ const HomePage = () => {
     {
       title: "Home screen",
       description:
-        "Make your app home screen colorful and bright with one of the Doably templates.",
+        "Make the home screen of your App colourful and bright with one of the Doably templates.",
       footer: "App example",
       image: ExampleAppHomeGridImage,
     },
     {
       title: "Photo gallery",
       description:
-        "Present your ideas in a stylish photo gallery. Choose your favorite template and code blocks.",
+        "Present your ideas in a stylish photo gallery. Choose your favorite template and “code” blocks.",
       footer: "App example",
       image: ExampleAppPhotoGalleryImage,
     },
