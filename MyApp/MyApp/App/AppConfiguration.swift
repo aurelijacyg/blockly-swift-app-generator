@@ -257,7 +257,7 @@ private let bubbleListElements = BubbleListModel(
             BubbleListItemModel(
                 title: "Title 2",
                 subtitle: nil,
-                icon: nil,
+                icon: "smell",
                 backgroundColor: .blue,
                 backgroundGradientColor: .purple,
                 routeTo: Screen.phrase(
