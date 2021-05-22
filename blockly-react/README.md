@@ -1,6 +1,8 @@
 # Doably 
 ## A website to create an app using Blockly blocks
 
+React JS website, which uses Material-UI design system.
+
 ### How to run the project
  - clone repository
  - in console cd to `blockly-swift-ui-generator/blockly-react`
