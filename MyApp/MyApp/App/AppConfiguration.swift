@@ -278,7 +278,31 @@ private let bubbleListElements = BubbleListModel(
             BubbleListItemModel(
                 title: nil,
                 subtitle: "Subtitle 2",
-                icon: nil,
+                icon: "touch",
+                backgroundColor: .green,
+                backgroundGradientColor: .yellow,
+                routeTo: nil
+            ),
+            BubbleListItemModel(
+                title: nil,
+                subtitle: "Subtitle 2",
+                icon: "sight",
+                backgroundColor: .green,
+                backgroundGradientColor: .yellow,
+                routeTo: nil
+            ),
+            BubbleListItemModel(
+                title: nil,
+                subtitle: "Subtitle 2",
+                icon: "taste",
+                backgroundColor: .green,
+                backgroundGradientColor: .yellow,
+                routeTo: nil
+            ),
+            BubbleListItemModel(
+                title: nil,
+                subtitle: "Subtitle 2",
+                icon: "hear",
                 backgroundColor: .green,
                 backgroundGradientColor: .yellow,
                 routeTo: nil
