@@ -3,7 +3,24 @@ import { Typography, Grid } from "@material-ui/core";
 
 import CustomCarousel from "../components/templatesPage/CustomCarousel";
 
-import ScreenPrimaryImg from "../images/logo.png";
+import ScreenPrimaryImg from "../images/templates/screen-primary.png";
+import ScreenPhraseImg from "../images/templates/screen-phrase.png";
+import ScreenPaperImg from "../images/templates/screen-paper.png";
+import ScreenCardGalleryImg from "../images/templates/screen-card-gallery.png";
+import ScreenArticleImg from "../images/templates/screen-article.png";
+
+import LayoutNoteImg from "../images/templates/layout-note.png";
+import LayoutListImg from "../images/templates/layout-list.png";
+import LayoutBubbleListImg from "../images/templates/layout-bubble-list.png";
+import LayoutGridImg from "../images/templates/layout-grid.png";
+import LayoutCatalogGridImg from "../images/templates/layout-catalog-grid.png";
+import LayoutHoneycombImg from "../images/templates/layout-honeycomb.png";
+import LayoutAnimatedBoardImg from "../images/templates/layout-animated-board.png";
+
+import ComponentCardImg from "../images/templates/component-card.png";
+import ComponentFlipCardImg from "../images/templates/component-flip-card.png";
+import ComponentPhotoImg from "../images/templates/component-photo.png";
+import ComponentBubbleImg from "../images/templates/component-bubble.png";
 
 var screens = [
   {
@@ -14,83 +31,83 @@ var screens = [
   {
     title: "Cards gallery screen",
     description: "",
-    image: ScreenPrimaryImg,
+    image: ScreenCardGalleryImg,
   },
   {
     title: "Phrase screen",
     description: "",
-    image: ScreenPrimaryImg,
+    image: ScreenPhraseImg,
   },
   {
     title: "Article screen",
     description: "",
-    image: ScreenPrimaryImg,
+    image: ScreenArticleImg,
   },
   {
     title: "Paper screen",
     description: "",
-    image: ScreenPrimaryImg,
+    image: ScreenPaperImg,
   },
 ];
 
 var layouts = [
   {
     title: "Animated board",
-    description: "This layout has animations.",
-    image: ScreenPrimaryImg,
+    description: "This type of layout has animations. Bubbles (one by one) are rising to the front.",
+    image: LayoutAnimatedBoardImg,
   },
   {
     title: "Note",
     description: "This layout could have animation for floating component up and down.",
-    image: ScreenPrimaryImg,
+    image: LayoutNoteImg,
   },
   {
     title: "Honeycomb",
     description: "",
-    image: ScreenPrimaryImg,
+    image: LayoutHoneycombImg,
   },
   {
     title: "List",
     description: "",
-    image: ScreenPrimaryImg,
+    image: LayoutListImg,
   },
   {
     title: "Grid",
     description: "",
-    image: ScreenPrimaryImg,
+    image: LayoutGridImg,
   },
   {
     title: "Bubble list",
-    description: "",
-    image: ScreenPrimaryImg,
+    description: "Elements of bubble list could be big or small.",
+    image: LayoutBubbleListImg,
   },
   {
     title: "Catalog grid",
     description: "",
-    image: ScreenPrimaryImg,
+    image: LayoutCatalogGridImg,
   },
 ];
 
 var components = [
   {
     title: "Photo",
-    description: "",
-    image: ScreenPrimaryImg,
+    description: "Photo could have shape: circle, rectangle, rounded rectangle, ellipse...",
+    image: ComponentPhotoImg,
   },
   {
     title: "Bubble",
     description: "",
-    image: ScreenPrimaryImg,
+    image: ComponentBubbleImg,
   },
   {
     title: "Card",
     description: "",
-    image: ScreenPrimaryImg,
+    image: ComponentCardImg,
   },
   {
     title: "Flip card",
-    description: "",
-    image: ScreenPrimaryImg,
+    description: "Hidden text appears on tapping card.",
+    image: ComponentFlipCardImg,
   }
 ];
 

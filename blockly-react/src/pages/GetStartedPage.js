@@ -64,9 +64,9 @@ const GetStartedPage = () => {
     {
       icon: <WidgetsRoundedIcon color="primary" />,
       title: `Start "blocking"`,
-      description: 
+      description:
         <Typography display="block">
-            Start creating your App by placing blocks like a puzzle! <br />
+          Start creating your App by placing blocks like a puzzle! <br />
             1) Begin with the main “App” block, place “Tab” blocks into the main block and continue with the screens. Tabs represent the main screens of your App. Keep in mind, Tab bar will not be displayed in your App, if you place only one tab. <br />
             2) You can assign a design or behaviour for each element of the screen by choosing blocks. <br />
             3) Pay attention to the question mark. If the variable of the component has this mark, it means that this variable is optional - you can choose to sign value to it or not. If the variable doesn’t have question mark, it means that you must assign the value to it (otherwise your App won’t compile).<br />
@@ -74,6 +74,26 @@ const GetStartedPage = () => {
             5) App configuration file will download into your computer. Insert the downloaded file into the main code and run your own, personal and well designed App!<br />
         </Typography>
     },
+  ];
+
+  const usefulLinks = [
+    {
+      link: "https://apps.apple.com/us/app/xcode/id497799835?mt=12",
+      title: "Install Xcode in your Mac"
+    },
+    {
+      link: "https://developer.apple.com/documentation/xcode/running-your-app-in-the-simulator-or-on-a-device",
+      title: "Running Your App in the Simulator or on a Device"
+    },
+    {
+      link: "https://developer.apple.com/xcode/",
+      title: "Xcode documentation"
+    },
+    {
+      link: "https://git-scm.com/docs/gittutorial",
+      title: "How to use GIT"
+    },
+
   ];
 
   return (
@@ -86,7 +106,7 @@ const GetStartedPage = () => {
           <StepsList steps={steps} />
         </Grid>
         <Grid item xs={12} justify="center" alignItems="center">
-          <UsefulLinks />
+          <UsefulLinks data={usefulLinks} />
         </Grid>
         <Grid item xs={12} justify="center" alignItems="center">
           <Divider />

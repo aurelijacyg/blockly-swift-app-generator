@@ -9,7 +9,7 @@ const useStyles = makeStyles(() => ({
     },
 }));
 
-const LinksSection = () => {
+const LinksSection = ({ data }) => {
     const classes = useStyles();
 
     return (
@@ -21,29 +21,13 @@ const LinksSection = () => {
                     </Typography>
                 </Grid>
                 <Grid item xs={12}>
-                    <Typography>
-                        <Link color="textPrimary" href="https://apps.apple.com/us/app/xcode/id497799835?mt=12">
-                            Install Xcode in your Mac
-                        </Link>
-                    </Typography>
-                    &#160;
-                    <Typography>
-                        <Link color="textPrimary" href="https://developer.apple.com/documentation/xcode/running-your-app-in-the-simulator-or-on-a-device">
-                            Running Your App in the Simulator or on a Device
-                        </Link>
-                    </Typography>
-                    &#160;
-                    <Typography>
-                        <Link color="textPrimary" href="https://developer.apple.com/xcode/">
-                            Xcode documentation
-                        </Link>
-                    </Typography>
-                    &#160;
-                    <Typography>
-                        <Link color="textPrimary" href="https://git-scm.com/docs/gittutorial">
-                            How to use GIT
-                        </Link>
-                    </Typography>
+                    {data.map((item) => (
+                        <Typography>
+                            <Link color="textPrimary" href={item.link}>
+                                {item.title} 
+                            </Link>
+                        </Typography>
+                    ))}
                 </Grid>
             </Grid>
         </div>
