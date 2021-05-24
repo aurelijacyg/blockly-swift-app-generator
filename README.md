@@ -9,8 +9,8 @@ Doably is an intuitive, visual programming environment that allows everyone - ev
 
 
 
+![Webpage movie](https://user-images.githubusercontent.com/43350371/119382839-452ea580-bccb-11eb-8d4f-4e73b0d865a4.gif)
 
-![WebMovie5](https://user-images.githubusercontent.com/43350371/119229022-93eb0c80-bb1e-11eb-888a-f5bad4967c96.gif)
 
 
 
