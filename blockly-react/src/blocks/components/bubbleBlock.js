@@ -2,10 +2,10 @@ import * as Blockly from 'blockly/core';
 
 // Block Definition:
 
-Blockly.Blocks['component_circle'] = {
+Blockly.Blocks['component_bubble'] = {
     init: function () {
         this.appendDummyInput()
-            .appendField("CIRCLE COMPONENT");
+            .appendField("BUBBLE COMPONENT");
         this.appendDummyInput();
         this.appendValueInput("title")
             .setCheck("String")
@@ -34,7 +34,7 @@ Blockly.Blocks['component_circle'] = {
 
 // Generator stub:
 
-Blockly.JavaScript['component_circle'] = function (block) {
+Blockly.JavaScript['component_bubble'] = function (block) {
     var value_title = Blockly.JavaScript.valueToCode(block, 'title', Blockly.JavaScript.ORDER_ATOMIC);
     var value_photo = Blockly.JavaScript.valueToCode(block, 'photo', Blockly.JavaScript.ORDER_ATOMIC) || 'nil';
     var value_title_color = Blockly.JavaScript.valueToCode(block, 'title_color', Blockly.JavaScript.ORDER_ATOMIC) || 'nil';

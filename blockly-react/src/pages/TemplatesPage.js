@@ -78,7 +78,7 @@ var components = [
     image: ScreenPrimaryImg,
   },
   {
-    title: "Circle component",
+    title: "Bubble",
     description: "",
     image: ScreenPrimaryImg,
   },

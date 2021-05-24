@@ -34,7 +34,7 @@ import "../../blocks/layoutElements/animatedBoardElementBlock";
 import "../../blocks/components/cardBlock";
 import "../../blocks/components/flipCardBlock";
 import "../../blocks/components/photoBlock";
-import "../../blocks/components/circleComponentBlock";
+import "../../blocks/components/bubbleBlock";
 
 import "../../blocks/icons/iconColorfulAstronomyBlock";
 import "../../blocks/icons/iconColorfulFoodBlock";
@@ -178,7 +178,7 @@ const BlocklyBox = forwardRef((props, ref) => {
                     <Block type="component_card" />
                     <Block type="component_flip_card" />
                     <Block type="component_photo" />
-                    <Block type="component_circle" />
+                    <Block type="component_bubble" />
                 </Category>
 
                 <Category name="Text">
