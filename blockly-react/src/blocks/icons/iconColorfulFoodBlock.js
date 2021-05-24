@@ -17,6 +17,9 @@ Blockly.Blocks['icon_food_colorful'] = {
                     ["hamburger and fries", "icon-mc"],
                     ["pizza", "icon-pizza"],
                     ["watermelon", "icon-watermelon"]
+                    ["avocado", "avocado"],
+                    ["spaghetti", "spaghetti"],
+                    ["pancake", "pancake"]
                 ]
             ), "icon");
         this.setColour(165);
