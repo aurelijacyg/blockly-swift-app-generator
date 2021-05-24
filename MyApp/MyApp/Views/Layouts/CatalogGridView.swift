@@ -65,11 +65,11 @@ struct CatalogGridView: View {
                     .font(.system(size: 25))
                     .fontWeight(.bold)
                     .foregroundColor(data.titleColor)
-                    .padding(EdgeInsets(top: 20, leading: 20, bottom: 0, trailing: 20))
+                    .padding(EdgeInsets(top: 20, leading: 0, bottom: 0, trailing: 0))
 
                 Divider()
                     .frame(width: UIScreen.screenWidth * 0.7)
-                    .padding(EdgeInsets(top: 5, leading: 20, bottom: 0, trailing: 20))
+                    .padding(EdgeInsets(top: 5, leading: 0, bottom: 0, trailing: 0))
             }
 
             grid
@@ -108,7 +108,7 @@ struct CatalogGridView: View {
         if columnsNumber == 1 {
             return UIScreen.screenWidth * 0.9
         } else if columnsNumber == 2 {
-            return UIScreen.screenWidth * 0.45
+            return UIScreen.screenWidth * 0.41
         } else {
             return UIScreen.screenWidth * 0.30
         }

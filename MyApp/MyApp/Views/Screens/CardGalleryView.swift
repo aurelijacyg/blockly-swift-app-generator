@@ -19,7 +19,7 @@ struct CardGalleryView: View {
     }
 
     var body: some View {
-        VStack(spacing:25) {
+        VStack() {
             List(data.cards){ card in
                 CardView(
                     card: card,
@@ -33,6 +33,7 @@ struct CardGalleryView: View {
             Text(data.navigationBarTitle),
             displayMode: .inline
         )
+        .padding(.init(top: 0, leading: -15, bottom: 0, trailing: -15))
         .introspectTabBarController { (UITabBarController) in
             UITabBarController.tabBar.isHidden = data.isTabBarHidden
             uiTabBarController = UITabBarController

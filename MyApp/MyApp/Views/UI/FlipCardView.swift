@@ -36,7 +36,8 @@ struct FlipCardView: View {
                 if isShowingAnswer {
                     Text(card.hiddenText)
                         .font(.title)
-                        .foregroundColor(card.textColor)
+                        .bold()
+                        .foregroundColor(.black)
                 }
             }
             .padding(20)

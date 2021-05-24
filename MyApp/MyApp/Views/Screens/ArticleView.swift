@@ -23,7 +23,7 @@ struct ArticleView: View {
         VStack {
             ScrollView(.vertical) {
                 VStack(spacing:15) {
-                    VStack(alignment: .leading, spacing: 15) {
+                    VStack(alignment: .leading, spacing: 20) {
                         Text(data.title)
                             .font(.title)
                             .fontWeight(.black)
@@ -44,13 +44,13 @@ struct ArticleView: View {
                                 .foregroundColor(data.bodyColor)
                                 .multilineTextAlignment(.leading)
                         }
-                    }.padding(9)
+                    }.padding(20)
                 }
             }
 
             if let photoURL = data.photoURL {
                 RemoteImageCropped(url: photoURL)
-                    .frame(width: .infinity, height: UIScreen.screenWidth * 0.5)
+                    .frame(width: UIScreen.screenWidth, height: UIScreen.screenWidth * 0.5)
             }
         }
         .ignoresSafeArea(edges: .bottom)

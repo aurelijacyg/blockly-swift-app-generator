@@ -17,7 +17,7 @@ struct ListView: View {
     var body: some View {
         let elements = data.items
 
-        return LazyVStack(spacing: 10, pinnedViews: [.sectionHeaders]) {
+        return LazyVStack(spacing: 15, pinnedViews: [.sectionHeaders]) {
             Section() {
 
                 ForEach(elements) { element in
