@@ -10,7 +10,6 @@ import SwiftUI
 import CoreData
 
 struct SimpleListModel {
-    var items: [SimpleListItem]
     var itemsColor: Color?
     var onSwipeDeleteItems: Bool
     var isTabBarHidden: Bool
@@ -24,7 +23,7 @@ class SimpleListItem: NSManagedObject, Identifiable {
 }
 
 extension SimpleListItem {
-    static func getSimpleListItems() -> NSFetchRequest<SimpleListItem> {
+    static func getAllSimpleListItems() -> NSFetchRequest<SimpleListItem> {
         let request: NSFetchRequest<SimpleListItem> = SimpleListItem.fetchRequest() as! NSFetchRequest<SimpleListItem>
 
         let sort = NSSortDescriptor(key: "createdAt", ascending: true)

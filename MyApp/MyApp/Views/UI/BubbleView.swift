@@ -10,7 +10,6 @@ import SwiftUI
 struct BubbleView: View {
     let data: BubbleModel
 
-
     init(data: BubbleModel) {
         self.data = data
     }

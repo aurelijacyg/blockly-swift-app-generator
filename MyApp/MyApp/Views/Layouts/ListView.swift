@@ -9,8 +9,6 @@ import SwiftUI
 
 struct ListView: View {
     let data: ListModel
-    let currentScreen = CurrentScreen()
-
     init(data: ListModel) {
         self.data = data
     }
@@ -22,7 +20,7 @@ struct ListView: View {
             Section() {
                 ForEach(elements) { element in
                     if let destinationScreen = element.routeTo {
-                        NavigationLink(destination: currentScreen.get(destinationScreen)) {
+                        NavigationLink(destination: destinationScreen.get) {
                             listElement(element)
                         }.foregroundColor(element.textColor)
                     } else {

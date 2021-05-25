@@ -1,10 +1,9 @@
 //
-//  TabsModel.swift
+//  AppModel.swift
 //  MyApp
 //
 //  Created by Aurelija Cygaite
 //
-
 
 import SwiftUI
 
@@ -13,5 +12,5 @@ struct AppModel {
     var headerColor: Color
     var navigationBarColor: Color
     var screenBackground: BackgroundModel
-    var tabs: [Tab]
+    var tabs: [TabModel]
 }

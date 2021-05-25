@@ -9,8 +9,6 @@ import SwiftUI
 
 struct CatalogGridView: View {
     let data: CatalogGridModel
-    let currentScreen = CurrentScreen()
-
     init(data: CatalogGridModel) {
         self.data = data
     }
@@ -25,7 +23,7 @@ struct CatalogGridView: View {
             Section() {
                 ForEach(elements){ element in
                     if let destinationScreen = element.routeTo {
-                        NavigationLink(destination: currentScreen.get(destinationScreen)) {
+                        NavigationLink(destination: destinationScreen.get) {
                             catalogGridElement(element, frameSize: frameSize)
                         }.foregroundColor(element.textColor)
                     } else {

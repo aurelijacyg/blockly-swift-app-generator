@@ -22,7 +22,6 @@ struct AnimatedBoardRisingView: View {
 
     let totalViews: Int
     let data: AnimatedBoardModel
-    let screenBackground = ScreenBackground()
 
     init(data: AnimatedBoardModel) {
         self.data = data
@@ -60,13 +59,7 @@ struct AnimatedBoardRisingView: View {
             }
         }
         .padding(.top, 10)
-        .background(
-            screenBackground.background(
-                color: data.backgroundColor.color,
-                gradientColor: data.backgroundColor.gradientColor,
-                photoURL: data.backgroundColor.photoURL
-            )
-        )
+        .background(data.backgroundColor.getView)
     }
 
     func activatingRectangle(frame: CGRect,
@@ -97,23 +90,9 @@ struct AnimatedBoardRisingView: View {
     }
 
     private var componentView: some View {
-        switch data.items[activated].risingComponent {
-        case .card(let card):
-            return AnyView(
-                CardView(
-                    card: card,
-                    categoryColor: .primary,
-                    headingColor: .primary,
-                    labelColor: .secondary
-                )
-            )
-        case .flipCard(let card):
-            return AnyView(FlipCardView(card: card))
-        case .photo(let photo):
-            return AnyView(PhotoView(photo: photo))
-        case .bubble(let data):
-            return AnyView(BubbleView(data: data))
-        case _:
+        if let risingComponent = data.items[activated].risingComponent {
+            return AnyView(risingComponent.get)
+        } else {
             return AnyView(bubble)
         }
     }

@@ -11,8 +11,6 @@ import Introspect
 struct PhraseView: View {
 
     let data: PhraseModel
-    let screenBackground = ScreenBackground()
-
     @State
     var uiTabBarController: UITabBarController?
 
@@ -40,10 +38,7 @@ struct PhraseView: View {
             maxHeight: .infinity,
             alignment: .leading
         )
-        .background(screenBackground.background(
-                        color: data.backgroundColor.color,
-                        gradientColor: data.backgroundColor.gradientColor,
-                        photoURL: data.backgroundColor.photoURL))
+        .background(data.backgroundColor.getView)
         .ignoresSafeArea()
         .introspectTabBarController { (UITabBarController) in
             UITabBarController.tabBar.isHidden = data.isTabBarHidden

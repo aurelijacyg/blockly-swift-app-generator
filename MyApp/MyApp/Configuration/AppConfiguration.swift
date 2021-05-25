@@ -10,8 +10,8 @@ import SwiftUI
 
 struct AppConfiguration {
     let data = AppModel(
-        header: "Test",
-        headerColor: Color.purple,
+        header: "TODO",
+        headerColor: Color.blue,
         navigationBarColor: Color.white,
         screenBackground: BackgroundModel(
             color: Color.white,
@@ -20,33 +20,15 @@ struct AppConfiguration {
         ),
         tabs:
             [
-                Tab(
-                    label: "Questions",
-                    systemImage: "message",
+                TabModel(
+                    label: "Home",
+                    systemImage: "homekit",
                     screen: Screen.primary(PrimaryViewModel(isTabBarHidden: false, layout: Layout.list(listModel)))
-                ),
-
-                Tab(
-                    label: "Questions",
-                    systemImage: "message",
-                    screen: Screen.simpleList(simpleListModel)
                 ),
                 
             ]
     )
 }
-
-private let simpleListModel =
-    SimpleListModel(
-        items: [],
-        itemsColor: nil,
-        onSwipeDeleteItems: true,
-        isTabBarHidden: false,
-        inputField: InputFieldModel(
-            header: "New Item",
-            title: "Enter new item"
-        )
-    )
 
 private let listModel =
     ListModel(
@@ -58,7 +40,7 @@ private let listModel =
                     backgroundGradientColor: Color.black,
                     textColor: Color.white,
                     icon: "planet",
-                    routeTo: Screen.simpleList(simpleListModel)
+                    routeTo: nil
                 ),
 
                 ListItemModel(
@@ -613,6 +595,17 @@ let articleScreen = Screen.article(
         isTabBarHidden: true
     )
 )
+
+private let simpleListModel =
+    SimpleListModel(
+        itemsColor: nil,
+        onSwipeDeleteItems: true,
+        isTabBarHidden: false,
+        inputField: InputFieldModel(
+            header: "New Task",
+            title: "Enter new task"
+        )
+    )
 
 let simpleCardComponent = Component.card(
     CardModel(

@@ -1,5 +1,5 @@
 //
-//  RegularItemsModel.swift
+//  PrimaryViewModel.swift
 //  MyApp
 //
 //  Created by Aurelija Cygaite

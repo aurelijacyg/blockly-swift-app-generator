@@ -1,5 +1,5 @@
 //
-//  CircleModel.swift
+//  BubbleModel.swift
 //  MyApp
 //
 //  Created by Aurelija Cygaite

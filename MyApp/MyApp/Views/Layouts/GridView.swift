@@ -9,8 +9,6 @@ import SwiftUI
 
 struct GridView: View {
     let data: GridModel
-    let currentScreen = CurrentScreen()
-
     init(data: GridModel) {
         self.data = data
     }
@@ -24,7 +22,7 @@ struct GridView: View {
             Section() {
                 ForEach(elements){ element in
                     if let destinationScreen = element.routeTo {
-                        NavigationLink(destination: currentScreen.get(destinationScreen)) {
+                        NavigationLink(destination: destinationScreen.get) {
                             gridElement(element, frameSize: frameSize)
                         }.foregroundColor(element.textColor)
                     } else {

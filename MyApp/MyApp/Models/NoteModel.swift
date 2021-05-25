@@ -1,5 +1,5 @@
 //
-//  NoteModel.swift
+//  NoteMode.swift
 //  MyApp
 //
 //  Created by Aurelija Cygaite 

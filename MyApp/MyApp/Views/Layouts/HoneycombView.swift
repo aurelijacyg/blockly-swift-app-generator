@@ -15,8 +15,6 @@ struct HoneycombView: View {
     var hexagonWidth: CGFloat { (imgsize.width / 2) * cos(.pi / 6) * 2 }
 
     let data: HoneycombModel
-    let currentScreen = CurrentScreen()
-
     init(data: HoneycombModel) {
         self.data = data
         self.cols = data.columnsNumber
@@ -28,7 +26,7 @@ struct HoneycombView: View {
         LazyVGrid(columns: gridItems, spacing: spacing) {
             ForEach(Array(data.items.enumerated()), id: \.offset) { index, element in
                 if let destinationScreen = element.routeTo {
-                    NavigationLink(destination: currentScreen.get(destinationScreen)) {
+                    NavigationLink(destination: destinationScreen.get) {
                         honeycombElement(element, index: index)
                     }
                 } else {

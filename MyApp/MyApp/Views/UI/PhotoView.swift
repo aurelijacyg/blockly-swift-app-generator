@@ -10,7 +10,6 @@ import SwiftUI
 struct PhotoView: View {
     let photo: PhotoModel
 
-
     init(photo: PhotoModel) {
         self.photo = photo
     }

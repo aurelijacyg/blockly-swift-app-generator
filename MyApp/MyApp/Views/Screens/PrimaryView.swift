@@ -42,21 +42,7 @@ struct PrimaryView: View {
                     )
                     Spacer(minLength: 20)
                 }
-
-                switch data.layout {
-                case .list(let data):
-                    ListView(data: data)
-                case .grid(let data):
-                    GridView(data: data)
-                case .bubbleList(let data):
-                    BubbleListView(data: data)
-                case .catalogGrid(let data):
-                    CatalogGridView(data: data)
-                case .honeycomb(let data):
-                    HoneycombView(data: data)
-                case _:
-                    Text("Failed to load screen")
-                }
+                data.layout.get
             }
         }.introspectTabBarController { (UITabBarController) in
             UITabBarController.tabBar.isHidden = data.isTabBarHidden

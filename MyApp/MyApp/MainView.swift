@@ -11,8 +11,6 @@ struct MainView: View {
     let data: AppModel
     let coloredNavAppearance = UINavigationBarAppearance()
     let buttonsColor: Color
-    let screenBackground = ScreenBackground()
-    let currentScreen = CurrentScreen()
 
     init() {
         self.data = AppConfiguration().data
@@ -38,40 +36,28 @@ struct MainView: View {
         }
     }
 
-    private func regularItem(_ tab: Tab) -> some View {
+    private func regularItem(_ tab: TabModel) -> some View {
         NavigationView {
             modelItem(tab)
-                .background(
-                    screenBackground.background(
-                        color: data.screenBackground.color,
-                        gradientColor: data.screenBackground.gradientColor,
-                        photoURL: data.screenBackground.photoURL
-                    )
-                )
+                .background(data.screenBackground.getView)
                 .edgesIgnoringSafeArea(.bottom)
         }
         .accentColor(buttonsColor)
     }
 
-    private func tabItem(_ tab: Tab) -> some View {
+    private func tabItem(_ tab: TabModel) -> some View {
         NavigationView {
             modelItem(tab)
-                .background(
-                    screenBackground.background(
-                        color: data.screenBackground.color,
-                        gradientColor: data.screenBackground.gradientColor,
-                        photoURL: data.screenBackground.photoURL
-                    )
-                )
+                .background(data.screenBackground.getView)
                 .edgesIgnoringSafeArea(.bottom)
         }
         .accentColor(buttonsColor)
         .tabItem { Label(tab.label ?? "", systemImage: tab.systemImage ?? "list.dash") }
     }
 
-    private func modelItem(_ tab: Tab) -> some View {
+    private func modelItem(_ tab: TabModel) -> some View {
         HStack {
-            currentScreen.get(tab.screen)
+            tab.screen.get
                 .navigationBarTitle(
                     Text(data.header),
                     displayMode: .large
