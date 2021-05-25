@@ -68,8 +68,8 @@ struct NoteView: View {
             return AnyView(FlipCardView(card: card))
         case .photo(let photo):
             return AnyView(PhotoView(photo: photo))
-        case .circle(let data):
-            return AnyView(CircleView(data: data))
+        case .bubble(let data):
+            return AnyView(BubbleView(data: data))
         }
     }
 }

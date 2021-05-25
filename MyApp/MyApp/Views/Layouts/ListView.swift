@@ -9,6 +9,7 @@ import SwiftUI
 
 struct ListView: View {
     let data: ListModel
+    let currentScreen = CurrentScreen()
 
     init(data: ListModel) {
         self.data = data
@@ -19,37 +20,12 @@ struct ListView: View {
 
         return LazyVStack(spacing: 15, pinnedViews: [.sectionHeaders]) {
             Section() {
-
                 ForEach(elements) { element in
-                    switch element.routeTo {
-
-                    case .paper(let model):
-                        NavigationLink(destination: PaperView(data: model)) {
+                    if let destinationScreen = element.routeTo {
+                        NavigationLink(destination: currentScreen.get(destinationScreen)) {
                             listElement(element)
                         }.foregroundColor(element.textColor)
-
-
-                    case .cards(let model):
-                        NavigationLink(destination: CardGalleryView(data: model)) {
-                            listElement(element)
-                        }.foregroundColor(element.textColor)
-
-                    case .phrase(let model):
-                        NavigationLink(destination: PhraseView(data: model)) {
-                            listElement(element)
-                        }.foregroundColor(element.textColor)
-
-                    case .article(let model):
-                        NavigationLink(destination: ArticleView(data: model)) {
-                            listElement(element)
-                        }.foregroundColor(element.textColor)
-
-                    case .primary(let model):
-                        NavigationLink(destination: PrimaryView(data: model)) {
-                            listElement(element)
-                        }.foregroundColor(element.textColor)
-
-                    case _:
+                    } else {
                         VStack{
                             listElement(element)
                         }.foregroundColor(element.textColor)

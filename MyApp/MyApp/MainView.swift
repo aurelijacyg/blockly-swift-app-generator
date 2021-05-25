@@ -8,10 +8,11 @@
 import SwiftUI
 
 struct MainView: View {
-    let data: TabsModel
+    let data: AppModel
     let coloredNavAppearance = UINavigationBarAppearance()
     let buttonsColor: Color
     let screenBackground = ScreenBackground()
+    let currentScreen = CurrentScreen()
 
     init() {
         self.data = AppConfiguration().data
@@ -70,56 +71,11 @@ struct MainView: View {
 
     private func modelItem(_ tab: Tab) -> some View {
         HStack {
-            getScreen(tab.screen)
-        }
-    }
-
-    private func getScreen(_ screen: Screen) -> some View {
-        switch screen {
-        case .primary(let viewModel):
-            return AnyView(
-                PrimaryView(data: viewModel)
-                    .navigationBarTitle(
-                        Text(data.header),
-                        displayMode: .large
-                    )
-            )
-
-        case .article(let viewModel):
-            return AnyView(
-                ArticleView(data: viewModel)
-                    .navigationBarTitle(
-                        Text(data.header),
-                        displayMode: .large
-                    )
-            )
-
-        case .cards(let viewModel):
-            return AnyView(
-                CardGalleryView(data: viewModel)
-                    .navigationBarTitle(
-                        Text(data.header),
-                        displayMode: .large
-                    )
-            )
-
-        case .paper(let viewModel):
-            return AnyView(
-                PaperView(data: viewModel)
-                    .navigationBarTitle(
-                        Text(data.header),
-                        displayMode: .large
-                    )
-            )
-
-        case .phrase(let viewModel):
-            return AnyView(
-                PhraseView(data: viewModel)
-                    .navigationBarTitle(
-                        Text(data.header),
-                        displayMode: .large
-                    )
-            )
+            currentScreen.get(tab.screen)
+                .navigationBarTitle(
+                    Text(data.header),
+                    displayMode: .large
+                )
         }
     }
 }

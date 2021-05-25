@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct CircleModel : Identifiable {
+struct BubbleModel : Identifiable {
     var id = UUID()
     var title: String
     var photo: PhotoModel?

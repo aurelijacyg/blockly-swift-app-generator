@@ -9,8 +9,8 @@
 import SwiftUI
 
 struct AppConfiguration {
-    let data = TabsModel(
-        header: "Honeycomb example",
+    let data = AppModel(
+        header: "Test",
         headerColor: Color.purple,
         navigationBarColor: Color.white,
         screenBackground: BackgroundModel(
@@ -23,18 +23,30 @@ struct AppConfiguration {
                 Tab(
                     label: "Questions",
                     systemImage: "message",
-                    screen: Screen.primary(
-                        PrimaryViewModel(
-                            photoURL: nil,
-                            isTabBarHidden: true,
-                            layout: .honeycomb(honeycombModel)
-                        )
-                    )
+                    screen: Screen.primary(PrimaryViewModel(isTabBarHidden: false, layout: Layout.list(listModel)))
+                ),
+
+                Tab(
+                    label: "Questions",
+                    systemImage: "message",
+                    screen: Screen.simpleList(simpleListModel)
                 ),
                 
             ]
     )
 }
+
+private let simpleListModel =
+    SimpleListModel(
+        items: [],
+        itemsColor: nil,
+        onSwipeDeleteItems: true,
+        isTabBarHidden: false,
+        inputField: InputFieldModel(
+            header: "New Item",
+            title: "Enter new item"
+        )
+    )
 
 private let listModel =
     ListModel(
@@ -46,7 +58,7 @@ private let listModel =
                     backgroundGradientColor: Color.black,
                     textColor: Color.white,
                     icon: "planet",
-                    routeTo: nil
+                    routeTo: Screen.simpleList(simpleListModel)
                 ),
 
                 ListItemModel(
@@ -440,8 +452,8 @@ let animatedBoardModel = AnimatedBoardModel(
             size: 120,
             xPosition: 70,
             yPosition: 30,
-            risingComponent: Component.circle(
-                CircleModel(
+            risingComponent: Component.bubble(
+                BubbleModel(
                     title: "Discus",
                     photo: PhotoModel.init(
                         URL: "https://fishkeepingguide.net/wp-content/uploads/2020/03/discus_fish-min.jpg",
@@ -463,8 +475,8 @@ let animatedBoardModel = AnimatedBoardModel(
             size: 100,
             xPosition: 300,
             yPosition: 50,
-            risingComponent: Component.circle(
-                CircleModel(
+            risingComponent: Component.bubble(
+                BubbleModel(
                     title: "Flowerhorn Cichlid",
                     photo: PhotoModel.init(
                         URL: "https://www.fishkeepingworld.com/wp-content/uploads/2019/08/Flowerhorn-Cichlid-Appearance.jpg",
@@ -497,8 +509,8 @@ let animatedBoardModel = AnimatedBoardModel(
             size: 130,
             xPosition: 200,
             yPosition: 200,
-            risingComponent: Component.circle(
-                CircleModel(
+            risingComponent: Component.bubble(
+                BubbleModel(
                     title: "Ocellaris clownfish",
                     photo: PhotoModel.init(
                         URL: "https://www.wallpapers13.com/wp-content/uploads/2016/02/Anemone-fish-exotic-fish-Amphiprion-ocellaris-1920x1440.jpg",
@@ -530,8 +542,8 @@ let animatedBoardModel = AnimatedBoardModel(
             size: 90,
             xPosition: 250,
             yPosition: 600,
-            risingComponent: Component.circle(
-                CircleModel(
+            risingComponent: Component.bubble(
+                BubbleModel(
                     title: "Betta",
                     photo: PhotoModel.init(
                         URL: "https://i.ytimg.com/vi/QRGl4AkaOzE/maxresdefault.jpg",

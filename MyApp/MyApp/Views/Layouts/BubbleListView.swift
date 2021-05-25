@@ -9,7 +9,7 @@ import SwiftUI
 
 struct BubbleListView: View {
     let data: BubbleListModel
-    let screenBackground = ScreenBackground()
+    let currentScreen = CurrentScreen()
 
     init(data: BubbleListModel) {
         self.data = data
@@ -24,35 +24,11 @@ struct BubbleListView: View {
         ) {
             Section() {
                 ForEach(elements){ element in
-                    switch element.routeTo {
-
-                    case .paper(let model):
-                        NavigationLink(destination: PaperView(data: model)){
+                    if let destinationScreen = element.routeTo {
+                        NavigationLink(destination: currentScreen.get(destinationScreen)) {
                             bubbleListElement(element, isItemBig: data.isItemsBig)
                         }.foregroundColor(element.titleColor)
-
-
-                    case .cards(let model):
-                        NavigationLink(destination: CardGalleryView(data: model)){
-                            bubbleListElement(element, isItemBig: data.isItemsBig)
-                        }.foregroundColor(element.titleColor)
-
-                    case .phrase(let model):
-                        NavigationLink(destination: PhraseView(data: model)){
-                            bubbleListElement(element, isItemBig: data.isItemsBig)
-                        }.foregroundColor(element.titleColor)
-
-                    case .article(let model):
-                        NavigationLink(destination: ArticleView(data: model)) {
-                            bubbleListElement(element, isItemBig: data.isItemsBig)
-                        }.foregroundColor(element.titleColor)
-
-                    case .primary(let model):
-                        NavigationLink(destination: PrimaryView(data: model)) {
-                            bubbleListElement(element, isItemBig: data.isItemsBig)
-                        }.foregroundColor(element.titleColor)
-
-                    case _:
+                    } else {
                         VStack{
                             bubbleListElement(element, isItemBig: data.isItemsBig)
                         }.foregroundColor(element.titleColor)

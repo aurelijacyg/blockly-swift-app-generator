@@ -20,10 +20,6 @@ struct PrimaryView: View {
 
     var body: some View {
         switch data.layout {
-        case .note(let data):
-            VStack {
-                NoteView(data: data)
-            }
         case .animatedBoard(let data):
             VStack {
                 AnimatedBoardRisingView(data: data)

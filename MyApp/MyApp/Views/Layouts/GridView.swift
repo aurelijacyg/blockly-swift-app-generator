@@ -9,6 +9,7 @@ import SwiftUI
 
 struct GridView: View {
     let data: GridModel
+    let currentScreen = CurrentScreen()
 
     init(data: GridModel) {
         self.data = data
@@ -21,36 +22,12 @@ struct GridView: View {
 
         return LazyVGrid(columns: columns, spacing: 20, pinnedViews: [.sectionHeaders]) {
             Section() {
-
                 ForEach(elements){ element in
-                    switch element.routeTo {
-
-                    case .paper(let model):
-                        NavigationLink(destination: PaperView(data: model)){
+                    if let destinationScreen = element.routeTo {
+                        NavigationLink(destination: currentScreen.get(destinationScreen)) {
                             gridElement(element, frameSize: frameSize)
                         }.foregroundColor(element.textColor)
-
-                    case .cards(let model):
-                        NavigationLink(destination: CardGalleryView(data: model)){
-                            gridElement(element, frameSize: frameSize)
-                        }.foregroundColor(element.textColor)
-
-                    case .phrase(let model):
-                        NavigationLink(destination: PhraseView(data: model)){
-                            gridElement(element, frameSize: frameSize)
-                        }.foregroundColor(element.textColor)
-
-                    case .article(let model):
-                        NavigationLink(destination: ArticleView(data: model)) {
-                            gridElement(element, frameSize: frameSize)
-                        }.foregroundColor(element.textColor)
-
-                    case .primary(let model):
-                        NavigationLink(destination: PrimaryView(data: model)) {
-                            gridElement(element, frameSize: frameSize)
-                        }.foregroundColor(element.textColor)
-
-                    case _:
+                    } else {
                         VStack{
                             gridElement(element, frameSize: frameSize)
                         }.foregroundColor(element.textColor)

@@ -7,11 +7,11 @@
 
 import SwiftUI
 
-struct CircleView: View {
-    let data: CircleModel
+struct BubbleView: View {
+    let data: BubbleModel
 
 
-    init(data: CircleModel) {
+    init(data: BubbleModel) {
         self.data = data
     }
 
@@ -38,7 +38,7 @@ struct CircleView: View {
         }
     }
 
-    func backgroundColor(item: CircleModel) -> LinearGradient {
+    func backgroundColor(item: BubbleModel) -> LinearGradient {
         LinearGradient(
             gradient: Gradient(
                 colors: [

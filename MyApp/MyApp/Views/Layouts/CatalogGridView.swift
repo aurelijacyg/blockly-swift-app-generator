@@ -9,6 +9,7 @@ import SwiftUI
 
 struct CatalogGridView: View {
     let data: CatalogGridModel
+    let currentScreen = CurrentScreen()
 
     init(data: CatalogGridModel) {
         self.data = data
@@ -23,34 +24,11 @@ struct CatalogGridView: View {
         let grid = LazyVGrid(columns: columns, spacing: 40, pinnedViews: [.sectionHeaders]) {
             Section() {
                 ForEach(elements){ element in
-                    switch element.routeTo {
-
-                    case .paper(let model):
-                        NavigationLink(destination: PaperView(data: model)){
+                    if let destinationScreen = element.routeTo {
+                        NavigationLink(destination: currentScreen.get(destinationScreen)) {
                             catalogGridElement(element, frameSize: frameSize)
                         }.foregroundColor(element.textColor)
-
-                    case .cards(let model):
-                        NavigationLink(destination: CardGalleryView(data: model)){
-                            catalogGridElement(element, frameSize: frameSize)
-                        }.foregroundColor(element.textColor)
-
-                    case .phrase(let model):
-                        NavigationLink(destination: PhraseView(data: model)){
-                            catalogGridElement(element, frameSize: frameSize)
-                        }.foregroundColor(element.textColor)
-
-                    case .article(let model):
-                        NavigationLink(destination: ArticleView(data: model)) {
-                            catalogGridElement(element, frameSize: frameSize)
-                        }.foregroundColor(element.textColor)
-
-                    case .primary(let model):
-                        NavigationLink(destination: PrimaryView(data: model)) {
-                            catalogGridElement(element, frameSize: frameSize)
-                        }.foregroundColor(element.textColor)
-
-                    case _:
+                    } else {
                         VStack{
                             catalogGridElement(element, frameSize: frameSize)
                         }.foregroundColor(element.textColor)

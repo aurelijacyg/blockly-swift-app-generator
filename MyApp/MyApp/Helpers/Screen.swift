@@ -11,4 +11,6 @@ enum Screen {
     case cards(CardGalleryModel)
     case phrase(PhraseModel)
     case article(ArticleModel)
+    case note(NoteModel)
+    case simpleList(SimpleListModel)
 }
