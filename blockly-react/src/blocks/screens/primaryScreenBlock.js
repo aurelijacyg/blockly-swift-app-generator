@@ -18,7 +18,7 @@ Blockly.Blocks['screen_primary'] = {
             .setCheck("Layout")
             .appendField("Layout Type");
         this.setColour(210);
-        this.setTooltip("Tab");
+        this.setTooltip("");
         this.setHelpUrl("");
         this.setOutput(true, 'Screen');
     }

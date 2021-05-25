@@ -44,13 +44,13 @@ Blockly.Blocks['element_animated_board_item'] = {
 // Generator stub:
 
 Blockly.JavaScript['element_animated_board_item'] = function (block) {
-    var value_title = Blockly.JavaScript.valueToCode(block, 'title', Blockly.JavaScript.ORDER_ATOMIC);
+    var value_title = Blockly.JavaScript.valueToCode(block, 'title', Blockly.JavaScript.ORDER_ATOMIC) || '';
     var value_text_color = Blockly.JavaScript.valueToCode(block, 'text_color', Blockly.JavaScript.ORDER_ATOMIC);
     var value_background_color = Blockly.JavaScript.valueToCode(block, 'background_color', Blockly.JavaScript.ORDER_ATOMIC);
     var value_background_color_gradient = Blockly.JavaScript.valueToCode(block, 'background_color_gradient', Blockly.JavaScript.ORDER_ATOMIC) || 'nil';
     var value_size = Blockly.JavaScript.valueToCode(block, 'size', Blockly.JavaScript.ORDER_ATOMIC);
-    var value_x_position = Blockly.JavaScript.valueToCode(block, 'x_position', Blockly.JavaScript.ORDER_ATOMIC);
-    var value_y_position = Blockly.JavaScript.valueToCode(block, 'y_position', Blockly.JavaScript.ORDER_ATOMIC);
+    var value_x_position = Blockly.JavaScript.valueToCode(block, 'x_position', Blockly.JavaScript.ORDER_ATOMIC) || '100';
+    var value_y_position = Blockly.JavaScript.valueToCode(block, 'y_position', Blockly.JavaScript.ORDER_ATOMIC) || '100';
     var value_component = Blockly.JavaScript.valueToCode(block, 'component', Blockly.JavaScript.ORDER_ATOMIC) || 'nil';
 
     // Assemble JavaScript into code variable.

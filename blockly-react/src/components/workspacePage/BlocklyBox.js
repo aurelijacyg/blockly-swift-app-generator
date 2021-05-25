@@ -15,13 +15,14 @@ import "../../blocks/screens/paperViewScreenBlock";
 import "../../blocks/screens/primaryScreenBlock";
 import "../../blocks/screens/phraseScreenBlock";
 import "../../blocks/screens/articleScreenBlock";
+import "../../blocks/screens/noteScreenBlock";
+import "../../blocks/screens/simpleListScreenBlock";
 
 import "../../blocks/layouts/layoutGridBlock";
 import "../../blocks/layouts/layoutListBlock";
 import "../../blocks/layouts/layoutBubbleListBlock";
 import "../../blocks/layouts/layoutCatalogGridBlock";
 import "../../blocks/layouts/layoutHoneycombBlock";
-import "../../blocks/layouts/layoutNoteBlock";
 import "../../blocks/layouts/layoutAnimatedBoardBlock";
 
 import "../../blocks/layoutElements/listElementBlock";
@@ -70,6 +71,7 @@ import "../../blocks/text/textURLBlock";
 import "../../blocks/functions/funcMakeBackgroundBlock";
 
 import "../../blocks/types/typeShapeBlock";
+import "../../blocks/types/typeInputFieldBlock";
 
 
 const BlocklyBox = forwardRef((props, ref) => {
@@ -153,6 +155,8 @@ const BlocklyBox = forwardRef((props, ref) => {
                     <Block type="screen_paper_view" />
                     <Block type="screen_phrase" />
                     <Block type="screen_article" />
+                    <Block type="screen_note" />
+                    <Block type="screen_simple_list" />
                 </Category>
 
                 <Category name="Layouts">
@@ -161,7 +165,6 @@ const BlocklyBox = forwardRef((props, ref) => {
                     <Block type="layout_list" />
                     <Block type="layout_bubble_list" />
                     <Block type="layout_honeycomb" />
-                    <Block type="layout_note" />
                     <Block type="layout_animated_board" />
                 </Category>
 
@@ -203,6 +206,7 @@ const BlocklyBox = forwardRef((props, ref) => {
 
                 <Category name="Types">
                     <Block type="type_shape" />
+                    <Block type="type_input_field" />
                 </Category>
 
                 <Category name="Colors">

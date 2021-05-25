@@ -34,7 +34,7 @@ Blockly.JavaScript['tab_block'] = function (block) {
 
     // Assemble JavaScript into code variable.
 
-    var code = `Tab(
+    var code = `TabModel(
         label: ${value_label},
         systemImage: ${value_system_image},
         screen: ${screen}

@@ -33,7 +33,7 @@ Blockly.Blocks['app_block'] = {
 // Generator stub:
 
 Blockly.JavaScript['app_block'] = function (block) {
-  var value_header = Blockly.JavaScript.valueToCode(block, 'header', Blockly.JavaScript.ORDER_ATOMIC);
+  var value_header = Blockly.JavaScript.valueToCode(block, 'header', Blockly.JavaScript.ORDER_ATOMIC) || '';
   var value_header_color = Blockly.JavaScript.valueToCode(block, 'header_color', Blockly.JavaScript.ORDER_ATOMIC);
   var value_nav_bar_color = Blockly.JavaScript.valueToCode(block, 'nav_bar_color', Blockly.JavaScript.ORDER_ATOMIC);
   var value_background = Blockly.JavaScript.valueToCode(block, 'background', Blockly.JavaScript.ORDER_ATOMIC);
@@ -42,7 +42,7 @@ Blockly.JavaScript['app_block'] = function (block) {
   // Assemble JavaScript into code variable.
 
   var code = `struct AppConfiguration {
-    let data = TabsModel(
+    let data = AppModel(
       header: ${value_header},
       headerColor: ${value_header_color},
       navigationBarColor: ${value_nav_bar_color},

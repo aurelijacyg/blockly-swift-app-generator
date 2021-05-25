@@ -24,7 +24,7 @@ Blockly.Blocks['layout_bubble_list'] = {
 // Generator stub:
 
 Blockly.JavaScript['layout_bubble_list'] = function (block) {
-    var value_is_items_big = Blockly.JavaScript.valueToCode(block, 'is_items_big', Blockly.JavaScript.ORDER_ATOMIC);
+    var value_is_items_big = Blockly.JavaScript.valueToCode(block, 'is_items_big', Blockly.JavaScript.ORDER_ATOMIC) || 'false';
     var statements_items = Blockly.JavaScript.statementToCode(block, 'items', Blockly.JavaScript.ORDER_COMMA);
 
     // Assemble JavaScript into code variable.

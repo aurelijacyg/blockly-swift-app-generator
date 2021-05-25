@@ -24,8 +24,7 @@ struct AppConfiguration {
                     label: "Home",
                     systemImage: "homekit",
                     screen: Screen.primary(PrimaryViewModel(isTabBarHidden: false, layout: Layout.list(listModel)))
-                ),
-                
+                ),                
             ]
     )
 }

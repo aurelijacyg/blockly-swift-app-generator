@@ -2,10 +2,10 @@ import * as Blockly from 'blockly/core';
 
 // Block Definition:
 
-Blockly.Blocks['layout_note'] = {
+Blockly.Blocks['screen_note'] = {
     init: function () {
         this.appendDummyInput()
-            .appendField("LAYOUT - note");
+            .appendField("NOTE SCREEN");
         this.appendDummyInput();
         this.appendValueInput("Animated")
             .setCheck("Bool")
@@ -17,23 +17,23 @@ Blockly.Blocks['layout_note'] = {
             .setCheck("Component")
             .appendField("Component");
         this.setInputsInline(false);
-        this.setColour(255);
+        this.setColour(210);
         this.setTooltip("");
         this.setHelpUrl("");
-        this.setOutput(true, 'Layout');
+        this.setOutput(true, 'Screen');
     }
 };
 
 // Generator stub:
 
-Blockly.JavaScript['layout_note'] = function (block) {
-    var value_animated = Blockly.JavaScript.valueToCode(block, 'Animated', Blockly.JavaScript.ORDER_ATOMIC);
+Blockly.JavaScript['screen_note'] = function (block) {
+    var value_animated = Blockly.JavaScript.valueToCode(block, 'Animated', Blockly.JavaScript.ORDER_ATOMIC) || 'true';
     var value_background_color = Blockly.JavaScript.valueToCode(block, 'background_color', Blockly.JavaScript.ORDER_ATOMIC);
     var value_component = Blockly.JavaScript.valueToCode(block, 'component', Blockly.JavaScript.ORDER_ATOMIC);
 
     // Assemble JavaScript into code variable.
 
-    var code = `Layout.note(
+    var code = `Screen.note(
         NoteModel(
             component: ${value_component},
             isAnimated: ${value_animated},

@@ -8,8 +8,9 @@ import ScreenPhraseImg from "../images/templates/screen-phrase.png";
 import ScreenPaperImg from "../images/templates/screen-paper.png";
 import ScreenCardGalleryImg from "../images/templates/screen-card-gallery.png";
 import ScreenArticleImg from "../images/templates/screen-article.png";
+import ScreenNoteImg from "../images/templates/screen-note.png";
+import ScreenSimpleList from "../images/templates/screen-simple-list.png";
 
-import LayoutNoteImg from "../images/templates/layout-note.png";
 import LayoutListImg from "../images/templates/layout-list.png";
 import LayoutBubbleListImg from "../images/templates/layout-bubble-list.png";
 import LayoutGridImg from "../images/templates/layout-grid.png";
@@ -48,6 +49,16 @@ var screens = [
     description: "",
     image: ScreenPaperImg,
   },
+  {
+    title: "Note screen",
+    description: "This screen could have animation for floating component up and down.",
+    image: ScreenNoteImg,
+  },
+  {
+    title: "Simple list screen",
+    description: "",
+    image: ScreenSimpleList,
+  },
 ];
 
 var layouts = [
@@ -55,11 +66,6 @@ var layouts = [
     title: "Animated board",
     description: "This type of layout has animations. Bubbles (one by one) are rising to the front.",
     image: LayoutAnimatedBoardImg,
-  },
-  {
-    title: "Note",
-    description: "This layout could have animation for floating component up and down.",
-    image: LayoutNoteImg,
   },
   {
     title: "Honeycomb",

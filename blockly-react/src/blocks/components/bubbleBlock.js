@@ -44,7 +44,7 @@ Blockly.JavaScript['component_bubble'] = function (block) {
 
     // Assemble JavaScript into code variable.
 
-    var code = `CircleModel(
+    var code = `BubbleModel(
         title: ${value_title},
         photo: ${value_photo},
         titleColor: ${value_title_color},

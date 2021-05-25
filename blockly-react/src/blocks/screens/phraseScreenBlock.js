@@ -36,10 +36,10 @@ Blockly.Blocks['screen_phrase'] = {
 // Generator stub:
 
 Blockly.JavaScript['screen_phrase'] = function (block) {
-    var value_title = Blockly.JavaScript.valueToCode(block, 'title', Blockly.JavaScript.ORDER_ATOMIC);
-    var value_label = Blockly.JavaScript.valueToCode(block, 'label', Blockly.JavaScript.ORDER_ATOMIC);
+    var value_title = Blockly.JavaScript.valueToCode(block, 'title', Blockly.JavaScript.ORDER_ATOMIC) || '';
+    var value_label = Blockly.JavaScript.valueToCode(block, 'label', Blockly.JavaScript.ORDER_ATOMIC) || '';
     var value_text_color = Blockly.JavaScript.valueToCode(block, 'text_color', Blockly.JavaScript.ORDER_ATOMIC);
-    var value_typeface = Blockly.JavaScript.valueToCode(block, 'typeface', Blockly.JavaScript.ORDER_ATOMIC);
+    var value_typeface = Blockly.JavaScript.valueToCode(block, 'typeface', Blockly.JavaScript.ORDER_ATOMIC) || 'arial';
     var value_is_tabbar_hidden = Blockly.JavaScript.valueToCode(block, 'is_tabbar_hidden', Blockly.JavaScript.ORDER_ATOMIC) || 'false';
     var value_background_color = Blockly.JavaScript.valueToCode(block, 'background_color', Blockly.JavaScript.ORDER_ATOMIC);
 

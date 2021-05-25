@@ -14,7 +14,6 @@ struct SimpleListModel {
     var onSwipeDeleteItems: Bool
     var isTabBarHidden: Bool
     var inputField: InputFieldModel?
-    var navigationBarTitle: String?
 }
 
 class SimpleListItem: NSManagedObject, Identifiable {
