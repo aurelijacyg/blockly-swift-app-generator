@@ -25,7 +25,7 @@ Blockly.Blocks['layout_honeycomb'] = {
 
 Blockly.JavaScript['layout_honeycomb'] = function (block) {
     var dropdown_columns_number = block.getFieldValue('columns_number');
-    var statements_elements = Blockly.JavaScript.statementToCode(block, 'elements', Blockly.JavaScript.ORDER_COMMA);
+    var statements_elements = Blockly.JavaScript.statementToCode(block, 'elements');
 
     // TODO: Assemble JavaScript into code variable.
 

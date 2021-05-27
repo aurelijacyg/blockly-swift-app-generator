@@ -64,7 +64,7 @@ Blockly.JavaScript['element_animated_board_item'] = function (block) {
         xPosition: ${value_x_position},
         yPosition: ${value_y_position},
         risingComponent: ${value_component}
-    )`;
+    ),`;
 
     return code;
 };

@@ -10,11 +10,11 @@ Blockly.Blocks['icon_sense_colorful'] = {
         this.appendDummyInput()
             .appendField(new Blockly.FieldDropdown(
                 [
-                    ["hear", "icon-hear"],
-                    ["sight", "icon-sight"],
-                    ["smell", "icon-smell"],
-                    ["taste", "icon-taste"],
-                    ["touch", "icon-touch"]
+                    ["hear", "hear"],
+                    ["sight", "sight"],
+                    ["smell", "smell"],
+                    ["taste", "taste"],
+                    ["touch", "touch"]
                 ]
             ), "icon");
         this.setColour(165);

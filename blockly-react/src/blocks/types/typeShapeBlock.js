@@ -7,7 +7,7 @@ Blockly.Blocks['type_shape'] = {
         this.appendDummyInput()
             .appendField("SHAPE");
         this.appendDummyInput()
-            .appendField(new Blockly.FieldDropdown([["rectangle", "rectangle"], ["circle", "circle"], ["ellipse", "ellipse"], ["capsule", "capsule"], ["rounded rectangle", "rounded_rectangle"]]), "selected_shape");
+            .appendField(new Blockly.FieldDropdown([["rectangle", "rectangle"], ["circle", "circle"], ["ellipse", "ellipse"], ["capsule", "capsule"], ["rounded rectangle", "roundedRectangle"]]), "selected_shape");
         this.appendDummyInput();
         this.appendValueInput("corner_radius")
             .setCheck(null)
@@ -28,7 +28,7 @@ Blockly.JavaScript['type_shape'] = function (block) {
     // Assemble JavaScript into code variable.
 
     var shape;
-    if (dropdown_selected_shape === 'rounded_rectangle') {
+    if (dropdown_selected_shape === 'roundedRectangle') {
         shape = `roundedRectangle(${value_corner_radius})`
     } else {
         shape = `${dropdown_selected_shape}`

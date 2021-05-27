@@ -63,7 +63,7 @@ Blockly.JavaScript['element_bubble_list_item'] = function (block) {
         titleColor: ${value_title_color},
         subtitleColor: ${value_subtitle_color},
         routeTo: ${value_route_to}
-    )`;
+    ),`;
 
     return code;
 };

@@ -10,12 +10,12 @@ Blockly.Blocks['icon_astronomy_colorful'] = {
         this.appendDummyInput()
             .appendField(new Blockly.FieldDropdown(
                 [
-                    ["earth", "icon-earth"],
-                    ["moon", "icon-moon"],
-                    ["star", "icon-start"],
-                    ["sun", "icon-sun"],
-                    ["planet", "icon-planet"],
-                    ["saturn", "icon-saturn"]
+                    ["earth", "earth"],
+                    ["moon", "moon"],
+                    ["star", "star"],
+                    ["sun", "sun"],
+                    ["planet", "planet"],
+                    ["saturn", "saturn"]
                 ]
             ), "icon");
         this.setColour(165);

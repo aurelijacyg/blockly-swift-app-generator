@@ -10,13 +10,13 @@ Blockly.Blocks['icon_food_colorful'] = {
         this.appendDummyInput()
             .appendField(new Blockly.FieldDropdown(
                 [
-                    ["coffee cup", "icon-coffee-cup"],
-                    ["cupcake", "icon-cupcake"],
-                    ["eat", "icon-eat"],
-                    ["hamburger", "icon-hamburger"],
-                    ["hamburger and fries", "icon-mc"],
-                    ["pizza", "icon-pizza"],
-                    ["watermelon", "icon-watermelon"]
+                    ["coffee cup", "coffee-cup"],
+                    ["cupcake", "cupcake"],
+                    ["eat", "eat"],
+                    ["hamburger", "hamburger"],
+                    ["hamburger and fries", "mc"],
+                    ["pizza", "pizza"],
+                    ["watermelon", "watermelon"],
                     ["avocado", "avocado"],
                     ["spaghetti", "spaghetti"],
                     ["pancake", "pancake"]

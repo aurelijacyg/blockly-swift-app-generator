@@ -10,18 +10,18 @@ Blockly.Blocks['icon_regular'] = {
         this.appendDummyInput()
             .appendField(new Blockly.FieldDropdown(
                 [
-                    ["account", "icon-account"],
-                    ["airplane", "icon-airplane"],
+                    ["account", "account-icon"],
+                    ["airplane", "airplane-icon"],
                     ["article", "icon-article"],
-                    ["blog", "icon-blog"],
-                    ["book", "icon-book"],
-                    ["idea", "icon-idea"],
-                    ["info", "icon-info"],
-                    ["learning", "icon-learning"],
-                    ["location", "icon-location"],
-                    ["note", "icon-note"],
-                    ["travel", "icon-note"],
-                    ["gallery", "icon-gallery"]
+                    ["blog", "blog-icon"],
+                    ["book", "book-icon"],
+                    ["idea", "idea-icon"],
+                    ["info", "info-icon"],
+                    ["learning", "learning-icon"],
+                    ["location", "location-icon"],
+                    ["note", "note-icon"],
+                    ["travel", "travel-icon"],
+                    ["gallery", "gallery-icon"]
                 ]
             ), "icon");
         this.setColour(165);

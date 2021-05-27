@@ -42,7 +42,7 @@ Blockly.JavaScript['screen_simple_list'] = function (block) {
             itemsColor: ${value_items_color},
             onSwipeDeleteItems: ${value_on_swipe_delete_items},
             isTabBarHidden: ${value_is_tabbar_hidden},
-            inputField: ${value_input_field},
+            inputField: ${value_input_field}
         )
       )`;
 

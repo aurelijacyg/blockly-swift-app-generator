@@ -25,7 +25,7 @@ Blockly.Blocks['layout_animated_board'] = {
 
 Blockly.JavaScript['layout_animated_board'] = function (block) {
     var value_background_color = Blockly.JavaScript.valueToCode(block, 'background_color', Blockly.JavaScript.ORDER_ATOMIC);
-    var statements_elements = Blockly.JavaScript.statementToCode(block, 'elements', Blockly.JavaScript.ORDER_COMMA);
+    var statements_elements = Blockly.JavaScript.statementToCode(block, 'elements');
 
     // Assemble JavaScript into code variable.
 

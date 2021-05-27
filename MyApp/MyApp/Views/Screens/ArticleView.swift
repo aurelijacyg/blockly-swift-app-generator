@@ -53,7 +53,7 @@ struct ArticleView: View {
                     .frame(width: UIScreen.screenWidth, height: UIScreen.screenWidth * 0.5)
             }
         }
-        .ignoresSafeArea(edges: .bottom)
+        .ignoresSafeArea(edges: data.isTabBarHidden ? .bottom : .horizontal)
         .introspectTabBarController { (UITabBarController) in
             UITabBarController.tabBar.isHidden = data.isTabBarHidden
             uiTabBarController = UITabBarController

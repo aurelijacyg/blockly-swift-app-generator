@@ -25,8 +25,7 @@ Blockly.Blocks['layout_bubble_list'] = {
 
 Blockly.JavaScript['layout_bubble_list'] = function (block) {
     var value_is_items_big = Blockly.JavaScript.valueToCode(block, 'is_items_big', Blockly.JavaScript.ORDER_ATOMIC) || 'false';
-    var statements_items = Blockly.JavaScript.statementToCode(block, 'items', Blockly.JavaScript.ORDER_COMMA);
-
+    var statements_items = Blockly.JavaScript.statementToCode(block, 'items')
     // Assemble JavaScript into code variable.
 
     var code = `Layout.bubbleList(

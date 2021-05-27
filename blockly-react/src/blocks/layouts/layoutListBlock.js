@@ -20,7 +20,7 @@ Blockly.Blocks['layout_list'] = {
 // Generator stub:
 
 Blockly.JavaScript['layout_list'] = function (block) {
-    var statements_list_elements = Blockly.JavaScript.statementToCode(block, 'list_elements', Blockly.JavaScript.ORDER_COMMA);
+    var statements_list_elements = Blockly.JavaScript.statementToCode(block, 'list_elements');
     
     // Assemble JavaScript into code variable.
 

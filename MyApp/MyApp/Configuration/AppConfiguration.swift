@@ -10,8 +10,8 @@ import SwiftUI
 
 struct AppConfiguration {
     let data = AppModel(
-        header: "TODO",
-        headerColor: Color.blue,
+        header: "Tasty",
+        headerColor: Color.secondary,
         navigationBarColor: Color.white,
         screenBackground: BackgroundModel(
             color: Color.white,
@@ -23,8 +23,76 @@ struct AppConfiguration {
                 TabModel(
                     label: "Home",
                     systemImage: "homekit",
-                    screen: Screen.primary(PrimaryViewModel(isTabBarHidden: false, layout: Layout.list(listModel)))
-                ),                
+                    screen: Screen.primary(
+                        PrimaryViewModel(
+                            photoURL: "https://i.pinimg.com/474x/43/9a/46/439a469a30ec341e25808d21bc15fcf8.jpg",
+                            isTabBarHidden: false,
+                            layout: Layout.catalogGrid(
+                                CatalogGridModel(
+                                    title: nil,
+                                    titleColor: .blue,
+                                    items:
+                                        [
+                                            CatalogGridItemModel(
+                                                text: "Salads",
+                                                icon: "avocado",
+                                                backgroundColor: Color(rgb: 0xFFF8E2),
+                                                backgroundGradientColor: Color(rgb: 0xF1ECDD),
+                                                textColor: Color.gray,
+                                                routeTo: nil
+                                            ),
+                                            CatalogGridItemModel(
+                                                text: "Pizza",
+                                                icon: "pizza",
+                                                backgroundColor: Color(rgb: 0xFFF8E2),                                                backgroundGradientColor: Color(rgb: 0xF1ECDD),
+                                                textColor: Color.gray,
+                                                routeTo: Screen.article(
+                                                    ArticleModel(
+                                                        title: "Pizza",
+                                                        subtitle: "Italian tasty",
+                                                        body: "Pizza is a savory dish of Italian origin consisting of a usually round, flattened base of leavened wheat-based dough topped with tomatoes, cheese, and often various other ingredients, which is then baked at a high temperature, traditionally in a wood-fired oven. A small pizza is sometimes called a pizzetta.",
+                                                        titlesColor: Color(rgb: 0xC8BB94),
+                                                        bodyColor: .secondary,
+                                                        photoURL: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRwNiHE5bI0gA3LS7vt7oXqsplWRPak0BM_Eg&usqp=CAU",
+                                                        isTabBarHidden: false
+                                                    )
+                                                )
+                                            ),
+                                            CatalogGridItemModel(
+                                                text: "Spaghetti",
+                                                icon: "spaghetti",
+                                                backgroundColor: Color(rgb: 0xFFF8E2),                                                backgroundGradientColor: Color(rgb: 0xF1ECDD),
+                                                textColor: Color.gray,
+                                                routeTo: nil
+                                            ),
+                                            CatalogGridItemModel(
+                                                text: "Pancakes",
+                                                icon: "pancake",
+                                                backgroundColor: Color(rgb: 0xFFF8E2),                                                backgroundGradientColor: Color(rgb: 0xF1ECDD),
+                                                textColor: Color.gray,
+                                                routeTo: nil
+                                            )
+                                        ]
+                                ))
+                        )
+                    )
+                ),
+
+                TabModel(
+                    label: "Todo",
+                    systemImage: nil,
+                    screen: Screen.simpleList(
+                        SimpleListModel(
+                            itemsColor: Color(rgb: 0xC8BB94),
+                            onSwipeDeleteItems: true,
+                            isTabBarHidden: false,
+                            inputField: InputFieldModel(
+                                header: "Todo",
+                                title: "Add task"
+                            )
+                        )
+                    )
+                )
             ]
     )
 }
@@ -632,3 +700,4 @@ let photoComponent = Component.photo(
         height: 200
     )
 )
+

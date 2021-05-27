@@ -58,7 +58,7 @@ Blockly.JavaScript['element_grid_item'] = function (block) {
     cornerRadius: ${value_corner_radius},
     textColor: ${value_text_color},
     routeTo: ${value_route_to}
-  )`;
+  ),`;
 
   return code;
 };

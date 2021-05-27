@@ -29,7 +29,7 @@ Blockly.Blocks['layout_catalog_grid'] = {
 Blockly.JavaScript['layout_catalog_grid'] = function (block) {
     var value_title = Blockly.JavaScript.valueToCode(block, 'title', Blockly.JavaScript.ORDER_ATOMIC) || 'nil';
     var value_title_color = Blockly.JavaScript.valueToCode(block, 'title_color', Blockly.JavaScript.ORDER_ATOMIC) || 'nil';
-    var statements_elements = Blockly.JavaScript.statementToCode(block, 'elements', Blockly.JavaScript.ORDER_COMMA);
+    var statements_elements = Blockly.JavaScript.statementToCode(block, 'elements');
 
     // Assemble JavaScript into code variable.
 

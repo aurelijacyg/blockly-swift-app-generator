@@ -53,7 +53,7 @@ Blockly.JavaScript['element_catalog_grid_item'] = function (block) {
         backgroundGradientColor: ${value_background_color_gradient},
         textColor: ${value_text_color},
         routeTo: ${value_route_to}
-    )`;
+    ),`;
 
     return code;
 };
